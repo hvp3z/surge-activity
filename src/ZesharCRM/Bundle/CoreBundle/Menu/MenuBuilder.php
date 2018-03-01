@@ -301,10 +301,10 @@ class MenuBuilder
 	private function buildMyLeadsSubmenu()
     {
 
-		$this->items['my_leads']->addChild('New Leads <span style="color: #00a65a">- 10</span> ' , array('uri' => 'http://symf.testingtls.com'))->setLinkAttribute('class', 'icon-link icon-2')->setExtra('safe_label', true );
-		$this->items['my_leads']->addChild('Recycled Leads <span style="color: #00a65a" >- 20</span>' , array('uri' => 'http://symf.testingtls.com'))->setLinkAttribute('class', 'icon-link icon-2')->setExtra('safe_label', true );
-		$this->items['my_leads']->addChild('X-Sale Leads <span style="color: #00a65a">- 100</span>' , array('uri' => 'http://symf.testingtls.com'))->setLinkAttribute('class', 'icon-link icon-2')->setExtra('safe_label', true );
-		$this->items['my_leads']->addChild('Lead pool <span style="color: #00a65a">- 500</span>' , array('uri' => 'http://symf.testingtls.com'))->setLinkAttribute('class', 'icon-link icon-2')->setExtra('safe_label', true );
+		$this->items['my_leads']->addChild('New Leads - 10' , array('uri' => 'http://symf.testingtls.com'))->setLinkAttribute('class', 'icon-link icon-2')->setExtra('safe_label', true );
+		$this->items['my_leads']->addChild('Recycled Leads - 20' , array('uri' => 'http://symf.testingtls.com'))->setLinkAttribute('class', 'icon-link icon-2')->setExtra('safe_label', true );
+		$this->items['my_leads']->addChild('X-Sale Leads - 100' , array('uri' => 'http://symf.testingtls.com'))->setLinkAttribute('class', 'icon-link icon-2')->setExtra('safe_label', true );
+		$this->items['my_leads']->addChild('Lead pool - 500' , array('uri' => 'http://symf.testingtls.com'))->setLinkAttribute('class', 'icon-link icon-2')->setExtra('safe_label', true );
 		return;
         $fetchCallback = function() {
             if ($currentUser = $this->getCurrentLoggedInUser()) {

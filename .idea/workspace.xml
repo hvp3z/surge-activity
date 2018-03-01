@@ -134,7 +134,6 @@
       <change beforePath="" afterPath="$PROJECT_DIR$/app/DoctrineMigrations/Version20150813092746.php" />
       <change beforePath="" afterPath="$PROJECT_DIR$/app/DoctrineMigrations/Version20150813092942.php" />
       <change beforePath="" afterPath="$PROJECT_DIR$/app/DoctrineMigrations/Version20160817105321.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
       <change beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/loading_spinner.html.twig" />
       <change beforePath="" afterPath="$PROJECT_DIR$/app/SymfonyRequirements.php" />
       <change beforePath="" afterPath="$PROJECT_DIR$/app/app/.htaccess" />
@@ -2444,7 +2443,6 @@
       <change beforePath="" afterPath="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Listener/LogoutHandler.php" />
       <change beforePath="" afterPath="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Listener/ReportControllerSubscriber.php" />
       <change beforePath="" afterPath="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Listener/SecurityListener.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Menu/MenuBuilder.php" />
       <change beforePath="" afterPath="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Menu/RequestVoter.php" />
       <change beforePath="" afterPath="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Model/Conversion.php" />
       <change beforePath="" afterPath="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Model/Report.php" />
@@ -2657,7 +2655,6 @@
       <change beforePath="" afterPath="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Resources/views/Widget/time.html.twig" />
       <change beforePath="" afterPath="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Resources/views/layout.html.twig" />
       <change beforePath="" afterPath="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Resources/views/main_menu.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Resources/views/sonata_layout.html.twig" />
       <change beforePath="" afterPath="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Resources/views/sonata_list.html.twig" />
       <change beforePath="" afterPath="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Service/ADNService.php" />
       <change beforePath="" afterPath="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Service/DeletedLeadListBlockService.php" />
@@ -22453,7 +22450,6 @@
       <change beforePath="" afterPath="$PROJECT_DIR$/web/css/print.css" />
       <change beforePath="" afterPath="$PROJECT_DIR$/web/css/reset.css" />
       <change beforePath="" afterPath="$PROJECT_DIR$/web/css/select2.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/css/style.css" />
       <change beforePath="" afterPath="$PROJECT_DIR$/web/css/style3.css" />
       <change beforePath="" afterPath="$PROJECT_DIR$/web/csvimport/import_16df398ed4a2f97565a11b67143cda8e_16642.csv" />
       <change beforePath="" afterPath="$PROJECT_DIR$/web/csvimport/import_2932cf739eaee1a167292cfa3fa2f692_70251.csv" />
@@ -22832,6 +22828,10 @@
       <change beforePath="" afterPath="$PROJECT_DIR$/wires/Opportunity Edit_files/twilio.min.js" />
       <change beforePath="" afterPath="$PROJECT_DIR$/wires/Quote Edit.htm" />
       <change beforePath="" afterPath="$PROJECT_DIR$/wires/backlog.txt" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Menu/MenuBuilder.php" afterPath="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Menu/MenuBuilder.php" />
+      <change beforePath="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Resources/views/sonata_layout.html.twig" afterPath="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Resources/views/sonata_layout.html.twig" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.css" afterPath="$PROJECT_DIR$/web/css/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22848,8 +22848,18 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2775">
-              <caret line="185" column="55" lean-forward="false" selection-start-line="185" selection-start-column="55" selection-end-line="185" selection-end-column="55" />
+            <state relative-caret-position="288">
+              <caret line="749" column="5" lean-forward="true" selection-start-line="749" selection-start-column="5" selection-end-line="749" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MenuBuilder.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Menu/MenuBuilder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="143" column="165" lean-forward="true" selection-start-line="143" selection-start-column="165" selection-end-line="143" selection-end-column="165" />
               <folding />
             </state>
           </provider>
@@ -22865,11 +22875,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="6" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+            <state relative-caret-position="240">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -22878,8 +22888,8 @@
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="45" column="38" lean-forward="false" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
+            <state relative-caret-position="319">
+              <caret line="51" column="23" lean-forward="true" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -22898,8 +22908,25 @@
       <file leaf-file-name="sonata_layout.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Resources/views/sonata_layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3300">
-              <caret line="220" column="41" lean-forward="false" selection-start-line="220" selection-start-column="41" selection-end-line="220" selection-end-column="41" />
+            <state relative-caret-position="124">
+              <caret line="217" column="109" lean-forward="false" selection-start-line="217" selection-start-column="90" selection-end-line="217" selection-end-column="109" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#nav#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#li#0;n#ol#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#17374#17380#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main_menu.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Resources/views/main_menu.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="69" column="34" lean-forward="true" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -22925,43 +22952,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Resources/views/Dashboard/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="35" lean-forward="false" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sonata_list.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Resources/views/sonata_list.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>compressed_root</find>
-      <find>Compressed</find>
-      <find>activities</find>
-      <find>dashboard</find>
-      <find>Dashboard</find>
-      <find>contacts</find>
-      <find>Reports</find>
-      <find>Admin</find>
-      <find>menu_w</find>
-      <find>&lt;div id=&quot;whole_page_loading&quot; &gt;</find>
-      <find>whole_page_loading</find>
-      <find>title-wrap</find>
-      <find>menu_wrap</find>
       <find>ADMIN</find>
       <find>title_wrap</find>
       <find>cache</find>
@@ -22971,14 +22965,27 @@
       <find>title</find>
       <find>&lt;div class=&quot;wrapper&quot;</find>
       <find>new lead</find>
-      <find>00a65a</find>
       <find>leads</find>
       <find>span s</find>
       <find>span style=&quot;color</find>
       <find>drop-link</find>
-      <find>menu-wrap</find>
       <find>fact  ory</find>
       <find>surgeact</find>
+      <find>admin/dashboard</find>
+      <find>menu-wrap</find>
+      <find>-3px</find>
+      <find>collaps</find>
+      <find>collap</find>
+      <find>content-</find>
+      <find>menu-wra$</find>
+      <find>footer</find>
+      <find>drop</find>
+      <find>icon-link</find>
+      <find>00a65a</find>
+      <find>$fetchCallback</find>
+      <find>activity lead list</find>
+      <find>subMenu</find>
+      <find>Submenu</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -23004,17 +23011,17 @@
         <option value="$PROJECT_DIR$/vendor/sonata-project/admin-bundle/Resources/views/Core/dashboard.html.twig" />
         <option value="$PROJECT_DIR$/src1/ZesharCRM/Bundle/CoreBundle/Menu/MenuBuilder.php" />
         <option value="$PROJECT_DIR$/vendor/knplabs/knp-menu/src/Knp/Menu/Resources/views/knp_menu_base.html.twig" />
-        <option value="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Menu/MenuBuilder.php" />
         <option value="$PROJECT_DIR$/src1/ZesharCRM/Bundle/CoreBundle/Resources/views/sonata_layout.html.twig" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/app/config/prod.log" />
         <option value="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Resources/views/Dashboard/index.html.twig" />
-        <option value="$PROJECT_DIR$/web/css/style.css" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/app1/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Resources/views/sonata_layout.html.twig" />
         <option value="$PROJECT_DIR$/vendor/knplabs/knp-menu-bundle/Resources/config/menu.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Resources/views/sonata_layout.html.twig" />
+        <option value="$PROJECT_DIR$/web/css/style.css" />
+        <option value="$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Menu/MenuBuilder.php" />
       </list>
     </option>
   </component>
@@ -23442,10 +23449,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18198000" />
+    <option name="totallyTimeSpent" value="26739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -23456,11 +23464,12 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32983193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32983193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -23490,7 +23499,6 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32948583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
@@ -23534,7 +23542,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3300">
           <caret line="220" column="41" lean-forward="false" selection-start-line="220" selection-start-column="41" selection-end-line="220" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#nav#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#li#0;n#ol#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#17374#17380#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -23614,7 +23629,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3300">
           <caret line="220" column="41" lean-forward="false" selection-start-line="220" selection-start-column="41" selection-end-line="220" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#nav#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#li#0;n#ol#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#17374#17380#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -23758,13 +23780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Menu/MenuBuilder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Resources/views/CRUD/account_create.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -23776,13 +23791,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Resources/views/main_menu.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-450">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -23847,26 +23855,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app1/Resources/views/base.html.twig">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="26" lean-forward="false" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Resources/views/sonata_layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3300">
-          <caret line="220" column="41" lean-forward="false" selection-start-line="220" selection-start-column="41" selection-end-line="220" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="38" lean-forward="false" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -23879,18 +23871,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/style.css">
+    <entry file="file://$PROJECT_DIR$/app1/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2775">
-          <caret line="185" column="55" lean-forward="false" selection-start-line="185" selection-start-column="55" selection-end-line="185" selection-end-column="55" />
+        <state relative-caret-position="720">
+          <caret line="48" column="26" lean-forward="false" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="6" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+        <state relative-caret-position="319">
+          <caret line="51" column="23" lean-forward="true" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Resources/views/sonata_layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="217" column="109" lean-forward="false" selection-start-line="217" selection-start-column="90" selection-end-line="217" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#nav#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#li#0;n#ol#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#17374#17380#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Resources/views/main_menu.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="69" column="34" lean-forward="true" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="749" column="5" lean-forward="true" selection-start-line="749" selection-start-column="5" selection-end-line="749" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ZesharCRM/Bundle/CoreBundle/Menu/MenuBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="143" column="165" lean-forward="true" selection-start-line="143" selection-start-column="165" selection-end-line="143" selection-end-column="165" />
           <folding />
         </state>
       </provider>

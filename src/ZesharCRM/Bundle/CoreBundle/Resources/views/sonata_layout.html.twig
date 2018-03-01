@@ -212,87 +212,90 @@ file that was distributed with this source code.
             </header>
 
             {% block sonata_wrapper %}
-                {% if app.user %}
-                    <div class="menu-wrap">
-                        {{ knp_menu_render('main', {'template': 'ZesharCRMCoreBundle::main_menu.html.twig'}) }}
-                    </div>
-                {% else %}
-                    <div class="menu-wrap">
-                        <ul class="menu">
-                            <li id="login-logo">
-                                <img src="{{ asset('images/logo2.png') }}" alt="" width="41px">
-                                <p class="title-logo">Surge<span>Activity</span></p>
-                            </li>
-                        </ul>
-                    </div>
-                {% endif %}
                 <div class="{% block sonata_whole_content_wrapper_classes %}content clear-fix{% endblock %}">
+                    {% if app.user %}
+                        <div class="menu-wrap">
+                            {{ knp_menu_render('main', {'template': 'ZesharCRMCoreBundle::main_menu.html.twig'}) }}
+                        </div>
+                    {% else %}
+                        <div class="menu-wrap">
+                            <ul class="menu">
+                                <li id="login-logo">
+                                    <img src="{{ asset('images/logo2.png') }}" alt="" width="41px">
+                                    <p class="title-logo">Surge<span>Activity</span></p>
+                                </li>
+                            </ul>
+                        </div>
+                    {% endif %}
+                    <div class="page-content">
                     {% block sonata_page_content %}
                         {% block sonata_page_content_header %}
                             {% block sonata_page_content_nav %}
                                 {% if _tab_menu is not empty or _actions is not empty %}
-                                    <div class="filter-wrap clearfix">
-                                        <div class="right-column">
-                                            {{ block('sonata_admin_filter_right_column') }}
-                                        </div>
-                                        <div class="left-column">
-                                            {{ block('sonata_admin_filter_left_column') }}
-                                        </div>
-                                    </div>
-                                {% endif %}
-                                {% if enable_bundles.ZesharCRMCallsBundle is defined %}
-                                    {{ render(controller('ZesharCRMCallsBundle:CallReporting:createCall')) }}
-                                {% endif %}
-                            {% endblock sonata_page_content_nav %}
 
-                        {% endblock sonata_page_content_header %}
-
-                        <div>
-                            {% block sonata_admin_content %}
-
-                                {% block notice %}
-                                    {% include 'SonataCoreBundle:FlashMessage:render.html.twig' %}
-                                {% endblock notice %}
-
-                                {{ block('sonata_admin_right_column') }}
-
-                                <div class="left-column">
-
-                                    {% if _preview is not empty %}
-                                        <div class="sonata-ba-preview">{{ _preview|raw }}</div>
-                                    {% endif %}
-
-                                    {% if _content is not empty %}
-                                        <div class="sonata-ba-content">{{ _content|raw }}</div>
-                                    {% endif %}
-
-                                    {% if _show is not empty %}
-                                        <div class="sonata-ba-show">{{ _show|raw }}</div>
-                                    {% endif %}
-
-                                    {% if _form is not empty %}
-                                        <div class="sonata-ba-form">{{ _form|raw }}</div>
-                                    {% endif %}
-
-                                    {% if _list_table is not empty or _list_filters is not empty %}
-                                        <div class="table-wrap">
-                                            <div class="table-block">
-                                                <div class="custom-content" style="padding-bottom: 35px;">
-                                                    <div>
-                                                        {{ _list_table|raw }}
-                                                    </div>
-
-                                                    {% if _list_filters|trim %}
-                                                        <div class="sonata-ba-filter col-md-2" style="display:none;">
-                                                            {{ _list_filters|raw }}
-                                                        </div>
-                                                    {% endif %}
-                                                </div>
+                                        <div class="filter-wrap clearfix">
+                                            <div class="right-column">
+                                                {{ block('sonata_admin_filter_right_column') }}
+                                            </div>
+                                            <div class="left-column">
+                                                {{ block('sonata_admin_filter_left_column') }}
                                             </div>
                                         </div>
                                     {% endif %}
-                                </div>
-                            {% endblock sonata_admin_content %}
+                                    {% if enable_bundles.ZesharCRMCallsBundle is defined %}
+                                        {{ render(controller('ZesharCRMCallsBundle:CallReporting:createCall')) }}
+                                    {% endif %}
+                                {% endblock sonata_page_content_nav %}
+
+                            {% endblock sonata_page_content_header %}
+
+                            <div>
+                                {% block sonata_admin_content %}
+
+                                    {% block notice %}
+                                        {% include 'SonataCoreBundle:FlashMessage:render.html.twig' %}
+                                    {% endblock notice %}
+
+                                    {{ block('sonata_admin_right_column') }}
+
+                                    <div class="left-column">
+
+                                        {% if _preview is not empty %}
+                                            <div class="sonata-ba-preview">{{ _preview|raw }}</div>
+                                        {% endif %}
+
+                                        {% if _content is not empty %}
+                                            <div class="sonata-ba-content">{{ _content|raw }}</div>
+                                        {% endif %}
+
+                                        {% if _show is not empty %}
+                                            <div class="sonata-ba-show">{{ _show|raw }}</div>
+                                        {% endif %}
+
+                                        {% if _form is not empty %}
+                                            <div class="sonata-ba-form">{{ _form|raw }}</div>
+                                        {% endif %}
+
+                                        {% if _list_table is not empty or _list_filters is not empty %}
+                                            <div class="table-wrap">
+                                                <div class="table-block">
+                                                    <div class="custom-content" style="padding-bottom: 35px;">
+                                                        <div>
+                                                            {{ _list_table|raw }}
+                                                        </div>
+
+                                                        {% if _list_filters|trim %}
+                                                            <div class="sonata-ba-filter col-md-2" style="display:none;">
+                                                                {{ _list_filters|raw }}
+                                                            </div>
+                                                        {% endif %}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                {% endblock sonata_admin_content %}
+                            </div>
                         </div>
                     {% endblock sonata_page_content %}
                 </div>

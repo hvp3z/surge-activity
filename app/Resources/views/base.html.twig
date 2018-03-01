@@ -53,7 +53,8 @@
                         {{ knp_menu_render('main', {'template': 'ZesharCRMCoreBundle::main_menu.html.twig'}) }}
                     </div>
                     {% block content %}
-                        {% if not is_granted('ROLE_ULTRA_ADMIN') %}
+                    {% if not is_granted('ROLE_ULTRA_ADMIN') %}
+                    <div class="page-content">
                             <div id="collapse-block" class="right-column">
                                     <div class="widget-wrap">
                                         {{ render(controller('ZesharCRMCoreBundle:Dashboard:showBlockWidget')) }}
@@ -64,6 +65,7 @@
                             </div>
                         {% endif %}
                     {% endblock %}
+                    </div>
                 </div>
 
             </div>
