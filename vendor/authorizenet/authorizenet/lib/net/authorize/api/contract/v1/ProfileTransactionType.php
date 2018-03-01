@@ -165,7 +165,7 @@ class ProfileTransactionType
      *
      * @return \net\authorize\api\contract\v1\ProfileTransVoidType
      */
-    public function getProfileTransVoid()
+    public function getProfileTransvoid(0)
     {
         return $this->profileTransVoid;
     }

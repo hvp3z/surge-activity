@@ -225,7 +225,7 @@ class __TwigTemplate_f2531bec201a5150d8fcca89c7360793833524d6e05850ba976bf5c0336
             echo "drop-link ";
         }
         echo twig_escape_filter($this->env, twig_join_filter($this->getAttribute((isset($context["item"]) ? $context["item"] : null), "labelAttributes", array(0 => "class"), "method"), " "), "html", null, true);
-        echo "\" href=\"javascript:void();\">";
+        echo "\" href=\"javascript:void(0);\">";
         $this->displayBlock("label", $context, $blocks);
         echo "</a>";
     }
@@ -364,5 +364,5 @@ class __TwigTemplate_f2531bec201a5150d8fcca89c7360793833524d6e05850ba976bf5c0336
 /* {% endblock %}*/
 /*     */
 /* {% block linkElement %}<a class="{% if item.hasChildren %}drop-link {% endif %}{{ item.linkAttributes('class')|join(' ') }}" href="{{ item.uri }}">{{ block('label') }}</a>{% endblock %}*/
-/* {% block spanElement %}<a class="{% if item.hasChildren %}drop-link {% endif %}{{ item.labelAttributes('class')|join(' ') }}" href="javascript:void();">{{ block('label') }}</a>{% endblock %}*/
+/* {% block spanElement %}<a class="{% if item.hasChildren %}drop-link {% endif %}{{ item.labelAttributes('class')|join(' ') }}" href="javascript:void(0);">{{ block('label') }}</a>{% endblock %}*/
 /* */

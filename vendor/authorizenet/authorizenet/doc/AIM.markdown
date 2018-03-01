@@ -141,7 +141,7 @@ To submit a transaction call one of the 7 methods:
 AuthorizeNetAIM::authorizeAndCapture()
 AuthorizeNetAIM::authorizeOnly()
 AuthorizeNetAIM::priorAuthCapture()
-AuthorizeNetAIM::void()
+AuthorizeNetAIM::void(0)
 AuthorizeNetAIM::captureOnly()
 AuthorizeNetAIM::credit()
 ```

@@ -265,7 +265,7 @@ class AuthorizeNetAIM_Sandbox_Test extends PHPUnit_Framework_TestCase
     }
 
 
-    public function testVoid()
+    public function testvoid(0)
     {
         // First create transaction to void.
         $amount = rand(1, 1000);
@@ -288,7 +288,7 @@ class AuthorizeNetAIM_Sandbox_Test extends PHPUnit_Framework_TestCase
             'trans_id' => $response->transaction_id,
             )
         );
-        $void_response = $void->Void();
+        $void_response = $void->void(0);
         $this->assertTrue($void_response->approved);
     }
 
@@ -381,7 +381,7 @@ class AuthorizeNetAIM_Sandbox_Test extends PHPUnit_Framework_TestCase
         $this->assertTrue($response->approved);
     }
 
-    public function testAuthCaptureVoid()
+    public function testAuthCapturevoid(0)
     {
         $amount = rand(1, 1000);
         $auth = new AuthorizeNetAIM;
@@ -417,7 +417,7 @@ class AuthorizeNetAIM_Sandbox_Test extends PHPUnit_Framework_TestCase
             'trans_id' => $auth_response->transaction_id,
             )
         );
-        $void_response = $void->void();
+        $void_response = $void->void(0);
         $this->assertTrue($void_response->approved);
     }
 

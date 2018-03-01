@@ -99,7 +99,7 @@ header {min-width: 1280px; margin: 0 auto;}
 .menu > li.message-link a {line-height: 21px; width: 21px; text-align: center; background: #bf1826; border-radius: 2px; padding: 0;}
 .menu > li.add {padding: 0 10px; border-left: 1px solid #2e2c27;}
 .menu > li.add a {color: #fff; font-weight: bold; font-size: 26px; display: block;}
-.menu > li:hover > .drop-menu {display: block;}
+/* .menu > li:hover > .drop-menu {display: block; } */
 .menu .drop-menu {text-align: left; background: #fff; left:69px; top: 49px;background:#555248; display: none; z-index: 10;}
 .menu .drop-menu:after {position: absolute; content: ''; height: 4px; top: -5px; width: 100%; left: 0;}
 .menu .drop-menu .drop-menu {top: 0; left: 221px;}

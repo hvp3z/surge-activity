@@ -83,4 +83,4 @@
 {% endblock %}
     
 {% block linkElement %}<a class="{% if item.hasChildren %}drop-link {% endif %}{{ item.linkAttributes('class')|join(' ') }}" href="{{ item.uri }}">{{ block('label') }}</a>{% endblock %}
-{% block spanElement %}<a class="{% if item.hasChildren %}drop-link {% endif %}{{ item.labelAttributes('class')|join(' ') }}" href="javascript:void();">{{ block('label') }}</a>{% endblock %}
+{% block spanElement %}<a class="{% if item.hasChildren %}drop-link {% endif %}{{ item.labelAttributes('class')|join(' ') }}" href="javascript:void(0);">{{ block('label') }}</a>{% endblock %}
