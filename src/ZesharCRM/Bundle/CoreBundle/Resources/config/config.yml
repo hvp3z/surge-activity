@@ -1,0 +1,141 @@
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+#        sonata.admin.block.admin_list:
+#            contexts:   [admin]
+
+        sonata.admin_doctrine_orm.block.audit:
+            contexts:   [admin]
+
+        sonata.block.service.text:
+        sonata.block.service.rss:
+        sonata.user.block.menu:    # used to display the menu in profile pages
+        sonata.user.block.account:
+
+        # Some specific block from the SonataMediaBundle
+        #sonata.media.block.media:
+        #sonata.media.block.gallery:
+        #sonata.media.block.feature_media:
+
+        zeshar_crm_core.block.importcsv: ~
+        zeshar_crm_core.block.admin_list: ~
+        zeshar_crm_core.block.deleted_lead_list: ~
+
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: ZesharCRM\Bundle\CoreBundle\Entity\User
+
+    group:
+        group_class:   ZesharCRM\Bundle\CoreBundle\Entity\Group
+        group_manager: sonata.user.orm.group_manager
+
+    service:
+        user_manager: sonata.user.orm.user_manager
+
+
+sonata_user:
+    security_acl: true
+    manager_type: orm
+
+    profile:  # Authentication Form
+        menu:
+            - { route: 'sonata_user_profile_show', label: 'sonata_profile_title', domain: 'SonataUserBundle'}
+            - { route: 'sonata_user_profile_edit', label: 'link_edit_profile', domain: 'SonataUserBundle'}
+            - { route: 'sonata_user_profile_edit_authentication', label: 'link_edit_authentication', domain: 'SonataUserBundle'}
+
+        form:
+            type:               fos_user_profile
+            handler:            fos_user.profile.form.handler.default
+            name:               fos_user_profile_form
+            validation_groups:  [Profile] # Please note : this is not the default value
+
+    admin:                  # Admin Classes
+        user:
+            class:          ZesharCRM\Bundle\CoreBundle\Admin\UserAdmin
+            controller:     ZesharCRMCoreBundle:UserCRUD
+            translation:    SonataUserBundle
+
+
+sonata_admin:
+    title:      ZesharCRM Admin
+
+    options:
+        use_select2: false      # enable select2
+#        use_icheck:  false      # enable iCheck
+
+    security:
+        handler: sonata.admin.security.handler.noop # use global security handler instead
+
+    dashboard:
+         blocks:
+             # display a dashboard block
+             - { position: left, type: zeshar_crm_core.block.admin_list }
+             - { position: right, type: zeshar_crm_core.block.importcsv }
+             - { position: right, type: zeshar_crm_core.block.deleted_lead_list}
+
+    templates:
+        layout: ZesharCRMCoreBundle::sonata_layout.html.twig
+        list:   ZesharCRMCoreBundle::sonata_list.html.twig
+        base_list_field:     ZesharCRMCoreBundle:CRUD:base_list_field.html.twig
+
+    persist_filters: true
+
+#    assets:
+#        javascripts:
+#            - bundles/sonatajquery/jquery-1.10.2.js
+#            - bundles/sonatajquery/jquery-ui-1.10.4.js
+#            - bundles/sonatajquery/jquery-ui-i18n.js
+#            - bundles/sonataadmin/jquery/jquery.form.js
+#            - bundles/sonataadmin/jquery/jquery.confirmExit.js
+#            - bundles/sonataadmin/admin-lte/js/bootstrap.min.js
+#            - bundles/sonataadmin/bootstrap3-editable/bootstrap3-editable/js/bootstrap-editable.min.js
+#            - bundles/sonataadmin/select2/select2.min.js
+#            - bundles/sonataadmin/App.js
+#            - bundles/sonataadmin/Admin.js
+
+doctrine:
+    dbal:
+        types:
+            json: Sonata\Doctrine\Types\JsonType
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    ZesharCRMCoreBundle: ~
+                    SonataUserBundle: ~
+                    FOSUserBundle: ~
+                filters:
+                    lead_subject_filter:
+                        class:   ZesharCRM\Bundle\CoreBundle\Filter\ValidLeadSubjectFilter
+                        enabled: true
+                    access_filter:
+                        class:   ZesharCRM\Bundle\CoreBundle\Filter\AccessFilter
+                        enabled: false
+                    date_range_filter:
+                        class:   ZesharCRM\Bundle\CoreBundle\Filter\DateRangeFilter
+                        enabled: false
+                    soft-deleteable:
+                        class:   Gedmo\SoftDeleteable\Filter\SoftDeleteableFilter
+                        enabled: false
+
+parameters:
+#    sonata.user.admin.user.class: ZesharCRM\Bundle\CoreBundle\Admin\UserAdmin
+    sonata.user.admin.user.entity: ZesharCRM\Bundle\CoreBundle\Entity\User
+    security.acl.permission.map.class: Sonata\AdminBundle\Security\Acl\Permission\AdminPermissionMap
+    # optionally use a custom MaskBuilder
+    #sonata.admin.security.mask.builder.class: Sonata\AdminBundle\Security\Acl\Permission\MaskBuilder
+
+services:
+    sonata.user.admin.group:
+        abstract: true
+        public: false
+    gedmo.listener.softdeleteable:
+        class: Gedmo\SoftDeleteable\SoftDeleteableListener
+sonata_doctrine_orm_admin:
+    templates:
+      types:
+        list:
+          html: ZesharCRMCoreBundle:Default:sonata_list_html.html.twig
+#    audit:
+#        force: false

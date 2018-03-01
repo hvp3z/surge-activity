@@ -1,0 +1,29 @@
+<div class="group-forms">
+    <div class="form-group row">
+        <div class="col-md-6">
+            <label for="year">Year</label>
+            {{ render(controller('ZesharCRMCoreBundle:FormItems:leadPrequalificationYearSelect', {
+                'activeValue': autoYear
+            } )) }}
+        </div>
+        <div class="col-md-6">
+            <label for="compaign">Make</label>
+            <input type="text" id="compaign" name="auto_make[$$name$$]" class="form-control" value="{{ autoMake is defined ?  autoMake  : '' }}" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-md-6">
+            <label for="compaign">Model</label>
+            <input type="text" name="auto_model[$$name$$]" id="compaign" class="form-control" value="{{ autoModel is defined ? autoModel  : '' }}" />
+        </div>
+        <div class="col-md-6">
+            <label for="compaign">VIN Number</label>
+            <input type="text" id="compaign" name="auto_vinNumber[$$name$$]" class="form-control" value="{{ autoVinNumber is defined ? autoVinNumber : '' }}" />
+        </div>
+    </div>
+
+    <input type="hidden" class="autoId" name="autoId[$$name$$]" value="{{ autoId is defined ?  autoId  : '' }}" />
+    {% include('ZesharCRMCoreBundle:FormItems:prequalificationButtonGroup.html.twig') with {'empty': empty, 'singleEmpty': singleEmpty, 'last': last, 'save': false} %}
+
+</div>

@@ -1,0 +1,140 @@
+{% for label, flashes in app.session.flashbag.all %}
+    {% for flash in flashes %}
+        <div class="alert alert-error">
+            {{ flash }}
+        </div>
+    {% endfor %}
+{% endfor %}
+
+{% block spinner %}
+    {% include 'loading_spinner.html.twig' %}
+{% endblock %}
+
+<script>
+    (function() {
+        var _init = function () {
+            $('.btn').on('click', function() {
+                var formId = $(this).closest('[data-controller]').attr('id');
+                var spinner = new Spinner(formId);
+                spinner.create();
+                setTimeout(spinner.hide, 2000);
+            })
+        };
+        $(document).ready(setTimeout(_init, 30));
+    })();
+</script>
+
+<div class="custom-block calendar-block">
+    <div class="custom-head clearfix">
+        <div class="custom-menu">
+            <button class="up-custom"></button>
+        </div>
+        <h3>Account Info</h3>
+    </div>
+    <div class="clearfix">
+        <div id="billing-info" class="display-block-persistent" data-controller="leads_display" data-action="leadEvent">
+            <div class="form-column">
+                <h4 class="company-id">Company ID : {{ object.creator.company.id }} </h4><br />
+                <div class="before-error"></div>
+                <div class="before-success"></div>
+                <div class="small-table">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th width="15%">Subscription Status</th>
+                                <th width="35%"></th>
+                                <th width="15%">Credits</th>
+                                <th width="35%"></th>
+                            </tr>
+                            <tr>
+                                <td><b>Product</b></td>
+                                <td>
+                                    {% if is_granted('ROLE_ULTRA_ADMIN') %}
+                                        <input style="width:307px;" type="text" class="form-control" disabled value="{{ object.subscriptionProduct.name }}" >
+                                    {% else %}
+                                        <select class="active-select" style="width: 50%;" id="product">
+                                            {% for i,product in products %}
+                                                <option value="{{ i }}" {% if product.id == object.subscriptionProduct.id %} selected {% endif %}
+                                                    data-billingProduct="{{ product.id }}"
+                                                    data-billingMRate="{{ product.mRate }}"
+                                                    data-billingYRate="{{ product.yRate }}"
+                                                >{{ product.name }} </option>
+                                            {% endfor %}
+                                        </select>
+                                    {% endif %}
+                                </td>
+                                <td><b>License</b></td>
+                                <td>
+                                    {% if is_granted('ROLE_ULTRA_ADMIN') %}
+                                        <input style="width:307px;" id="billingLicense" type="text" class="form-control" disabled value="{{ object.license }}" >
+                                    {% else %}
+                                        <select class="active-select" style="width: 50%;" id="usersNumber">
+                                            {% for i in 1..15 %}
+                                                <option value="{{ i }}" {% if i == object.license %} selected {% endif %}>{{ i }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Status</b></td>
+                                <td>
+                                    <input id="billingStatus" style="width:307px;" type="text" class="form-control" disabled value="{{ object.subscriptionStatusString }}" >
+                                </td>
+                                <td><b>Next payment</b></td>
+                                <td>
+                                    <input style="width:307px;" id="billingCredit" type="text" class="form-control" disabled value="{{ object.credit }}" >
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br />
+
+                <div class="small-table">
+                    <table style="width:96%;">
+                        <tbody>
+                        <tr>
+                            <th width="15%">Billing Frequency</th>
+                            <th width="35%"></th>
+                            <th width="15%">License Info</th>
+                            <th width="35%"></th>
+                        </tr>
+                        <tr>
+                            <td><b>This subscription is currently billed</b></td>
+                            <td>
+                                <input name="frequency" {% if is_granted('ROLE_ULTRA_ADMIN') %} disabled {% endif %} type="radio" value="0" {% if not object.frequency %} checked {% endif %}/>Monthly
+                            </td>
+                            <td><b>Effective Date</b></td>
+                            <td>
+                                <input id="effectiveDate" disabled type="text"  value="{{ object.effectiveDate|date('M d, Y') }}" class="form-control datepicker" name="date"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input name="frequency" {% if is_granted('ROLE_ULTRA_ADMIN') %} disabled {% endif %} type="radio" value="1" {% if object.frequency %} checked {% endif %}/>Yearly
+                            </td>
+                            <td><b>Expiration Date</b></td>
+                            <td>
+                                <input id="expirationDate" disabled type="text" value="{{ object.expirationDate|date('M d, Y') }}"
+                                class="form-control datepicker" name="date"/>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br />
+
+                {% include('ZesharCRMCoreBundle:CRUD:DisplayPartial/billing_info_tab_credit_card_info.html.twig') %}
+                {% include('ZesharCRMCoreBundle:CRUD:DisplayPartial/billing_info_tab_payment_history.html.twig') %}
+            </div>
+            {% if not is_granted('ROLE_ULTRA_ADMIN') %}
+                {% include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_block_actions.html.twig') with {'show_cancel_link': false, 'save_button_title': 'Save'} %}
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+
+

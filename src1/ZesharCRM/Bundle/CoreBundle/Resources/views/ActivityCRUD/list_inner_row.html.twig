@@ -1,0 +1,14 @@
+{% for field_description in admin.list.elements %}
+    {% if field_description.name == '_action' and app.request.isXmlHttpRequest %}
+        {# Action buttons disabled in ajax view! #}
+    {% elseif field_description.getOption('ajax_hidden') == true and app.request.isXmlHttpRequest %}
+        {# Disable fields with 'ajax_hidden' option set to true #}
+    {% else %}
+        {%  if admin.baseRoutePattern == 'expiredactivity' and loop.first%}
+            <td class="sonata-ba-list-field sonata-ba-list-field-batch sonata-list-field-batch" objectid="{{ object.id }}">
+                <input type="checkbox" name="idx[]" value="{{ object.id  }}">
+            </td >
+        {% endif %}
+        {{ object|render_list_element(field_description) }}
+    {% endif %}
+{% endfor %}

@@ -1,0 +1,31 @@
+{% extends 'Sonata\DoctrineORMAdminBundle:CRUD:show_orm_one_to_many.html.twig' %}
+
+{% block field%}
+    {% if value is not empty %}
+        <ul class="sonata-ba-show-one-to-many">
+            {% for element in value%}
+                <li>
+                    {% if element.getAttachment().getText() is not empty %}
+                        <p>{{ element.getAttachment().getText()|nl2br }}</p>
+                    {% endif %}
+                    {% if element.getAttachment().getFile() is not empty %}
+                        <p>File:&nbsp;&nbsp;{{ element.getAttachment().getDownloadLink() | raw }}</p>
+                    {% endif %}
+                    {% if element.getAttachment().getCreator() is not empty %}
+                        <p>Posted by:&nbsp;&nbsp;{{ element.getAttachment().getCreator().getUsername() }}</p>
+                    {% endif %}
+                    <p>Posted at:&nbsp;&nbsp;{{ element.getAttachment().getCreatedAt()|date('Y-m-d H:i:s') }}</p>
+                    <p>Updated at:&nbsp;&nbsp;{{ element.getAttachment().getUpdatedAt()|date('Y-m-d H:i:s') }}</p>
+                    <p>
+                        <a href="{{ field_description.associationadmin.generateAttachmentEditURL(element.getAttachment()) }}">Edit this attachment</a>&nbsp;&nbsp;&nbsp;
+                        <a href="{{ field_description.associationadmin.generateAttachmentRemoveURL(element.getAttachment()) }}">Remove this attachment</a>
+                    </p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <br />
+        <div>This lead has no attachments yet.</div>
+    {% endif %}
+    <a href="{{ field_description.associationadmin.generateAttachmentCreateURL(object) }}">Add new attachment</a>
+{% endblock %}

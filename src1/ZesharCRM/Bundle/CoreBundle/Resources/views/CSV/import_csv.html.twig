@@ -1,0 +1,12 @@
+{% extends 'ZesharCRMCoreBundle::sonata_layout.html.twig' %}
+
+{% block sonata_breadcrumb %}
+    <ol class="nav navbar-top-links breadcrumb">
+        <li><a href="{{ url('sonata_admin_dashboard') }}">Dashboard</a></li>
+        <li class="active">Import CSV</li>
+    </ol>
+{% endblock sonata_breadcrumb %}
+
+{% block content %}
+    {{ sonata_block_render({'type': 'zeshar_crm_core.block.importcsv'}) }}
+{% endblock %}

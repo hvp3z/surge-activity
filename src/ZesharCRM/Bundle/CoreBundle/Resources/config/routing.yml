@@ -1,0 +1,115 @@
+admin:
+    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+    prefix: /admin
+
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admin
+
+sonata_user:
+    resource: '@SonataUserBundle/Resources/config/routing/admin_security.xml'
+    prefix: /admin
+
+sonata_user_security:
+    resource: "@SonataUserBundle/Resources/config/routing/sonata_security_1.xml"
+
+sonata_user_resetting:
+    resource: "@SonataUserBundle/Resources/config/routing/sonata_resetting_1.xml"
+    prefix: /resetting
+
+sonata_user_profile:
+    resource: "@SonataUserBundle/Resources/config/routing/sonata_profile_1.xml"
+    prefix: /profile
+
+sonata_user_register:
+    resource: "@SonataUserBundle/Resources/config/routing/sonata_registration_1.xml"
+    prefix: /register
+
+sonata_user_change_password:
+    resource: "@SonataUserBundle/Resources/config/routing/sonata_change_password_1.xml"
+    prefix: /profile
+
+root:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /dashboard
+        permanent: true
+
+dashboard:
+    pattern:  /dashboard
+    defaults: { _controller: ZesharCRMCoreBundle:Dashboard:index }
+
+
+widgetLoad:
+    pattern:  /widget/load
+    defaults: { _controller: ZesharCRMCoreBundle:Dashboard:loadWidget }
+
+widgetSave:
+    pattern:  /widget/save
+    defaults: { _controller: ZesharCRMCoreBundle:Dashboard:saveWidget }
+
+shortyImportCSV:
+     pattern: /admin/csv/import
+     defaults:  { _controller: ZesharCRMCoreBundle:CSV:importFile }
+    
+ajaxLeadsDisplay:
+    pattern:  /ajax/leads_display/{action}
+    defaults: { _controller: ZesharCRMCoreBundle:LeadDisplayBlocks:index}
+
+ajaxLeadsList:
+    pattern:  /ajax/leads_list/{action}
+    defaults: { _controller: ZesharCRMCoreBundle:LeadList:ajax}
+
+leadNoteAttach:
+    pattern:  /uploads/attachments
+    defaults: { _controller: ZesharCRMCoreBundle:LeadDisplayBlocks:leadNoteAttachAction}
+
+reports_user_performance:
+    pattern:  /admin/reports/userPerformance
+    defaults: { _controller: ZesharCRMCoreBundle:Reports:userPerformance}
+
+reports_user_conversion:
+    pattern:  /admin/reports/userConversion
+    defaults: { _controller: ZesharCRMCoreBundle:Reports:userConversion}
+
+reports_user_audit:
+    pattern:  /admin/reports/userAudit
+    defaults: { _controller: ZesharCRMCoreBundle:Reports:userAudit}
+
+import_csv:
+    pattern:  /admin/importCsv
+    defaults: { _controller: ZesharCRMCoreBundle:CSV:index}
+
+changeProduct:
+    pattern:  /admin/product
+    defaults: { _controller: ZesharCRMCoreBundle:Product:index}
+    methods: [POST]
+
+deleteProduct:
+    pattern:  /admin/product/{id}
+    defaults: { _controller: ZesharCRMCoreBundle:Product:delete}
+    methods: [DELETE]
+
+ajaxActivityList:
+    pattern:  /ajax/activity_list/{action}
+    defaults: { _controller: ZesharCRMCoreBundle:ActivityList:ajax}
+
+ajaxBillingInfo:
+    pattern:  /ajax/billingInfo/{action}
+    defaults: { _controller: ZesharCRMCoreBundle:BillingInfoBlocks:index}
+
+ajaxAccountInfo:
+    pattern:  /ajax/accountInfo/{action}
+    defaults: { _controller: ZesharCRMCoreBundle:AccountInfoBlocks:index}
+
+
+createAccount:
+    pattern:  /account/create
+    defaults: { _controller: ZesharCRMCoreBundle:AccountInfoBlocks:showForm}
+
+adnPaymentSilentPost:
+    pattern:  /billing/updatePaymentHistory
+    defaults: { _controller: ZesharCRMCoreBundle:BillingInfoBlocks:updatePaymentHistory}
+    methods: [POST]

@@ -1,0 +1,9 @@
+<td{% block sonata_list_field_attributes %} class="sonata-ba-list-field sonata-ba-list-field-{{ field_description.type }} sonata-list-field-{{ field_description.name }}" objectId="{{ admin.id(object) }}"{% endblock %}>
+    {% if object.contactCard is defined %}
+        {% if object.contactCard.phone is not empty %}
+            <div class="name-tel-tab {% if object.contactCard.phone.getDnc() %}dnc{% else %}make-call{% endif %}" style="width: auto; overflow: visible; {% if not object.contactCard.phone.getDnc() %}cursor:pointer;{% endif %}">
+                {{ object.contactCard.phone }}
+            </div>
+        {% endif %}
+    {% endif %}
+</td>

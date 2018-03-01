@@ -1,0 +1,9 @@
+<select id="{{ formItemId }}" name="{{ formItemId }}" class="custom-select light"{% if disabled is not empty %} disabled="disabled"{% endif %}>
+    {% if emptyOption is not empty %}
+        <option value="">{{ emptyOptionTitle }}</option>
+    {% endif %}
+    {% for entity in entities %}
+        {{ activeId }}
+        <option value="{{ entity.getId() }}" {% if activeId is not empty and entity.getId()|number_format == activeId|number_format %}selected="selected"{% endif %}>{{ attribute(entity, titleProperty) }}</option>
+    {% endfor %}
+</select>

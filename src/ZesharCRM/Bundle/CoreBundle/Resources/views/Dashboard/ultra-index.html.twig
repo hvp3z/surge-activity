@@ -1,0 +1,105 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Dashboard{% endblock %}
+{% block page_title %}Dashboard{% endblock %}
+
+
+{% block content %}
+
+{% include('ZesharCRMCoreBundle:CRUD:DisplayPartial/product_block_actions_js.html.twig') %}
+
+	<link rel="stylesheet" type="text/css"  href="{{ asset('bundles/sonataadmin/vendor/bootstrap/dist/css/bootstrap.min.css') }}"  />
+	<link rel="stylesheet" type="text/css"  href="{{ asset('bundles/sonataadmin/vendor/AdminLTE/css/AdminLTE.css') }}"  />
+	<link rel="stylesheet" type="text/css"  href="{{ asset('bundles/zesharcrmcore/css/jquery-ui.css') }}"  />
+	<style>
+		footer {
+			margin-top: 0px;
+		}
+		.show-display-per-block-actions{
+			display: block!important;
+			margin-left: 0px; 
+		}
+		.menu-wrap{
+			height: 49px!important;
+		}
+        .ui-dialog{
+            height:200px!important;
+            width:400px!important;
+            top:300px!important;
+        }
+        #dialog-confirm{
+            height:90px!important;
+        }
+	</style>
+
+
+    <div id="dialog-confirm" title="Remove product?" style="display:none;">
+        <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>These item will be permanently deleted and cannot be recovered. Are you sure?</p>
+    </div>
+
+    <div class="custom-block calendar-block">
+    <div class="clearfix">
+        <div id="billing-info" class="display-block-persistent" data-controller="leads_display" data-action="leadEvent">
+            <div class="form-column">
+                <form action="{{ path('changeProduct') }}" method="POST" >
+                    <div class="small-table">
+                            <table style="width:100%;">
+                                <tbody>
+                                <tr>
+                                    <th width="23%">Product</th>
+                                    <th width="23%">Product Type</th>
+                                    <th width="23%">Monthly Rate</th>
+                                    <th width="23%">Yearly Rate</th>
+                                    <th width="8%">Action</th>
+                                </tr>
+                                {% for product in products %}
+                                        <tr>
+                                            <td>
+                                                <input class="id" class="form-control" type="hidden" name="id[]" value="{{ product.id }}" />
+                                                <input class="form-control" type="text" name="name[]" value="{{ product.name }}" />
+                                            </td>
+                                            <td>
+                                                <select class="active-select" name="type[]">
+                                                    {% for i,type in productTypes %}
+                                                        <option value="{{ i }}" {% if product.productType == i %}selected{% endif %}>{{ type }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            </td>
+                                            <td><input class="form-control" type="text" name="mRate[]" value="{{ product.monthlyRate }}" /></td>
+                                            <td><input class="form-control" type="text" name="yRate[]" value="{{ product.yearlyRate }}" /></td>
+                                            <td>
+                                                <div class="show-display-per-block-actions" style="margin-left: 65px;">
+                                                    <a class="delete" href="#" class="btn-cancel-block" data-id="{{ product.id }}">Delete</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                {% endfor %}
+                                    <tr>
+                                        <td>
+                                            <input class="form-control" type="hidden" name="id[]"  />
+                                            <input class="form-control" type="text" name="name[]"  />
+                                        </td>
+                                        <td>
+                                            <select class="active-select" name="type[]">
+                                                {% for i,type in productTypes %}
+                                                    <option value="{{ i }}">{{ type }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </td>
+                                        <td><input class="form-control" type="text" name="mRate[]" /></td>
+                                        <td><input class="form-control" type="text" name="yRate[]" /></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                    </div>
+                    {% include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_block_actions.html.twig') with {'show_cancel_link': false, 'save_button_title': 'Save'} %}		
+                </form>
+                <br />
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% block widget %}
+    <div class="custom-block">
+        <div class="custom-head clear-fix">
+            <div class="custom-menu">
+                <button class="up-custom"></button>
+                <button class="settings-custom"></button>
+                <button class="close-custom"></button>
+            </div>
+            <div class="custom-menu-select">
+                {% if persons is not empty %}
+                    <select class="user_data">
+                        {% for person in persons %}
+                            <option {% if selectedUser == person.username %} selected {% endif %}>{{ person.username}}</option>
+                        {% endfor %}
+                    </select>
+                {% endif %}
+            </div>
+            <h3>My SurgePoint</h3>
+        </div>
+        <div class="custom-content">
+            {% for key, value in data %}
+                {% set percent = value.percent*100|format(0) %}
+                {% if percent > 100 %}
+                    {% set percent = 100 %}
+                {% endif %}
+                <div class="wrap-battery">
+                    {% set count = value.count|number_format > 0 ? value.count|number_format : 0 %}
+                    <div class="value-battery">{{ count }}</div>
+                    <div class="column-battery">
+                        <i data-percent-height="{{ percent }}%" data-color="{{ value.color }}" class="icon-battery icon-widget"></i>
+                    </div>
+                    <div class="legend">{{ key }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

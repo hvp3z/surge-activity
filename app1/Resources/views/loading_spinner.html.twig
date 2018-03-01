@@ -1,0 +1,32 @@
+{% block spinner %}
+    <link rel="stylesheet" href="{{ asset('css/jquery-loading.min.css') }}">
+    <script src="{{ asset('js/jquery-loading.js') }}"></script>
+    <script>
+        Spinner = function (elemId) {
+            var elemName = '#'+elemId;
+            var spinner = null;
+            return {
+                show : function () {
+                    spinner.show();
+                },
+                hide : function () {
+                    spinner.hide();
+                },
+                destroy : function () {
+                    spinner.destroy();
+                    spinner = null;
+                },
+                option: function (key, value) {
+                    spinner.option(key, value)
+                },
+                create : function (options) {
+                    var elem = $(elemName).loading(options);
+                    spinner = elem.data().plugin_loading;
+                },
+                init : function () {
+                    spinner.init()
+                }
+            }
+        };
+    </script>
+{% endblock %}

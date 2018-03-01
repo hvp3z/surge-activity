@@ -1,0 +1,10 @@
+<td{% block sonata_list_field_attributes %} class="sonata-ba-list-field sonata-ba-list-field-{{ field_description.type }} sonata-list-field-{{ field_description.name }}" objectId="{{ admin.id(object) }}"{% endblock %}>
+
+    {% if object.billingStatus() == 'Active' %}
+        <span class="contact-status yes">{{ object.billingStatus() }}</span>
+    {% endif %}
+    {% if object.billingStatus == 'Inactive' %}
+        <span class="contact-status no">{{ object.billingStatus }}</span>
+    {% endif %}
+
+</td>

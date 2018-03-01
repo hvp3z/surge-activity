@@ -1,0 +1,83 @@
+ZesharCRM\Bundle\CoreBundle\Entity\CreditCard:
+    type: entity
+    table: credit_card
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+            nullable: false
+        number:
+            type: string
+            length: 25
+            nullable: false
+        expirationDate:
+            type: date
+            nullable: false
+            column: expiration_date
+        address:
+            type: string
+            length: 255
+            nullable: true
+        city:
+            type: string
+            length: 255
+            nullable: true
+        state:
+            type: string
+            length: 255
+            nullable: true
+        zipCode:
+            type: integer
+            nullable: true
+            column: zip_code
+        type:
+            type: integer
+            nullable: true
+        authCode:
+            type: string
+            length: 255
+            nullable: true
+            column: auth_code
+        transId:
+            type: string
+            length: 255
+            nullable: true
+            column: trans_id
+        refId:
+            type: string
+            length: 255
+            nullable: true
+            column: ref_id
+        profileId:
+            type: string
+            length: 255
+            nullable: true
+            column: profile_id
+        paymentProfileId:
+            type: string
+            length: 255
+            nullable: true
+            column: payment_profile_id
+        timeZone:
+            type: string
+            length: 100
+            nullable: true
+            column: time_zone
+
+    manyToOne:
+        owner:
+            targetEntity: User
+            cascade: {  }
+            mappedBy: null
+            inversedBy: creditCards
+            joinColumns:
+                owner:
+                    nullable: false
+                    referencedColumnName: id
+    lifecycleCallbacks: {  }

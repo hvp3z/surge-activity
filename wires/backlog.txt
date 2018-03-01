@@ -1,0 +1,53 @@
+
+     b) Ticket: This is not looking Good. These are types of at fault tickets. 1. Speeding   2. Seat Belt   3. No Insurance  4. Accident   5.DUI   6. DWL. 7. Other. Could these be done in a drop down list? This is better because there is no validation at the keyboard entry point.   (At Fault is two words).
+1. Opportunity Page: Milestone: Lead should be "Leads" and the arrows should face back rather than the front.
+2. Did we remove "Sold" as a Function in Quotes?
+If you removed "Appointed Events" list,  Fixed Location so it would be Location: Text box on the same row, You would be able to bring "Notes" to the same level as "Processing" and "General Info". It would look much better.
+
+1. When Lead is regenerated, or Recycled, it is listed just like any other lead(By Name), except that the Lead Source and Lead Type  will be different.(I removed Lead Type because it looked like Lead Source, but I see it has a totally different function.) Right now we do not have Lead Type, so  will use Lead Source. Lead Type is Recycled, Winback, Cross Sell. Lead Source is System, or Internet Leads, Network etc. I noticed the list lists leads by Lead Type. Can you put it back? (Under LeadPoint, LeadType should go to Lead Type, not Campaigns. By the way, it should Campaign should be changed tom "Activity").
+
+2. Tickets: No! Tickets go with the Driver and is attached to driver's licence. Multiple tickets can be added to the same Driver. He could have a speeding ticked, or two in one day, and have a DUI the next day!!
+3. Conversion rate: Does it mean that conversion rate changes are based on the performance in current month only? No. Conversion is an ongoing thing. It does not depend on time. It depends on how fast you are converting from one milestone to the next.  I think the misunderstanding would be, what if the new Activity is slightly different? So because of this, conversion rate should be done on each Activity. So, when Activity, or Product or Lead Source  is created, the conversion rate is not carried from similar activity. It starts its own.  Milestones though, will have not be re-created.
+4. Login: User Id, Date, Time Logged in, Time Logged out.
+5. The Edit List pages and the new Lead page look good. Except Lead Score: Remove the word "Criteria" And do the same thing as Auto , Driver, Insured Address. They need to stand out when they are unhidden. I would Make the background color for just those rows look a little different because they are titles.
+6. Appointments: Can you rename the header: "Appointments" since you already have Today's date on the Widgets. And this being the case, Appointed events should not be there because they already show on the widgets "My Calendar". However, if necessary, then that list should show under "Calendar" Menu.
+
+Calendar block - rename to appointments
+add lead type
+appointed events - neglected checkbox/radiobutton, contact status - not yet, to appointed events, remove contact status from processing
+
+
+Basically you need to capture:
+ a) User Performance
+ b) Lead Performance
+ c) System Performance: In generating leads
+ d) Login Reports: for the Admin, who logged in, when, and what did they change.
+
+
+Milton Asherz
+
+On Wed, Oct 29, 2014 at 1:57 PM, Milton Asherz <miltonasherz@gmail.com> wrote:
+Report:
+
+1) History (What you now call "Operations")... oops... it is not there!!
+2) Lead performance:
+3) User performance: This already is shown in the Widgets)
+     a) Conversion rates - This is also shown in the Widgets
+     b) How they are meeting goals
+4) Contact Log:
+    a) Who was contacted
+    b) When were they contacted
+    c) We can sort out contact be type etc.
+5) Audit Reports
+     a) How many Leads were created
+     b) How many leads were processed
+     c) How many leads were sold
+     d) How many leads were recycled
+     e) How many leads were automatically generated bt the system for cross sale?
+6) Activity History:
+        a) This already exists. But we need to add:
+             1) How many leads are there in this Activity
+             2) How many leads were quoted
+             3) How many leads are sold
+             5) What is the conversion rate for this activity, for each user?
+7) Conversion Rate

@@ -1,0 +1,38 @@
+ZesharCRM\Bundle\CoreBundle\Entity\PaymentHistory:
+    type: entity
+    table: payment_history
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        description:
+            type: string
+            length: 255
+            nullable: true
+        date:
+            type: datetime
+            nullable: false
+        amount:
+            type: decimal
+            precision: 10
+            scale: 2
+            nullable: false
+        trialOccurrences:
+            type: integer
+            nullable: true
+            column: trial_occurrences
+
+    manyToOne:
+        creator:
+            targetEntity: User
+            cascade: {  }
+            mappedBy: null
+            inversedBy: payments
+            joinColumns:
+                creator:
+                    nullable: false
+                    referencedColumnName: id
+    lifecycleCallbacks: {  }

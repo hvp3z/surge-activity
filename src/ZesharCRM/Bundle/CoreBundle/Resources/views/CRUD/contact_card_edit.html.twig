@@ -1,0 +1,200 @@
+{% extends 'SonataAdminBundle:CRUD:edit.html.twig' %}
+{% block form %}
+    {{ sonata_block_render_event('sonata.admin.edit.form.top', { 'admin': admin, 'object': object }) }}
+
+    {% set url = admin.id(object) is not null ? 'edit' : 'create' %}
+
+    {% if not admin.hasRoute(url)%}
+        <div>
+            {{ "form_not_available"|trans({}, "SonataAdminBundle") }}
+        </div>
+    {% else %}
+        {# some styles and javascript for dynamic fields #}
+        <style>
+                div[id^=field_container_][id$=_contacts] table tbody tr [class*=-donotEmail] select { display: none; }
+                div[id^=field_container_][id$=_contacts] table tbody tr [class*=-name] input { display: none; }
+        </style>
+        <script type="text/javascript">
+                (function($) {
+                    
+                    $(document).ready(function() {
+                        var typeSelectSelector = 'div[id^=field_container_][id$=_contacts] table tbody tr [class*=_contacts-type] select';
+//                        console.log($('div[id$=_type] div select'));
+
+                        var networkSelect =  $('select[id$=_networkType]');
+                        var networkLabel =  $('.networkTypeLabel');
+
+                        $(document).on('change', 'div[id$=_type] div select', function(){
+                            if ($(this).find(":selected").text() == "Network") {
+                                console.log('jaja');
+                                networkSelect.show();
+                                networkLabel.show();
+                            } else {
+                                networkSelect.prop('selectedIndex',0);
+                                networkSelect.hide();
+                                networkLabel.hide();
+                            }
+                        });
+                        
+                        var handleContactsRow = function() {
+                            console.log($(this));
+                            var that = this; // to access current context in helpers
+                            
+                            // helpers to show/hide optional fields
+                            var hideContactStatus = function() {
+                                $(that).parent().siblings('[class*=-donotCall]').children('select').val('').trigger('change').hide();
+                            };
+                            var showContactStatus = function() {
+                                $(that).parent().siblings('[class*=-donotCall]').children('select').show();
+                            };
+                            var hideDNE = function() {
+                                $(that).parent().siblings('[class*=-donotEmail]').children('select').val('').trigger('change').hide();
+                            };
+                            var showDNE = function() {
+                                $(that).parent().siblings('[class*=-donotEmail]').children('select').show();
+                            };
+                            var hideDNC = function() {
+                                $(that).parent().siblings('[class*=-dnc]').children('select').val('').trigger('change').hide();
+                            };
+                            var showDNC = function() {
+                                $(that).parent().siblings('[class*=-dnc]').children('select').show();
+                            };
+                            var hideName = function() {
+                                $(that).parent().siblings('[class*=-name]').children('input').val('').trigger('change').hide();
+                            };
+                            var showName = function() {
+                                $(that).parent().siblings('[class*=-name]').children('input').show();
+                            };
+                            
+                            var selectedVal = $(this).val();
+                            
+                            if (selectedVal == 1 || selectedVal == 2 || selectedVal == 3) { // 1,2,3 - phone contact types
+                                showContactStatus();
+                                showDNC();
+                            } else {
+                                hideContactStatus();
+                                hideDNC();
+                            }
+                            
+                            if (selectedVal == 4) { // 4 - email contact type
+                                showDNE();
+                            } else {
+                                hideDNE();
+                            }
+                            
+                            if (selectedVal == 7) { // 7 - custom contact type
+                                showName();
+                            } else {
+                                hideName();
+                            }
+                            
+                        };
+                        
+                        $(document).on('change', typeSelectSelector, handleContactsRow);
+                        $(typeSelectSelector).each(handleContactsRow);
+                        
+                    });
+                })(jQuery);
+        </script>
+        {# end js #}
+        <form
+              {% if admin_pool.getOption('form_type') == 'horizontal' %}class="form-horizontal"{% endif %}
+              role="form"
+              action="{{ admin.generateUrl(url, {'id': admin.id(object), 'uniqid': admin.uniqid, 'subclass': app.request.get('subclass')}) }}" {{ form_enctype(form) }}
+              method="POST"
+              {% if not admin_pool.getOption('html5_validate') %}novalidate="novalidate"{% endif %}
+              class="contact_card_edit_form"
+              >
+            {% if form.vars.errors|length > 0 %}
+                <div class="sonata-ba-form-error">
+                    {{ form_errors(form) }}
+                </div>
+            {% endif %}
+
+            {% block sonata_pre_fieldsets %}
+                <div class="row">
+            {% endblock %}
+
+            {% block sonata_tab_content %}
+                {% for name, form_group in admin.formgroups %}
+                    <div class="{{ form_group.class|default('col-md-12') }}">
+                        <div class="box box-success">
+                            <div class="box-header">
+                                <h4 class="box-title">
+                                    {{ admin.trans(name, {}, form_group.translation_domain) }}
+                                </h4>
+                            </div>
+                            {#<div class="box{% if loop.first %} in{% endif %}" id="{{ admin.uniqid }}_{{ loop.index }}">#}
+                                <div class="box-body">
+                                    <div class="sonata-ba-collapsed-fields">
+                                        {% if form_group.description != false %}
+                                            <p>{{ form_group.description|raw }}</p>
+                                        {% endif %}
+
+                                        {% for field_name in form_group.fields %}
+                                            {% if admin.formfielddescriptions[field_name] is defined %}
+                                                {{ form_row(form[field_name])}}
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {#</div>#}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endblock %}
+
+            {% block sonata_post_fieldsets %}
+                </div>
+            {% endblock %}
+                
+            {{ form_rest(form) }}
+
+            {% block formactions %}
+                <div class="well well-small form-actions">
+                    {% if app.request.isxmlhttprequest %}
+                        {% if admin.id(object) is not null %}
+                            <button type="submit" class="btn btn-success" name="btn_update"><i class="fa fa-save"></i> {{ 'btn_update'|trans({}, 'SonataAdminBundle') }}</button>
+                        {% else %}
+                            <button type="submit" class="btn btn-success" name="btn_create"><i class="fa fa-plus-circle"></i> {{ 'btn_create'|trans({}, 'SonataAdminBundle') }}</button>
+                        {% endif %}
+                    {% else %}
+                        {% if admin.supportsPreviewMode %}
+                            <button class="btn btn-info persist-preview" name="btn_preview" type="submit">
+                                <i class="fa fa-eye"></i>
+                                {{ 'btn_preview'|trans({}, 'SonataAdminBundle') }}
+                            </button>
+                        {% endif %}
+                        {% if admin.id(object) is not null %}
+                            <button type="submit" class="btn btn-success" name="btn_update_and_edit"><i class="fa fa-save"></i> {{ 'btn_update_and_edit_again'|trans({}, 'SonataAdminBundle') }}</button>
+
+                            {% if admin.hasroute('list') %}
+                                <button type="submit" class="btn btn-success" name="btn_update_and_list"><i class="fa fa-save"></i> <i class="fa fa-list"></i> {{ 'btn_update_and_return_to_list'|trans({}, 'SonataAdminBundle') }}</button>
+                            {% endif %}
+
+                            {% if admin.hasroute('delete') and admin.isGranted('DELETE', object) %}
+                                {{ 'delete_or'|trans({}, 'SonataAdminBundle') }}
+                                <a class="btn btn-danger" href="{{ admin.generateObjectUrl('delete', object) }}"><i class="fa fa-minus-circle"></i> {{ 'link_delete'|trans({}, 'SonataAdminBundle') }}</a>
+                            {% endif %}
+
+                            {% if admin.isAclEnabled() and admin.hasroute('acl') and admin.isGranted('MASTER', object) %}
+                                <a class="btn btn-info" href="{{ admin.generateObjectUrl('acl', object) }}"><i class="fa fa-users"></i> {{ 'link_edit_acl'|trans({}, 'SonataAdminBundle') }}</a>
+                            {% endif %}
+                        {% else %}
+                            {% if admin.hasroute('edit') %}
+                                <button class="btn btn-success" type="submit" name="btn_create_and_edit"><i class="fa fa-save"></i> {{ 'btn_create_and_edit_again'|trans({}, 'SonataAdminBundle') }}</button>
+                            {% endif %}
+                            {% if admin.hasroute('list') %}
+                                <button type="submit" class="btn btn-success" name="btn_create_and_list"><i class="fa fa-save"></i> <i class="fa fa-list"></i> {{ 'btn_create_and_return_to_list'|trans({}, 'SonataAdminBundle') }}</button>
+                            {% endif %}
+                            <button class="btn btn-success" type="submit" name="btn_create_and_create"><i class="fa fa-plus-circle"></i> {{ 'btn_create_and_create_a_new_one'|trans({}, 'SonataAdminBundle') }}</button>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            {% endblock formactions %}
+        </form>
+    {% endif%}
+
+    {{ sonata_block_render_event('sonata.admin.edit.form.bottom', { 'admin': admin, 'object': object }) }}
+
+{% endblock %}

@@ -1,0 +1,36 @@
+parameters:
+#    zeshar_crm_lead_scoring.example.class: ZesharCRM\Bundle\LeadScoringBundle\Example
+
+services:
+#    zeshar_crm_lead_scoring.example:
+#        class: %zeshar_crm_lead_scoring.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+    zeshar_crm_lead_scoring.admin.scoring_criteria:
+            class: ZesharCRM\Bundle\LeadScoringBundle\Admin\ScoringCriteriaAdmin
+            arguments: [~, ZesharCRM\Bundle\LeadScoringBundle\Entity\ScoringCriteria, ZesharCRMLeadScoringBundle:ScoringCriteriaAdmin]
+            tags:
+                - {name: sonata.admin, manager_type: orm, group: Lead Scoring, label: Scoring Criteria}
+
+    zeshar_crm_leadscoring.service.event_service:
+        class: ZesharCRM\Bundle\LeadScoringBundle\Listener\LSESubscriber
+        arguments: [ @service_container]
+        tags:
+            - {name: kernel.event_subscriber}
+
+    zeshar_crm_lead_scoring.admin.lead_scoring:
+        class: ZesharCRM\Bundle\LeadScoringBundle\Admin\LeadScoringAdmin
+        arguments: [~, ZesharCRM\Bundle\LeadScoringBundle\Entity\LeadScoring, ZesharCRMLeadScoringBundle:LeadScoringAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Lead Scoring, label: Lead Scoring}
+            
+    zeshar_crm_lead_scoring.sonata_admin_configure_listener:
+        class: ZesharCRM\Bundle\LeadScoringBundle\EventListener\SonataAdminConfigureListener
+        arguments: [ @service_container ]
+        tags:
+          - { name: kernel.event_listener, event: zeshar_crm_core.sonata_admin_configure, method: onSonataAdminConfigure }
+
+    # this is custom filter for sonata list
+    zeshar_crm_lead_scoring.helpers.filter.zeshar_lead_score:
+        class: ZesharCRM\Bundle\LeadScoringBundle\Helper\Filter\FilterLeadScore
+        tags:
+            - {name: sonata.admin.filter.type, alias: zeshar_lead_score}

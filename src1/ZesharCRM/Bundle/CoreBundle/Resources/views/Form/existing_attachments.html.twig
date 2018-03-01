@@ -1,0 +1,34 @@
+<div class="form-group">
+                                                <label class="control-label">
+                                    Comments
+                            </label>
+
+        <div class="sonata-ba-field sonata-ba-field-standard-natural">
+                
+                {% if object.getAttachments() is not empty %}
+                    <ul class="sonata-ba-show-one-to-many">
+                        {% for element in object.getAttachments() %}
+                            <li>
+                                {% if element.getAttachment().getText() is not empty %}
+                                    <p>{{ element.getAttachment().getText()|nl2br }}</p>
+                                {% endif %}
+                                {% if element.getAttachment().getFile() is not empty %}
+                                    <p>File:&nbsp;&nbsp;{{ element.getAttachment().getDownloadLink() | raw }}</p>
+                                {% endif %}
+                                {% if element.getAttachment().getCreator() is not empty %}
+                                    <p>Posted by:&nbsp;&nbsp;{{ element.getAttachment().getCreator().getUsername() }}</p>
+                                {% endif %}
+                                <p>Posted at:&nbsp;&nbsp;{{ element.getAttachment().getCreatedAt()|date('Y-m-d H:i:s') }}</p>
+                                <p>Updated at:&nbsp;&nbsp;{{ element.getAttachment().getUpdatedAt()|date('Y-m-d H:i:s') }}</p>
+                                <br/>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <br />
+                    <div>This item has no attachments yet.</div>
+                {% endif %}
+                
+        </div>
+
+</div>

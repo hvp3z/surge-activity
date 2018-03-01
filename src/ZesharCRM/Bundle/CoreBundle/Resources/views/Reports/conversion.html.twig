@@ -1,0 +1,79 @@
+{% extends 'ZesharCRMCoreBundle:Reports:list.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('select.table-select').change(function(){
+                index = $(this).parent().parent().attr('index');
+                entityName = $('tr[index="'+index+'"]').find('select.table-select option:selected').attr('name');
+
+                $tr = $('tr.child-row[index="'+index+'"]');
+                $tr.each(function(ind,val){
+                    $(val).css('display','none');
+                });
+
+                if(entityName != "none"){
+                    tr = $('tr[name="'+entityName+'"]')[index];
+                    $(tr).toggle();
+                }
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block table_header %}
+    <thead class="title-head">
+    <tr>
+        {% for key,name in header %}
+            {#{% if admin.hasRoute('batch') and field_description.getOption('code') == '_batch' and batchactions|length > 0 %}#}
+
+
+            {% spaceless %}
+                <th class="sonata-ba-list-field-header-{{ key }}" class="sonata-list-field-{{ key }}" data-fieldname="{{ key }}">
+                    <span>{{ name }}</span>
+                    {#{% if sortable %}<a class="filter-link" href="{{ admin.generateUrl('list', sort_parameters) }}">{% endif %}#}
+                    {#{% if sortable %}</a>{% endif %}#}
+                </th>
+            {% endspaceless %}
+            {#{% endif %}#}
+        {% endfor %}
+    </tr>
+    </thead>
+{% endblock %}
+
+            {% block table_body %}
+                <tbody>
+                {% for ind,object in dataSet %}
+
+                    <tr class="user-row" index="{{ ind }}">
+                        {% for key,field in object %}
+                            <td>
+                                {% if field.id is defined %}
+                                    <span></span>{{ field }}</span>
+                                    <select class="table-select">
+                                        <option name="none"></option>
+                                        {% if object.user.productTable|length > 0  %}<option name="Product">Product</option>{% endif %}
+                                        {% if object.user.sourceTable|length > 0  %}<option name="Source">Source</option>{% endif %}
+                                        {% if object.user.campaignTable|length > 0  %}<option name="Activity">Activity</option>{% endif %}
+                                    </select>
+                                {% else %}
+                                    {{  field }}
+                                {% endif %}
+                            </td>
+                        {% endfor %}
+                    </tr>
+
+                    {% if object.user is defined and object.user.productTable is defined %}
+                        {{ include('ZesharCRMCoreBundle:Reports:partTable.html.twig', {'entityName': 'Product', 'dataTable':  object.user.productTable, 'index':ind }) }}
+                    {% endif %}
+                    {% if object.user is defined and object.user.sourceTable is defined %}
+                        {{ include('ZesharCRMCoreBundle:Reports:partTable.html.twig', {'entityName': 'Source', 'dataTable':  object.user.sourceTable, 'index':ind }) }}
+                    {% endif %}
+                    {% if object.user is defined and object.user.campaignTable is defined %}
+                        {{ include('ZesharCRMCoreBundle:Reports:partTable.html.twig', {'entityName': 'Activity', 'dataTable':  object.user.campaignTable, 'index':ind }) }}
+                    {% endif %}
+
+                {% endfor %}
+                </tbody>
+            {% endblock %}

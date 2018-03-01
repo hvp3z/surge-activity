@@ -1,0 +1,31 @@
+{% extends 'SonataAdminBundle::standard_layout.html.twig' %}
+
+{% block breadcrumb %}
+    <li><a href="{{ url('sonata_admin_dashboard') }}">{% trans %}Dashboard{% endtrans %}</a></li>
+    <li class="active">X-Sell Page</li>
+{% endblock %}
+
+{% block content %}
+    <h1>X-Sell Page</h1>
+    <table class="table table-bordered">
+        <thead>
+        <tr class="sonata-ba-view-title">
+            <th colspan="2">
+                Product:
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in product %}
+            <tr class="sonata-ba-view-container">
+                <td>
+                    {{ item.title }}
+                </td>
+                <td>
+                    <a class="btn btn-sm btn-default" title="Win-Back Product" href="{{ url('sonata_admin_crosssell_leadgenerate',{'product': item.id,'card':card})  }}">Create lead</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

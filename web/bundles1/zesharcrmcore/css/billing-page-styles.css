@@ -1,0 +1,89 @@
+.small-table{
+    display:block;
+}
+
+.small-table table{
+    font-size: 12px;
+    width:96%
+}
+
+.small-table table th {
+    text-align: left!important;
+    padding-left: 150px!important;
+}
+
+.small-table table select {
+    width:50%
+}
+
+.left-couple{
+    display:block;
+    height:400px;
+    float:left;
+    width: 45%;
+    margin-right: 45px;
+}
+
+.left-couple table{
+    width:98%
+}
+
+.right-couple{
+    display:block;
+    height:400px;
+    float:left;
+    width: 48.5%;
+    margin-right: 45px;
+}
+
+.right-couple table{
+    width:98%
+}
+
+table.payments tr{
+    border-bottom: 1pt solid lightgrey;
+}
+
+
+.red{
+    color:red;
+}
+
+.error{
+    background-color: #d9534f;
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 90%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    width: 505px;
+}
+
+.success{
+    background-color: #5cb85c;
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 90%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    width: 505px;
+}
+
+input.form-control{
+    width: 265px;
+}
+
+.company-id{
+    color:#5cb85c;
+    font-weight: bold;
+}

@@ -1,0 +1,204 @@
+ZesharCRM\Bundle\CoreBundle\Entity\LeadSubject:
+    type: entity
+    inheritanceType: JOINED
+    discriminatorColumn:
+      name: discr
+      type: string
+      length: null
+      fieldName: discr
+    discriminatorMap:
+      lead: Lead
+      opportunity: Opportunity
+    table: lead_subject
+    gedmo:
+        soft_deleteable:
+          field_name: deletedAt
+          time_aware: false
+    repositoryClass: ZesharCRM\Bundle\CoreBundle\Repository\LeadSubjectRepository
+    id:
+        id:
+            type: integer
+            id: true
+            nullable: false
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+            nullable: false
+        status:
+            type: smallint
+            nullable: false
+        purchasedAt:
+            type: datetime
+            column: purchased_at
+            nullable: true
+        purchaseAmount:
+            type: bigint
+            column: purchase_amount
+            nullable: true
+        estimatedValue:
+            type: bigint
+            column: estimated_value
+            nullable: true
+        previousCarrierName:
+            type: string
+            length: 255
+            column: previous_carrier_name
+            nullable: true
+        previousCarrierPolice:
+            type: string
+            length: 255
+            column: previous_carrier_police
+            nullable: true
+        previousCarrierXDate:
+            type: datetime
+            column:  previous_carrier_x_date
+            nullable: true
+        systemLeadType:
+            type: smallint
+            column: system_lead_type
+            nullable: true
+        quantity:
+            type: integer
+            nullable: true
+        isArchive:
+            type: boolean
+            column: is_archive
+            nullable: true
+        createdAt:
+            type: datetime
+            column: created_at
+            nullable: false
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            column: updated_at
+            nullable: false
+            gedmo:
+                timestampable:
+                    on: update
+        deletedAt:
+             type: datetime
+             nullable: true
+    lifecycleCallbacks: {  }
+    manyToOne:
+#        creator:
+#            targetEntity: User
+#            cascade: {  }
+#            mappedBy: null
+#            inversedBy: createdLeads
+#            joinColumns:
+#                creator:
+#                    nullable: false
+#                    referencedColumnName: id
+#            orphanRemoval: false
+#        assignee:
+#            targetEntity: User
+#            cascade: {  }
+#            mappedBy: null
+#            inversedBy: assignedLeads
+#            joinColumns:
+#                assignee:
+#                    referencedColumnName: id
+#            orphanRemoval: false
+        contactCard:
+            targetEntity: ContactCard
+            cascade: ["persist"]
+            mappedBy: null
+            inversedBy: relatedLeads
+            joinColumns:
+                contact_card:
+                    nullable: true
+                    referencedColumnName: id
+            orphanRemoval: false
+        contactCardOpportunity:
+            targetEntity: ContactCard
+            cascade: ["persist"]
+            mappedBy: null
+            inversedBy: relatedLeads
+            joinColumns:
+                contact_card_opportunity:
+                    nullable: true
+                    referencedColumnName: id
+            orphanRemoval: false
+        leadCategory:
+            targetEntity: LeadCategory
+            cascade: ["remove"]
+            mappedBy: null
+            inversedBy: lead
+            joinColumns:
+                lead_category:
+                    nullable: true
+                    referencedColumnName: id
+            orphanRemoval: false
+        leadCampaign:
+            targetEntity: Activity
+            cascade: {  }
+            mappedBy: null
+            inversedBy: lead
+            joinColumns:
+                lead_campaign:
+                    nullable: true
+                    referencedColumnName: id
+            orphanRemoval: false
+        leadSource:
+            targetEntity: LeadSource
+            cascade: {  }
+            mappedBy: null
+            inversedBy: lead
+            joinColumns:
+                lead_source:
+                    nullable: true
+                    referencedColumnName: id
+            orphanRemoval: false
+        leadType:
+            targetEntity: LeadType
+            cascade: {  }
+            mappedBy: null
+            inversedBy: lead
+            joinColumns:
+                lead_type:
+                    nullable: true
+                    referencedColumnName: id
+            orphanRemoval: false
+    oneToOne:
+        opportunity:
+            targetEntity: Opportunity
+            mappedBy: lead
+    oneToMany:
+        attachments:
+            targetEntity: LeadAttachment
+            mappedBy: leadSubject
+            cascade: ["persist", "remove"]
+        leadEvents:
+            targetEntity: LeadEvent
+            mappedBy: lead
+            cascade: ["persist", "remove"]
+        prequalificationAutos:
+            targetEntity: LeadPrequalificationAuto
+            mappedBy: lead
+            cascade: ["remove"]
+        prequalificationDrivers:
+            targetEntity: LeadPrequalificationDriver
+            mappedBy: lead
+            cascade: ["remove"]
+        prequalificationInsuredAddresses:
+            targetEntity: LeadPrequalificationInsuredAddress
+            mappedBy: lead
+            cascade: ["remove"]
+        operations:
+            targetEntity: Operation
+            mappedBy: entity
+            cascade: ["remove"]
+        milestoneOperations:
+            targetEntity: MilestoneOperation
+            mappedBy: leadSubject
+            cascade: ["remove"]
+        callReports:
+            targetEntity: ZesharCRM\Bundle\CallsBundle\Entity\CallReporting
+            ccascade: ["remove"]
+            mappedBy: lead

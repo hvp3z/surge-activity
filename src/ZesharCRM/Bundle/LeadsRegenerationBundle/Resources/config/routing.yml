@@ -1,0 +1,11 @@
+zeshar_crm_leads_regeneration_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: ZesharCRMLeadsRegenerationBundle:Default:index }
+
+sonata_admin_crosssell:
+    pattern:  /admin/crosssell
+    defaults: { _controller: ZesharCRMLeadsRegenerationBundle:CrossSellAdmin:crossSell }
+
+sonata_admin_crosssell_leadgenerate:
+    pattern:  /admin/crosssell/leadgenerate
+    defaults: { _controller: ZesharCRMLeadsRegenerationBundle:CrossSellAdmin:generateLead }

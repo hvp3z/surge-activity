@@ -1,0 +1,15 @@
+<td{% block sonata_list_field_attributes %} class="sonata-ba-list-field sonata-ba-list-field-{{ field_description.type }} sonata-list-field-{{ field_description.name }}" objectId="{{ admin.id(object) }}"{% endblock %}>
+    {% if object.contactCard is defined %}
+        {% if (object.contactCard.getEmail() is defined) and (object.contactCard.getEmail() is not empty) %}
+            {% if not object.contactCard.getEmail().getDonotEmail() %}
+                <span class="email-tab">
+                    <a href="#" class="send-email" title="{{ object.contactCard.getEmail() }}">{{ object.contactCard.getEmail() }}</a>
+                </span>
+            {% else %}
+                <span class="email-tab marked-dne">
+                    {{ object.contactCard.getEmail() }}
+                </span>
+            {% endif %}
+        {% endif %}
+    {% endif %}
+</td>

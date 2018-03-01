@@ -1,0 +1,14 @@
+<ul class="lead-type four-list">
+    <li>
+        <input type="radio" class="radio" id="yes" name="contact_status" value="1" {% if activeValue is not empty and activeValue == 1 %}checked="checked"{% endif %} />
+        <label for="yes" class="contact-status yes">Yes</label>
+    </li>
+    <li>
+        <input type="radio" class="radio" id="no" name="contact_status" value="2" {% if activeValue is not empty and activeValue == 2 %}checked="checked"{% endif %}/>
+        <label for="no" class="contact-status no">No</label>
+    </li>
+    <li class="larger">
+        <input type="radio" class="radio" id="neglected" name="contact_status" value="3" {% if activeValue is not empty and activeValue == 3 %}checked="checked"{% endif %}/>
+        <label for="neglected" class="contact-status neglect">Neglected</label>
+    </li>
+</ul>

@@ -1,0 +1,57 @@
+{% extends 'ZesharCRMCoreBundle::sonata_layout.html.twig' %}
+
+{% block breadcrumb %}
+    <li><a href="{{ url('sonata_admin_dashboard') }}">{% trans %}Dashboard{% endtrans %}</a></li>
+    <li class="active">Scoring Page for {{ entity.name }}</li>
+{% endblock %}
+
+{% block content %}
+    {{ form_start(form) }}
+    <table class="table table-bordered">
+        <thead>
+        <tr class="sonata-ba-view-title">
+            <th colspan="2">
+                Scoring Criteria:
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ form_label(form.criteria)}}</td>
+                <td>
+                    {% macro recursiveCriteria(criteria,form) %}
+                        <li>
+                            {% for value in form.criteria %}
+                                {% if criteria.id == value.vars.value%}
+                                    {{ form_widget(value) }}
+                                {% endif %}
+                            {% endfor %}
+                            {{ criteria.name }}
+                            {% if criteria.children|length %}
+                                <ul style="margin-left:20px">
+                                    {% for child in criteria.children %}
+                                        {{ _self.recursiveCriteria(child,form) }}
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </li>
+                    {% endmacro %}
+
+                    {% if firstCriteria %}
+                        <ul style="margin-left:20px">
+                            {% for item in firstCriteria %}
+                                {{ _self.recursiveCriteria(item,form) }}
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>{{ leadScoring.total }}</td>
+            </tr>
+        </tbody>
+    </table>
+    {{ form_widget(form.save) }}
+    {{ form_end(form) }}
+{% endblock %}

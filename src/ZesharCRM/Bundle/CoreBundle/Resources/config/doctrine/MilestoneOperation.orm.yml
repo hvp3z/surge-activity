@@ -1,0 +1,38 @@
+ZesharCRM\Bundle\CoreBundle\Entity\MilestoneOperation:
+    type: entity
+    table: milestone_operation
+    repositoryClass: ZesharCRM\Bundle\CoreBundle\Repository\MilestoneOperationRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        performedAt:
+            type: datetime
+            column: performed_at
+        operationType:
+            type: integer
+            column: operation_type
+    manyToOne:
+        performer:
+            targetEntity: User
+            cascade: {  }
+            mappedBy: null
+            inversedBy: performedMilestoneOperations
+            joinColumns:
+                performer:
+                    nullable: false
+                    referencedColumnName: id
+            orphanRemoval: false
+        leadSubject:
+            targetEntity: LeadSubject
+            cascade: ["persist"]
+            mappedBy: null
+            inversedBy: milestoneOperations
+            joinColumns:
+                lead_subject:
+                    nullable: false
+                    referencedColumnName: id
+            orphanRemoval: false

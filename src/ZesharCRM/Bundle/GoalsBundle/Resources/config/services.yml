@@ -1,0 +1,32 @@
+parameters:
+#    zeshar_crm_goals.example.class: ZesharCRM\Bundle\GoalsBundle\Example
+
+services:
+#    zeshar_crm_goals.example:
+#        class: %zeshar_crm_goals.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+    zeshar_crm_goals.admin.goal:
+        class: ZesharCRM\Bundle\GoalsBundle\Admin\GoalAdmin
+        arguments: [~, ZesharCRM\Bundle\GoalsBundle\Entity\Goal, ZesharCRMGoalsBundle:GoalAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Goal, label: Goal}
+
+#    zeshar_crm_goals.admin.goal_assignment:
+#        class: ZesharCRM\Bundle\GoalsBundle\Admin\GoalAssignmentAdmin
+#        arguments: [~, ZesharCRM\Bundle\GoalsBundle\Entity\GoalAssignment, ZesharCRMGoalsBundle:GoalAssignmentAdmin]
+#        tags:
+#            - {name: sonata.admin, manager_type: orm, group: Goal, label: GoalAssignment}
+
+    zeshar_crm_goals.widget.performance:
+        class: ZesharCRM\Bundle\GoalsBundle\Service\Widget\PerformanceWidget
+        arguments: [ @service_container ]
+
+    zeshar_crm_core.widget.need:
+        class: ZesharCRM\Bundle\GoalsBundle\Service\Widget\NeedWidget
+        arguments: [ @service_container ]
+
+    zeshar_crm_goals.configure_menu_listener:
+        class: ZesharCRM\Bundle\GoalsBundle\EventListener\ConfigureMenuListener
+        arguments: [ @service_container ]
+        tags:
+          - { name: kernel.event_listener, event: zeshar_crm_core.menu_configure, method: onMenuConfigure }

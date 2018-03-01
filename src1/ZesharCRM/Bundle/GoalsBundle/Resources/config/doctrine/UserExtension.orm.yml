@@ -1,0 +1,17 @@
+ZesharCRM\Bundle\GoalsBundle\Entity\UserExtension:
+    type:  entity
+    table: fos_user
+    inheritanceType: SINGLE_TABLE
+    discriminatorMap:
+        leadCategoryExtension: ZesharCRM\Bundle\GoalsBundle\Entity\UserExtension
+    repositoryClass: ZesharCRM\Bundle\GoalsBundle\Repository\UserExtensionRepository
+    lifecycleCallbacks: {  }
+    oneToMany:
+        goalAssignments:
+            targetEntity: ZesharCRM\Bundle\GoalsBundle\Entity\GoalAssignment
+            cascade: {  }
+            mappedBy: assignee
+        createdGoals:
+            targetEntity: ZesharCRM\Bundle\GoalsBundle\Entity\Goal
+            cascade: {  }
+            mappedBy: creator

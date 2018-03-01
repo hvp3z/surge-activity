@@ -1,0 +1,65 @@
+ZesharCRM\Bundle\CoreBundle\Entity\Attachment:
+    table: attachment
+    type: entity
+    repositoryClass: ZesharCRM\Bundle\CoreBundle\Repository\AttachmentRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        text:
+            type: text
+            nullable: true
+        file:
+            type: string
+            length: 255
+            nullable: true
+        filename:
+            type: string
+            length: 255
+            nullable: true
+        createdAt:
+            type: datetime
+            column: created_at
+            nullable: false
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            column: updated_at
+            nullable: false
+            gedmo:
+                timestampable:
+                    on: update
+    lifecycleCallbacks:
+        prePersist:   [ lifecycleFileUpload ]
+        preUpdate:    [ lifecycleFileUpload ]
+    manyToOne:
+        creator:
+            targetEntity: User
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                creator:
+                    nullable: false
+                    referencedColumnName: id
+            orphanRemoval: false
+    oneToOne:
+        leadAttachment:
+            targetEntity: LeadAttachment
+            mappedBy: attachment
+            cascade: ["persist", "remove"]
+            onDelete: CASCADE
+            orderBy:
+                createdAt: DESC
+        opportunityAttachment:
+            targetEntity: OpportunityAttachment
+            mappedBy: attachment
+            cascade: ["persist", "remove"]
+            onDelete: CASCADE
+            orderBy:
+                createdAt: DESC

@@ -1,0 +1,41 @@
+{% block widget %}
+    <div class="box" style="margin:10px auto">
+        <div class="box-body ">
+            {% if persons is not empty %}
+                <select class="user_data">
+                    {% for person in persons %}
+                        <option {% if selectedUser == person.username %} selected {% endif %}>{{ person.username}}</option>
+                    {% endfor %}
+                </select>
+            {% endif %}
+            <h3>Performance</h3>
+            <table class="table" style="border: solid 1px darkgrey;border-collapse: collapse; width: 96%;margin:3px">
+                <tbody>
+                {% if data|length != 0 %}
+                    {% for key, value in data %}
+                        {% if value|length != 0 %}
+                            <tr >
+                                <td rowspan="{{ value|length +1 }}" style="border: 1px solid darkgrey;padding: 5px" >{{ humanTitles[key] }}</td>
+                            </tr >
+                            {% for key2, value2 in value %}
+                                <tr >
+                                    <td  style="border: 1px solid darkgrey;padding: 5px" >{{ key2 }} : {{ (value2.current / value2.estimated *100)| number_format(2) }} %</td>
+                                </tr>
+                            {% endfor %}
+                        {% else %}
+                            <tr >
+                                <td  style="border: 1px solid darkgrey;padding: 5px" >{{ humanTitles[key] }}</td>
+                                <td  style="border: 1px solid darkgrey;padding: 5px" >Empty</td>
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                    <tr >
+                        <td  style="border: 1px solid darkgrey;padding: 5px" >No operation!</td>
+                    </tr>
+                {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

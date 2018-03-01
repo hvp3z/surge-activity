@@ -1,0 +1,45 @@
+ZesharCRM\Bundle\CoreBundle\Entity\Operation:
+    type: entity
+    table: operation
+    repositoryClass: ZesharCRM\Bundle\CoreBundle\Repository\OperationRepository
+    id:
+        id:
+            type: integer
+            id: true
+            nullable: false
+            generator:
+                strategy: AUTO
+    fields:
+       performedAt:
+            type: datetime
+            column: performed_at
+            nullable: false
+            gedmo:
+                timestampable:
+                    on: create
+       operationType:
+            type: integer
+            column: operation_type
+            nullable: false
+    lifecycleCallbacks: {  }
+    manyToOne:
+        performer:
+            targetEntity: User
+            cascade: {  }
+            mappedBy: null
+            inversedBy: performedOperations
+            joinColumns:
+                performer:
+                    nullable: false
+                    referencedColumnName: id
+            orphanRemoval: false
+        entity:
+            targetEntity: LeadSubject
+            cascade: ["persist"]
+            mappedBy: null
+            inversedBy: operations
+            joinColumns:
+                entity:
+                    nullable: false
+                    referencedColumnName: id
+            orphanRemoval: false

@@ -1,0 +1,52 @@
+ZesharCRM\Bundle\CoreBundle\Entity\BillingInfo:
+    type: entity
+    table: billing_info
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        frequency:
+            type: integer
+        effectiveDate:
+            type: date
+            column: effective_date
+        expirationDate:
+            type: date
+            column: expiration_date
+        subscriptionStatus:
+            type: integer
+            column: subscription_status
+        subscriptionId:
+            type: string
+            length: 100
+            column: subscription_id
+            nullable: true
+        license:
+            type: integer
+        credit:
+            type: decimal
+            precision: 10
+            scale: 2
+    manyToOne:
+        creator:
+            targetEntity: User
+            cascade: ["remove"]
+            mappedBy: null
+            inversedBy: billingInfo
+            joinColumns:
+                creator:
+                    nullable: false
+                    referencedColumnName: id
+        subscriptionProduct:
+            targetEntity: Product
+            cascade: {  }
+            mappedBy: null
+            inversedBy: billingInfo
+            joinColumns:
+                subscription_product:
+                    nullable: false
+                    referencedColumnName: id
+    lifecycleCallbacks: {  }

@@ -1,0 +1,10 @@
+<div class="show-display-per-block-actions" style="margin-bottom: 15px;">
+    {% if not (show_cancel_link is defined and show_cancel_link == false) %}
+        <a href="#" class="btn-cancel-block">Cancel</a>
+        &nbsp;&nbsp;&nbsp;
+    {% endif %}
+    <button class="btn-save-block btn btn-green">{% if save_button_title is defined %}{{ save_button_title }}{% else %}Save{% endif %}</button>
+    {% if delete is defined and delete == true %}
+        <button class="btn-delete-block btn btn-red">{% if delete_button_title is defined %}{{ delete_button_title }}{% else %}Delete{% endif %}</button>
+    {% endif %}
+</div>

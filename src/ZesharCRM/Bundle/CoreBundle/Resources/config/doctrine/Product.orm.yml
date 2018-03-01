@@ -1,0 +1,37 @@
+ZesharCRM\Bundle\CoreBundle\Entity\Product:
+    type: entity
+    table: product
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+            nullable: true
+        monthlyRate:
+            type: decimal
+            precision: 10
+            scale: 2
+            nullable: true
+            column: monthly_rate
+        yearlyRate:
+            type: decimal
+            precision: 10
+            scale: 2
+            nullable: true
+            column: yearly_rate
+        productType:
+            type: integer
+            nullable: true
+            column: product_type
+
+    oneToMany:
+        billingInfo:
+            targetEntity: BillingInfo
+            mappedBy: subscriptionProduct
+            cascade: ["persist", "remove"]
+    lifecycleCallbacks: {  }

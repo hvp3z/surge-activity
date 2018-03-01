@@ -1,0 +1,95 @@
+<table class="goal child-goal-report-table table-sonata-list table-striped table table-bordered product" style="display: none">
+    <thead>
+    <tr>
+        <th class="cell-empty" colspan="2"></th>
+        <th colspan="3">LEAD STATUS</th>
+        <th colspan="3">PRIORITY</th>
+        <th colspan="3">MILESTONE</th>
+        <th colspan="6">PERFORMANCE</th>
+    </tr>
+    <tr>
+        <th>Product</th>
+        {#<th>Monthly Goals</th>#}
+        <th>Total Leads</th>
+        <th>Cold</th>
+        <th>Warm</th>
+        <th>Hot</th>
+        <th>Low</th>
+        <th>Medium</th>
+        <th>High</th>
+        <th>Leads</th>
+        <th>Opportunities</th>
+        <th>Quotes</th>
+        <th colspan="3">Sold</th>
+        <th colspan="3">Lost</th>
+        {#{% if filter == false %}#}
+        {#{% for month, prePercent in value.summaryPercentPreMonths|reverse %}#}
+        {#<th>#}
+        {#{{ month }}#}
+        {#</th>#}
+        {#{% endfor %}#}
+        {#{% endif %}#}
+    </tr>
+    </thead>
+    <tbody>
+
+    {% for productTitle, product in value.products %}
+        {% set monthlyGoals = product.user_year_goal/12 %}
+        {% if result.countDaysInMonth != 0 %}
+            {% set currentGoals = result.currentDay / result.countDaysInMonth * monthlyGoals %}
+        {% else %}
+            {% set currentGoals = 0 %}
+        {% endif %}
+        {% if currentGoals != 0 %}
+            {% set performance = product.sold / currentGoals * 100 %}
+        {% else %}
+            {% set performance = 0 %}
+        {% endif %}
+
+        <tr class="sonata-ba-view-container">
+            <td>
+                {{ productTitle }}
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            {#<td>#}
+                {#{{ monthlyGoals|round(2) }}#}
+            {#</td>#}
+            <td>
+                {{ product.sold }}
+            </td>
+            {#<td>#}
+                {#{{ currentGoals|round(2, 'floor') }}#}
+            {#</td>#}
+            <td class="performance {% if performance < 20 %}least{% endif %}{% if performance > 20 and performance < 40 %}little{% endif %}{% if performance > 40 and performance < 70 %}need_better{% endif %}{% if performance > 70 and performance < 100 %}good{% endif %}{% if performance > 100 %}very_good{% endif %} ">
+                <label class="tile-type"> {{ performance|round(2, 'floor') }}% </label>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            {#{% if filter == false %}#}
+            {#{% for month, prePercent in product.percentPreMonths|reverse %}#}
+            {#<td>#}
+            {#{% if monthlyGoals == 0 %}#}
+            {#-#}
+            {#{% else %}#}
+            {#{{ (prePercent / monthlyGoals * 100)|round(2, 'floor') }}%#}
+            {#{% endif %}#}
+            {#</td>#}
+            {#{% endfor %}#}
+            {#{% endif %}#}
+        </tr>
+
+    {% endfor %}
+
+    </tbody>
+</table>

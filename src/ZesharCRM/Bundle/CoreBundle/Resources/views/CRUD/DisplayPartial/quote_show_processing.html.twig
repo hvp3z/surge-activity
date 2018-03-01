@@ -1,0 +1,148 @@
+<div class="custom-block">
+    <div class="custom-head clearfix">
+        <h3>Processing</h3>
+    </div>
+    <script type="text/javascript">
+        (function($) {
+            $(document).ready(function() {
+                $('#lead_event_create').on('block-data-validate', function(e, params) {
+                    var values = params.values;
+
+                    //var eventDate = new Date(eventDate);
+                    // @TODO check past date/time
+
+                });
+                $('#lead_processing_save').on('block-ajax-return', function(e, serverResponse) {
+//                    var serverResponseObject = JSON.parse(serverResponse);
+//                    var redirectUrl = serverResponseObject.redirectUrl;
+//                    var sold = serverResponseObject.sold;
+//                    console.log(redirectUrl);
+//                    //console.log('ajax response', serverResponse);
+//                    $(this).find('input').not('[type="hidden"]').val('').trigger('change');
+//                    if (!sold) {
+//                        if (redirectUrl) {
+//                            window.location.replace(redirectUrl);
+//                        } else {
+//                            window.location.reload(); // todo - insert data without reload
+//                        }
+//                    }
+                    $(this).find('input').not('[type="hidden"]').val('').trigger('change');
+                    window.location.reload(); // todo - insert data without reload
+
+                });
+
+//                $('button.btn-green-border').parents('form').on('submit', function(e){
+//                    e.preventDefault();
+//                    e.stopPropagation();
+//                    return false;
+//                })
+
+
+            });
+        })(jQuery);
+    </script>
+    <div id="lead_processing_save" class="form-column display-block-persistent" data-controller="leads_display" data-action="leadProcessing">
+        <form>
+            <div class="form-inline form-inline-processing">
+                <div class="form-group opportunity-processing-inline-select">
+                    {% if is_granted('ROLE_ADMIN') %}
+                        {% set disabled = false %}
+                    {% else %}
+                        {% set disabled = true %}
+                    {% endif %}
+                    <label for="asign">Asignee</label>
+                    {{ render(controller('ZesharCRMCoreBundle:FormItems:assigneeSelect', {
+                    'activeId': object.getAssignee() is not empty ? object.getAssignee().getId() : null,
+                    'disabled': disabled
+                    })) }}
+                    <input type="hidden" id="lead_id" name="lead_id" value="{{ object.getId() }}" />
+                </div>
+                <div class="form-group opportunity-processing-inline-select">
+                    <label for="compaign">Priority</label>
+                    {{ render(controller('ZesharCRMCoreBundle:FormItems:prioritySelect', {
+                    'activeValue': object.getPriority() is not empty ? object.getPriority() : null
+                    })) }}
+                </div>
+            </div>
+            {% if admin.getLabel() == 'Lead' %}
+                <div class="form-group">
+                    <p class="label-type">Status</p>
+                    <div class="clearfix">
+                        {{ render(controller('ZesharCRMCoreBundle:FormItems:leadStatusSelect', {
+                        'activeValue': object.getType()
+                        })) }}
+                    </div>
+                </div>
+            {% endif %}
+            {% set score = lead_subject.getLeadScoringByLead(object) %}
+            {% if score is not empty %}
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3">Lead Score</label>
+                        <div class="col-sm-6">
+                            {% include('ZesharCRMCoreBundle:FormItems:opportunity_show_score.html.twig') with {'value': score.getTotal()} %}
+                        </div>
+
+                    </div>
+                </div>
+            {% endif %}
+
+            <div class="form-group">
+                <p class="label-type">Lead Status</p>
+                <div class="clearfix">
+                    {{ render(controller('ZesharCRMCoreBundle:FormItems:leadStatusSelect', {
+                    'activeValue': object.getLead().getType()
+                    })) }}
+                </div>
+            </div>
+            <div class="form-inline">
+                <div class="form-group opportunity-processing-inline-select">
+                    <label>Closing date</label>
+                    <input type="text" name="closing_date" class="form-control datepicker-processing" id="dp1413988887500" value="{{ object.getClosingDate()|date('M d, Y') }}">
+                </div>
+                <div class="form-group opportunity-processing-inline-select">
+                    <label>Effective date</label>
+                    <input type="text" name="effective_date" class="form-control datepicker-processing" value="{{ object.getEffectiveDate()|date('M d, Y') }}">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="compaign">Product</label>
+                    {{ render(controller('ZesharCRMCoreBundle:FormItems:leadCategorySelect', {
+                    'activeId': object.getLeadCategory() is not empty ? object.getLeadCategory().getId() : NULL
+                    })) }}
+                </div>
+                <div class="col-md-4">
+                    <label>Quantity</label>
+                    <input type="text" name="quantity" class="form-control" id="lead_opportunity_quantity" value="{{ object.quantity }}">
+                </div>
+                <div class="col-md-4">
+                    <label>Amount</label>
+                    <input type="text" name="amount" class="form-control" id="lead_opportunity_amount" value="{{ object.quotedAmount }}" />
+                </div>
+            </div>
+
+            {% if object.getContactCard() is not empty %}
+                {% if object.getContactCard().getContacts() is not empty %}
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <label for="type3">Contact Type</label>
+                            {{ render(controller('ZesharCRMCoreBundle:FormItems:contactTypeSelect', {
+                            'activeValue': object.getContactCard().getContacts()
+                            })) }}
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="type3">Contact Result</label>
+                            {{ render(controller('ZesharCRMCoreBundle:FormItems:contactResultSelect', {
+                            })) }}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endif %}
+            
+            <input type="hidden" id="lead_id" name="lead_id" value="{{ object.getId() }}" />
+            {{ include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_block_actions.html.twig') }}
+        </form>
+    </div>
+</div>

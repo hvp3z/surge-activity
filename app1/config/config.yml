@@ -1,0 +1,116 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    - { resource: @ZesharCRMCoreBundle/Resources/config/config.yml }
+    - { resource: parameters_custom.yml }
+
+framework:
+    #esi:             ~
+    translator:      { fallback: "%locale%" }
+    secret:          "%secret%"
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+    form:            ~
+    csrf_protection: ~
+    validation:      { enable_annotations: true }
+    templating:
+        engines: ['twig']
+        #assets_version: SomeVersionScheme
+    default_locale:  "%locale%"
+    trusted_hosts:   ~
+    trusted_proxies: ~
+    session:
+        # handler_id set to null will use default session handler from php.ini
+        handler_id: session.handler.native_file
+        save_path: "%kernel.root_dir%/sessions"
+    fragments:       ~
+    http_method_override: true
+
+# Twig Configuration
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+    globals:
+        enable_bundles: "%kernel.bundles%"
+        lead_subject: "@zeshar_crm_core.admin.service.twig_helper_lead_subject"
+
+# Assetic Configuration
+assetic:
+    debug:          "%kernel.debug%"
+    use_controller: false
+    bundles:        [ ]
+    #java: /usr/bin/java
+    filters:
+        cssrewrite: ~
+        #closure:
+        #    jar: "%kernel.root_dir%/Resources/java/compiler.jar"
+        #yui_css:
+        #    jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver:   "%database_driver%"
+        host:     "%database_host%"
+        port:     "%database_port%"
+        dbname:   "%database_name%"
+        user:     "%database_user%"
+        password: "%database_password%"
+        charset:  UTF8
+        # if using pdo_sqlite as your database driver, add the path in parameters.yml
+        # e.g. database_path: "%kernel.root_dir%/data/data.db3"
+        # path:     "%database_path%"
+
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        auto_mapping: true
+        dql:
+            datetime_functions:
+                YEAR: Luxifer\DQL\Datetime\Year
+                MONTH: Luxifer\DQL\Datetime\Month
+            numeric_functions:
+                IF: ZesharCRM\Bundle\CoreBundle\DQL\IFFunction
+            string_functions:
+                TYPE: ZesharCRM\Bundle\CoreBundle\DQL\TypeFunction
+                FIELD: ZesharCRM\Bundle\CoreBundle\DQL\TypeFieldFunction
+
+# Swiftmailer Configuration
+#swiftmailer:
+#    transport:  smtp
+#    encryption: ssl
+#    auth_mode:  login
+#    host:       smtp.gmail.com
+#    username:   nikolaenkodariaaanatolievna@gmail.com
+#    password:   Dasha9116609
+
+swiftmailer:
+    transport:  mail
+    encryption: tls
+    host:       relay-hosting.secureserver.net
+    port:       587
+    username:   Asherz
+    password:   11Jailbird11
+
+#swiftmailer:
+#    encryption: ssl
+#    port:       465
+#    host:       p3plcpnl0689.prod.phx3.secureserver.net
+#    username:   nikolaenkodariaaanatolievna@gmail.com
+#    password:   Dasha9116609
+
+doctrine_migrations:
+    dir_name: %kernel.root_dir%/DoctrineMigrations
+    namespace: Application\Migrations
+    table_name: migration_versions
+    name: Application Migrations
+
+stof_doctrine_extensions:
+    orm:
+        default:
+            softdeleteable: true
+            timestampable: true
+
+vresh_twilio:
+    sid: 'ACa0ad5718068d85750e20a4ae053f1ca8'
+    authToken: '9ac57c81c2242bb499b37d0653bf16da'

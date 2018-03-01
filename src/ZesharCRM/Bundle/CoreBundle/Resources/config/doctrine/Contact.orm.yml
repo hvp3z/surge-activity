@@ -1,0 +1,51 @@
+ZesharCRM\Bundle\CoreBundle\Entity\Contact:
+    type: entity
+    table: contact
+    repositoryClass: ZesharCRM\Bundle\CoreBundle\Repository\ContactRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        type:
+            type: smallint
+            nullable: false
+        name:
+            type: string
+            length: 255
+            nullable: true
+        value:
+            type: string
+            length: 255
+            nullable: false
+        # this is a confuse - donotCall means really "Contact Status" - yes/no/neglected - real boolean "donotCall" is named "dnc" below
+        donotCall:
+            type: integer
+            column: donot_call
+            nullable: true
+        dnc:
+            type: boolean
+            column: dnc
+            nullable: true
+        donotEmail:
+            type: boolean
+            column: donot_email
+            nullable: true
+        isDefault:
+            type: boolean
+            column: is_default
+            nullable: false
+            options:
+                default: false
+    lifecycleCallbacks: {  }
+    manyToOne:
+        contactCard:
+            targetEntity: ContactCard
+            cascade: ["persist"]
+            mappedBy: null
+            inversedBy: contacts
+            joinColumns:
+                contact_card:
+                    referencedColumnName: id

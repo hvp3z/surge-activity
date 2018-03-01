@@ -1,0 +1,16 @@
+<div class="prequalification-button-group">
+    {% if save is not defined or save == true %}
+        {% include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_block_actions.html.twig') with {'show_cancel_link': false} %}
+    {% endif %}
+    <div class="right-prequalification-groub-buttons pull-right">
+        {{ last == true ? "<div class=\"add-new-block\"><button class=\"btn btn-green-border add-new\" >Add New</button></div>" : "" }}
+        {% if empty == true and singleEmpty == false %}
+            <div class="exclude-new-block"><a href="#" class="exclude-new link-delete">Delete</a></div>
+            {#<button class="btn btn-red-border exclude-new" >Exclude</button>#}
+        {% endif %}
+        {% if singleEmpty == true or empty == false %}
+            <a href="#" class="clear-all link-delete">Delete</a>
+            {#<button class="btn btn-red-border clear-all" >Clear all</button>#}
+        {% endif %}
+    </div>
+</div>

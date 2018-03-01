@@ -1,0 +1,657 @@
+div .calendar-block{
+    width: 800px;
+}
+
+#phone{
+    width:90%;
+}
+
+#ext{
+    width:45%
+}
+
+.digits{
+    float:left;
+}
+
+.errmsg{
+    color: red;
+    padding-left: 10px;
+}
+
+
+.small-table{
+    display:block;
+}
+
+.small-table table{
+    font-size: 12px;
+    width:96%
+}
+
+.small-table table th {
+    text-align: left!important;
+    padding-left: 150px!important;
+}
+
+.small-table table select {
+    width:73%
+}
+
+.left-couple{
+    display:block;
+    height:400px;
+    float:left;
+    width: 45%;
+    margin-right: 45px;
+}
+
+.left-couple table{
+    width:98%
+}
+
+.right-couple{
+    display:block;
+    height:400px;
+    float:left;
+    width: 48.5%;
+    margin-right: 45px;
+}
+
+.right-couple table{
+    width:98%
+}
+
+table.payments tr{
+    border-bottom: 1pt solid lightgrey;
+}
+
+
+.red{
+    color:red;
+}
+
+.error{
+    background-color: #d9534f;
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 90%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    width: 505px;
+}
+
+input.form-control{
+    width: 265px;
+}
+
+.company-id{
+    color:#5cb85c;
+    font-weight: bold;
+}
+
+
+
+
+
+/*
+    Document   : sonata_fixes
+    Created on : 10.07.2014, 16:47:29
+    Author     : Victor Karalkin
+    Description:
+        Fixes & adjustments for sonata backend.
+*/
+
+.content .sonata-ba-form > form, .modal-content .modal-body > form {
+    width: 752px;
+}
+
+form .form-control {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+form .form-control:focus {
+    border-color: #daa520 !important;
+}
+
+.box {
+    border-top: 2px solid #daa520 !important;
+}
+
+input:invalid, textarea:invalid {
+    background-color: #fff !important;
+}
+
+.box.box-success, .box.box-primary {
+    border-top-color: #daa520 !important;
+}
+
+.btn.btn-success, .btn.btn-primary {
+    border-color: #da8520 !important;
+    background-color: #daa520 !important;
+}
+
+.btn.btn-success:hover, .btn.btn-success:active, .btn.btn-primary:hover, .btn.btn-primary:active {
+    border-color: #da8520 !important;
+    background-color: #daa520 !important;
+}
+
+.custom-block .custom-form-head .custom-menu-notes {
+    margin-right: 16px;
+    margin-top: 10px;
+}
+
+.custom-block-prequalification .form-column h3 {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.custom-block-prequalification .form-column .custom-form-head {
+    margin-bottom: -1px;
+    border-bottom: 1px solid #dfdac6;
+}
+
+.custom-block-prequalification .form-column .form-group {
+    margin-top: 14px;
+}
+
+.custom-block-prequalification .form-column .additional-block.last {
+    border-bottom: 1px solid #dfdac6;
+    margin-bottom: 15px;
+}
+
+.custom-block-prequalification > .show-display-per-block-actions {
+    margin: 15px 0 15px 15px;
+}
+
+.show-display-per-block-actions {
+    display: inline-block;
+}
+
+#lead_event_create  .btn-save-block {
+    margin-left: 16px;
+}
+
+.btn-green-border.checkButton {
+    background-color: #77bd77;
+}
+
+.prequalification-button-group {
+    display: inline-block;
+    width: 100%;;
+}
+
+/*.prequalification-button-group .btn-green-border {*/
+/*margin-left: 248px;*/
+/*}*/
+
+.group-forms {
+    border-bottom: 1px solid #dfdac6;
+    margin-bottom: -1px;
+}
+
+.btn-red-border {
+    background: transparent;
+    border-color: red;
+    box-shadow: none;
+    color: #000000;
+}
+
+.prequalification-button-group .btn-red-border {
+    margin-left: 179px;
+}
+
+.btn-red-border.exclude-new:before {
+    content:"\f068";
+    font-family: FontAwesome;
+    color: red;
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    padding-top: 3px;
+}
+
+/*.btn-green-border.add-new{*/
+/*margin-left: 173px;*/
+/*}*/
+
+.btn-green-border.add-new:before {
+    padding-top: 3px;
+}
+
+.form-column .btn.btn-red-border.clear-all{
+    font-size: 12px;
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    margin-left: -180px
+}
+
+.btn-red-border.clear-all:before {
+    content:"\f00d";
+    font-family: FontAwesome;
+    color: red;
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    padding-top: 3px;
+}
+
+.btn-red {
+    color: #fff;
+    background-color: #F94949;
+    border-color: #F94949;
+}
+
+.link-delete {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 6px 0 16px 20px;
+    line-height: 1.42857143;
+    margin-left: 5px;
+}
+
+/*.exclude-new{*/
+/*padding-left: 289px;*/
+/*}*/
+
+.update-comment{
+    margin-top: 10px;
+    margin-right: 4px;
+}
+
+.buttons-change-comment{
+    display: inline-block;
+}
+
+.attach-file{
+    color: #6E6E6E;
+}
+
+.block-attach-file{
+    padding-left: 3px;
+    padding-top: 6px;
+}
+
+.delete-file{
+    color: #d9534f;
+}
+.file-link{
+    color: blue;
+    font-size: 12px;
+}
+
+.filter-widget{
+    background: #c78c2e;
+    color: #fff;
+    border: 1px solid #a9731c;
+    float: right;
+}
+
+.show-page .right-column{
+    margin-right: 15px;
+}
+
+.custom-block-history .show-display-per-block-actions{
+    margin-top: 10px;
+}
+
+.reassign-block{
+    display: inline-block;
+    margin-left: 38px;
+}
+
+.right-prequalification-groub-buttons{
+    display: inline-flex;
+}
+
+.add-new-block{
+    display: inline-block;
+}
+
+.exclude-new-block{
+    display: inline-block;
+}
+
+.column-battery i{
+    margin-left: -2px;
+    margin-bottom: -2px;
+}
+
+.ui-dialog.custom-block {
+    font-family: Arial, Tahoma, Verdana, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    border-top: 1px solid #ddd;
+}
+
+.ui-widget-header {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-bottom: 1px solid #dfdac6;
+    background: linear-gradient(to bottom, #ffffff 0%,#fdfdfc 32%,#fafaf7 69%,#f8f7f3 100%);
+}
+
+#table-scroll {
+    height:266px;
+    overflow:auto;
+    margin-top:20px;
+}
+
+.sonata-list-field-lead\.type {
+    width: 20px;
+}
+
+tbody .sonata-list-field-contactCard\.email {
+    width: 150px;
+    min-width: 150px;
+    max-width: 200px;
+}
+
+.form-column .form-group textarea{
+    min-height: 64px;
+}
+
+.comments-list article{
+    min-height: 110px;
+}
+
+.lead-processing-inline-select{
+    width:30%;
+}
+
+.form-inline-processing{
+    padding-bottom: 10px;
+}
+
+.opportunity-processing-inline-select {
+    width: 49%;
+}
+
+.processing-score-value{
+    margin-top: -6px;
+}
+
+.tile-type.low {
+    background-color: #F3D86C;
+}
+
+.tile-type.medium {
+    background-color: #E6A861;
+}
+
+.tile-type.high {
+    background-color: #EF7676;
+}
+
+.processing-score-value.bold{
+    font-weight: 600;
+    color: black;
+}
+
+.processing-score-value.yellowish{
+    background-color: #e4c066;
+}
+
+.processing-score-value.green{
+    background-color: #77bd77;
+}
+
+.delete-event{
+    color: #d9534f;
+}
+
+a.delete-event:hover{
+    color: #d9534f;
+    cursor: pointer;
+}
+
+.form-inline input.form-control.datepicker-processing{
+    width: 100%;
+}
+
+.custom-block .custom-head div.custom-menu {
+    float: right;
+    height: 23px;
+    vertical-align: middle;
+    padding-top: 4px;
+}
+
+.custom-block .custom-head .custom-menu .custom-menu-link {
+    padding-top: 6px;
+    display: inline;
+}
+
+.custom-block .custom-head .custom-menu .custom-dropdown-menu .edit-custom{
+    background-image: none;
+    padding-top: 8px;
+    padding-bottom: 20px;
+}
+
+.lead-type.recycled{
+    background-color: #77bd77;
+}
+
+.lead-type.winback{
+    background-color: #ea8a87;
+}
+
+.lead-type.cross_sell{
+    background-color: #e4c066;
+}
+
+.lead-subject-type label.lead-type {
+    border-radius: 3px;
+    line-height: 1.8;
+    padding: 0 8px;
+}
+
+ul.lead-subject-type.four-list li{
+    width: 27%;
+}
+
+.double-quote.back:before {
+    content: '«';
+}
+
+.form-group.plus span.glyphicon {
+    color: #4ea94e;
+    display: inline;
+}
+
+.form-group.plus .add-group a{
+     text-decoration: none;
+     padding-right: 4px;
+ }
+
+.form-group.plus .add-group{
+    margin-left: -16px;
+}
+
+.form-group.plus.first span.glyphicon {
+    line-height: 5;
+}
+
+.report-table thead tr th{
+    vertical-align: middle;
+}
+
+table.table-bordered tr.total-amount td{
+    font-weight: 600;
+    border-color: white;
+}
+
+.report-table .sonata-ba-view-container:nth-child(2n):hover td, .sonata-ba-view-container:nth-child(2n):hover th {
+    background-color: #f9f9f9;
+}
+
+.report-table.table-striped > tbody > tr.last:nth-child(odd) > td{
+    background-color: white;
+}
+
+label.report-title{
+    font-size: large;
+}
+
+.sonata-ba-view-container td.total-td{
+    font-weight: bold;
+}
+
+.dropdown-menu.actions{
+    width: auto;
+    min-width: 0;
+    left: -19px;
+    position: absolute;
+}
+
+.sonata-list-field-middleInitial{
+    width: 40px;
+}
+
+.sonata-list-field-streetAddress{
+    min-width: 250px;
+}
+
+.sonata-list-field-genericPhone{
+    min-width: 155px;
+}
+
+.sonata-list-field-state{
+    width: 40px;
+}
+
+.sonata-list-field-cellPhone{
+    min-width: 155px;
+}
+
+.sonata-list-field-workPhone{
+    min-width: 155px;
+}
+
+.sonata-list-field-city{
+    min-width: 155px;
+}
+
+.sonata-list-field-email{
+        min-width: 195px;
+}
+
+table .sonata-ba-list-field.sonata-list-field-id{
+    min-width: 41px;
+}
+div.select2-drop.select2-with-searchbox{
+    min-width: 155px;
+}
+
+.custom-table-2 .sonata-list-field-genericPhone .name-tel-tab {
+    height: 17px;
+}
+
+.custom-table-2 .sonata-list-field-cellPhone .name-tel-tab {
+    height: 17px;
+}
+
+.custom-table-2 .sonata-list-field-workPhone .name-tel-tab {
+    height: 17px;
+}
+
+.table .email-contact-tab.marked-dne:before {
+    content: 'DNE';
+    display: table-cell;
+    height: 15px;
+    width: 30px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 1px 0;
+    font-size: 10px;
+    color: #fff;
+    background-color: #e7a19f;
+    position: absolute;
+    top: 50%;
+    margin-top: -7px;
+    right: -34px;
+}
+
+.email-contact-tab {
+    position: relative;
+}
+
+
+div.popover{
+    left:30px!important;
+}
+
+.editable-table .name-tel-tab {
+    width:auto!important;
+    padding:0px!important;
+}
+
+.address{
+    max-width: 250px!important;
+    min-width:230px!important;
+}
+
+.alert-error {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+}
+/*
+div.sonata-ba-form-error{
+    padding:15px;
+}
+div.sonata-ba-form-error li{
+    background-color: #d9534f;
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 85%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+} */
+
+.error-popup{
+    min-width: 50px;
+    min-height: 25px;
+    max-width: 170px;
+    position: absolute;
+    margin-top: -20px;
+}
+
+.editable-table .email-tab{
+    width: auto!important;
+}
+
+div.sonata-ba-form-error li{
+    margin:5px;
+    display:block;
+    width:200px;
+}
+
+.table-select{
+    float:right;
+}
+
+.show-display-per-block-actions{
+    margin-left: 15px;
+}
+
+.accept-payment{
+    float:right;
+}

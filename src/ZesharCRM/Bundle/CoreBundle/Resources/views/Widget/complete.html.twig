@@ -1,0 +1,39 @@
+{% block widget %}
+    <div class="custom-block table-block">
+        <div class="custom-head clear-fix">
+            <div class="custom-menu">
+                <button class="up-custom"></button>
+                <button class="settings-custom"></button>
+                <button class="close-custom"></button>
+            </div>
+            <div class="custom-menu-select">
+                {% if persons is not empty %}
+                    <select class="user_data">
+                        {% for person in persons %}
+                            <option {% if selectedUser == person.username %} selected {% endif %}>{{ person.username}}</option>
+                        {% endfor %}
+                    </select>
+                {% endif %}
+            </div>
+            <h3>My Opportunities & Quotes</h3>
+        </div>
+        <div class="custom-content">
+            {% for key, value in data %}
+                <div class="small-table">
+                    <table>
+                        <tr>
+                            <th>{{ humanTitles[key] }}</th>
+                            <th>Items</th>
+                        </tr>
+                        {% for key2, value2 in value %}
+                            <tr >
+                                <td>{{ key2 }}</td>
+                                <td>{{ value2 }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

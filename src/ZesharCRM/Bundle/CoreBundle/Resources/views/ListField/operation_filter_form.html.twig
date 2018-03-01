@@ -1,0 +1,97 @@
+{% block list_filters %}
+    {% set currentYear = "now"|date("Y") %}
+    {% set startYear = currentYear - 10 %}
+
+    {% set monthId = 0 %}
+    {% set yearId = 0 %}
+
+    {% if admin.dateFilter['month'] %}
+        {% set monthId = admin.dateFilter['month'] %}
+    {% endif %}
+    {% if admin.dateFilter['year'] %}
+        {% set yearId = admin.dateFilter['year'] %}
+    {% endif %}
+
+    {% if app.request.get('filter')['performedAt']['value']['date']['month'] is defined %}
+        {% set monthId = app.request.get('filter')['performedAt']['value']['date']['month'] %}
+    {% endif %}
+    {% if app.request.get('filter')['performedAt']['value']['date']['year'] is defined %}
+        {% set yearId = app.request.get('filter')['performedAt']['value']['date']['year'] %}
+    {% endif %}
+
+    {% if admin.datagrid.filters %}
+        {% form_theme form "SonataAdminBundle:Form:filter_admin_fields.html.twig" %}
+        <div id="box-box-primary" class="box box-primary">
+            <div id="box-box-body" class="box-body">
+                <form class="custom sonata-filter-form {{ admin.isChild and 1 == admin.datagrid.filters|length ? 'hide' : '' }}" action="{{ admin.generateUrl('list') }}" method="GET" role="form">
+                    <div class="filter_container {{ admin.datagrid.hasActiveFilters ? 'active' : 'inactive' }}">
+                        {% for filter in admin.datagrid.filters %}
+                            {% if filter.name == "performedAt" %}
+                                <div class="form-group">
+                                    <select id="filter_performedAt_value_date_month" name="filter[performedAt][value][date][month]" class=" form-control">
+                                        <option value="">Month</option>
+                                        <option {% if '1' == monthId %} selected {% endif %} value="1">Jan</option>
+                                        <option {% if '2' == monthId %} selected {% endif %} value="2">Feb</option>
+                                        <option {% if '3' == monthId %} selected {% endif %} value="3">Mar</option>
+                                        <option {% if '4' == monthId %} selected {% endif %} value="4">Apr</option>
+                                        <option {% if '5' == monthId %} selected {% endif %} value="5">May</option>
+                                        <option {% if '6' == monthId %} selected {% endif %} value="6">Jun</option>
+                                        <option {% if '7' == monthId %} selected {% endif %} value="7">Jul</option>
+                                        <option {% if '8' == monthId %} selected {% endif %} value="8">Aug</option>
+                                        <option {% if '9' == monthId %} selected {% endif %} value="9">Sep</option>
+                                        <option {% if '10' == monthId %} selected {% endif %} value="10">Oct</option>
+                                        <option {% if '11' == monthId %} selected {% endif %} value="11">Nov</option>
+                                        <option {% if '12' == monthId %} selected {% endif %} value="12">Dec</option>
+                                    </select>
+                                    <select id="filter_performedAt_value_date_year" name="filter[performedAt][value][date][year]" class=" form-control">
+                                        <option value="">Year</option>
+                                        {% for i in currentYear..startYear  %}
+                                            <option {% if i == yearId %} selected {% endif %} value="{{ i }}">{{ i }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+
+                        <input type="hidden" name="filter[_page]" id="filter__page" value="1">
+
+                        {% set foo = form.children['_page'].setRendered() %}
+                        {{ form_rest(form) }}
+
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-filter"></i> {{ 'btn_filter'|trans({}, 'SonataAdminBundle') }}</button>
+
+                        <a class="btn btn-default" href="{{ admin.generateUrl('list', {filters: 'reset'}) }}">{{ 'link_reset_filter'|trans({}, 'SonataAdminBundle') }}</a>
+                    </div>
+
+                    {% for paramKey, paramValue in admin.persistentParameters %}
+                        <input type="hidden" name="{{ paramKey }}" value="{{ paramValue }}">
+                    {% endfor %}
+                </form>
+            </div>
+        </div>
+
+<style>
+    #box-box-body{
+        width: 485px;
+    }
+    #box-box-primary{
+        width: 485px;
+    }
+    .custom .filter_container .form-group{
+        float: left;
+        padding-right: 5px;
+    }
+    #filter_performedAt_value_date_month{
+        width: 160px;
+        float: left;
+        margin-top: 0!important;
+        margin-bottom: 0!important;
+    }
+    #filter_performedAt_value_date_year{
+        width: 160px;
+        margin-top: 0!important;
+        margin-bottom: 0!important;
+    }
+</style>
+    {% endif %}
+{% endblock %}

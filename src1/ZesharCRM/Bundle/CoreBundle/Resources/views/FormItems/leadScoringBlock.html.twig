@@ -1,0 +1,38 @@
+<ul class="criteria-list">
+    <li>
+        <b>Criteria *</b>
+        <ul>
+
+            {% macro recursiveCriteria(criteria, chosen) %}
+                <li>
+                    {% if not criteria.children|length %}
+                        <label>
+                            <input class="criteria-input" data-criteria-value="{{ criteria.portionScore }}" name="criteria[]" {% if(criteria.id in chosen) %} checked="checked" {% endif %}value="{{ criteria.id }}" type="checkbox"/>{{ criteria.name }}
+                        </label>
+
+                    {% else %}
+                        {{ criteria.name }}
+                        <ul style="margin-left:20px">
+                            {% for child in criteria.children %}
+                                {{ _self.recursiveCriteria(child, chosen) }}
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endmacro %}
+
+            {% if rootCriteria %}
+                <ul style="margin-left:20px">
+                    {% for item in rootCriteria %}
+                        {{ _self.recursiveCriteria(item, chosen) }}
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+        </ul>
+    </li>
+    <li>
+        <b>Total *</b><br/>
+        <input readonly name="scoring-total" class="criteria-score" type="text" value=""/>
+    </li>
+</ul>

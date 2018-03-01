@@ -1,0 +1,34 @@
+{% extends 'SonataAdminBundle:CRUD:show.html.twig' %}
+
+{% block actions %}
+
+{% endblock %}
+
+{% block tab_menu %}{% endblock %}
+
+{% block sonata_whole_content_wrapper_classes %}content show-page clear-fix{% endblock %}
+
+{% block sonata_page_content_nav %}{% endblock %}
+
+{% block show %}
+
+    <link rel="stylesheet" type="text/css"  href="{{ asset('bundles/zesharcrmcore/css/billing-page-styles.css') }}"  />
+    {{ include('ZesharCRMCoreBundle:CRUD:DisplayPartial/billing_show_block_actions_js.html.twig') }}
+
+    {{ include('ZesharCRMCoreBundle:CRUD:DisplayPartial/billing_info_tab.html.twig') }}
+    {#{{ include('ZesharCRMCoreBundle:CRUD:DisplayPartial/payment_history_tab.html.twig') }}#}
+    {{ include('ZesharCRMCoreBundle:CRUD:DisplayPartial/company_info_tab.html.twig') }}
+    {{ include('ZesharCRMCoreBundle:CRUD:DisplayPartial/personal_info_tab.html.twig') }}
+    {% if is_granted('ROLE_ULTRA_ADMIN') and object.subscriptionStatus == 0 and not (object.creator.disabled) %}
+        <div class="accept-payment show-display-per-block-actions" style="margin-bottom: 15px;">
+            <button class="btn-save-block btn btn-green">Accept Payment</button>
+        </div>
+    {% endif %}
+
+    {% if is_granted('ROLE_ULTRA_ADMIN') and object.subscriptionStatus == 1  and not (object.creator.disabled)%}
+        <div class="disable-account show-display-per-block-actions" style="margin-bottom: 15px;">
+            <button class="btn-delete-block btn btn-red">Disable Account</button>
+        </div>
+    {% endif %}
+
+{% endblock %}

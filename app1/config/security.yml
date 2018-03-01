@@ -1,0 +1,78 @@
+security:
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+        FOS\UserBundle\Model\UserInterface: sha512
+
+    role_hierarchy:
+        ROLE_SALES_PERSON: ROLE_USER
+        ROLE_DISABLED_ADMIN: ROLE_DISABLED_ADMIN
+        ROLE_AGENCY_OWNER: [ROLE_SALES_PERSON, ROLE_ADMIN]
+        ROLE_SUPER_ADMIN:  [ROLE_AGENCY_OWNER, ROLE_ALLOWED_TO_SWITCH]
+        ROLE_ULTRA_ADMIN:  ROLE_ULTRA_ADMIN
+
+#        set access_strategy to unanimous, else you may have unexpected behaviors
+#        access_decision_manager:
+#            strategy: unanimous
+
+    providers:
+        fos_userbundle:
+            id: fos_user.user_manager
+
+    firewalls:
+         dev:
+             pattern: ^/(_(profiler|wdt)|css|images|js)/
+             security: false
+         account:
+             pattern:            ^/account
+             security:           false
+         admin:
+             pattern:            .*
+             context:            user
+             form_login:
+                 provider:       fos_userbundle
+                 login_path:     /admin/login
+                 use_forward:    false
+                 check_path:     /admin/login_check
+                 failure_path:   null
+#                 always_use_default_target_path: true
+                 default_target_path: /dashboard
+             logout:
+                 path:           /admin/logout
+                 target:         /admin/login
+                 invalidate_session: false
+                 success_handler: account.logout_handler
+             anonymous:          true
+
+    acl:
+        connection: default
+
+    access_control:
+        # URL of FOSUserBundle which need to be available to anonymous users
+        - { path: ^/call, role: IS_AUTHENTICATED_ANONYMOUSLY }
+
+        # Admin login page needs to be access without credential
+        - { path: ^/(css|js), role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/logout$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/login_check$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+
+        # application-specific settings
+        - { path: ^/admin/dashboard, role: ROLE_SUPER_ADMIN }
+
+        - { path: ^/dashboard, role: [ROLE_ULTRA_ADMIN, ROLE_SUPER_ADMIN, ROLE_AGENCY_OWNER, ROLE_SALES_PERSON] }
+        - { path: ^/admin/company, role: ROLE_ULTRA_ADMIN }
+        - { path: ^/admin/billing_info, role: [ROLE_SUPER_ADMIN, ROLE_ULTRA_ADMIN] }
+        - { path: ^/admin/account, role: ROLE_ULTRA_ADMIN }
+        - { path: ^/admin/product, role: ROLE_ULTRA_ADMIN }
+
+        - { path: ^/ajax/billingInfo, role: [ROLE_ULTRA_ADMIN, ROLE_SUPER_ADMIN] }
+        - { path: ^/ajax/accountInfo, role: [IS_AUTHENTICATED_ANONYMOUSLY, ROLE_ULTRA_ADMIN] }
+
+
+        # Secured part of the site
+        # This config requires being logged for the whole site and having the admin role for the admin part.
+        # Change these rules to adapt them to your needs
+        - { path: ^/.*, role: [ROLE_ADMIN, ROLE_AGENCY_OWNER, ROLE_SALES_PERSON, ROLE_ULTRA_ADMIN]}
+        - { path: ^/admin/, role: [ROLE_ADMIN, ROLE_AGENCY_OWNER, ROLE_SALES_PERSON] }
+        

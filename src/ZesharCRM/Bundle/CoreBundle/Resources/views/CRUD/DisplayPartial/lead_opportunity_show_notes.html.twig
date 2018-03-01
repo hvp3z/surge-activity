@@ -1,0 +1,33 @@
+<div class="custom-block">
+    <script type="text/javascript">
+        (function($) {
+            $(document).ready(function() {
+                var leadNotesWrapper = $('#lead_notes');
+                leadNotesWrapper.on('block-data-validate', function(e, params) {
+                    var values = params.values;
+
+                        //var eventDate = new Date(eventDate);
+                        // @TODO check past date/time
+
+                });
+                leadNotesWrapper.on('block-ajax-return', function(e, serverResponse) {
+                    $('#lead_notes').html(serverResponse);
+                   //$(this).find('input').not('[type="hidden"]').val('').trigger('change');
+                   //window.location.reload(); // todo - insert data without reload
+                });
+            });
+        })(jQuery);
+    </script>
+
+    <div class="custom-head clearfix">
+        <div class="custom-menu">
+            <button class="up-custom close"></button>
+        </div>
+        <h3>Notes</h3>
+    </div>
+
+    <div id="lead_notes" class="custom-form-content display-block-persistent" data-controller="leads_display" data-action="leadNote" style="display: none;">
+        {{ include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_notes_content.html.twig') }}
+    </div>
+</div>
+

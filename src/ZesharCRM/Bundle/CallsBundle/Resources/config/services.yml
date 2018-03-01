@@ -1,0 +1,18 @@
+parameters:
+#    zeshar_crm_calls.example.class: ZesharCRM\Bundle\CallsBundle\Example
+
+services:
+#    zeshar_crm_calls.example:
+#        class: %zeshar_crm_calls.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+    zeshar_crm_calls.admin.call_reporting:
+        class: ZesharCRM\Bundle\CallsBundle\Admin\CallReportingAdmin
+        arguments: [~, ZesharCRM\Bundle\CallsBundle\Entity\CallReporting, ZesharCRMCallsBundle:CallReportingAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Call, label: Contact Reporting}
+
+    zeshar_crm_calls.service.event_service:
+        class: ZesharCRM\Bundle\CallsBundle\Listener\CLESubscriber
+        arguments: [ @service_container]
+        tags:
+            - {name: kernel.event_subscriber}

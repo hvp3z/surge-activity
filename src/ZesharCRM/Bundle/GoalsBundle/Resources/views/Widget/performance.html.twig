@@ -1,0 +1,34 @@
+{% block widget %}
+    <div class="custom-block">
+        <div class="custom-head clear-fix">
+            <div class="custom-menu">
+                <button class="up-custom"></button>
+                <button class="settings-custom"></button>
+                <button class="close-custom"></button>
+            </div>
+            <div class="custom-menu-select">
+                {% if persons is not empty %}
+                    <select class="user_data">
+                        {% for person in persons %}
+                            <option {% if selectedUser == person.username %} selected {% endif %}>{{ person.username}}</option>
+                        {% endfor %}
+                    </select>
+                {% endif %}
+            </div>
+            <h3>My performance</h3>
+        </div>
+        <div class="custom-content">
+            {% for key, value in data %}
+                        <div class="wrap-bar">
+                            <div class="column-bar">
+                                <i data-percent-height="{{ value['value'] }}%" class="icon-bar icon-widget"></i>
+                            </div>
+                            <div class="legend widget-performance-title" data-hover-title="{{ value['title'] }}" data-unhover-title="Line {{ key }}"><a>Line {{ key }}</a></div>
+                        </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('bundles/zesharcrmgoals/js/widget_performance.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,23 @@
+ZesharCRM\Bundle\CoreBundle\Entity\Widget:
+    type: entity
+    table: widget
+    repositoryClass: ZesharCRM\Bundle\CoreBundle\Repository\WidgetRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        serviceId:
+            type: string
+            column: service_id
+            length: 255
+        height:
+            type: integer
+        width:
+            type: integer
+    lifecycleCallbacks: {  }

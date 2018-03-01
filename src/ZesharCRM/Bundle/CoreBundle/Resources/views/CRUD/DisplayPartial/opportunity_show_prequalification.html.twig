@@ -1,0 +1,210 @@
+<div class="custom-block custom-block-prequalification opp-prequalification-show">
+<script type="text/javascript">
+    (function($) {
+        $(document).ready(function() {
+//                $('#lead_prequalification_save').on('block-data-validate', function(e, params) {
+//                    var values = params.values;
+//                        //var eventDate = new Date(eventDate);
+//                        // @TODO check past date/time
+//
+//                });
+            $('#lead_prequalification_save').on('block-ajax-return', function(e, serverResponse) {
+                //console.log('ajax response', serverResponse);
+                $(this).find('input').not('[type="hidden"]').val('').trigger('change');
+                window.location.reload(); // todo - insert data without reload
+            });
+        });
+    })(jQuery);
+</script>
+
+<div class="custom-head clearfix">
+    <div class="custom-menu">
+        <button class="up-custom close"></button>
+    </div>
+    <h3>Product Details</h3>
+</div>
+
+<div id="lead_prequalification_save" class="form-column display-block-persistent" data-controller="leads_display" data-action="leadPrequalification" style="display: none;">
+
+    <div class="additional-block">
+        <div class="custom-form-head clear-fix">
+            <div class="custom-menu">
+                <button class="up-custom up-custom-auto close"></button>
+            </div>
+            <h3>Auto</h3>
+        </div>
+        {% set autos = object.getPrequalificationAutos() %}
+        {% set lead = object|lead %}
+        {% if(autos is not empty) %}
+            <div class="custom-form-content" data-prototype=' {{ render(controller('ZesharCRMCoreBundle:FormItems:leadPrequalificationAutoBlock')) }} ' style="display: none;">
+                <table class="table table-condensed table-bordered">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Year</th>
+                        <th>Make</th>
+                        <th>Model</th>
+                        <th>VIN</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for key, auto in autos %}
+                        <tr>
+                            <td>{{ key+1 }}</td>
+                            <td>{{ auto.year }}</td>
+                            <td>{{ auto.make }}</td>
+                            <td>{{ auto.model }}</td>
+                            <td>{{ auto.vinNumber }}</td>
+                        </tr>
+                    {% endfor %}
+                    <tr>
+                    </tr><tr class="warning">
+                        <td colspan="5">
+                            Previous Carrier
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="name">Name</label>
+                                    <span style="display: block;" class="form-control-static">{{ object.getPreviousCarrierName() }}</span>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="compaign">Policy №</label>
+                                    <span style="display: block;" class="form-control-static">{{ object.getPreviousCarrierPolice() }}</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="xdate">X-Date</label>
+                                    <span style="display: block;" class="form-control-static">{{ object.getPreviousCarrierXDate()|date('M d, Y') }}</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="additional-block">
+        <div class="custom-form-head clear-fix">
+            <div class="custom-menu">
+                <button class="up-custom close"></button>
+            </div>
+            <h3>Driver</h3>
+        </div>
+        {% set drivers = object.getPrequalificationDrivers() %}
+        <div class="custom-form-content" style="display:none;" data-prototype=' {{ render(controller('ZesharCRMCoreBundle:FormItems:leadPrequalificationDriverBlock')) }} ' >
+                {% if(drivers is not empty ) %}
+                    <table class="table table-condensed table-bordered">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>DOB</th>
+                            <th>License</th>
+                            <th>Age licensed</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for key, driver in drivers %}
+                            <tr>
+                                <td rowspan="3">{{ key+1 }}</td>
+                                <td>{{ driver.name }}</td>
+                                <td>{{ driver.dob|date('M d, Y') }}</td>
+                                <td>{{ driver.license }}</td>
+                                <td>{{ driver.ageLicensed }}</td>
+                            </tr>
+                            <tr>
+                            </tr>
+                            {% if driver.tickets is defined and driver.tickets is not empty %}
+                                <tr>
+                                    <td colspan="4" class="row">
+                                        <div class="col-md-12">
+                                            <label for="compaign">AtFault / Tickets</label>
+                                            {% for key, ticket in driver.tickets %}
+                                                <span class="form-control-static">{{ ticket.getTypeString() }}{{ loop.last ? '' : ',' }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    </td>
+                                </tr>
+                            {% endif %}
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                {% endif %}
+        </div>
+    </div>
+
+    <div class="additional-block last">
+        <div class="custom-form-head clear-fix">
+            <div class="custom-menu">
+                <button class="up-custom close"></button>
+            </div>
+            <h3>Insured Address</h3>
+        </div>
+        {% set insuredAddresses = object.getPrequalificationInsuredAddresses() %}
+        <div class="custom-form-content" data-prototype=' {{ render(controller('ZesharCRMCoreBundle:FormItems:leadPrequalificationInsuredAddressBlock')) }} ' style="display: none;" >
+            {% if(insuredAddresses is not empty ) %}
+                <table class="table table-condensed table-bordered  ">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Address</th>
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Zip</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for key, insuredAddress in insuredAddresses %}
+                        <tr>
+                            <td rowspan="4">{{ key+1 }}</td>
+                            <td>{{ insuredAddress.address }}</td>
+                            <td>{{ insuredAddress.city }}</td>
+                            <td>{{ insuredAddress.state }}</td>
+                            <td>{{ insuredAddress.zipCode }}</td>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <div class="" row="">
+                                    <div class="col-md-12">
+                                        <span class="form-control-static">{{ insuredAddress.getTypeString() }}</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr class="warning">
+                            <td colspan="5">
+                                Previous Carrier
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="name">Name</label>
+                                        <span style="display: block;" class="form-control-static">{{ insuredAddress.previousCarrierName }}</span>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="compaign">Policy №</label>
+                                        <span style="display: block;" class="form-control-static">{{ insuredAddress.previousCarrierPolice }}</span>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="xdate">X-Date</label>
+                                        <span style="display: block;" class="form-control-static">{{ insuredAddress.previousCarrierXDate|date('M d, Y') }}</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            {% endif %}
+        </div>
+    </div>
+    <input type="hidden" id="lead_id" name="lead_id" value="{{ object.getId() }}" />
+    <div class="show-display-per-block-actions" style="margin-bottom: 15px;">
+        <button class="btn btn-success">Edit</button>
+    </div>
+    </div>
+</div>

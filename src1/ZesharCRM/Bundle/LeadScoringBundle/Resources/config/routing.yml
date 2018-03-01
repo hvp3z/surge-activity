@@ -1,0 +1,7 @@
+zeshar_crm_lead_scoring_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: ZesharCRMLeadScoringBundle:Default:index }
+
+sonata_admin_scoring:
+    pattern:  /admin/scoring
+    defaults: { _controller: ZesharCRMLeadScoringBundle:ScoringAdmin:scoring }

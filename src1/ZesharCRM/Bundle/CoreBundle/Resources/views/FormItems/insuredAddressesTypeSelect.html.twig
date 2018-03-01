@@ -1,0 +1,10 @@
+<ul class="three-list clearfix">
+    <li>
+        <input type="radio" class="radio" name="ins_address_type[$$name$$]" value="1" id="own" val="val1" {% if activeValue is not empty and activeValue == 1 %}checked="checked"{% endif %} />
+        <label for="own">Own</label>
+    </li>
+    <li>
+        <input type="radio" class="radio" name="ins_address_type[$$name$$]" value="2" id="rent" val="val2" {% if activeValue is not empty and activeValue == 2 %}checked="checked"{% endif %}/>
+        <label for="rent">Rent</label>
+    </li>
+</ul>

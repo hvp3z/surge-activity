@@ -1,0 +1,50 @@
+<div class="custom-block table-block entity-details">
+    <div class="custom-head clearfix">
+        <div class="custom-menu">
+            <a class="inline-edit-details" href="#"><button class="edit-custom entity-details-edit">Edit</button></a>
+            <a class="inline-edit-details-save" href="#"><button style="color: green; width: 63px;" class="edit-custom entity-details-edit">Save</button></a>
+            <a href="{{ admin.getContactDelegate().generateContactCardObjectUrl(object, 'edit') }}"><button class="edit-custom wide-edit-custom">Choose Contact</button></a>
+        </div>
+        <ul class="nav nav-pills block-tabs">
+                <li class="active"><a href="#lead-tab" role="tab" data-toggle="tab">{{ admin.getLabel() }} Details</a></li>
+                <li><a  href="#opportunity-tab" role="tab" data-toggle="tab">Opportunity</a></li>
+        </ul>
+
+    </div>
+    <div class="custom-content tab-content form-block">
+
+        <div class="tab-pane active" id="lead-tab">
+            {% if object.getContactCard() %}
+                {{ include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_entity_details_table.html.twig') }}
+            {% endif %}
+            {{ render(controller('ZesharCRMCoreBundle:FormItems:entityDetails', {
+            'subject': object,
+            'type': 'lead'
+
+            })) }}
+        </div>
+        <div class="tab-pane" id="opportunity-tab">
+            {% if object.getContactCardOpportunity() %}
+                {{ include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_entity_details_table.html.twig') }}
+            {% endif %}
+            {{ render(controller('ZesharCRMCoreBundle:FormItems:entityDetails', {
+            'subject': object,
+            'type': 'opportunity'
+
+            })) }}
+        </div>
+
+    </div>
+</div>
+<div class="modal fade" id="choose_contactCard" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+            </div>
+        </div>
+    </div>
+</div>

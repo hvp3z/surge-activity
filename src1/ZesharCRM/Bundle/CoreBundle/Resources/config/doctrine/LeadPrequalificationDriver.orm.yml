@@ -1,0 +1,42 @@
+ZesharCRM\Bundle\CoreBundle\Entity\LeadPrequalificationDriver:
+    type: entity
+    table: lead_prequalification_driver
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+            nullable: true
+        dob:
+            type: datetime
+            length: 255
+            nullable: true
+        license:
+            type: string
+            length: 255
+            nullable: true
+        ageLicensed:
+            type: integer
+            nullable: true
+    oneToMany:
+        tickets:
+            targetEntity: DriverTicket
+            cascade: ["persist"]
+            mappedBy: driver
+    manyToOne:
+        lead:
+            targetEntity: LeadSubject
+            cascade: {  }
+            mappedBy: null
+            inversedBy: prequalificationDrivers
+            joinColumns:
+                lead:
+                    nullable: false
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,71 @@
+ZesharCRM\Bundle\CoreBundle\Entity\ContactCard:
+    type: entity
+    table: contact_card
+    repositoryClass: ZesharCRM\Bundle\CoreBundle\Repository\ContactCardRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        firstName:
+            type: string
+            column: first_name
+            length: 50
+            nullable: false
+        middleInitial:
+            type: string
+            column: middle_initial
+            length: 50
+            nullable: true
+        lastName:
+            type: string
+            column: last_name
+            length: 50
+            nullable: false
+        streetAddress:
+            type: string
+            column: street_address
+            length: 50
+            nullable: true
+        city:
+            type: string
+            length: 50
+            nullable: true
+        state:
+            type: string
+            length: 4
+            nullable: true
+        zip:
+            type: string
+            length: 6
+            nullable: true
+        type:
+            type: smallint
+            nullable: false
+        isOpportunity:
+            type: smallint
+            nullable: true
+        other:
+            type: string
+            column: other
+            length: 100
+            nullable: true
+        networkType:
+            type: smallint
+            nullable: true
+    lifecycleCallbacks: {  }
+    oneToMany:
+        contacts:
+            targetEntity: Contact
+            cascade: ["persist"]
+            mappedBy: contactCard
+        relatedLeads:
+            targetEntity: Lead
+            cascade: {  }
+            mappedBy: contactCard
+        relatedOpportunities:
+            targetEntity: Opportunity
+            cascade: ["persist"]
+            mappedBy: contactCard

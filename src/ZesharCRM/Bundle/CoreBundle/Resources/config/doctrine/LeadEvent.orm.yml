@@ -1,0 +1,55 @@
+ZesharCRM\Bundle\CoreBundle\Entity\LeadEvent:
+    type: entity
+    table: lead_event
+    repositoryClass: ZesharCRM\Bundle\CoreBundle\EntityRepository\LeadEventRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        happensAt:
+            type: datetime
+            column: happens_at
+            nullable: true
+        location:
+            type: string
+            length: 255
+            nullable: true
+        goal:
+            type: integer
+            length: 255
+            nullable: true
+    lifecycleCallbacks: {  }
+    manyToOne:
+        lead:
+            targetEntity: LeadSubject
+            cascade: ["persist"]
+            mappedBy: null
+            inversedBy: leadEvents
+            joinColumns:
+                lead:
+                    nullable: true
+                    referencedColumnName: id
+            orphanRemoval: false
+        type:
+            targetEntity: LeadEventType
+            cascade: ["persist"]
+            mappedBy: null
+            inversedBy: leadEvents
+            joinColumns:
+                type:
+                    nullable: true
+                    referencedColumnName: id
+            orphanRemoval: false
+#        opportunity:
+#            targetEntity: Opportunity
+#            cascade: ["persist"]
+#            mappedBy: null
+#            inversedBy: opportunityEvents
+#            joinColumns:
+#                opportunity:
+#                    nullable: true
+#                    referencedColumnName: id
+#            orphanRemoval: false

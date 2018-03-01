@@ -1,0 +1,12 @@
+<td{% block sonata_list_field_attributes %} class="sonata-ba-list-field sonata-ba-list-field-{{ field_description.type }} sonata-list-field-{{ field_description.name }}" objectId="{{ admin.id(object) }}"{% endblock %}>
+    {% set typeString = object.getPriorityString() %}
+    {% if typeString == 'Low' %}
+        <span class="tile-type low">Low</span>
+    {% endif %}
+    {% if typeString == 'Medium' %}
+        <span class="tile-type medium">Medium</span>
+    {% endif %}
+    {% if typeString == 'High' %}
+        <span class="tile-type high">High</span>
+    {% endif %}
+</td>

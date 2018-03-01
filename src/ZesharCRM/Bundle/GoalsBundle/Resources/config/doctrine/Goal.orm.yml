@@ -1,0 +1,50 @@
+ZesharCRM\Bundle\GoalsBundle\Entity\Goal:
+    type: entity
+    table: goal
+    repositoryClass: ZesharCRM\Bundle\GoalsBundle\Repository\GoalRepository
+    id:
+        id:
+            type: integer
+            id: true
+            nullable: false
+            generator:
+                strategy: AUTO
+    fields:
+        description:
+            type: text
+            nullable: true
+        startsAt:
+            type: datetime
+        finishesAt:
+            type: datetime
+        estimated:
+            type: float
+        total:
+            type: integer
+
+    lifecycleCallbacks: {  }
+    manyToOne:
+        creator:
+            targetEntity: ZesharCRM\Bundle\CoreBundle\Entity\User
+            cascade: {  }
+            mappedBy: null
+            inversedBy: createdGoals
+            joinColumns:
+                creator:
+                    nullable: false
+                    referencedColumnName: id
+            orphanRemoval: false
+    oneToMany:
+        assignments:
+            targetEntity: GoalAssignment
+            cascade: ["persist","remove"]
+            mappedBy: goal
+    oneToOne:
+        goalCategory:
+            targetEntity: ZesharCRM\Bundle\CoreBundle\Entity\LeadCategory
+            mappedBy: null
+            joinColumns:
+                goal_category:
+                    referencedColumnName: id
+                    onDelete: SET NULL
+            orphanRemoval: false

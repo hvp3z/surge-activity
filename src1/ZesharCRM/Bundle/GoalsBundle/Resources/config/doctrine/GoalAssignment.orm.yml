@@ -1,0 +1,41 @@
+ZesharCRM\Bundle\GoalsBundle\Entity\GoalAssignment:
+    type: entity
+    table: goal_assignment
+    repositoryClass: ZesharCRM\Bundle\GoalsBundle\Repository\GoalAssignmentRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        estimated:
+            type: integer
+        status:
+            type: integer
+        current:
+            type: integer
+            nullable: true
+    lifecycleCallbacks: {  }
+
+    manyToOne:
+            goal:
+                targetEntity: Goal
+                cascade: {  }
+                mappedBy: null
+                inversedBy: assignments
+                joinColumns:
+                    goal:
+                        nullable: false
+                        referencedColumnName: id
+                orphanRemoval: false
+            assignee:
+                targetEntity: ZesharCRM\Bundle\CoreBundle\Entity\User
+                cascade: {  }
+                mappedBy: null
+                inversedBy: goalAssignments
+                joinColumns:
+                    assignee:
+                        nullable: false
+                        referencedColumnName: id
+                orphanRemoval: false

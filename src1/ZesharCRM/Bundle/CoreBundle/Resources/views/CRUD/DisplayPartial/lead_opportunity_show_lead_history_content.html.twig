@@ -1,0 +1,26 @@
+<div id="lead_contact_history_table">
+    {% if object.getCallReport() is not empty %}
+        <div>
+            <table class="tabletable editable-table">
+                <tr>
+                    <td>Date</td>
+                    <td>Type</td>
+                    <td>Direction</td>
+                    <td>Status</td>
+                </tr>
+                <tbody>
+                {% for contactAttempt in object.getCallReport() %}
+                    <tr class="existing-event-line">
+                        <td>{{ contactAttempt.getStartsAt()|date('m/d/y') }}</td>
+                        <td>{{ contactAttempt.getEventsTypeString() }}</td>
+                        <td>{{ contactAttempt.getTypeString() }}</td>
+                        <td>{{ contactAttempt.getStatusString() }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <div>There are no contact attempt.</div>
+    {% endif %}
+</div>

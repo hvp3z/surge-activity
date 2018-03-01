@@ -1,0 +1,35 @@
+ZesharCRM\Bundle\LeadScoringBundle\Entity\ScoringCriteria:
+    type: entity
+    table: scoring_criteria
+    repositoryClass: ZesharCRM\Bundle\LeadScoringBundle\Repository\ScoringCriteriaRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        score:
+            type: integer
+    lifecycleCallbacks: {  }
+    oneToMany:
+        children:
+          targetEntity: ScoringCriteria
+          mappedBy: parent
+          cascade: [ "remove" ]
+    manyToOne:
+        parent:
+          targetEntity: ScoringCriteria
+          inversedBy: children
+        company:
+          targetEntity: ZesharCRM\Bundle\CoreBundle\Entity\Company
+          cascade: { }
+          mappedBy: null
+          inversedBy: scoringCriterias
+          joinColumns:
+            company:
+              nullable: true
+              referencedColumnName: id

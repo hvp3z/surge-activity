@@ -1,0 +1,203 @@
+<script type=text/javascript>
+    $(document).ready(function() {
+        "use strict";
+
+        var goal = {
+            tableWrapper: $('.sonata-ba-view-container'),
+            wrapper: $('body'),
+
+            updateField: function(){
+                goal.tableWrapper.on('click', '.editable-on-text', function(event){
+                    var element = event.target;
+                    console.log(element);
+                    if (!$(element).hasClass('goal-text-editable')) {
+                        var currentContent = $(this).html();
+                        goal.updateValue();
+                        if (!$(this).hasClass('input-enable')) {
+                            $(this).addClass('input-enable');
+                            $(this).html("<input class='goal-text-edit goal-text-editable' type='number' value='" + currentContent.trim() + "' />");
+                        }
+                    }
+                });
+
+                goal.tableWrapper.on('change', '.edit-field', function(event){
+                    goal.updateTable($(this));
+                    if (!$(this).parents('td').hasClass('input-enable')) {
+                        $(this).parents('td').addClass('input-enable');
+                    }
+                });
+
+//                goal.wrapper.on('click', function(event){
+//                    var element = event.target;
+//                    if(!$(element).hasClass('editable-on-text') && !$(element).hasClass('goal-text-editable') &&
+//                            !$(element).hasClass('goal-text-save') && !$(element).hasClass('edit-field') )
+//                    {
+//                        goal.updateValue();
+//                    }
+//                });
+                goal.wrapper.on('keydown', function(event){
+                    if (event.which == 13) {
+                        goal.updateValue();
+                    }
+
+                });
+            },
+
+            saveValue: function() {
+                goal.wrapper.on('click', '.goal-action-save', function(){
+                    var data = {};
+                    var i = 0;
+                    var ajaxUrl = "{{ app.request.getBaseURL() }}/ajax/goal_global_admin/saveGoals";
+
+                    goal.tableWrapper.each(function(){
+                        var dataElem = {};
+
+                        dataElem['product_id'] = $(this).data('productId');
+                        $(this).find('.goal-editable').each(function(){
+                            var inputField = $(this).find('input');
+                            if (inputField.length > 0) {
+                                dataElem[$(this).data('fieldName')] = inputField.val();
+                            } else {
+                                dataElem[$(this).data('fieldName')] = $(this).html().trim();
+                            }
+                        });
+                        data[i] = dataElem;
+                        i++;
+                    });
+                    console.log(data);
+                    $.ajax(ajaxUrl, {
+                        'data': data,
+                        'type': 'POST',
+                        'success': function (response) {
+                            console.log('ajax success');
+                        },
+                        'error': function () {
+                            console.log('ajax error');
+                            alert('A error occured while AJAX request.');
+                        }
+                    });
+                });
+
+            },
+
+            updateValue: function() {
+                var editableField = goal.wrapper.find('.input-enable');
+
+                if (editableField.length > 0) {
+                    editableField.find('.goal-text-edit').each(function(){
+                        $(this).blur();
+                        goal.updateTable($(this));
+                        if ($(this).hasClass('removed')) {
+                            editableField.html($(this).val());
+                        }
+                    });
+                    editableField.removeClass('input-enable');
+                }
+            },
+
+            updateTable: function(value){
+
+                var trWrapper = value.parents('.sonata-ba-view-container');
+
+                var points = trWrapper.find('.goal-points');
+                var prev = trWrapper.find('.goal-prev');
+                var prevTotal = trWrapper.find('.goal-prev-total');
+                var percent = trWrapper.find('.goal-percent');
+                var postTotal = trWrapper.find('.goal-post-total');
+                var post = trWrapper.find('.goal-post');
+
+                var data = {};
+                var ajaxUrl = "{{ app.request.getBaseURL() }}/ajax/goal_global_admin/updateGoal";
+
+                trWrapper.find('.goal-editable').each(function(){
+                    var inputField = $(this).find('input');
+                    if (inputField.length > 0) {
+                        data[$(this).data('fieldName')] = inputField.val();
+                    } else {
+                        data[$(this).data('fieldName')] = $(this).html();
+
+                    }
+                });
+
+                var updatedPrev = parseFloat(data['prev']);
+                var updatedPercent = parseFloat(data['percent']);
+                //var updatedEstimated = (updatedPercent/100) * updatedPrev;
+                var updatedEstimated = (updatedPercent/100 + 1) * updatedPrev;
+                var updatedPrevTotal = updatedPrev * parseFloat(points.html());
+                var updatedPostTotal = updatedEstimated * parseFloat(points.html());
+
+                prev.html(updatedPrev);
+                prevTotal.html(updatedPrevTotal);
+                percent.find('input.goal-text-edit').val(updatedPercent);
+                post.html(updatedEstimated.toFixed(2));
+                postTotal.html(updatedPostTotal.toFixed(2));
+                goal.updateTotalIfo();
+
+//                data['product_id'] = value.parents('.sonata-ba-view-container').data('productId');
+//
+//                $.ajax(ajaxUrl, {
+//                    'data': data,
+//                    'type': 'POST',
+//                    'success': function (response) {
+//                        console.log('ajax success');
+//                        $(points).html(response.points);
+//                        $(prev).html(response.prev);
+//                        $(prevTotal).html(response.prev * response.points);
+//                        $(percent).find('input.goal-text-edit').val(response.percent);
+//                        $(post).html(response.estimated);
+//                        $(postTotal).html(response.estimated * response.points);
+//                        goal.updateTotalIfo();
+//                    },
+//                    'error': function () {
+//                        console.log('ajax error');
+//                        alert('A error occured while AJAX request.');
+//                    }
+//                });
+            },
+
+            updateTotalIfo: function(){
+                var globalPrev = $('.total-amount .goal-global-prev');
+                var globalPrevTotal = $('.total-amount .goal-global-prev-total');
+                var globalPercent = $('.total-amount .goal-global-percent');
+                var globalEstimated = $('.total-amount .goal-global-estimated');
+                var globalPostTotal = $('.total-amount .goal-global-post-total');
+
+                var globalPrevUpdate = 0;
+                var globalPrevTotalUpdate = 0;
+                var globalPercentUpdate = 0;
+                var globalEstimatedUpdate = 0;
+                var globalPostTotalUpdate = 0;
+
+                goal.tableWrapper.each(function(){
+                    //console.log($(this).find('.goal-prev').html().trim());
+
+                    var prev = $(this).find('.goal-prev');
+
+                    if (isNaN(parseFloat(prev.html().trim()))) {
+                        globalPrevUpdate += parseFloat(prev.find('.goal-text-editable').val());
+                    } else {
+                        globalPrevUpdate += parseFloat(prev.html().trim());
+                    }
+                    globalPrevTotalUpdate += parseFloat($(this).find('.goal-prev-total').html().trim());
+                    globalEstimatedUpdate += parseFloat($(this).find('.goal-post').html().trim());
+                    globalPostTotalUpdate += parseFloat($(this).find('.goal-post-total').html().trim());
+                });
+
+                globalPercentUpdate += (globalEstimatedUpdate - globalPrevUpdate)/globalPrevUpdate * 100;
+
+                globalPrev.html(globalPrevUpdate);
+                globalPrevTotal.html(globalPrevTotalUpdate);
+                globalPercent.html(globalPercentUpdate.toFixed(2) + "%");
+                globalEstimated.html(globalEstimatedUpdate.toFixed(2));
+                globalPostTotal.html(globalPostTotalUpdate.toFixed(2));
+            },
+
+            init: function(){
+                goal.updateField();
+                goal.saveValue();
+            }
+        };
+
+        goal.init();
+    });
+</script>

@@ -1,0 +1,17 @@
+{% extends admin.getTemplate('base_list_field') %}
+
+{% block field %}
+    {% if value %}
+        {% if object.getEmail() is not empty %}
+            {% if not object.getEmail().getDonotEmail() %}
+                <span class="email-contact-tab">
+                                <a href="#" class="send-email" title="{{ object.getEmail() }}">{{ object.getEmail() }}</a>
+                            </span>
+            {% else %}
+                <span class="email-contact-tab marked-dne">
+                                {{ object.getEmail() }}
+                            </span>
+            {% endif %}
+        {% endif %}
+    {% endif %}
+{% endblock %}

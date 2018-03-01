@@ -1,0 +1,14 @@
+<ul class="lead-subject-type lead-type four-list">
+    <li>
+        <input type="radio" class="radio" id="yes" name="lead_subject_type" value="1" {% if activeValue is not empty and activeValue == 1 %}checked="checked"{% endif %} />
+        <label for="yes" class="lead-type recycled">Recycled</label>
+    </li>
+    <li>
+        <input type="radio" class="radio" id="no" name="lead_subject_type" value="2" {% if activeValue is not empty and activeValue == 2 %}checked="checked"{% endif %}/>
+        <label for="no" class="lead-type winback">Winback</label>
+    </li>
+    <li class="larger">
+        <input type="radio" class="radio" id="neglected" name="lead_subject_type" value="3" {% if activeValue is not empty and activeValue == 3 %}checked="checked"{% endif %}/>
+        <label for="neglected" class="lead-type cross_sell">Cross Sell</label>
+    </li>
+</ul>

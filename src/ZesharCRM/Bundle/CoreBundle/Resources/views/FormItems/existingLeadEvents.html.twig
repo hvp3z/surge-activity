@@ -1,0 +1,23 @@
+<div>
+    {% if object.getLeadEvents() is not empty %}
+        <div id="table-scroll">
+            <table class="tabletable editable-table" style="width:100%;">
+                <tbody>
+                {% for leadEvent in object.getLeadEvents() %}
+                    <tr class="existing-event-line" data-event-id="{{ leadEvent.getId() }}">
+                        <td data-event-field="happensAt" data-event-field-val="{{ leadEvent.getHappensAt()|date('Y-m-d H:i:s') }}">{{ leadEvent.getHappensAt()|date('M d, Y H:i') }}</td>
+                        <td data-event-field="location" data-event-field-val="{{ leadEvent.getLocation() }}">{{ leadEvent.getLocation() }}</td>
+                        <td data-event-field="leadEventType" data-event-field-val="{{ leadEvent.getType() is null ? '' : leadEvent.getType().getId()}}">
+                            {{ leadEvent.getType() is null ? '' : leadEvent.getType().getTitle() }}
+                        </td>
+                        <td data-event-field="goal" data-event-field-val="{{ leadEvent.getGoal() }}">{{ leadEvent.getGoalString() }}</td>
+                        <td data-event-field="delete" style="width: auto;"><a class="delete-event"><i class="fa fa-times"></i></a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <div>No events were still appointed.</div>
+    {% endif %}
+</div>

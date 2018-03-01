@@ -1,0 +1,28 @@
+ZesharCRM\Bundle\CoreBundle\Entity\Lead:
+    type: entity
+    table: lead
+    repositoryClass: ZesharCRM\Bundle\CoreBundle\Repository\LeadSubjectRepository
+    fields:
+        type:
+            type: smallint
+            nullable: false
+    manyToOne:
+        creator:
+            targetEntity: User
+            cascade: {  }
+            mappedBy: null
+            inversedBy: createdLeads
+            joinColumns:
+                creator:
+#                    nullable: false
+                    referencedColumnName: id
+            orphanRemoval: false
+        assignee:
+            targetEntity: User
+            cascade: {  }
+            mappedBy: null
+            inversedBy: assignedLeads
+            joinColumns:
+                assignee:
+                    referencedColumnName: id
+            orphanRemoval: false

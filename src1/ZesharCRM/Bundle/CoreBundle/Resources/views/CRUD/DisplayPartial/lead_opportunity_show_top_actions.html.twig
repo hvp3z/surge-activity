@@ -1,0 +1,26 @@
+{% if app.request.get('leadCampaign') is defined %}
+    {% set leadCampaign = app.request.get('leadCampaign') %}
+{% else %}
+    {% set leadCampaign = '' %}
+{% endif %}
+
+<div class="top-actions" data-lead-id="{{ object.getId() }}" data-lead-campaign="{{ leadCampaign }}">
+    {% if admin.getLabel() == 'Lead' %}
+        <button class="btn btn-green-border double-quote transition-opportunity" data-status="opportunity" value="1">Opportunity</button>
+        <button class="btn btn-green-border double-quote transition-opportunity" data-status="quote" value="3">Quote</button>
+    {% endif %}
+    {% if admin.getLabel() == 'Opportunity' %}
+        {% if object.getStatus == 1 %}
+            <button class="btn btn-green-border double-quote back transition-opportunity" data-status="opportunity_to_lead" value="3">Lead</button>
+            <button class="btn btn-green-border double-quote transition-opportunity" data-status="opportunity_to_quote" value="3">Quote</button>
+            <button class="btn btn-green-border double-quote transition-opportunity" data-status="opportunity_to_sold" value="5">Sold</button>
+        {% endif %}
+        {% if object.getStatus == 3 %}
+            <button class="btn btn-green-border double-quote back transition-opportunity" data-status="quote_to_opportunity" value="1">Opportunity</button>
+            <button class="btn btn-green-border double-quote transition-opportunity" data-status="opportunity_to_sold" value="5">Sold</button>
+        {% endif %}
+    {% endif %}
+    {% if admin.getLabel() == 'Lead' %}
+        <a href="{{ admin.generateObjectUrl('delete', object) }}">Delete {{ admin.getLabel() }}</a>
+    {% endif %}
+</div>

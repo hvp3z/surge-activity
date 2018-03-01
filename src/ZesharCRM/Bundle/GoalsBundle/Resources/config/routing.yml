@@ -1,0 +1,16 @@
+zeshar_crm_goals_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: ZesharCRMGoalsBundle:Default:index }
+zeshar_crm_goals_users:
+    pattern:  /admin/goals/
+    defaults: { _controller: ZesharCRMGoalsBundle:GoalGlobalAdmin:showAdminGoals }
+ajaxGoalAdmin:
+    pattern:  /ajax/goal_global_admin/{action}
+    defaults: { _controller: ZesharCRMGoalsBundle:GoalGlobalAdmin:index}
+zeshar_crm_goal_users:
+    pattern:  /admin/goals/goal/{id}
+    defaults: { _controller: ZesharCRMGoalsBundle:GoalGlobalAdmin:showAdminGoal }
+zeshar_crm_goal_report:
+    pattern:  /admin/goals/report
+    defaults: { _controller: ZesharCRMGoalsBundle:GoalGlobalAdmin:showAdminGoalReport }
+

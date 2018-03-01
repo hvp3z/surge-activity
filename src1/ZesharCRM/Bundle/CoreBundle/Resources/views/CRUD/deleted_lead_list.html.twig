@@ -1,0 +1,372 @@
+{#
+
+This file is part of the Sonata package.
+
+(c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+
+#}
+
+{% extends 'SonataAdminBundle:CRUD:list.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('bundles/zesharcrmcore/js/lead_opportunity_list.js') }}"></script>
+{% endblock %}
+
+{% block list_table %}
+    <div class="box box-primary">
+    <div class="box-body table-responsive no-padding">
+    {{ sonata_block_render_event('sonata.admin.list.table.top', { 'admin': admin }) }}
+
+    {% block list_header %}
+        {% if pageTitle is defined %}
+        <script>
+            $(function(){
+                page_title = "{{ pageTitle }}";
+                if(page_title.length > 0){
+                    document.title = page_title;
+                }
+            });
+        </script>
+        {% endif %}
+        <script>
+            (function() {
+
+
+                var _init = function () {
+
+                    // bulk operations checkboxes
+
+                    var listBatchCheckbox = $('#list_batch_checkbox');
+                    var otherCheckboxes = listBatchCheckbox
+                                    .closest('table')
+                                    .find('td.sonata-ba-list-field-batch input[type="checkbox"]')
+                                    .not(listBatchCheckbox)
+                            ;
+                    listBatchCheckbox.on('change', function () {
+                        if ($(this).is(':checked')) {
+                            otherCheckboxes
+                                    .prop('checked', true)
+                                    .trigger('change')
+                            ;
+                        } else {
+                            otherCheckboxes
+                                    .prop('checked', false)
+                                    .trigger('change')
+                            ;
+                        }
+                    });
+
+                    otherCheckboxes
+                            .on('change', function () {
+                                $(this)
+                                        .closest('tr')
+                                        .toggleClass('sonata-ba-list-row-selected', $(this).is(':checked'))
+                                ;
+                                var selectedCheckboxesCount = otherCheckboxes.filter(':checked').size();
+                                var selectedCheckboxesCountText = '';
+                                if (selectedCheckboxesCount == 0) {
+                                    selectedCheckboxesCountText = 'No items selected';
+                                } else {
+                                    if (selectedCheckboxesCount == 1) {
+                                        selectedCheckboxesCountText = '1 Item Selected';
+                                    } else {
+                                        selectedCheckboxesCountText = selectedCheckboxesCount + ' Items Selected';
+                                    }
+                                }
+                                $('.selected-items-count').text(selectedCheckboxesCountText);
+                            })
+                            .trigger('ifChanged')
+                    ;
+
+
+                    // top list filters
+
+                    $('.table-sonata-list').each(function() {
+                        var filtersThead = $('<thead></thead>');
+                        var filtersTheadTr = $('<tr></tr>');
+                        var titlesThead = $(this).children('thead.title-head');
+                        titlesThead.find('th').each(function() {
+                            var th = $('<th></th>');
+                            if ($(this).is('[data-fieldname]')) {
+                                th.addClass('sonata-list-field-' + $(this).data('fieldname'));
+                                var realFilterInputId = 'filter_' + ($(this).data('fieldname').replace('.', '__')) + '_value';
+                                var realFilterInput = $('#' + realFilterInputId).not('div');
+                                if (realFilterInput.size()) { // else - filter for this field exist
+                                    var newFilterInput = realFilterInput.clone();
+                                    newFilterInput
+                                            .addClass('fake-filter-input')
+                                            .css('margin', '0')
+                                            .appendTo(th)
+                                    ;
+                                    if (newFilterInput.prop("tagName") == 'select' || newFilterInput.prop("tagName") == 'SELECT') { // init select2
+                                        newFilterInput.addClass('light');
+                                        newFilterInput.select2();
+                                    }
+                                } else {
+                                    // check for date filters
+                                    var yearFilter = $('#' + realFilterInputId + '_year');
+                                    var monthFilter = $('#' + realFilterInputId + '_month');
+                                    var dayFilter = $('#' + realFilterInputId + '_day');
+                                    if (yearFilter.size() || monthFilter.size() || dayFilter.size()) {
+                                        var date = new Date();
+                                        var dateNotEmpty = false;
+                                        if (yearFilter.size()) {
+                                            if (yearFilter.val()) {
+                                                date.setYear(yearFilter.val());
+                                                dateNotEmpty = true;
+                                            }
+                                        }
+                                        if (monthFilter.size()) {
+                                            if (monthFilter.val()) {
+                                                date.setMonth(monthFilter.val() - 1);
+                                                dateNotEmpty = true;
+                                            }
+                                        }
+                                        if (dayFilter.size()) {
+                                            if (dayFilter.val()) {
+                                                date.setDate(dayFilter.val());
+                                                dateNotEmpty = true;
+                                            }
+                                        }
+                                        var dateInput = $('<input type="text" class="datepicker"/>');
+
+                                        var m_names = new Array("january", "february", "march",
+                                                "april", "may", "june", "july", "august", "september",
+                                                "october", "november", "december");
+                                        var dateString = date.getDate() + ' ' + m_names[date.getMonth()] + ', ' + date.getFullYear();
+
+                                        // hack for datepicker (smth overrides it)
+                                        setTimeout(function() {
+                                            if (dateNotEmpty) {
+                                                dateInput.val(dateString);
+                                            }
+                                        }, 1000);
+
+                                        dateInput
+                                            //.val(dateString)
+                                            //.trigger('change')
+                                                .datepicker( "option", "dateFormat", "M d, yy" )
+                                                .datepicker('setDate', date)
+                                                .addClass('fake-filter-input')
+                                                .css('margin', '0')
+                                                .data('real-inpit-id', realFilterInputId)
+                                                .appendTo(th)
+                                        ;
+                                    }
+                                }
+                            }
+                            th.appendTo(filtersTheadTr);
+                        });
+                        filtersTheadTr.appendTo(filtersThead);
+                        filtersThead.addClass('fake-filters').insertAfter(titlesThead);
+
+                        $('.fake-filter-input').on('keypress', function(e) {
+                            if (13 == e.keyCode) { // catch Enter key
+                                e.preventDefault();
+                            }
+                        });
+                    });
+
+                    // search button
+
+                    $('.btn-list-search').on('click', function(e) {
+                        var sonataFilterForm = $('form.sonata-filter-form');
+
+                        $('.fake-filters').find('input.fake-filter-input, select.fake-filter-input').each(function() {
+                            var fakeFilterName = $(this).attr('name');
+                            var realFilterInput = sonataFilterForm.find('[name="' + fakeFilterName + '"]');
+                            if (realFilterInput.size()) {
+                                realFilterInput.val($(this).val()).trigger('change');
+                            } else { // try to handle date
+                                var realInputId = $(this).data('real-inpit-id');
+                                if (realInputId) {
+                                    if ($(this).val()) {
+                                        var date = $(this).datepicker( "getDate" );
+                                        $('#' + realInputId + '_year').val(date.getFullYear()).trigger('change');
+                                        $('#' + realInputId + '_month').val(date.getMonth() + 1).trigger('change');
+                                        $('#' + realInputId + '_day').val(date.getDate()).trigger('change');
+                                    }
+                                }
+                            }
+                        });
+                        sonataFilterForm.off('submit');
+                        sonataFilterForm.trigger('submit');
+
+
+                        e.preventDefault();
+                    });
+
+                    // "reset filters" button
+
+                    $('.btn-list-reset').on('click', function(e) {
+                        var resetUrl = $('form.sonata-filter-form button[type="submit"]').next().attr('href');
+                        if (resetUrl) {
+                            window.location = resetUrl;
+                        }
+
+                        e.preventDefault();
+                    });
+
+                };
+                $(document).ready(setTimeout(_init, 30));
+            })();
+        </script>
+    {% endblock %}
+
+    {% set batchactions = admin.batchactions %}
+    {% if admin.datagrid.results|length > 0 %}
+        {% if admin.hasRoute('batch') %}
+            <div class="table-scroll" style="overflow: visible;">
+            <form action="{{ admin.generateUrl('batch', {'filter': admin.filterParameters}) }}" method="POST" >
+            <input type="hidden" name="_sonata_csrf_token" value="{{ csrf_token }}">
+        {% endif %}
+        <table class="table table-sonata-list table-bordered table-striped custom-table-2">
+            {% block table_header %}
+                <thead class="title-head">
+                <tr>
+                    {% for field_description in admin.list.elements %}
+                        {% if admin.hasRoute('batch') and field_description.getOption('code') == '_batch' and batchactions|length > 0 %}
+                            <th>
+                                <input type="checkbox" id="list_batch_checkbox">
+                            </th>
+                        {% elseif field_description.getOption('code') == '_select' %}
+                            <th class="sonata-ba-list-field-header sonata-ba-list-field-header-select"></th>
+                        {% elseif field_description.name == '_action' and app.request.isXmlHttpRequest %}
+                            {# Action buttons disabled in ajax view! #}
+                        {% elseif field_description.getOption('ajax_hidden') == true and app.request.isXmlHttpRequest %}
+                            {# Disable fields with 'ajax_hidden' option set to true #}
+                        {% else %}
+                            {% set sortable = false %}
+                            {% if field_description.options.sortable is defined and field_description.options.sortable %}
+                                {% set sortable             = true %}
+                                {% set sort_parameters      = admin.modelmanager.sortparameters(field_description, admin.datagrid) %}
+                                {% set current              = admin.datagrid.values._sort_by == field_description or admin.datagrid.values._sort_by.fieldName == sort_parameters.filter._sort_by %}
+                                {% set sort_active_class    = current ? 'sonata-ba-list-field-order-active' : '' %}
+                                {% set sort_by              = current ? admin.datagrid.values._sort_order : field_description.options._sort_order %}
+                            {% endif %}
+
+                            {% spaceless %}
+                                <th class="sonata-ba-list-field-header-{{ field_description.type}}" class="sonata-list-field-{{ field_description.name }}" data-fieldname="{{ field_description.name }}">
+                                    <span>{{ admin.trans(field_description.label, {}, field_description.translationDomain) }}</span>
+                                    {% if sortable %}<a class="filter-link" href="{{ admin.generateUrl('list', sort_parameters) }}">{% endif %}
+                                        {% if sortable %}</a>{% endif %}
+                                </th>
+                            {% endspaceless %}
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                </thead>
+            {% endblock %}
+
+            {% block table_body %}
+                <tbody>
+                {% for object in admin.datagrid.results %}
+                    {#{% if not object.isAvailable %}#}
+                        <tr>
+                            {% include admin.getTemplate('inner_list_row') %}
+                        </tr>
+                    {#{% endif %}#}
+                {% endfor %}
+                </tbody>
+            {% endblock %}
+        </table>
+        {% block table_footer %}
+            <div class="table-filter clearfix">
+                <div class="pull-left batch-wrap">
+                    <span class="selected-items-count" style="display: inline-block; min-width: 110px;">No items selected</span>
+                    {#<input name="action" type="hidden" value="delete" />#}
+                    {#<input name="action" type="hidden" value="reassign" />#}
+                    <input type="submit" data-ajax-url="{{ app.request.getBaseURL() }}/ajax/leads_list/leadReestablish" value="Reestablish" data-batch="reestablish" class="btn btn-small btn-primary btn-list-reestablish btn-batch">
+                    <input type="submit" data-ajax-url="{{ app.request.getBaseURL() }}/ajax/leads_list/leadDelete" value="Delete Permanently" data-batch="delete_permanently" class="btn btn-small btn-primary btn-list-delete btn-batch">
+                </div>
+
+                <div class="pull-right">
+                    {% block pager_results %}
+                        Show
+                        <select class="custom-select-to-init light per-page small" id="{{ admin.uniqid }}_per_page">
+                            {% for per_page in admin.getperpageoptions %}
+                                <option {% if per_page == admin.datagrid.pager.maxperpage %}selected="selected"{% endif %} value="{{ admin.generateUrl('list', {'filter': admin.datagrid.values | merge({'_page': 1, '_per_page': per_page})}) }}">
+                                    {{ per_page }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                        per page
+                    {% endblock %}
+
+                    {% if admin.hasRoute('export') and admin.isGranted("EXPORT") and admin.getExportFormats()|length %}
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                <i class="glyphicon glyphicon-export"></i>
+                                {{ "label_export_download"|trans({}, "SonataAdminBundle") }}
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" style="margin-left: 50px;">
+                                {% for format in admin.getExportFormats() %}
+                                <li>
+                                    <a href="{{ admin.generateUrl('export', admin.modelmanager.paginationparameters(admin.datagrid, 0) + {'format' : format}) }}">
+                                        <i class="glyphicon glyphicon-download"></i>
+                                        {{ format|upper }}
+                                    </a>
+                                <li>
+                                    {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            {% block pager_links %}
+                {% if admin.datagrid.pager.haveToPaginate() %}
+                    {% include admin.getTemplate('pager_links') %}
+                {% endif %}
+            {% endblock %}
+
+        {% endblock %}
+        {% if admin.hasRoute('batch') %}
+            </form>
+            </div>
+        {% endif %}
+    {% else %}
+        <div class="callout callout-info">
+            {{ 'no_result'|trans({}, 'SonataAdminBundle') }}
+        </div>
+    {% endif %}
+
+    {% block list_footer %}{% endblock %}
+
+    {{ sonata_block_render_event('sonata.admin.list.table.bottom', { 'admin': admin }) }}
+
+
+    </div>
+    </div>
+{% endblock %}
+
+{% block sonata_admin_filter_right_column %}
+    <div class="pull-right">
+        <button class="btn filter-widget hidden-widget" data-target="collapse-block">Hide widgets</button>
+    </div>
+{% endblock %}
+
+{% block sonata_admin_right_column %}
+    <div id="collapse-block" class="right-column">
+        <div class="widget-wrap">
+            {{ render(controller('ZesharCRMCoreBundle:Dashboard:showBlockWidget')) }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block sonata_admin_filter_left_column %}
+    <div class="pull-left">
+        <a href="{{ admin.generateUrl('create') }}"><button type="button" class="btn btn-green"><i class="fa fa-plus"></i>Add New {{ admin.getLabel() }}</button></a>
+    </div>
+    <div class="pull-right filter-controls">
+        {% if admin.datagrid.results|length > 0 %}
+            <input type="button" class="btn btn-green btn-list-search" value="Search">
+        {% endif %}
+        <input type="button" class="btn btn-white btn-list-reset" value="Reset Filters">
+    </div>
+{% endblock %}

@@ -1,0 +1,36 @@
+ZesharCRM\Bundle\GoalsBundle\Entity\GoalAssign:
+    type: entity
+    table: goal_assign
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        point:
+            type: float
+        percent:
+            type: float
+        items:
+            type: float
+    lifecycleCallbacks: {  }
+    manyToOne:
+        goal:
+            targetEntity: Goal
+            cascade: {  }
+            mappedBy: null
+            joinColumns:
+                goal:
+                    nullable: false
+                    referencedColumnName: id
+            orphanRemoval: false
+        user:
+            targetEntity: ZesharCRM\Bundle\CoreBundle\Entity\User
+            cascade: {  }
+            mappedBy: null
+            joinColumns:
+                assignee:
+                    nullable: false
+                    referencedColumnName: id
+            orphanRemoval: false

@@ -1,0 +1,232 @@
+/* 
+    Document   : sonata_fixes
+    Created on : 10.07.2014, 16:47:29
+    Author     : Victor Karalkin
+    Description:
+        Fixes & adjustments for sonata backend.
+*/
+
+.content .sonata-ba-form > form, .modal-content .modal-body > form {
+    width: 752px;
+}
+
+form .form-control {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+form .form-control:focus {
+    border-color: #daa520 !important;
+}
+
+.box {
+    border-top: 2px solid #daa520 !important;
+}
+
+input:invalid, textarea:invalid {
+    background-color: #fff !important;
+}
+
+.box.box-success, .box.box-primary {
+    border-top-color: #daa520 !important;
+}
+
+.btn.btn-success, .btn.btn-primary {
+    border-color: #da8520 !important;
+    background-color: #daa520 !important;
+}
+
+.btn.btn-success:hover, .btn.btn-success:active, .btn.btn-primary:hover, .btn.btn-primary:active {
+    border-color: #da8520 !important;
+    background-color: #daa520 !important;
+}
+
+.custom-block .custom-form-head .custom-menu-notes {
+    margin-right: 16px;
+    margin-top: 10px;
+}
+
+.custom-block-prequalification .form-column h3 {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.custom-block-prequalification .form-column .custom-form-head {
+    margin-bottom: -1px;
+    border-bottom: 1px solid #dfdac6;
+}
+
+.custom-block-prequalification .form-column .form-group {
+    margin-top: 14px;
+}
+
+.custom-block-prequalification .form-column .additional-block.last {
+    border-bottom: 1px solid #dfdac6;
+    margin-bottom: 15px;
+}
+
+.custom-block-prequalification > .show-display-per-block-actions {
+    margin: 15px 0 15px 15px;
+}
+
+.show-display-per-block-actions {
+    display: inline-block;
+}
+
+#lead_event_create  .btn-save-block {
+    margin-left: 16px;
+}
+
+.btn-green-border.checkButton {
+    background-color: #77bd77;
+}
+
+.prequalification-button-group {
+    display: inline-block;
+    width: 419px;
+}
+
+/*.prequalification-button-group .btn-green-border {*/
+    /*margin-left: 248px;*/
+/*}*/
+
+.group-forms {
+    border-bottom: 1px solid #dfdac6;
+    margin-bottom: -1px;
+}
+
+.btn-red-border {
+    background: transparent;
+    border-color: red;
+    box-shadow: none;
+    color: #000000;
+}
+
+.prequalification-button-group .btn-red-border {
+    margin-left: 179px;
+}
+
+.btn-red-border.exclude-new:before {
+    content:"\f068";
+    font-family: FontAwesome;
+    color: red;
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    padding-top: 3px;
+}
+
+/*.btn-green-border.add-new{*/
+    /*margin-left: 173px;*/
+/*}*/
+
+.btn-green-border.add-new:before {
+    padding-top: 3px;
+}
+
+.form-column .btn.btn-red-border.clear-all{
+    font-size: 12px;
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    margin-left: -180px
+}
+
+.btn-red-border.clear-all:before {
+    content:"\f00d";
+    font-family: FontAwesome;
+    color: red;
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    padding-top: 3px;
+}
+
+.btn-red {
+    color: #fff;
+    background-color: #F94949;
+    border-color: #F94949;
+}
+
+.link-delete {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 6px 27px;
+    line-height: 1.42857143;
+    margin-left: 5px;
+}
+
+/*.exclude-new{*/
+    /*padding-left: 289px;*/
+/*}*/
+
+.update-comment{
+    margin-top: 10px;
+    margin-right: 4px;
+}
+
+.buttons-change-comment{
+    display: inline-block;
+}
+
+.attach-file{
+    color: #6E6E6E;
+}
+
+.block-attach-file{
+    padding-left: 3px;
+    padding-top: 6px;
+}
+
+.delete-file{
+    color: #d9534f;
+}
+.file-link{
+    color: blue;
+    font-size: 12px;
+}
+
+.filter-widget{
+    background: #c78c2e;
+    color: #fff;
+    border: 1px solid #a9731c;
+    float: right;
+}
+
+.show-page .right-column{
+    margin-right: 15px;
+}
+
+.custom-block-history .show-display-per-block-actions{
+    margin-top: 10px;
+}
+
+.reassign-block{
+    display: inline-block;
+    margin-left: 38px;
+}
+
+.right-prequalification-groub-buttons{
+    display: inline-flex;
+    float: right;
+}
+
+.add-new-block{
+    display: inline-block;
+}
+
+.exclude-new-block{
+    display: inline-block;
+}
+
+.column-battery i{
+    margin-left: -2px;
+    margin-bottom: -2px;
+}
+
+.wide-edit-custom {
+    width: 105px;
+}

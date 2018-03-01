@@ -1,0 +1,61 @@
+{% extends 'ZesharCRMCoreBundle::sonata_layout.html.twig' %}
+
+{% block breadcrumb %}
+    <li><a href="{{ url('sonata_admin_dashboard') }}">{% trans %}Dashboard{% endtrans %}</a></li>
+    <li class="active">Goal Page</li>
+{% endblock %}
+
+{% block content %}
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th colspan="4">
+                 Portfolio
+            </th>
+            <th colspan="4">
+                User Goals
+            </th>
+        </tr>
+        <tr>
+        <th>Item</th>
+        <th>Points</th>
+        <th>Target Items</th>
+        <th>Total Points</th>
+        <th>Growth Desired</th>
+        <th>Items in Force</th>
+        <th>Total Points</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% if result %}
+            {% for key, item in result %}
+                <tr class="sonata-ba-view-container">
+                    <td>
+                        {{ key }}
+                    </td>
+                    <td>
+                        {{ item.points }}
+                    </td>
+                    <td>
+                        {{ item.prev}}
+                    </td>
+                    <td>
+                        {{ item.prev*item.points}}
+                    </td>
+                    <td>
+                        {{ item.percent}} %
+                    </td>
+                    <td>
+                        {{ item.estimated}}
+                    </td>
+                    <td>
+                        {{ item.estimated*item.points}}
+                    </td>
+                </tr>
+            {% endfor %}
+        {% endif %}
+        </tbody>
+    </table>
+
+{% endblock %}
+

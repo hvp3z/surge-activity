@@ -1,0 +1,4 @@
+zeshar_crm_call:
+    pattern:  /call
+    defaults: { _controller: ZesharCRMCallsBundle:CallReporting:create}
+

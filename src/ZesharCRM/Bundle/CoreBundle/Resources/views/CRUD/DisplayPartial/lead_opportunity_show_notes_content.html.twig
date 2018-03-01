@@ -1,0 +1,39 @@
+<div class="form-column">
+    <div class="form-group">
+        <textarea name="note" id="note" class="form-control" placeholder="Your comment"></textarea>
+        <div class="block-attach-file">
+            <form enctype="multipart/form-data">
+                <input type="file" id="attachmentFile" name="attachmentFile" class="attach-file" >
+            </form>
+        </div>
+    </div>
+    <div class="clearfix">
+        <input type="hidden" id="lead_id" name="lead_id" value="{{ object.getId() }}" />
+        {% include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_block_actions.html.twig') with {'show_cancel_link': false, 'save_button_title': 'Post'} %}
+    </div>
+</div>
+<div class="comments-list" style="max-height: 220px; overflow: hidden; overflow-y: scroll;">
+    {% for note in object.getAttachments() %}
+        <article {#{{ loop.index > 2 ? "style='display:none'" : "" }}#}>
+            <h3>{{ note.getAttachment().getCreator().getUsername() }}</h3>
+            <div class="comment-text">
+                <p>{{ note.getAttachment().getText() }}</p>
+                {% if note.getAttachment().getFile() is not null %}
+                    <a target="_blank" class="file-link" href="{{ note.getAttachment().getDownloadUrl() }}">{{ note.getAttachment().getFilename() }}</a>
+                {% endif %}
+            </div>
+            <div class="comment-footer">
+                <span class="post-created">Posted at: {{ note.getAttachment().getCreatedAt()|date('y-m-d H:i:s') }} </span>
+                <span class="post-updated">Updated at: {{ note.getAttachment().getUpdatedAt()|date('y-m-d H:i:s') }} </span>
+                        <span class="comment-controls">
+                            <a href="#" class="comment-edit"><i class="fa fa-pencil"></i></a>
+                            <a href="#" class="comment-delete"><i class="fa fa-times"></i></a>
+                        </span>
+            </div>
+            <input type="hidden" class="noteId" value="{{ note.getAttachment().getId() }}" />
+            <input type="hidden" class="lead_id" name="lead_id" value="{{ object.getId() }}" />
+        </article>
+    {% endfor %}
+
+    {#<a href="#" class="show-more">Show All Notes</a>#}
+</div>

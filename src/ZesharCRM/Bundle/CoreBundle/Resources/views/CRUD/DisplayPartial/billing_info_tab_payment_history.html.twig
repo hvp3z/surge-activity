@@ -1,0 +1,32 @@
+<div class="small-table right-couple">
+    <table>
+        <tr>
+            <th width="65%">Payment History</th>
+            <th width="35%"></th>
+        </tr>
+    </table>
+    <div>
+        <table>
+            <tr>
+                <td width="20%"><b>Date</b></td>
+                <td width="20%"><b>Action</b></td>
+                <td width="40%"><b>Description</b></td>
+                <td width="20%"><b>Amount</b></td>
+            </tr>
+        </table>
+        <hr />
+        <div style="height: 300px; overflow: auto">
+            <table class="payments">
+                {% for payment in object.creator.payments %}
+                    <tr>
+                        <td>{{ payment.date|date('d/m/Y') }}</td>
+                        <td></td>
+                        <td>{{ payment.description }}</td>
+                        <td>{{ payment.amount }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+<br />

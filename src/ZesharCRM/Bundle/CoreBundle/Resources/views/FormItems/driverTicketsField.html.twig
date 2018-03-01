@@ -1,0 +1,27 @@
+<div class="form-group plus row {{ first == true ? 'first' : '' }}">
+
+    <div class="col-md-10 ">
+        {% if first == true %}
+            <label for="tickets">At Fault / Tickets</label>
+        {% endif %}
+        <select id="{{ formItemId }}" name="{{ formItemId }}[$$name$$][$$ticketName$$][type]" class="custom-select light"{% if disabled is not empty %} disabled="disabled"{% endif %}>
+            {% if emptyOption is not empty %}
+                <option value="">{{ emptyOptionTitle }}</option>
+            {% endif %}
+            {% for key, dataElem in data %}
+                {{ dataElem }}
+                <option value="{{ fromEnum is defined ? key : dataElem }}" {% if activeValue is not empty and activeValue.getType() == key %} selected="selected"{% endif %}>{{ dataElem }}</option>
+            {% endfor %}
+        </select>
+
+    </div>
+
+    <div class="col-md-2 add-group">
+        <a href="#"><span class="glyphicon glyphicon-plus add-ticket-field"></span></a>
+        {% if first == false %}
+            <a href="#"><span class="glyphicon glyphicon-minus remove-ticket-field"></span></a>
+        {% endif %}
+    </div>
+
+    <input type="hidden" class="driverTicketId" name="driver_tickets[$$name$$][$$ticketName$$][id]" value="{{ activeValue is not empty ?  activeValue.getId() : '' }}" />
+</div>

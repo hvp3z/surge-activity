@@ -1,0 +1,47 @@
+{#
+
+This file is part of the Sonata package.
+
+(c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+
+#}
+
+{% extends admin.getTemplate('base_list_field') %}
+
+{% block field %}
+    {% if value %}
+        {% if field_description.options.attr is not defined %}
+            <div class="dropdown">
+        {% else %}
+            {% if field_description.options.attr.data == 'phone' %}
+                <div class="dropdown name-tel-tab {% if object.phone.getDnc() %}dnc{% endif %}">
+            {% endif %}
+            {% if field_description.options.attr.data == 'email' %}
+                <div class="dropdown email-tab {% if object.getEmail().getDonotEmail() %}marked-dne{% endif %}">
+            {% endif %}
+        {% endif %}
+        {% if field_description.hasAssociationAdmin and field_description.associationadmin.hasRoute('edit') and field_description.associationadmin.isGranted('EDIT', value) %}
+            <a href="{{ field_description.associationadmin.generateObjectUrl(field_description.options.route.name, value, field_description.options.route.parameters) }}">{{ value|render_relation_element(field_description) }}</a>
+        {% else %}
+            {{ value|render_relation_element(field_description) }}
+        {% endif %}
+        {% if enable_bundles.ZesharCRMCallsBundle is defined %}
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li>
+                    <span class="call" data-contact="{{ value.id }}" data-number="{{ value }}" >Call {{ value }}</span>
+                </li>
+                <li>
+                    <span class="hangup" style="display: none">Hangup</span>
+                </li>
+                <li>
+                    <span class="key" style="display: none">Press key</span>
+                </li>
+            </ul>
+            {% endif %}
+        </div>
+    {% endif %}
+{% endblock %}

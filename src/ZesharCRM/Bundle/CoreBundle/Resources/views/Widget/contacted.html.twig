@@ -1,0 +1,45 @@
+{% block widget %}
+    {#<div class="custom-block">
+        <div class="custom-head clear-fix">
+            <div class="custom-menu">
+                <button class="up-custom"></button>
+                <button class="settings-custom"></button>
+                <button class="close-custom"></button>
+            </div>
+            <div class="custom-menu-select">
+                {% if persons is not empty %}
+                    <select class="user_data">
+                        {% for person in persons %}
+                            <option {% if selectedUser == person.username %} selected {% endif %}>{{ person.username}}</option>
+                        {% endfor %}
+                    </select>
+                {% endif %}
+            </div>
+            <h3>My Activities</h3>
+        </div>
+        <div class="custom-content">
+            <table class="table-widget">
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th>Contacted</th>
+                    <th>Quoted</th>
+                    <th>Sold</th>
+                </tr>
+
+                {% for key, value in data %}
+                    <tr >
+                        <td>{{ key }}</td>
+                        <td>
+                            <div class="column-line">
+                                <i data-percent-width="{{ value['percent'] }}%" class="icon-line icon-widget"></i>
+                            </div>
+                        <td  >{{ value['percent'] }}%</td>
+                        <td>{{ value['quote'] }}</td>
+                        <td>0</td>
+                    </tr >
+                {% endfor %}
+            </table>
+        </div>
+    </div>#}
+{% endblock %}

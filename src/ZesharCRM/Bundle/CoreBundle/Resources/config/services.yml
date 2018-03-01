@@ -1,0 +1,319 @@
+parameters:
+    account.security_listener.class: ZesharCRM\Bundle\CoreBundle\Listener\SecurityListener
+    account.logout_handler.class: ZesharCRM\Bundle\CoreBundle\Listener\LogoutHandler
+    account.login_handler.class: ZesharCRM\Bundle\CoreBundle\Listener\LoginHandler
+
+services:
+    core.service.lead_service:
+        class: ZesharCRM\Bundle\CoreBundle\Service\LeadService
+        
+    zeshar_crm_core.menu_builder:
+        class: ZesharCRM\Bundle\CoreBundle\Menu\MenuBuilder
+        arguments: ["@service_container", "@knp_menu.factory"]
+
+    zeshar_crm_core.menu.request_voter:
+        class: ZesharCRM\Bundle\CoreBundle\Menu\RequestVoter
+        arguments:
+            - @service_container
+        tags:
+            - { name: knp_menu.voter }
+
+    zeshar_crm_core.menu.main:
+        class: Knp\Menu\MenuItem # the service definition requires setting the class
+        factory_service: zeshar_crm_core.menu_builder
+        factory_method: createMainMenu
+        arguments: ["@request"]
+        scope: request # needed as we have the request as a dependency here
+        tags:
+            - { name: knp_menu.menu, alias: main } # The alias is what is used to retrieve the menu
+
+    zeshar_crm_core.admin.activity:
+        class: ZesharCRM\Bundle\CoreBundle\Admin\ActivityAdmin
+        arguments: [~, ZesharCRM\Bundle\CoreBundle\Entity\Activity,  ZesharCRMCoreBundle:ActivityCRUD]
+        tags:
+            - {name: sonata.admin, audit: false, manager_type: orm, group: Core Entities, label: Activity}
+
+    zeshar_crm_core.admin.company:
+        class: ZesharCRM\Bundle\CoreBundle\Admin\CompanyAdmin
+        arguments: [~, ZesharCRM\Bundle\CoreBundle\Entity\Company,  ZesharCRMCoreBundle:CompanyCRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Company, label: Company, show_in_dashboard: false}
+
+    zeshar_crm_core.admin.account:
+        class: ZesharCRM\Bundle\CoreBundle\Admin\AccountAdmin
+        arguments: [~, ZesharCRM\Bundle\CoreBundle\Entity\User,  ZesharCRMCoreBundle:AccountCRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Account, label: Account, show_in_dashboard: false}
+
+    zeshar_crm_core.admin.expiredactivity:
+        class: ZesharCRM\Bundle\CoreBundle\Admin\ExpiredActivityAdmin
+        arguments: [~, ZesharCRM\Bundle\CoreBundle\Entity\Activity,  ZesharCRMCoreBundle:ExpiredActivityCRUD]
+        tags:
+            - {name: sonata.admin, audit: false, manager_type: orm, group: Core Entities, label: Expired Activity}
+
+    zeshar_crm_core.admin.opportunity:
+        class: ZesharCRM\Bundle\CoreBundle\Admin\OpportunityAdmin
+        arguments: [~, ZesharCRM\Bundle\CoreBundle\Entity\Opportunity, ZesharCRMCoreBundle:OpportunityCRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Core Entities, label: Opportunity}
+
+    zeshar_crm_core.admin.billinginfo:
+        class: ZesharCRM\Bundle\CoreBundle\Admin\BillingInfoAdmin
+        arguments: [~, ZesharCRM\Bundle\CoreBundle\Entity\BillingInfo, ZesharCRMCoreBundle:BillingCRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Core Entities, label: Billing Info, show_in_dashboard: false}
+
+    zeshar_crm_core.admin.payments:
+        class: ZesharCRM\Bundle\CoreBundle\Admin\PaymentAdmin
+        arguments: [~, ZesharCRM\Bundle\CoreBundle\Entity\PaymentHistory, ZesharCRMCoreBundle:PaymentsCRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Core Entities, label: Payment History, show_in_dashboard: false}
+
+    zeshar_crm_core.admin.lead:
+        class: ZesharCRM\Bundle\CoreBundle\Admin\LeadAdmin
+        arguments: [~, ZesharCRM\Bundle\CoreBundle\Entity\Lead, ZesharCRMCoreBundle:LeadsCRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Core Entities, label: Lead}
+
+    zeshar_crm_core.admin.leadsubject:
+        class: ZesharCRM\Bundle\CoreBundle\Admin\LeadSubjectAdmin
+        arguments: [~, ZesharCRM\Bundle\CoreBundle\Entity\LeadSubject, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Core Entities, label: Lead, show_in_dashboard: false}
+
+    zeshar_crm_core.admin.contact_card:
+        class: ZesharCRM\Bundle\CoreBundle\Admin\ContactCardAdmin
+        arguments: [~, ZesharCRM\Bundle\CoreBundle\Entity\ContactCard, ZesharCRMCoreBundle:ContactCardCRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Core Entities, label: Contact Card}
+
+    zeshar_crm_core.admin.contact:
+        class: ZesharCRM\Bundle\CoreBundle\Admin\ContactAdmin
+        arguments: [~, ZesharCRM\Bundle\CoreBundle\Entity\Contact, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Core Entities, label: Contact, show_in_dashboard: false}
+
+    zeshar_crm_core.admin.lead_event_type:
+        class: ZesharCRM\Bundle\CoreBundle\Admin\LeadEventTypeAdmin
+        arguments: [~, ZesharCRM\Bundle\CoreBundle\Entity\LeadEventType,  ZesharCRMCoreBundle:LeadEventTypeCRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Core Entities, label: Event Type}
+
+    zeshar_crm_core.admin.lead_type:
+        class: ZesharCRM\Bundle\CoreBundle\Admin\LeadTypeAdmin
+        arguments: [~, ZesharCRM\Bundle\CoreBundle\Entity\LeadType, ZesharCRMCoreBundle:LeadTypeCRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Core Entities, label: Lead Type}
+
+#    zeshar_crm_core.admin.user:
+#        class: ZesharCRM\Bundle\CoreBundle\Admin\UserAdmin
+#        arguments: [~, ZesharCRM\Bundle\CoreBundle\Entity\User,  ZesharCRMCoreBundle:UserCRUD]
+#        tags:
+#            - {name: sonata.admin, manager_type: orm, group: Users, label: User, show_in_dashboard: false}
+
+    zeshar_crm_core.widget.activity:
+        class: ZesharCRM\Bundle\CoreBundle\Service\Widget\ActivityWidget
+        arguments: [ @service_container ]
+
+    zeshar_crm_core.widget.oneMoreActivity:
+        class: ZesharCRM\Bundle\CoreBundle\Service\Widget\OneMoreActivityWidget
+        arguments: [ @service_container ]
+
+    zeshar_crm_core.widget.contacted:
+        class: ZesharCRM\Bundle\CoreBundle\Service\Widget\ContactedWidget
+        arguments: [ @service_container ]
+
+    zeshar_crm_core.widget.target:
+        class: ZesharCRM\Bundle\CoreBundle\Service\Widget\TargetWidget
+        arguments: [ @service_container ]
+
+    zeshar_crm_core.widget.complete:
+        class: ZesharCRM\Bundle\CoreBundle\Service\Widget\CompleteWidget
+        arguments: [ @service_container ]
+
+    zeshar_crm_core.widget.assignedLeads:
+            class: ZesharCRM\Bundle\CoreBundle\Service\Widget\AssignedLeadsWidget
+            arguments: [ @service_container ]
+
+    zeshar_crm_core.widget.assignedOpportunity:
+            class: ZesharCRM\Bundle\CoreBundle\Service\Widget\AssignedOpportunityWidget
+            arguments: [ @service_container ]
+
+    zeshar_crm_core.widget.assignedQuote:
+            class: ZesharCRM\Bundle\CoreBundle\Service\Widget\AssignedQuoteWidget
+            arguments: [ @service_container ]
+
+    core.service.event_service:
+        class: ZesharCRM\Bundle\CoreBundle\Listener\CESubscriber
+        arguments: [ @service_container]
+        tags:
+            - {name: kernel.event_subscriber}
+
+    core.service.doctrine_event_service:
+        class: ZesharCRM\Bundle\CoreBundle\Listener\DoctrineSubscriber
+        arguments: [ @service_container]
+        tags:
+            - {name: doctrine.event_subscriber, connection: default}
+
+#    core.service.dynamic_relation_subscriber:
+#        class: ZesharCRM\Bundle\CoreBundle\Listener\DynamicRelationSubscriber
+#        arguments: [ @service_container]
+#        tags:
+#            - {name: doctrine.event_subscriber, connection: default}
+
+    zeshar_crm_core.admin.lead_category:
+        class: ZesharCRM\Bundle\CoreBundle\Admin\LeadCategoryAdmin
+        arguments: [~, ZesharCRM\Bundle\CoreBundle\Entity\LeadCategory, ZesharCRMCoreBundle:LeadCategoryCRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Core Entities, label: Product}
+
+    zeshar_crm_core.admin.lead_source:
+        class: ZesharCRM\Bundle\CoreBundle\Admin\LeadSourceAdmin
+        arguments: [~, ZesharCRM\Bundle\CoreBundle\Entity\LeadSource, ZesharCRMCoreBundle:LeadSourceCRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Core Entities, label: Lead Source}
+
+    zeshar_crm_core.admin.operation:
+        class: ZesharCRM\Bundle\CoreBundle\Admin\OperationAdmin
+        arguments: [~, ZesharCRM\Bundle\CoreBundle\Entity\Operation, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, audit: false, manager_type: orm, group: Core Entities, label: Operation, show_in_dashboard: false}
+
+    zeshar_crm_core.block.importcsv:
+        class: ZesharCRM\Bundle\CoreBundle\Service\ImportCSVService
+        arguments: [ "zeshar_crm_core.block.uploadCSV", @templating, @service_container ]
+        tags:
+            - { name: sonata.block }
+
+    zeshar_crm_core.block.deleted_lead_list:
+        class: ZesharCRM\Bundle\CoreBundle\Service\DeletedLeadListBlockService
+        arguments: [ "zeshar_crm_core.block.deleted_lead_list", @templating, @service_container ]
+        tags:
+            - { name: sonata.block }
+
+    zeshar_crm_core.block.admin_list:
+        class: ZesharCRM\Bundle\CoreBundle\Service\ImportAdminList
+        arguments: [ "zeshar_crm_core.block.admin_list", @templating, @service_container ]
+        tags:
+            - { name: sonata.block }
+
+    zeshar_crm_core.admin.lead_attachment:
+        class: ZesharCRM\Bundle\CoreBundle\Admin\LeadAttachmentAdmin
+        arguments: [~, ZesharCRM\Bundle\CoreBundle\Entity\LeadAttachment, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Core Entities, label: Lead Attachment, show_in_dashboard: false}
+    
+    zeshar_crm_core.admin.opportunity_attachment:
+        class: ZesharCRM\Bundle\CoreBundle\Admin\OpportunityAttachmentAdmin
+        arguments: [~, ZesharCRM\Bundle\CoreBundle\Entity\OpportunityAttachment, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Core Entities, label: Opportunity Attachment, show_in_dashboard: false}
+
+    zeshar_crm_core.admin.attachment:
+        class: ZesharCRM\Bundle\CoreBundle\Admin\AttachmentAdmin
+        arguments: [~, ZesharCRM\Bundle\CoreBundle\Entity\Attachment, ZesharCRMCoreBundle:AttachmentsCRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Core Entities, label: Attachment, show_in_dashboard: false}
+            
+    
+    # this is custom filter for sonata list
+    zeshar_crm_core.helpers.filter.zeshar_contactcard_fullname:
+        class: ZesharCRM\Bundle\CoreBundle\Helper\Filter\FilterContactCardFullName
+        tags:
+            - {name: sonata.admin.filter.type, alias: zeshar_contactcard_fullname}
+            
+    zeshar_crm_core.helpers.filter.zeshar_contactcard_email:
+        class: ZesharCRM\Bundle\CoreBundle\Helper\Filter\FilterContactCardEmail
+        tags:
+            - {name: sonata.admin.filter.type, alias: zeshar_contactcard_email}
+            
+    zeshar_crm_core.helpers.filter.zeshar_contactcard_callstatus:
+        class: ZesharCRM\Bundle\CoreBundle\Helper\Filter\FilterContactCardCallStatus
+        tags:
+            - {name: sonata.admin.filter.type, alias: zeshar_contactcard_callstatus}
+
+    zeshar_crm_core.helpers.filter.zeshar_contactcard_phone:
+        class: ZesharCRM\Bundle\CoreBundle\Helper\Filter\FilterContactCardPhone
+        tags:
+            - {name: sonata.admin.filter.type, alias: zeshar_contactcard_phone}
+            
+    zeshar_crm_core.helpers.filter.zeshar_date_day:
+        class: ZesharCRM\Bundle\CoreBundle\Helper\Filter\FilterDateDay
+        tags:
+            - {name: sonata.admin.filter.type, alias: zeshar_date_day}
+
+    zeshar_crm_core.admin.service.twig_helper_lead_subject:
+          class: ZesharCRM\Bundle\CoreBundle\Service\LeadSubject
+          arguments: [@service_container]
+
+    zeshar_crm_core.twig.zeshar_crm_core:
+        class: ZesharCRM\Bundle\CoreBundle\Twig\Extension\ZesharCRMCoreExtension
+        tags:
+            - { name: twig.extension }
+    account.security_listener:
+            class: %account.security_listener.class%
+            arguments: ['@security.context', '@service_container']
+            tags:
+                - { name: kernel.event_listener, event: security.interactive_login, method: onSecurityInteractiveLogin }
+
+    account.logout_handler:
+                class: %account.logout_handler.class%
+                arguments: ['@security.http_utils','@security.context', '@service_container']
+#    zeshar_crm_core.twig.sort_by_created_at:
+#        class: ZesharCRM\Bundle\CoreBundle\Twig\Extension\SortByCreatedAtExtension
+#        tags:
+#            - { name: twig.extension }
+
+#    account.login_handler:
+#        class: %account.login_handler.class%
+#        arguments: ['@router','@security.context']
+#        tags:
+#            - { name: kernel.event_listener, event: security.authentication.success , method: onAuthenticationSuccess }
+    security.authentication.success_handler:
+        class:  ZesharCRM\Bundle\CoreBundle\Listener\AuthenticationSuccessHandler
+        arguments:  ["@security.http_utils", {},'@router','@security.context', '@service_container']
+        tags:
+            - { name: 'monolog.logger', channel: 'security' }
+
+    security.authentication.failure_handler:
+        class:  ZesharCRM\Bundle\CoreBundle\Listener\AuthenticationFailureHandler
+        arguments:  ["@http_kernel", "@security.http_utils", {}, "@logger"]
+        tags:
+            - { name: 'monolog.logger', channel: 'security' }
+
+    zeshar_crm_core.admin.log:
+        class: ZesharCRM\Bundle\CoreBundle\Admin\LogAdmin
+        arguments: [~, ZesharCRM\Bundle\CoreBundle\Entity\Log, ZesharCRMCoreBundle:LogAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Log}
+
+    zeshar_crm_core.admin.report_manager:
+        class: ZesharCRM\Bundle\CoreBundle\Model\Report
+        arguments: ['@service_container']
+
+    zeshar_crm_core.admin.conversion:
+        class: ZesharCRM\Bundle\CoreBundle\Model\Conversion
+        arguments: ['@service_container']
+
+    zeshar_crm_core.admin.report.listener:
+        class: ZesharCRM\Bundle\CoreBundle\Listener\ReportControllerSubscriber
+        arguments: [ @service_container]
+        tags:
+            - { name: kernel.event_listener, event: kernel.controller, method: onKernelRequest }
+
+    zeshar_crm_core.filter.configurator:
+        class: ZesharCRM\Bundle\CoreBundle\Filter\Configurator
+        arguments:
+            - "@doctrine.orm.entity_manager"
+            - "@security.context"
+        tags:
+            - { name: kernel.event_listener, event: kernel.request }
+
+    zeshar_crm_core.adn:
+        class: ZesharCRM\Bundle\CoreBundle\Service\ADNService
+        arguments:
+            container: "@service_container"
+            entity_manager: "@doctrine.orm.entity_manager"
+
+    zeshar_crm_core.account_controller:
+        class: ZesharCRM\Bundle\CoreBundle\Controller\AccountInfoBlocksController

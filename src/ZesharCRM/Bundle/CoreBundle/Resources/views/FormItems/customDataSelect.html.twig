@@ -1,0 +1,9 @@
+<select id="{{ formItemId }}" name="{{ formItemId }}{{ notArray is defined ? '' : '[$$name$$]'  }}" class="custom-select light"{% if disabled is not empty %} disabled="disabled"{% endif %}>
+    {% if emptyOption is not empty %}
+        <option value="">{{ emptyOptionTitle }}</option>
+    {% endif %}
+    {% for key, dataElem in data %}
+        {{ dataElem }}
+        <option value="{{ fromEnum is defined ? key : dataElem }}" {% if activeValue is not empty and (activeValue == dataElem or activeValue == key) %}selected="selected"{% endif %}>{{ dataElem }}</option>
+    {% endfor %}
+</select>

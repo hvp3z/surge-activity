@@ -1,0 +1,182 @@
+<div class="custom-block custom-block-prequalification opp-prequalification-edit" style="display: none;">
+    <script type="text/javascript">
+        (function($) {
+            $(document).ready(function() {
+//                $('#lead_prequalification_save').on('block-data-validate', function(e, params) {
+//                    var values = params.values;
+//                        //var eventDate = new Date(eventDate);
+//                        // @TODO check past date/time
+//
+//                });
+                $('#lead_prequalification_edit').on('block-ajax-return', function(e, serverResponse) {
+                    console.log('ajax response', serverResponse);
+//                    $(this).find('input').not('[type="hidden"]').val('').trigger('change');
+                    window.location.reload(); // todo - insert data without reload
+                });
+            });
+        })(jQuery);
+    </script>
+
+    <div class="custom-head clearfix">
+        <div class="custom-menu">
+            <button class="up-custom"></button>
+        </div>
+        <h3>Product Details</h3>
+    </div>
+
+    <div id="lead_prequalification_edit" class="form-column display-block-persistent" data-controller="leads_display" data-action="leadPrequalification" style="display: none;">
+        <div class="custom-form-head clear-fix">
+            <div class="custom-menu">
+                <button class="up-custom up-custom-auto close"></button>
+            </div>
+            <h3>Auto</h3>
+        </div>
+        {% set autos = object.getPrequalificationAutos() %}
+        {% set opportunity = object|opportunity %}
+        {% set lead = object|lead %}
+        <div style="display:none;">
+            <div class="custom-form-content" data-prototype=' {{ render(controller('ZesharCRMCoreBundle:FormItems:leadPrequalificationAutoBlock')) }} '>
+                {% if(autos is empty) %}
+                    {{ render(controller('ZesharCRMCoreBundle:FormItems:leadPrequalificationAutoBlock', {
+                        'last': true,
+                        'single': true,
+                        'first': true,
+                    })) }}
+
+                {% else %}
+                    {% for auto in autos %}
+
+                        {% if loop.last %}
+                            {% set last = true %}
+                        {% else %}
+                            {% set last = false %}
+                        {% endif %}
+
+                        {% if loop.first %}
+                            {% set first = true %}
+                        {% else %}
+                            {% set first = false %}
+                        {% endif %}
+
+                        {% set single = false %}
+
+                        {{ render(controller('ZesharCRMCoreBundle:FormItems:leadPrequalificationAutoBlock', {
+                            'last': last,
+                            'first': first,
+                            'single': single,
+                            'autoYear': auto.year,
+                            'autoMake': auto.make,
+                            'autoModel': auto.model,
+                            'autoVinNumber': auto.vinNumber,
+                            'id': auto.id
+                        })) }}
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <div class="custom-form-content-auto-previous">
+                <label for="source" style="padding-top: 10px;">Previous carrier</label>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="previous_carrier_name" id="name" class="form-control" value="{{ object.getPreviousCarrierName() }}" />
+                </div>
+                <div class="form-group">
+                    <label for="compaign">Policy №</label>
+                    <input type="text" name="previous_carrier_police" id="compaign" class="form-control" value="{{ object.getPreviousCarrierPolice() }}" />
+                </div>
+                <div class="form-group">
+                    <label for="xdate">X-Date</label>
+                    <input type="text" id="xdate" class="form-control datepicker-product" name="pckr1"  value="{{ object.getPreviousCarrierXDate()|date('M d, Y') }}" />
+                </div>
+            </div>
+        </div>
+
+        <div class="additional-block prequalification-drive-group">
+            <div class="custom-form-head clear-fix">
+                <div class="custom-menu">
+                    <button class="up-custom close"></button>
+                </div>
+                <h3>Driver</h3>
+            </div>
+            {% set drivers = object.getPrequalificationDrivers() %}
+            <div class="custom-form-content" style="display:none;" data-prototype=' {{ render(controller('ZesharCRMCoreBundle:FormItems:leadPrequalificationDriverBlock')) }} ' >
+                {% if(drivers is empty ) %}
+
+                    {{ render(controller('ZesharCRMCoreBundle:FormItems:leadPrequalificationDriverBlock', {
+                    'last': true,
+                    'single': true
+                    })) }}
+                {% else %}
+                    {% for driver in drivers %}
+
+                        {% if loop.last %}
+                            {% set last = true %}
+                        {% else %}
+                            {% set last = false %}
+                        {% endif %}
+
+                        {% set single = false %}
+
+                        {{ render(controller('ZesharCRMCoreBundle:FormItems:leadPrequalificationDriverBlock', {
+                            'last': last,
+                            'single': single,
+                            'name': driver.name,
+                            'dob': driver.dob,
+                            'license': driver.license,
+                            'ageLicensed': driver.ageLicensed,
+                            'tickets': driver.tickets,
+                            'id': driver.id
+                        })) }}
+
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="additional-block last">
+            <div class="custom-form-head clear-fix">
+                <div class="custom-menu">
+                    <button class="up-custom close"></button>
+                </div>
+                <h3>Insured Address</h3>
+            </div>
+            {% set insuredAddresses = object.getPrequalificationInsuredAddresses() %}
+            <div class="custom-form-content" style="display:none;" data-prototype=' {{ render(controller('ZesharCRMCoreBundle:FormItems:leadPrequalificationInsuredAddressBlock')) }} ' >
+                {% if(insuredAddresses is empty ) %}
+                    {{ render(controller('ZesharCRMCoreBundle:FormItems:leadPrequalificationInsuredAddressBlock', {
+                    'last': true,
+                    'single': true
+                    })) }}
+                {% else %}
+                    {% for insuredAddress in insuredAddresses %}
+
+                        {% if loop.last %}
+                            {% set last = true %}
+                        {% else %}
+                            {% set last = false %}
+                        {% endif %}
+
+                        {% set single = false %}
+
+                        {{ render(controller('ZesharCRMCoreBundle:FormItems:leadPrequalificationInsuredAddressBlock', {
+                            'previousCarrierPolice': insuredAddress.previousCarrierPolice,
+                            'previousCarrierXDate': insuredAddress.previousCarrierXDate,
+                            'previousCarrierName': insuredAddress.previousCarrierName,
+                            'last': last,
+                            'single': single,
+                            'type': insuredAddress.type,
+                            'address': insuredAddress.address,
+                            'state': insuredAddress.state,
+                            'zipCode': insuredAddress.zipCode,
+                            'city': insuredAddress.city,
+                            'id': insuredAddress.id
+                        })) }}
+
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        <input type="hidden" id="lead_id" name="lead_id" value="{{ object.getId() }}" />
+        <input type="hidden" name="leadCategory" value="" />
+        {%  include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_block_actions.html.twig') %}
+    </div>
+</div>

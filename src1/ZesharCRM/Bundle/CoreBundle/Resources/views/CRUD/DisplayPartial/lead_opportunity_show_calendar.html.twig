@@ -1,0 +1,72 @@
+<div class="custom-block calendar-block">
+    <div class="custom-head clearfix">
+        <div class="custom-menu">
+            <button class="up-custom"></button>
+        </div>
+        <h3>Appointments</h3>
+    </div>
+    <div class="clearfix">
+        <script type="text/javascript">
+            (function($) {
+                $(document).ready(function() {
+                    $('#lead_event_create').on('block-data-validate', function(e, params) {
+                        var values = params.values;
+                            //var eventDate = new Date(eventDate);
+                            // @TODO check past date/time
+
+                    });
+                    $('#lead_event_create').on('block-ajax-return', function(e, serverResponse) {
+                        //console.log('ajax response', serverResponse);
+                        $(this).find('input').not('[type="hidden"]').val('').trigger('change');
+                        window.location.reload(); // todo - insert data without reload
+                    });
+                });
+            })(jQuery);
+        </script>
+        <div id="lead_event_create" class="display-block-persistent" data-controller="leads_display" data-action="leadEvent">
+            <div class="form-column">
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <label for="date2">Date</label>
+                        <input type="text" id="date2" class="form-control datepicker" name="date"/>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="time">Time</label>
+                        <input type="text" id="time" class="form-control timepicker" name="time" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="compaign">Location</label>
+                    <input type="text" id="location" class="form-control"/>
+                </div>
+                <input type="hidden" id="lead_id" name="lead_id" value="{{ object.getId() }}" />
+            </div>
+            <div class="form-column">
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="type3">Type</label>
+                            {{ render(controller('ZesharCRMCoreBundle:FormItems:leadEventTypeSelect', {
+                            })) }}
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="compaign">Goal</label>
+                        {{ render(controller('ZesharCRMCoreBundle:FormItems:leadEventGoalSelect', {
+                        })) }}
+                    </div>
+                    {#<div class="col-md-6">#}
+                        {#<label for="compaign">Time</label>#}
+                        {#<input type="text" id="compaign" class="form-control"/>#}
+                    {#</div>#}
+                </div>
+                {#<div class="form-group">#}
+                    {#<label for="compaign">Goal</label>#}
+                    {#<input type="text" id="goal" name="goal" class="form-control"/>#}
+                {#</div>#}
+                {#{% include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_block_actions.html.twig') with {'show_cancel_link': false, 'save_button_title': 'Create'} %}#}
+            </div>
+            {% include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_block_actions.html.twig') with {'show_cancel_link': false, 'save_button_title': 'Save'} %}
+        </div>
+    </div>
+</div>

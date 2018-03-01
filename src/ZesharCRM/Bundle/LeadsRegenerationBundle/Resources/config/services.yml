@@ -1,0 +1,25 @@
+parameters:
+    win_back_regeneration_period: 180
+    base_regeneration_period: 30
+#    cross_sell: true
+#    zeshar_crm_leads_regeneration.example.class: ZesharCRM\Bundle\LeadsRegenerationBundle\Example
+
+services:
+#    zeshar_crm_leads_regeneration.example:
+#        class: %zeshar_crm_leads_regeneration.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+    zeshar_crm_leads_regeneration.admin.leads_regeneration:
+        class: ZesharCRM\Bundle\LeadsRegenerationBundle\Admin\LeadsRegenerationAdmin
+        arguments: [~, ZesharCRM\Bundle\LeadsRegenerationBundle\Entity\LeadsRegeneration, ZesharCRMLeadsRegenerationBundle:LeadsRegenerationAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Core Entities, label: LeadsRegeneration}
+    zeshar_crm_leads_regeneration.service.event_service:
+        class: ZesharCRM\Bundle\LeadsRegenerationBundle\Listener\RESubscriber
+        arguments: [ @service_container]
+        tags:
+            - {name: kernel.event_subscriber}
+    zeshar_crm_core.admin.lead_category:
+        class: ZesharCRM\Bundle\LeadsRegenerationBundle\Admin\LeadCategoryAdmin
+        arguments: [~, ZesharCRM\Bundle\CoreBundle\Entity\LeadCategory, ZesharCRMCoreBundle:LeadCategoryCRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Core Entities, label: Product}

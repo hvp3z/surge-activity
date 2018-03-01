@@ -1,0 +1,99 @@
+<table class="table editable-table entity-details-table-text">
+    {% set maxValue = 35 %}
+    {% set showValue = 32 %}
+    <tr>
+        <td>First Name</td>
+        <td>{% if contactCard is not empty %}
+                {% if contactCard.getFirstName()|length > maxValue %}
+                    <p title="{{ contactCard.getFirstName() }}">{{ contactCard.getFirstName()[:showValue] }}...</p>
+                {% else %}
+                    {{ contactCard.getFirstName() }}
+                {% endif %}
+            {% endif %}
+        </td>
+        <td>Address</td>
+        <td class="address">
+            {% if contactCard.getStreetAddress() is not empty %}
+                {% if contactCard.getStreetAddress()|length > maxValue %}
+                        <p title="{{ contactCard.getStreetAddress() }}">{{ contactCard.getStreetAddress()[:showValue] }}...</p>
+                {% else %}
+                    {{ contactCard.getStreetAddress() }}
+                {% endif %}
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td>Last Name</td>
+        <td>
+            {% if contactCard is not empty %}
+                {% if contactCard.getLastName()|length > maxValue %}
+                    <p title="{{ contactCard.getLastName() }}">{{ contactCard.getLastName()[:showValue] }}...</p>
+                {% else %}
+                    {{ contactCard.getLastName() }}
+                {% endif %}
+            {% endif %}
+        </td>
+        <td>City</td>
+        <td>{% if contactCard is not empty %}{{ contactCard.getCity() }}{% endif %}</td>
+    </tr>
+    <tr>
+        <td>Middle Initial</td>
+        <td>
+            {% if contactCard is not empty %}
+                {% if contactCard.getMiddleInitial()|length > maxValue %}
+                    <p title="{{ contactCard.getMiddleInitial() }}">{{ contactCard.getMiddleInitial()[:showValue] }}...</p>
+                {% else %}
+                    {{ contactCard.getMiddleInitial() }}
+                {% endif %}
+            {% endif %}
+        </td>
+        <td>State</td>
+        <td>{% if contactCard is not empty %}{{ contactCard.getState() }}{% endif %}</td>
+    </tr>
+    <tr>
+        <td>Phone</td>
+        <td>
+            {% if contactCard.phone is not empty %}
+                <div class="name-tel-tab {% if contactCard.phone.getDnc() %}dnc{% else %}make-call{% endif %}" style="overflow: visible; {% if not object.contactCard.phone.getDnc() %}cursor:pointer;{% endif %}">
+                    {% if contactCard.phone().value()|length > maxValue %}
+                        <p title="{{ contactCard.phone() }}">{{ contactCard.phone()[:showValue] }}...</p>
+                    {% else %}
+                        {{ contactCard.phone() }}
+                    {% endif %}
+                </div>
+            {% endif %}
+        </td>
+        <td>Zipcode</td>
+        <td>{% if contactCard is not empty %}{{ contactCard.getZip() }}{% endif %}</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+    <td objectid="{{ object.id }}">
+            {% if contactCard.getEmail() is not empty %}
+                {% if not contactCard.getEmail().getDonotEmail() %}
+                    <span class="email-tab">
+                            {% if contactCard.getEmail().value()|length > maxValue %}
+                                <a href="#" class="send-email" title="{{ contactCard.getEmail() }}">{{ contactCard.getEmail()[:showValue] }}...</a>
+                            {% else %}
+                                <a href="#" class="send-email" title="{{ contactCard.getEmail() }}">{{ contactCard.getEmail() }}</a>
+                            {% endif %}
+                    </span>
+                {% else %}
+                    <span class="email-tab marked-dne">
+                                {{ contactCard.getEmail() }}
+                            </span>
+                {% endif %}
+            {% endif %}
+        </td>
+        <td>Created At</td>
+        <td>{{ object.createdAt|date('M d, Y') }}</td>
+    </tr>
+    <tr>
+        <td>Lead Source</td>
+        <td>
+            {{ object.getLeadSource() is not empty ? object.getLeadSource().getTitle() : '(none)'  }}
+        </td>
+        <td>Activity</td>
+        <td>{{ object.getLeadCampaign() is not empty ? object.getLeadCampaign().getTitle() : '(none)'  }}</td>
+    </tr>
+</table>

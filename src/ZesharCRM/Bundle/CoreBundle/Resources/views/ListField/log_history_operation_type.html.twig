@@ -1,0 +1,9 @@
+<td{% block sonata_list_field_attributes %} class="sonata-ba-list-field sonata-ba-list-field-text sonata-list-field-{{ field_description.name }}" objectId="{{ admin.id(object) }}"{% endblock %}>
+    {% set typeString = object.getTypeString() %}
+    {% if typeString == 'Login' %}
+        Login
+    {% endif %}
+    {% if typeString == 'Logout' %}
+        Logout
+    {% endif %}
+</td>

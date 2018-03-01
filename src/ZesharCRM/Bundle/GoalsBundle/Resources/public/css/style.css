@@ -1,0 +1,56 @@
+.goal-text-edit.percent{
+    width: 60px;
+}
+
+.goal-text-edit{
+    width: 75px;
+}
+
+.goal-text-save{
+    margin-left: 10px;
+    background-color: #65D783;
+    border-color: #5EDB7F;
+}
+.goal-action-save{
+    float: right;
+}
+
+.total-amount td.td-title{
+    text-align: center;
+}
+
+.report-table.goal-assign{
+    margin-top: 16px;
+}
+
+label.goal-product-title{
+    font-size: large;
+}
+
+.goal-assign-table-wrap{
+    margin-top: 14px;
+}
+
+.performance.least .tile-type{
+    background-color: #FF6358;
+}
+
+.performance.little .tile-type{
+    background-color: #FF9966;
+}
+
+.performance.good .tile-type{
+     background-color: #5cb85c;
+ }
+
+.performance.very_good .tile-type{
+    background-color: #00DCA9;
+}
+
+.performance.need_better .tile-type{
+    background-color: #C6C652;
+}
+
+.performance .tile-type {
+    width: 64px;
+}

@@ -1,0 +1,14 @@
+<ul class="lead-type four-list">
+    <li>
+        <input type="radio" class="radio" id="cold2" name="lead_type2" value="1" {% if activeValue is not empty and activeValue == 1 %}checked="checked"{% endif %} />
+        <label for="cold2" class="tile-type cold">Cold</label>
+    </li>
+    <li>
+        <input type="radio" class="radio" id="warm2" name="lead_type2" value="2" {% if activeValue is not empty and activeValue == 2 %}checked="checked"{% endif %} />
+        <label for="warm2" class="tile-type warm">Warm</label>
+    </li>
+    <li>
+        <input type="radio" class="radio" id="hot2" name="lead_type2" value="3" {% if activeValue is not empty and activeValue == 3 %}checked="checked"{% endif %} />
+        <label for="hot2" class="tile-type hot">Hot</label>
+    </li>
+</ul>

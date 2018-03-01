@@ -1,0 +1,65 @@
+{% block widget %}
+    <div class="custom-block table-block">
+        <div class="custom-head clear-fix">
+            <div class="custom-menu">
+                <button class="up-custom"></button>
+                <button class="settings-custom"></button>
+                <button class="close-custom"></button>
+            </div>
+            <div class="custom-menu-select">
+                {% if persons is not empty %}
+                    <select class="user_data">
+                        {% for person in persons %}
+                            <option {% if selectedUser == person.username %} selected {% endif %}>{{ person.username}}</option>
+                        {% endfor %}
+                    </select>
+                {% endif %}
+            </div>
+            <h3>My Targets</h3>
+        </div>
+        <div class="custom-content targets">
+
+                <div class="small-table">
+                    <table>
+                        <tr>
+                            <th>Targets</th>
+                            <th>Items</th>
+                        </tr>
+                        {% for key, value in data %}
+                            <tr >
+                                <td>{{ value.title }}</td>
+                                <td>{{ value.items }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+                <div class="small-table next">
+                    <table>
+                        <tr>
+                            <th>Sold</th>
+                        </tr>
+                        {% for key, value in data %}
+                            <tr >
+                                <td>{{ value.soldItems }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+                <div class="small-table next next-three">
+                    <table>
+                        <tr>
+                            <th>Value</th>
+                        </tr>
+                        {% for key, value in data %}
+                            <tr >
+                                <td  style='font-weight:bold; color: #00a65a'>{{ value.value|number_format(2, '.', ',') }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+
+            {#{% for key, value in data %}#}
+            {#{% endfor %}#}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends 'knp_menu.html.twig' %}
+
+{% macro attributes(attributes) %}
+{% for name, value in attributes %}
+    {%- if value is not none and value is not sameas(false) -%}
+        {{- ' %s="%s"'|format(name, value is sameas(true) ? name|e : value|e)|raw -}}
+    {%- endif -%}
+{%- endfor -%}
+{% endmacro %}
+
+{% block list %}
+{% if item.hasChildren and options.depth is not sameas(0) and item.displayChildren %}
+    <ul {% if item.parent is empty %}class="menu"{% endif %} {{ _self.attributes(listAttributes) }}>
+        {% if item.parent is empty %} {# only fot root level - output notifications, profile info and "add" button #}
+            <li style="width: 260px;">
+                <img src="{{ asset('images/logo2.png') }}" alt="" width="41px">
+                <p class="title-logo">Surge<span>Activity</span></p>
+            </li>
+        {% endif %}
+        {{ block('children') }}
+        {% if item.parent is empty %} {# only fot root level - output notifications, profile info and "add" button #}
+            <li>{{ render(controller('ZesharCRMCoreBundle:Default:profileInfo')) }}</li>
+        {% endif %}
+    </ul>
+{% endif %}
+{% endblock %}
+
+{% block children %}
+{# save current variables #}
+{% set currentOptions = options %}
+{% set currentItem = item %}
+{# update the depth for children #}
+{% if options.depth is not none %}
+{% set options = currentOptions|merge({'depth': currentOptions.depth - 1}) %}
+{% endif %}
+{% for item in currentItem.children %}
+    {{ block('item') }}
+{% endfor %}
+{# restore current variables #}
+{% set item = currentItem %}
+{% set options = currentOptions %}
+{% endblock %}
+
+{% block item %}
+{% if item.displayed %}
+{# building the class of the item #}
+    {%- set classes = item.attribute('class') is not empty ? [item.attribute('class')] : [] %}
+    {%- if matcher.isCurrent(item) %}
+        {%- set classes = classes|merge([options.currentClass]) %}
+    {%- elseif matcher.isAncestor(item, options.matchingDepth) %}
+        {%- set classes = classes|merge([options.ancestorClass]) %}
+    {%- endif %}
+    {%- if item.actsLikeFirst %}
+        {%- set classes = classes|merge([options.firstClass]) %}
+    {%- endif %}
+    {%- if item.actsLikeLast %}
+        {%- set classes = classes|merge([options.lastClass]) %}
+    {%- endif %}
+    {%- set attributes = item.attributes %}
+    {%- if classes is not empty %}
+        {%- set attributes = attributes|merge({'class': classes|join(' ')}) %}
+    {%- endif %}
+{# displaying the item #}
+    {% import _self as knp_menu %}
+    <li{{ knp_menu.attributes(attributes) }}>
+    {#<li>#}
+        {%- if item.uri is not empty and (not item.current or options.currentAsLink) %}
+        {{ block('linkElement') }}
+        {%- else %}
+        {{ block('spanElement') }}
+        {%- endif %}
+{# render the list of children#}
+        {%- set childrenClasses = item.childrenAttribute('class') is not empty ? [item.childrenAttribute('class')] : [] %}
+        {%- set childrenClasses = childrenClasses|merge(['menu_level_' ~ item.level]) %}
+        {%- set listAttributes = item.childrenAttributes|merge({'class': childrenClasses|join(' ') }) %}
+        {% if item.hasChildren %}
+            <div class="drop-menu">
+                {{ block('list') }}
+            </div>
+        {% endif %}
+    </li>
+{% endif %}
+{% endblock %}
+    
+{% block linkElement %}<a class="{% if item.hasChildren %}drop-link {% endif %}{{ item.linkAttributes('class')|join(' ') }}" href="{{ item.uri }}">{{ block('label') }}</a>{% endblock %}
+{% block spanElement %}<a class="{% if item.hasChildren %}drop-link {% endif %}{{ item.labelAttributes('class')|join(' ') }}" href="javascript:void();">{{ block('label') }}</a>{% endblock %}

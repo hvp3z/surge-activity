@@ -1,0 +1,131 @@
+<table class="goal child-goal-report-table table-sonata-list table-striped table table-bordered {{ entityTitle|lower }}" style="display: none">
+    <thead>
+        <tr>
+            <th class="cell-empty" colspan="2"></th>
+            <th colspan="3">LEAD STATUS</th>
+            <th colspan="3">PRIORITY</th>
+            <th colspan="3">MILESTONE</th>
+            <th colspan="6">PERFORMANCE</th>
+        </tr>
+        <tr>
+            <th>{{ entityTitle }}</th>
+            <th>Total Leads</th>
+            <th>Cold</th>
+            <th>Warm</th>
+            <th>Hot</th>
+            <th>Low</th>
+            <th>Medium</th>
+            <th>High</th>
+            <th>Leads</th>
+            <th>Opportunities</th>
+            <th>Quotes</th>
+            <th colspan="3">Sold</th>
+            <th colspan="3">Lost</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    {% set summaryTotalLeads = 0 %}
+    {% set summarySold = 0 %}
+    {% set summarySoldPercent = 0 %}
+    {% set summaryLead = 0 %}
+    {% set summaryLost = 0 %}
+    {% set summaryLostPercent = 0 %}
+    {% set summaryQuote = 0 %}
+    {% set summaryOpportunity = 0 %}
+    {% set summaryLeadCold = 0 %}
+    {% set summaryLeadWarm = 0 %}
+    {% set summaryLeadHot = 0 %}
+    {% set summaryPriorityLow = 0 %}
+    {% set summaryPriorityMedium = 0 %}
+    {% set summaryPriorityHigh = 0 %}
+    {% set summaryQuotedAmount = 0 %}
+    {% set summaryLostQuotedAmount = 0 %}
+
+    {% for entityElementTitle, entity in data.entity %}
+
+        {% set totalLeads = entity.lead + entity.opportunity + entity.quote %}
+        {% set summaryTotalLeads = summaryTotalLeads + totalLeads %}
+        {% set summarySold = summarySold + entity.sold %}
+        {% set summaryLead = summaryLead + entity.lead %}
+        {% set summaryLost = summaryLost + entity.lost %}
+        {% set summaryOpportunity = summaryOpportunity + entity.opportunity %}
+        {% set summaryQuote = summaryQuote + entity.quote %}
+        {% set summaryLeadCold = summaryLeadCold + entity.leadCold %}
+        {% set summaryLeadWarm = summaryLeadWarm + entity.leadWarm %}
+        {% set summaryLeadHot = summaryLeadHot + entity.leadHot %}
+        {% set summaryPriorityLow = summaryPriorityLow + entity.priorityLow %}
+        {% set summaryPriorityMedium = summaryPriorityMedium + entity.priorityMedium %}
+        {% set summaryPriorityHigh = summaryPriorityHigh + entity.priorityHigh %}
+        {% set summaryQuotedAmount = summaryQuotedAmount + entity.quotedAmount %}
+        {% set summaryLostQuotedAmount = summaryLostQuotedAmount + entity.lostQuotedAmount %}
+
+
+        {% if summarySold != 0 %}
+            {% set percrntSold =  entity.sold / summarySold * 100 %}
+        {% else %}
+            {% set percrntSold = 0 %}
+        {% endif %}
+
+        {% if summaryLost != 0 %}
+            {% set percrntLost =  entity.lost / summaryLost * 100 %}
+        {% else %}
+            {% set percrntLost = 0 %}
+        {% endif %}
+
+        {% set summarySoldPercent = summarySoldPercent + percrntSold %}
+        {% set summaryLostPercent = summaryLostPercent + percrntLost %}
+
+        <tr class="sonata-ba-view-container">
+            <td>{{ entityElementTitle }}</td>
+            <td>{{ totalLeads }}</td>
+            <td>{{ entity.leadCold }}</td>
+            <td>{{ entity.leadWarm }}</td>
+            <td>{{ entity.leadHot }}</td>
+            <td>{{ entity.priorityLow }}</td>
+            <td>{{ entity.priorityMedium }}</td>
+            <td>{{ entity.priorityHigh }}</td>
+            <td>{{ entity.lead }}</td>
+            <td>{{ entity.opportunity }}</td>
+            <td>{{ entity.quote }}</td>
+            <td>
+                {{ entity.sold }}
+            </td>
+            <td>
+                {{ percrntSold|round(2, 'floor') }}%
+            </td>
+            <td>
+                {{ entity.quotedAmount }}$
+            </td>
+            <td>
+                {{ entity.lost }}
+            </td>
+            <td>
+                {{ percrntLost|round(2, 'floor') }}%
+            </td>
+            <td>
+                {{ entity.lostQuotedAmount }}$
+            </td>
+        </tr>
+    {% endfor %}
+    <tr class="sonata-ba-view-container">
+        <td class="total-td">TOTAL</td>
+        <td>{{ summaryTotalLeads }}</td>
+        <td>{{ summaryLeadCold }}</td>
+        <td>{{ summaryLeadWarm }}</td>
+        <td>{{ summaryLeadHot }}</td>
+        <td>{{ summaryPriorityLow }}</td>
+        <td>{{ summaryPriorityMedium }}</td>
+        <td>{{ summaryPriorityHigh }}</td>
+        <td>{{ summaryLead }}</td>
+        <td>{{ summaryOpportunity }}</td>
+        <td>{{ summaryQuote }}</td>
+        <td>{{ summarySold }}</td>
+        <td>{{ summarySoldPercent }}%</td>
+        <td>{{ summaryQuotedAmount }}$</td>
+        <td>{{ summaryLost }}</td>
+        <td>{{ summaryLostPercent }}%</td>
+        <td>{{ summaryLostQuotedAmount }}$</td>
+    </tr>
+    </tbody>
+</table>

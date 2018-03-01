@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>SurgeActivity - Dashboard</title>
+
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/select2.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <!--[if lt IE 9]><link rel="stylesheet" href="{{ asset('css/ie_style.css') }}" type="text/css" ><![endif]-->
+
+        <script src="{{ asset('js/jquery-1.9.1.min.js') }}"></script>
+        <script src="{{ asset('js/jquery-ui-1.10.4.custom.min.js') }}"></script>
+        <script src="{{ asset('js/select2.min.js') }}"></script>
+        <script src="{{ asset('js/actions.js') }}"></script>
+        <script src="{{ asset('js/jquery.timepicker.min.js') }}"></script>
+        <script src="{{ asset('js/jquery.tablesorter.js')}}"></script>
+        <!--[if lt IE 9]><script src="{{ asset('js/html5shiv.js') }}"></script><![endif]-->
+        {% block javascripts %}{% endblock %}
+
+        {% if (pageTitle is not defined) and (activityName is not defined) %}
+            <script>
+                $(function() {
+                    document.title = document.title.replace('Admin', 'SurgeActivity');
+                });
+            </script>
+        {% endif %}
+    </head>
+    {% block spinner %}
+        {% include 'loading_spinner.html.twig' %}
+    {% endblock %}
+    {% block body %}
+        <body>
+            <div class="wrapper">
+                <header>
+                    <div class="title-wrap">
+                        {% block widget_list %}{% endblock %}
+                        <h1>{% block page_title %}{% endblock %}</h1>
+                    </div>
+                </header>
+
+                <div class="content clear-fix">
+                    <div class="menu-wrap">
+                        {{ knp_menu_render('main', {'template': 'ZesharCRMCoreBundle::main_menu.html.twig'}) }}
+                    </div>
+                    {% block content %}
+                        <div class="right-column">
+                                <div class="widget-wrap">
+                                    {{ render(controller('ZesharCRMCoreBundle:Dashboard:showBlockWidget')) }}
+                                </div>
+                        </div>
+                        <div class="left-column">
+                            {% block left_column %}{% endblock %}
+                        </div>
+                    {% endblock %}
+                </div>
+
+            </div>
+            <footer>
+                <p class="title-logo">Surge<span>Activity</span></p>
+                <p class="copy-left">&copy; {{ "now"|date("Y") }} Zeshar</p>
+                <p class="copy-right">Powered By Zesharcrm</p>
+            </footer>
+        </body>
+    {% endblock %}
+</html>

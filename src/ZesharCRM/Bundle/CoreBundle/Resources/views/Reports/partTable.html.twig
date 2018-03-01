@@ -1,0 +1,40 @@
+<tr name="{{ entityName }}" index="{{ index }}" class="child-row" style="display: none;">
+    <td colspan="5">
+        <table class="table table-sonata-list table-bordered table-striped custom-table-2">
+            <thead class="title-head">
+            <tr>
+                {% for key,name in header %}
+                    {#{% if admin.hasRoute('batch') and field_description.getOption('code') == '_batch' and batchactions|length > 0 %}#}
+
+
+                    {% spaceless %}
+                        <th class="sonata-ba-list-field-header-{{ key }}" class="sonata-list-field-{{ key }}" data-fieldname="{{ key }}">
+                            {% if key == 'user' %}
+                                <span>{{ entityName }}</span>
+                            {% else %}
+                                <span>{{ name }}</span>
+                            {% endif %}
+                            {#{% if sortable %}<a class="filter-link" href="{{ admin.generateUrl('list', sort_parameters) }}">{% endif %}#}
+                            {#{% if sortable %}</a>{% endif %}#}
+                        </th>
+                    {% endspaceless %}
+                    {#{% endif %}#}
+                {% endfor %}
+            </tr>
+            </thead>
+            <tbody>
+            {% for row in dataTable %}
+
+                <tr>
+
+                    {% for field in row %}
+                        <td>
+                            {{  field }}
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </td>
+</tr>

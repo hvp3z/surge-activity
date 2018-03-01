@@ -1,0 +1,150 @@
+{% extends 'ZesharCRMCoreBundle::sonata_layout.html.twig' %}
+
+{% block breadcrumb %}
+    <li><a href="{{ url('sonata_admin_dashboard') }}">{% trans %}Dashboard{% endtrans %}</a></li>
+    <li class="active">Sales Performance</li>
+{% endblock %}
+
+{% block content %}
+    {{ include('ZesharCRMGoalsBundle:CRUD:goal_report_js.html.twig') }}
+
+    <label class="goal-product-title">Sales Performance</label>
+
+    <div class="filter-wrap clearfix">
+        <div class="left-column">
+            <div class="">
+                <div class="pull-right filter-controls">
+                    <form method="get" class="form-inline report-filter-form" action="{{ url(app.request.attributes.get('_route')) }}">
+                        <div class="form-group">
+                            <input type="text" name="date-range-from" class="form-control datepicker" id="date-range-from" autocomplete="off" placeholder="From" value="{{ rangeFrom }}">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="date-range-to" class="form-control datepicker" id="date-range-to" autocomplete="off" placeholder="To" value="{{ rangeTo }}">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-green btn-list-search">Search</button>
+                            <input type="button" class="btn btn-white btn-list-reset" value="Reset Filters">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="goal-reports table-wrap ui-sortable">
+        <div class="box box-primary">
+            {% set firstUser = result.users|first %}
+            <table class="report-table table-sonata-list table-striped table table-bordered">
+                {% block table_header %}
+                <thead>
+                <tr>
+                    <th colspan="3">SALES</th>
+                    <th colspan="4">PERFORMANCES</th>
+                    {% if filter == false %}
+                        <th colspan="{{ firstUser.summaryPercentPreMonths|length }}">MONTHLY PERFORMANCE COMPARISONS</th>
+                    {% endif %}
+
+                </tr>
+                <tr>
+                    <th>User</th>
+                    <th>Current Goals</th>
+                    <th>Items Sold</th>
+                    <th>Balance</th>
+                    <th>Sales</th>
+                    <th>Activity</th>
+                    <th>Source</th>
+                    {% if filter == false %}
+                        {% for month, prePercent in firstUser.summaryPercentPreMonths|reverse %}
+                            <th>
+                                {{ month }}
+                            </th>
+                        {% endfor %}
+                    {% endif %}
+                </tr>
+                </thead>
+                {% endblock %}
+                {% block table_body %}
+                <tbody>
+                {% if result %}
+                    {% for user, value in result.users %}
+                        <tr data-user="{{ value.id }}" class="sonata-ba-view-container">
+                            <td>
+                                <a class="report-username report-child" data-child-type="product" href="#">{{ user }}</a>
+                            </td>
+                            <td>
+                                {{ value.summaryItems }}
+                            </td>
+                            <td>
+                                {{ value.summarySold }}
+                            </td>
+                            <td>
+                                {{ value.summaryCurrentGoals }}
+                            </td>
+                            <td class="performance {% if value.summaryPerformance < 20 %}least{% endif %}{% if value.summaryPerformance > 20 and value.summaryPerformance < 40 %}little{% endif %}{% if value.summaryPerformance > 40 and value.summaryPerformance < 70 %}need_better{% endif %}{% if value.summaryPerformance > 70 and value.summaryPerformance < 100 %}good{% endif %}{% if value.summaryPerformance > 100 %}very_good{% endif %}">
+                                <label class="tile-type">{{ value.summaryPerformance }}% </label>
+                            </td>
+                            <td>
+                                <a class="report-child" data-child-type="campaign" href="#">{{ value.summaryCampaignPercent }}%</a>
+                            </td>
+                            <td>
+                                <a class="report-child" data-child-type="source" href="#">{{ value.summarySourcePercent }}%</a>
+                            </td>
+
+                            {% if filter == false %}
+                                {% for month, prePercent in value.summaryPercentPreMonths|reverse %}
+                                    <td>
+                                        {% if value.summaryItems == 0 %}
+                                            -
+                                        {% else %}
+                                            {{ (prePercent/value.summaryItems * 100)|round(2, 'floor') }}%
+                                        {% endif %}
+
+                                    </td>
+                                {% endfor %}
+                            {% endif %}
+                        </tr>
+                        <tr class="child-table" style="display: none">
+                            {% set rows = value.summaryPercentPreMonths|length + 7 %}
+                            <td colspan="{{ rows }}">
+                                {{ render(controller('ZesharCRMGoalsBundle:GoalGlobalAdmin:childEntityTableGenerate', {
+                                    'userId': value.id,
+                                    'propertyTitle': 'leadSource',
+                                    'entityTitle': 'Source'
+                                })) }}
+                                {{ render(controller('ZesharCRMGoalsBundle:GoalGlobalAdmin:childEntityTableGenerate', {
+                                    'userId': value.id,
+                                    'propertyTitle': 'leadCampaign',
+                                    'entityTitle': 'Campaign'
+                                })) }}
+                                {{ render(controller('ZesharCRMGoalsBundle:GoalGlobalAdmin:childEntityTableGenerate', {
+                                'userId': value.id,
+                                'propertyTitle': 'leadCategory',
+                                'entityTitle': 'Product'
+                                })) }}
+                                {#{% include('ZesharCRMGoalsBundle:CRUD:goal_report_product.html.twig') with {'result': result, 'filter': filter} %}#}
+
+                            </td>
+                            {#{% set rows = value.summaryPercentPreMonths|length + 7 %}#}
+                            {#<td colspan="{{ rows }}">#}
+                                {#{% if value.products is defined %}#}
+
+                                {#{% endif %}#}
+                            {#</td>#}
+
+
+                        </tr>
+                    {% endfor %}
+
+                {% endif %}
+                </tbody>
+                {% endblock %}
+            </table>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css"  href="{{ asset('bundles/zesharcrmgoals/css/style.css') }}"  />
+{% endblock %}

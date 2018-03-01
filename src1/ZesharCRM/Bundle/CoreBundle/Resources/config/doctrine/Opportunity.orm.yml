@@ -1,0 +1,132 @@
+ZesharCRM\Bundle\CoreBundle\Entity\Opportunity:
+    type: entity
+    table: opportunity
+    repositoryClass: ZesharCRM\Bundle\CoreBundle\Repository\OpportunityRepository
+    fields:
+        price:
+            type: integer
+            nullable: true
+        policyNumber:
+            type: string
+            length: 255
+            column: policy_number
+            nullable: true
+        effectiveDT:
+            type: string
+            length: 255
+            column: effective_dt
+            nullable: true
+        lineCode:
+            type: string
+            length: 255
+            column: line_code
+            nullable: true
+        lspCode:
+            type: string
+            length: 255
+            column: lsp_code
+            nullable: true
+        renewalCount:
+            type: string
+            length: 255
+            column: renewal_count
+            nullable: true
+        premium:
+            type: string
+            length: 255
+            nullable: true
+        vehicleCount:
+            type: string
+            length: 255
+            column: vehicle_count
+            nullable: true
+        homeownersCount:
+            type: string
+            length: 255
+            column: homeowners_count
+            nullable: true
+        closingDate:
+            type: datetime
+            column: closing_date
+            nullable: true
+        effectiveDate:
+            type: datetime
+            column: effective_date
+            nullable: true
+        priority:
+            type: integer
+            nullable: true
+        quotedAmount:
+            type: integer
+            nullable: true
+    lifecycleCallbacks:
+        postLoad: [ onLoadCallback ]
+        preUpdate: [ onUpdateCallback ]
+    associationOverride:
+#        creator:
+#            targetEntity: User
+#            cascade: {  }
+#            mappedBy: null
+#            inversedBy: createdOpportunities
+#            joinColumns:
+#                creator:
+#                    nullable: false
+#                    referencedColumnName: id
+#            orphanRemoval: false
+#        assignee:
+#            targetEntity: User
+#            cascade: {  }
+#            mappedBy: null
+#            inversedBy: assignedOpportunities
+#            joinColumns:
+#                assignee:
+#                    referencedColumnName: id
+#            orphanRemoval: false
+#        attachments:
+#            targetEntity: OpportunityAttachment
+#            mappedBy: opportunity
+#            cascade: ["persist"]
+    manyToOne:
+        creator:
+            targetEntity: User
+            cascade: {  }
+            mappedBy: null
+            inversedBy: createdOpportunities
+            joinColumns:
+                creator:
+#                    nullable: false
+                    referencedColumnName: id
+            orphanRemoval: false
+        assignee:
+            targetEntity: User
+            cascade: {  }
+            mappedBy: null
+            inversedBy: assignedOpportunities
+            joinColumns:
+                assignee:
+                    referencedColumnName: id
+            orphanRemoval: false
+#        opportunityCategory:
+#            targetEntity: LeadCategory
+#            cascade: {  }
+#            mappedBy: null
+#            inversedBy: opportunity
+#            joinColumns:
+#                opportunityCategory:
+#                    nullable: true
+#                    referencedColumnName: id
+#            orphanRemoval: false
+    oneToOne:
+        lead:
+            targetEntity: Lead
+            cascade: {  }
+            mappedBy: null
+            inversedBy: opportunity
+            joinColumns:
+                lead:
+                    nullable: true
+                    referencedColumnName: id
+                    onDelete: SET NULL
+            orphanRemoval: false
+
+

@@ -1,0 +1,45 @@
+<script type=text/javascript>
+    jQuery(document).ready(function(){
+        $('.delete').click(areYouSure);
+    });
+
+    function deleteItem(productId){
+        var ajaxUrl = "{{ app.request.getBaseURL() }}/admin/product/"+productId;
+
+        console.log(productId);
+
+        $.ajax(ajaxUrl, {
+            'id': productId,
+            'type': 'DELETE',
+            'success': function (response) {
+                window.location.href = "{{ path('dashboard') }}";
+            },
+            'error': function (error) {
+                console.log('ajax error');
+                console.log(error);
+            }
+        });
+        e.preventDefault();
+        return false;
+    }
+
+
+    function areYouSure(e){
+        productId = $(this).attr('data-id');
+        $( "#dialog-confirm" ).dialog({
+            resizable: false,
+            height:140,
+            modal: true,
+            buttons: {
+                "Delete item": function() {
+                    $( this ).dialog( "close" );
+                    deleteItem(productId);
+                },
+                Cancel: function() {
+                    $( this ).dialog( "close" );
+                }
+            }
+        });
+    }
+
+</script>

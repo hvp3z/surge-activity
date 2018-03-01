@@ -1,0 +1,1401 @@
+First Name,Last Name,Street Address,City,State,Zip,Phone,email ,Customer Status,Purchase Date,Purchase Amount,DNC,Est. Home Value
+C,Hooper,4001  Hunts Point Rd,Bellevue,WA,98004,4254629890,,Former Customer,2/16/1995,"$3,315,000 ",DNC,"$9,636,000 "
+Leslie,Garrison,9000 Ne 42nd St,Bellevue,WA,98004,4256370871,,Former Customer,4/24/2006,"$4,888,000 ",DNC,"$4,301,000 "
+Harish,Naidu,905  Shoreland Dr Se,Bellevue,WA,98004,4254542775,HNAIDU@MSN.COM,Former Customer,5/12/2008,"$6,500,000 ",DNC,"$4,671,000 "
+Shalini,Naidu,,,,,,SHALINIH@MSN.COM,,,,,
+Rod,Steoger,,,,,, ROD.G.STEOGER@BOEING.CO,,,,,
+James,Ewel,1436  92nd Ave Ne,Bellevue,WA,98004,4252235079, JEWEL@GOAHEAD.COM,Former Customer,2/16/2004,"$1,100,000 ",DNC,"$2,972,000 "
+Damon,Huard,9508 Ne 18th St,Bellevue,WA,98004,4255029733,,Former Customer,1/3/2005,"$708,000 ",OK,"$3,027,000 "
+Warren,Lieb,9520 Se Shoreland Dr,Bellevue,WA,98004,4256373931,,Former Customer,7/8/2005,"$3,900,000 ",DNC,"$2,681,000 "
+Robert,Youngjohns,1311  89th Ave Ne,Bellevue,WA,98004,4256796414,,Former Customer,5/16/2008,"$4,350,000 ",DNC,"$2,465,000 "
+Pedro,Domingos,9434 Ne 25th St,Bellevue,WA,98004,4254624428,,Former Customer,6/29/2009,"$2,510,000 ",DNC,"$2,317,000 "
+Karena,Nordby,2521  103rd Ave Se,Bellevue,WA,98004,4254519668,,Former Customer,,"$0,000",DNC,"$2,537,000 "
+Todd,Patrick,9029 Ne 36th St,Bellevue,WA,98004,4256350475,PTODD28@HOTMAIL.COM,Former Customer,5/27/2004,"$1,350,000 ",DNC,"$2,293,000 "
+Thomas,Luthy,8  Enatai Dr,Bellevue,WA,98004,4254541960,,Former Customer,,"$0,000",DNC,"$1,947,000 "
+Philip,Brown,4427  95th Ave Ne,Bellevue,WA,98004,4256370931,,Former Customer,10/10/2002,"$709,000 ",DNC,"$1,810,000 "
+Lori,Moore,9000 Ne 14th St,Bellevue,WA,98004,,BUTTERFLY65TOO@HOTMAIL.COM,Former Customer,4/16/2009,"$3,120,000 ",,"$1,736,000 "
+Todd,Floyd,8935 Ne 13th St,Bellevue,WA,98004,,,Former Customer,4/19/2002,"$690,000 ",,"$1,779,000 "
+Anna,Mastroianni,2011  89th Ave Ne,Bellevue,WA,98004,,,Former Customer,4/16/1995,"$500,000 ",,"$1,720,000 "
+David,Tan,111  Cedar Crest Ln,Bellevue,WA,98004,4256359323,,Former Customer,3/22/2004,"$1,695,000 ",DNC,"$1,754,000 "
+Mark,Roberts,1505  90th Pl Ne,Bellevue,WA,98004,4254537218,,Former Customer,8/16/1986,"$305,000 ",DNC,"$1,776,000 "
+Pete,Murphy,11065 Se Lake Rd,Bellevue,WA,98004,4254535794,,Former Customer,5/1/2006,"$320,000 ",DNC,"$1,433,000 "
+Doug,Rasar,9400  Vineyard Crst,Bellevue,WA,98004,4254552323,,Former Customer,6/16/1997,"$439,000 ",DNC,"$1,348,000 "
+Thomas,Knauss,9021 Ne 42nd St,Bellevue,WA,98004,4254517956,,Former Customer,6/16/1986,"$253,000 ",DNC,"$1,403,000 "
+Won,Lee,3028  Hunts Point Cir,Bellevue,WA,98004,4252235345,,Former Customer,7/24/2006,"$1,955,000 ",OK,"$1,310,000 "
+Patrick,Goff,9521 Ne 31st St,Bellevue,WA,98004,4254621356,,Former Customer,5/16/1984,"$98,000 ",DNC,"$1,287,000 "
+Ying,Chang,255  Shoreland Dr Se,Bellevue,WA,98004,4254528888,,Former Customer,5/16/2000,"$0,000",OK,"$1,282,000 "
+Ehab,Henien,703  99th Ave Ne,Bellevue,WA,98004,4254501979,,Former Customer,2/16/2004,"$8,060,000 ",DNC,"$1,247,000 "
+Michael,Mulroy,9405  Vineyard Crst,Bellevue,WA,98004,4254540594,,Former Customer,8/16/2000,"$600,000 ",DNC,"$1,260,000 "
+Sidney,Brinckerhoff,1668  100th Pl Se,Bellevue,WA,98004,4256371186,,Former Customer,2/16/1995,"$166,000 ",DNC,"$1,246,000 "
+Quinn,Chin,10835 Se Lake Rd,Bellevue,WA,98004,,,Former Customer,,"$0,000",,"$1,209,000 "
+Cyrous,Shokri,3145  110th Ave Se,Bellevue,WA,98004,,,Former Customer,8/18/2010,"$960,000 ",,"$1,167,000 "
+Roseanna,Myall,8619 Ne 24th St,Bellevue,WA,98004,,,Former Customer,6/1/2006,"$455,000 ",,"$1,182,000 "
+Chen,Huang,2625  90th Ave Ne,Bellevue,WA,98004,4256889988,,Former Customer,6/16/1997,"$900,000 ",DNC,"$1,185,000 "
+Richard,Wood,10217 Se 21st St,Bellevue,WA,98004,4254550772,,Former Customer,5/31/2005,"$1,675,000 ",DNC,"$1,197,000 "
+Robert,Bennetson,2104  108th Ave Se,Bellevue,WA,98004,4255027846,,Former Customer,6/16/2009,"$1,225,000 ",DNC,"$1,176,000 "
+William,Koefoed,9254  Points Dr Ne,Bellevue,WA,98004,4254542213,,Former Customer,6/9/2005,"$1,850,000 ",DNC,"$1,158,000 "
+Craig,Suhrbier,8504 Ne 15th St,Bellevue,WA,98004,4254544433,,Former Customer,5/16/2000,"$0,000",DNC,"$1,132,000 "
+Kurt,Larson,9645  Hilltop Rd,Bellevue,WA,98004,4254540893,,Former Customer,12/16/1993,"$325,000 ",DNC,"$1,129,000 "
+David,Feller,9030 Ne 34th St,Bellevue,WA,98004,4254678027,,Former Customer,4/3/2001,"$899,000 ",DNC,"$1,141,000 "
+David,Pim,3202  107th Ave Se,Bellevue,WA,98004,4255027637,,Former Customer,4/30/2007,"$1,625,000 ",DNC,"$1,095,000 "
+Robert,Trickett,8304  Hunts Point Cir,Bellevue,WA,98004,,,Former Customer,7/10/2003,"$545,000 ",,"$1,074,000 "
+Martha,Lane,2523  103rd Ave Se,Bellevue,WA,98004,4254546801,,Former Customer,,"$0,000",DNC,"$1,083,000 "
+Paul,Johnson,2809  110th Ave Se,Bellevue,WA,98004,4254629769,,Former Customer,11/16/2000,"$333,000 ",DNC,"$1,092,000 "
+Paul,Chae,3201  98th Ave Ne,Bellevue,WA,98004,4256889260,,Former Customer,4/16/2003,"$940,000 ",DNC,"$1,047,000 "
+Jeffrey,Nebel,2055  94th Ave Ne,Bellevue,WA,98004,4256467802,,Former Customer,6/16/1995,"$840,000 ",DNC,"$1,044,000 "
+Brian,Thaut,3021  110th Ave Se,Bellevue,WA,98004,,,Former Customer,5/28/2010,"$1,350,000 ",,"$1,039,000 "
+Mitch,Murri,9211 Ne 40th St,Bellevue,WA,98004,4254560275,,Former Customer,3/16/1998,"$540,000 ",DNC,"$1,008,000 "
+Mark,Alexieff,9509 Ne 30th St,Bellevue,WA,98004,4256371827,,Former Customer,5/29/1998,"$637,000 ",DNC,"$1,008,000 "
+Don,Box,9050 Ne 38th Pl,Bellevue,WA,98004,4254671486,,Former Customer,2/14/2002,"$1,290,000 ",DNC,"$1,013,000 "
+John,Sowatsky,2034  94th Ave Ne,Bellevue,WA,98004,4254552797,,Former Customer,10/17/2005,"$1,425,000 ",DNC,"$1,012,000 "
+Greg,Itkin,511  98th Ave Ne,Bellevue,WA,98004,4254540516,,Former Customer,2/16/2002,"$350,000 ",DNC,"$1,025,000 "
+Michael,Mecham,935  Evergreen Dr,Bellevue,WA,98004,4254626632,,Former Customer,4/17/1998,"$750,000 ",DNC,"$1,024,000 "
+Yvonne,Broda,9235 Ne 20th St,Bellevue,WA,98004,,,Former Customer,1/16/2002,"$825,000 ",,"$986,000 "
+Millie,Tung,9700 Ne 29th St,Bellevue,WA,98004,,,Former Customer,,"$0,000",,"$998,000 "
+John,Taylor,10244 Se 16th St,Bellevue,WA,98004,4252233070,,Former Customer,10/16/1997,"$235,000 ",OK,"$987,000 "
+Jon,Anastasio,1211  88th Pl Ne,Bellevue,WA,98004,,,Former Customer,2/26/2007,"$1,645,000 ",,"$985,000 "
+Robert,Capozzoli,11115 Ne 38th Pl,Bellevue,WA,98004,4258279063,,Former Customer,3/16/1992,"$659,000 ",DNC,"$991,000 "
+Robert,Brodhagen,3123  98th Ave Ne,Bellevue,WA,98004,4254536307,,Former Customer,10/25/2006,"$845,000 ",DNC,"$995,000 "
+Scott,Cameron,9623  Vineyard Crst,Bellevue,WA,98004,4257474698,,Former Customer,2/16/2001,"$700,000 ",DNC,"$966,000 "
+T,Woosley,2025  87th Ave Ne,Bellevue,WA,98004,4254546004,,Former Customer,,"$0,000",DNC,"$973,000 "
+Ronald,Honeyman,9837  Hilltop Rd,Bellevue,WA,98004,4254544553,,Former Customer,1/16/1979,"$110,000 ",DNC,"$951,000 "
+Rita,Calderon,10055  Meydenbauer Way Se Apt 16,Bellevue,WA,98004,4256881616,,Former Customer,12/11/2008,"$0,000",DNC,"$943,000 "
+Philip,Berger,1761  92nd Ave Ne,Bellevue,WA,98004,4254511950,,Former Customer,2/16/1984,"$160,000 ",DNC,"$928,000 "
+Michael,Harber,10414 Se 13th St,Bellevue,WA,98004,,,Former Customer,2/4/2005,"$790,000 ",,"$932,000 "
+Dishen,Men,8623 Ne 24th St,Bellevue,WA,98004,,,Former Customer,1/30/2009,"$886,000 ",,"$933,000 "
+John,Bryce,19  Enatai Dr,Bellevue,WA,98004,4254549111,,Former Customer,3/16/1978,"$74,000 ",OK,"$925,000 "
+Harry,Wilkinson,10055  Meydenbauer Way Se Apt 17,Bellevue,WA,98004,4254519015,,Former Customer,1/16/1998,"$675,000 ",DNC,"$913,000 "
+James,Hole,9222 Ne 37th Pl,Bellevue,WA,98004,4254555314,,Former Customer,2/16/1992,"$0,000",DNC,"$922,000 "
+Hee,Chun,2722  98th Ave Ne,Bellevue,WA,98004,4254627574,,Former Customer,5/12/2004,"$874,000 ",DNC,"$903,000 "
+Hossein,Khorram,2310  88th Ave Ne,Bellevue,WA,98004,4256463881,,Former Customer,3/14/2003,"$700,000 ",DNC,"$890,000 "
+Cahrles,Albright,9221 Ne 25th St,Bellevue,WA,98004,4256881354,,Former Customer,4/16/1996,"$383,000 ",DNC,"$889,000 "
+Anton,Kusak,8425 Ne 27th Pl,Bellevue,WA,98004,,,Former Customer,11/25/2008,"$1,080,000 ",,"$886,000 "
+Ernest,Granfelt,9535 Ne 32nd St,Bellevue,WA,98004,4254544890,,Former Customer,7/15/1999,"$500,000 ",DNC,"$905,000 "
+John,Harrison,2202  108th Ave Se,Bellevue,WA,98004,4256377992,,Former Customer,10/8/2004,"$609,000 ",DNC,"$873,000 "
+Jack,Bookey,9015 Ne 22nd Pl,Bellevue,WA,98004,4254549912,,Former Customer,,"$0,000",DNC,"$873,000 "
+Manocher,Moloudzadeh,2330  88th Ave Ne,Bellevue,WA,98004,4254542119,,Former Customer,12/14/2007,"$539,000 ",DNC,"$868,000 "
+Shiping,Gong,2697  102nd Pl Ne,Bellevue,WA,98004,,,Former Customer,3/24/2010,"$950,000 ",,"$866,000 "
+Scott,Coombs,9035 Ne 28th St,Bellevue,WA,98004,4254539053,,Former Customer,5/16/2000,"$0,000",DNC,"$870,000 "
+Makiah,Hogans,9908 Se 5th Pl,Bellevue,WA,98004,4254546225,,Former Customer,10/25/2006,"$1,200,000 ",DNC,"$867,000 "
+Lisa,Downey,714  98th Ave Ne,Bellevue,WA,98004,4254500314,,Former Customer,12/16/1995,"$172,000 ",DNC,"$872,000 "
+James,Klinger,1307  85th Ave Ne,Bellevue,WA,98004,4254541471,,Former Customer,3/16/1990,"$411,000 ",OK,"$883,000 "
+David,Dempster,10515 Se 27th St,Bellevue,WA,98004,4254537678,,Former Customer,6/16/1993,"$0,000",DNC,"$849,000 "
+Daniel,Owens,2525  104th Ave Se,Bellevue,WA,98004,4256469679,,Former Customer,12/1/2000,"$815,000 ",DNC,"$857,000 "
+Nolan,Robinson,8426 Ne 21st Pl,Bellevue,WA,98004,4254678004,,Former Customer,6/7/2005,"$975,000 ",DNC,"$831,000 "
+Rob,Walker,1401  96th Ave Se,Bellevue,WA,98004,4254540161,,Former Customer,,"$0,000",DNC,"$843,000 "
+Donald,Rowe,9751 Ne 1st St,Bellevue,WA,98004,4254537240,,Former Customer,1/4/2006,"$1,200,000 ",DNC,"$833,000 "
+Laurence,Young,9635 Ne 27th St,Bellevue,WA,98004,4254519038,,Former Customer,5/16/1998,"$0,000",DNC,"$844,000 "
+Thomas,Donahue,10922 Se 28th St,Bellevue,WA,98004,4254552553,,Former Customer,8/1/2001,"$300,000 ",DNC,"$841,000 "
+Jun,Fang,9819 Ne 14th St,Bellevue,WA,98004,,,Former Customer,8/20/2012,"$1,060,000 ",,"$824,000 "
+James,Freer,1234  108th Ave Ne,Bellevue,WA,98004,4254627886,,Former Customer,2/16/1996,"$496,000 ",DNC,"$829,000 "
+Iskender,Berberoglu,1418  92nd Ave Ne,Bellevue,WA,98004,4254627478,,Former Customer,6/16/1996,"$312,000 ",DNC,"$829,000 "
+Helen,Rohn,2217  94th Ave Ne,Bellevue,WA,98004,4254550412,,Former Customer,,"$0,000",DNC,"$818,000 "
+Donald,Franklin,8530 Ne 25th St,Bellevue,WA,98004,4254552229,,Former Customer,,"$0,000",DNC,"$808,000 "
+Craig,Wrench,2103  Blarney Pl Se,Bellevue,WA,98004,4254528408,,Former Customer,6/8/2007,"$804,000 ",DNC,"$790,000 "
+Steven,Linkon,611  97th Pl Se,Bellevue,WA,98004,,,Former Customer,7/1/2004,"$875,000 ",,"$796,000 "
+James,Wagner,9035 Ne 34th St,Bellevue,WA,98004,4254547378,,Former Customer,,"$0,000",DNC,"$792,000 "
+Lon,Smith,1201  100th Ave Ne,Bellevue,WA,98004,4254519546,,Former Customer,7/16/1997,"$495,000 ",DNC,"$804,000 "
+James,Blasingame,3022  Hunts Point Rd,Bellevue,WA,98004,4254538437,,Former Customer,2/16/1987,"$0,000",DNC,"$790,000 "
+Greg,Rockwell,8525 Ne 25th St,Bellevue,WA,98004,4254554068,,Former Customer,11/16/1977,"$137,000 ",DNC,"$799,000 "
+George,Hewitt,9433 Ne 25th St,Bellevue,WA,98004,4254550413,,Former Customer,,"$0,000",DNC,"$799,000 "
+Alfred,Nesbitt,9050  Points Dr Ne,Bellevue,WA,98004,,,Former Customer,1/8/2004,"$695,000 ",,"$781,000 "
+Joseph,Holtzer,3231  112th Ave Se,Bellevue,WA,98004,,,Former Customer,1/16/1997,"$378,000 ",,"$787,000 "
+Jeanette,Mallary,3227  96th Ave Ne,Bellevue,WA,98004,4254545125,,Former Customer,12/9/2005,"$0,000",DNC,"$778,000 "
+Husam,Charaf,10428 Se 24th Pl,Bellevue,WA,98004,4255029720,,Former Customer,6/18/2009,"$875,000 ",DNC,"$777,000 "
+Eleanor,Holbrook,2208  92nd Ave Ne,Bellevue,WA,98004,4254547840,,Former Customer,,"$0,000",DNC,"$775,000 "
+Andrew,Verprauskus,2401  94th Ave Ne,Bellevue,WA,98004,4254543196,,Former Customer,3/8/2004,"$950,000 ",DNC,"$767,000 "
+Eun,Ra,1325  98th Ave Ne,Bellevue,WA,98004,,,Former Customer,9/16/2007,"$1,425,000 ",,"$757,000 "
+Wilton,Wang,901  Sunset Way,Bellevue,WA,98004,,,Former Customer,6/6/2013,"$1,200,000 ",,"$764,000 "
+Thomas,Arndt,9425 Ne 16th St,Bellevue,WA,98004,4254671072,,Former Customer,6/24/2003,"$790,000 ",DNC,"$767,000 "
+William,Popp,2020  Killarney Dr,Bellevue,WA,98004,4254546589,,Former Customer,,"$0,000",OK,"$749,000 "
+Bernard,Gonzalez,2420  94th Ave Ne,Bellevue,WA,98004,4254553469,,Former Customer,,"$0,000",DNC,"$761,000 "
+Peter,Luke,3105  109th Ave Se,Bellevue,WA,98004,,,Former Customer,8/16/2002,"$0,000",,"$768,000 "
+Brian,Nelson,3811  95th Ave Ne,Bellevue,WA,98004,4254545649,,Former Customer,8/1/2006,"$0,000",DNC,"$750,000 "
+Ivan,Velkou,511  99th Ave Ne,Bellevue,WA,98004,4254532430,,Former Customer,8/12/2002,"$880,000 ",DNC,"$756,000 "
+Ronald,Blyth,1647  103rd Ave Se,Bellevue,WA,98004,4254553888,,Former Customer,,"$0,000",DNC,"$762,000 "
+Frances,Lindquist,9516 Ne 30th St,Bellevue,WA,98004,4254559516,,Former Customer,,"$0,000",DNC,"$744,000 "
+Matt,Leber,2721  105th Ave Se,Bellevue,WA,98004,,,Former Customer,7/16/2004,"$400,000 ",,"$730,000 "
+Lane,Vanwyk,2730  106th Pl Se,Bellevue,WA,98004,4254544854,,Former Customer,,"$0,000",DNC,"$731,000 "
+Patrick,McGrath,10801 Se 28th St,Bellevue,WA,98004,,,Former Customer,5/3/2007,"$1,067,000 ",,"$736,000 "
+Michael,Tokarchek,1651  103rd Ave Se,Bellevue,WA,98004,4255909300,,Former Customer,,"$0,000",OK,"$725,000 "
+Steven,Erickson,9818 Ne 31st St,Bellevue,WA,98004,4254538680,,Former Customer,11/16/1999,"$0,000",DNC,"$717,000 "
+Mark,Dickison,11289 Ne 37th Pl,Bellevue,WA,98004,4258224077,,Former Customer,2/16/1992,"$399,000 ",DNC,"$702,000 "
+Stewart,Chung,9331 Se Shoreland Dr,Bellevue,WA,98004,4254552878,,Former Customer,8/16/1995,"$270,000 ",OK,"$699,000 "
+Fumio,Ohuchi,9421 Ne 1st St,Bellevue,WA,98004,4254537143,,Former Customer,3/16/1992,"$334,000 ",DNC,"$707,000 "
+Linda,Young,614  108th Ave Se,Bellevue,WA,98004,4254559328,,Former Customer,6/16/1996,"$0,000",DNC,"$699,000 "
+Teresa,Wallace,9355  Sunset Way,Bellevue,WA,98004,,,Former Customer,4/22/1998,"$325,000 ",,"$685,000 "
+Michael,Broaddus,1007  106th Ave Se,Bellevue,WA,98004,4256373664,,Former Customer,1/16/1997,"$375,000 ",DNC,"$681,000 "
+Jacob,Gibbs,11418 Ne 21st St,Bellevue,WA,98004,4254535657,,Former Customer,4/16/2000,"$0,000",DNC,"$687,000 "
+Margaret,Pezoldt,9420 Ne 5th St,Bellevue,WA,98004,4254545135,,Former Customer,,"$0,000",DNC,"$695,000 "
+Matthew,Castle,2320  103rd Ave Ne,Bellevue,WA,98004,4254559154,,Former Customer,,"$0,000",DNC,"$670,000 "
+Bradley,Wheeler,2725  105th Ave Se,Bellevue,WA,98004,,,Former Customer,4/25/2000,"$295,000 ",,"$665,000 "
+Scott,Dudley,10242 Se 8th St,Bellevue,WA,98004,4254506007,,Former Customer,11/26/2002,"$535,000 ",DNC,"$688,000 "
+Paul,Trull,10066 Ne 29th Pl,Bellevue,WA,98004,4258898325,,Former Customer,5/16/2000,"$0,000",DNC,"$667,000 "
+Jeffrey,Hirsch,10256 Se 7th St,Bellevue,WA,98004,4254530236,,Former Customer,11/16/1986,"$162,000 ",DNC,"$684,000 "
+Greg,Hightower,10014 Se 16th St,Bellevue,WA,98004,4254519699,,Former Customer,12/15/2000,"$622,000 ",DNC,"$673,000 "
+Lee,Eberhardt,8412  Hunts Point Ln,Bellevue,WA,98004,4254552935,,Former Customer,5/16/2001,"$0,000",DNC,"$679,000 "
+Scott,Bash,10805 Ne 39th Pl,Bellevue,WA,98004,,,Former Customer,8/16/2011,"$720,000 ",,"$648,000 "
+Deane,England,2615  109th Pl Ne,Bellevue,WA,98004,4258228416,,Former Customer,,"$0,000",DNC,"$660,000 "
+Ming,Qi,9842 Ne 15th St,Bellevue,WA,98004,,,Former Customer,6/12/2012,"$820,000 ",,"$646,000 "
+David,Steere,9844 Ne 27th St,Bellevue,WA,98004,4254519844,,Former Customer,11/22/2002,"$395,000 ",DNC,"$640,000 "
+Juliet,Kudriavtseff,3015  Hunts Point Cir,Bellevue,WA,98004,,,Former Customer,,"$0,000",,"$638,000 "
+Rizwan,Samad,8311  Hunts Point Pl,Bellevue,WA,98004,,,Former Customer,7/16/1993,"$405,000 ",,"$635,000 "
+Patrick,Lawrence,3323  102nd Ave Ne,Bellevue,WA,98004,4255769195,,Former Customer,6/21/2002,"$395,000 ",DNC,"$639,000 "
+Klaas,Veenstra,2112  94th Ave Ne,Bellevue,WA,98004,4254548209,,Former Customer,7/16/1986,"$83,000 ",DNC,"$628,000 "
+Carlson,Lee,11000 Se 24th Pl,Bellevue,WA,98004,,,Former Customer,10/16/1999,"$0,000",,"$630,000 "
+Donald,Reiner,10637 Se 4th St,Bellevue,WA,98004,4254540438,,Former Customer,2/6/2009,"$0,000",DNC,"$637,000 "
+Enwei,Xie,717  99th Ave Se,Bellevue,WA,98004,4254513943,,Former Customer,9/16/2002,"$0,000",DNC,"$636,000 "
+Susan,Svenson,9931  Lake Washington Blvd Ne,Bellevue,WA,98004,4254549310,,Former Customer,5/1/1997,"$430,000 ",DNC,"$630,000 "
+Young,Kwak,9015 Ne 21st Pl,Bellevue,WA,98004,4256465493,,Former Customer,5/3/2006,"$1,177,000 ",OK,"$628,000 "
+Robert,Davidson,10923 Ne 26th Pl,Bellevue,WA,98004,4258273558,,Former Customer,,"$0,000",DNC,"$624,000 "
+Timothy,Osborn,9250  Points Dr Ne,Bellevue,WA,98004,4256888703,,Former Customer,7/27/2001,"$442,000 ",DNC,"$625,000 "
+Vasile,Radulescu,2410  Bellevue Way Ne,Bellevue,WA,98004,,,Former Customer,12/3/2002,"$289,000 ",,"$614,000 "
+Kenneth,Towers,3702  111th Ave Ne,Bellevue,WA,98004,4258225212,,Former Customer,7/16/1980,"$188,000 ",DNC,"$628,000 "
+Arturo,Rivera,102  Cedar Crest Ln,Bellevue,WA,98004,4252235215,,Former Customer,12/1/2009,"$595,000 ",OK,"$614,000 "
+Anne,Drebin,10015 Ne 4th St Apt 2002,Bellevue,WA,98004,4257472277,,Former Customer,8/28/2006,"$925,000 ",DNC,"$615,000 "
+Roberta,Rahn,10425 Se 24th Pl,Bellevue,WA,98004,4254542801,,Former Customer,,"$0,000",DNC,"$625,000 "
+Scott,Stabler,10711 Ne 19th Pl,Bellevue,WA,98004,4254511141,,Former Customer,4/5/2004,"$972,000 ",DNC,"$624,000 "
+Brad,Ramaley,9848 Ne 20th St,Bellevue,WA,98004,4254510437,,Former Customer,8/16/1986,"$77,000 ",DNC,"$612,000 "
+Susan,Navarro,2111  Blarney Pl Se,Bellevue,WA,98004,4254555018,,Former Customer,5/16/1996,"$357,000 ",DNC,"$610,000 "
+John,Hopper,9750 Ne 26th St,Bellevue,WA,98004,4254542321,,Former Customer,4/16/1983,"$105,000 ",DNC,"$610,000 "
+Frank,Westerlund,1623  109th Ave Ne,Bellevue,WA,98004,4254531009,,Former Customer,11/21/2001,"$595,000 ",DNC,"$607,000 "
+Robert,Pond,9841 Ne 16th St,Bellevue,WA,98004,4254541784,,Former Customer,,"$0,000",DNC,"$610,000 "
+Gary,Wilson,9828 Ne 13th St,Bellevue,WA,98004,4254543687,,Former Customer,3/16/2002,"$0,000",DNC,"$605,000 "
+Richard,Brackett,10250 Ne 24th St,Bellevue,WA,98004,4254537262,,Former Customer,,"$0,000",DNC,"$600,000 "
+Daniel,Bigos,10039 Ne 28th Pl,Bellevue,WA,98004,4257390967,,Former Customer,11/16/1996,"$239,000 ",DNC,"$606,000 "
+Patricia,Culbreth,1017  103rd Ave Se,Bellevue,WA,98004,4254525727,,Former Customer,10/21/2002,"$465,000 ",DNC,"$602,000 "
+Craig,Spiezle,9057  Points Dr Ne,Bellevue,WA,98004,4256887650,,Former Customer,10/16/1999,"$961,000 ",DNC,"$594,000 "
+Scott,Daehler,2228  108th Ave Ne,Bellevue,WA,98004,4254555519,,Former Customer,10/16/1993,"$216,000 ",DNC,"$592,000 "
+Ken,Jaffe,9821 Ne 27th St,Bellevue,WA,98004,,,Former Customer,6/30/1998,"$307,000 ",,"$594,000 "
+Patrick,Sirr,10413 Se 25th St,Bellevue,WA,98004,,,Former Customer,8/16/2005,"$680,000 ",,"$585,000 "
+Bernard,Johnson,2705  107th Ave Se,Bellevue,WA,98004,4256465946,,Former Customer,5/30/2002,"$423,000 ",DNC,"$586,000 "
+Rj,Sundsten,9834 Ne 25th St,Bellevue,WA,98004,4254555377,,Former Customer,,"$0,000",DNC,"$589,000 "
+Marilee,Smith,10047  Main St Apt 412,Bellevue,WA,98004,,,Former Customer,12/1/2004,"$601,000 ",,"$591,000 "
+Ira,Rodriguez,9615 Ne 26th St,Bellevue,WA,98004,4254670558,,Former Customer,12/14/1999,"$337,000 ",DNC,"$582,000 "
+Steven,Ursino,11027 Se 10th St,Bellevue,WA,98004,4254549771,,Former Customer,,"$0,000",DNC,"$590,000 "
+Kris,Hodge,10047  Main St Apt 510,Bellevue,WA,98004,4254542772,,Former Customer,4/16/2001,"$649,000 ",DNC,"$595,000 "
+Christopher,Suter,2127  109th Ave Se,Bellevue,WA,98004,4254629491,,Former Customer,2/10/2004,"$460,000 ",DNC,"$585,000 "
+George,Kosanke,9823 Ne 28th St,Bellevue,WA,98004,,,Former Customer,9/16/1987,"$91,000 ",,"$570,000 "
+Barbara,Varon,1910  109th Ave Ne,Bellevue,WA,98004,4254555330,,Former Customer,11/16/1995,"$254,000 ",DNC,"$572,000 "
+Henry,Halladay,3230  110th Ave Se,Bellevue,WA,98004,4254551955,,Former Customer,,"$0,000",DNC,"$570,000 "
+Thomas,Rice,2639  110th Ave Ne,Bellevue,WA,98004,,,Former Customer,8/16/2000,"$360,000 ",,"$564,000 "
+Yu,Kim,2815  112th Ave Se,Bellevue,WA,98004,,,Former Customer,5/8/2007,"$730,000 ",,"$562,000 "
+Brandon,Morris,2636  110th Ave Ne,Bellevue,WA,98004,,,Former Customer,6/19/2006,"$537,000 ",,"$553,000 "
+Charles,Ferree,10402 Se 29th St,Bellevue,WA,98004,4254547852,,Former Customer,,"$0,000",DNC,"$563,000 "
+James,Renfroe,10613 Ne 19th Pl,Bellevue,WA,98004,4256370131,,Former Customer,4/16/1991,"$205,000 ",DNC,"$556,000 "
+Stephen,Bard,3203  103rd Pl Ne,Bellevue,WA,98004,4258273601,,Former Customer,4/21/2004,"$440,000 ",DNC,"$556,000 "
+Gary,Jordan,10607 Ne 17th St,Bellevue,WA,98004,4254537048,,Former Customer,2/16/1997,"$149,000 ",DNC,"$559,000 "
+John,Donnan,1701  99th Ave Ne,Bellevue,WA,98004,4254545904,,Former Customer,6/16/1999,"$0,000",DNC,"$555,000 "
+John,Mancuso,9856 Ne 27th St,Bellevue,WA,98004,4254671311,,Former Customer,4/10/2003,"$345,000 ",DNC,"$559,000 "
+Timothy,Hood,705  109th Ave Se,Bellevue,WA,98004,,,Former Customer,5/16/2012,"$675,000 ",,"$545,000 "
+John,Allen,10590 Ne 12th St  102,Bellevue,WA,98004,,,Former Customer,9/29/2009,"$630,000 ",,"$551,000 "
+James,Ritter,1625  108th Ave Ne,Bellevue,WA,98004,4254555057,,Former Customer,9/16/1986,"$83,000 ",OK,"$546,000 "
+Ken,Mizell,2827  88th Ave Ne,Bellevue,WA,98004,4254539416,,Former Customer,3/16/1979,"$33,000 ",DNC,"$542,000 "
+Lance,Nelson,9618 Ne 35th Pl,Bellevue,WA,98004,4254554858,,Former Customer,9/16/1993,"$212,000 ",DNC,"$541,000 "
+Jeff,Lunder,11044 Se 28th Pl,Bellevue,WA,98004,4254530908,,Former Customer,12/16/1997,"$117,000 ",DNC,"$552,000 "
+Maria,Filarca,2218  108th Ave Ne,Bellevue,WA,98004,4254541835,,Former Customer,,"$0,000",DNC,"$543,000 "
+Michael,Smith,9235 Ne 5th St,Bellevue,WA,98004,4254509598,,Former Customer,4/16/1993,"$243,000 ",DNC,"$552,000 "
+Joan,Carter,10457 Ne 17th St,Bellevue,WA,98004,4254549162,,Former Customer,,"$0,000",DNC,"$541,000 "
+Young,Lee,1602  108th Ave Ne,Bellevue,WA,98004,,,Former Customer,2/22/2013,"$998,000 ",,"$533,000 "
+Mohammad,Eftekhari,9040 Ne 28th St,Bellevue,WA,98004,4254519356,,Former Customer,5/16/2000,"$0,000",DNC,"$533,000 "
+Michael,Gile,9915  Lake Washington Blvd Ne,Bellevue,WA,98004,4254555230,,Former Customer,6/7/2004,"$699,000 ",DNC,"$538,000 "
+Bradley,Ackley,3015  106th Ave Se,Bellevue,WA,98004,4254542110,,Former Customer,4/16/2005,"$599,000 ",DNC,"$534,000 "
+Shinzo,Toyama,9427 Se Shoreland Dr,Bellevue,WA,98004,4254544827,,Former Customer,2/16/1996,"$362,000 ",OK,"$528,000 "
+Alan,Lambert,10624  Woodhaven Ln,Bellevue,WA,98004,4256350055,,Former Customer,5/16/2000,"$0,000",DNC,"$528,000 "
+Thomas,Broznowski,3333  103rd Pl Ne,Bellevue,WA,98004,4258277932,,Former Customer,3/16/1994,"$168,000 ",DNC,"$528,000 "
+Miklos,Endrody,1778  Bellevue Way Ne,Bellevue,WA,98004,4256461003,,Former Customer,5/16/1997,"$440,000 ",DNC,"$527,000 "
+Richard,Mortell,1418  104th Ave Se,Bellevue,WA,98004,,,Former Customer,,"$0,000",,"$515,000 "
+Gubin,Wei,827  102nd Ave Se,Bellevue,WA,98004,,,Former Customer,9/26/2002,"$350,000 ",,"$525,000 "
+David,Jensen,1032  111th Pl Se,Bellevue,WA,98004,4254554519,,Former Customer,1/7/2000,"$306,000 ",DNC,"$523,000 "
+Joan,Holliday,9710 Ne 24th St,Bellevue,WA,98004,4254521912,,Former Customer,5/16/2000,"$0,000",DNC,"$524,000 "
+Daniel,Winstanley,11005 Se 26th St,Bellevue,WA,98004,4254535649,,Former Customer,7/16/1987,"$115,000 ",DNC,"$516,000 "
+Kelli,Jones,11010 Se 25th St,Bellevue,WA,98004,4254555798,,Former Customer,,"$0,000",DNC,"$523,000 "
+Marc,Balatico,3017  109th Ave Se,Bellevue,WA,98004,4256357417,,Former Customer,5/16/1984,"$92,000 ",DNC,"$522,000 "
+Robert,Mendonsa,11109 Ne 38th Pl,Bellevue,WA,98004,,,Former Customer,2/15/2002,"$542,000 ",,"$510,000 "
+Maura,Obrien,30  Enatai Dr,Bellevue,WA,98004,,,Former Customer,5/16/1993,"$0,000",,"$506,000 "
+Michael,Craddock,3807  110th Pl Ne,Bellevue,WA,98004,4258271386,,Former Customer,3/16/1982,"$155,000 ",DNC,"$501,000 "
+Alex,Hofto,10575 Ne 12th Pl  104,Bellevue,WA,98004,4256461816,,Former Customer,9/11/2008,"$670,000 ",DNC,"$501,000 "
+John,Leitch,2514  104th Ave Se,Bellevue,WA,98004,4254539139,,Former Customer,11/16/1982,"$70,000 ",DNC,"$494,000 "
+Jae,Kim,10208 Ne 26th St,Bellevue,WA,98004,,,Former Customer,12/26/2003,"$415,000 ",,"$489,000 "
+Thomas,Doyle,1012  110th Ave Se,Bellevue,WA,98004,,,Former Customer,,"$0,000",,"$490,000 "
+Henry,Montesino,2402  96th Ave Ne,Bellevue,WA,98004,,,Former Customer,10/16/1981,"$65,000 ",,"$484,000 "
+Gregory,Parr,1645  104th Ave Se,Bellevue,WA,98004,,,Former Customer,,"$0,000",,"$484,000 "
+Tami,Fujii,10424 Ne 17th St,Bellevue,WA,98004,,,Former Customer,6/3/2003,"$389,000 ",,"$479,000 "
+Michelle,McLaughlin,9851 Ne 29th St,Bellevue,WA,98004,,,Former Customer,8/16/2002,"$0,000",,"$475,000 "
+Richard,Weber,11005 Ne 17th St,Bellevue,WA,98004,4254504017,,Former Customer,8/16/1988,"$90,000 ",DNC,"$479,000 "
+John,Castro,10604 Se 25th St,Bellevue,WA,98004,,,Former Customer,1/16/1992,"$177,000 ",,"$475,000 "
+Joann,Warren,10610 Ne 9th Pl  1109,Bellevue,WA,98004,4254529440,,Former Customer,1/16/2008,"$866,000 ",DNC,"$471,000 "
+Kenneth,Crandall,2712  107th Ave Ne,Bellevue,WA,98004,,,Former Customer,,"$0,000",,"$469,000 "
+Yolanda,Torres,10266 Ne 21st Pl,Bellevue,WA,98004,,,Former Customer,,"$0,000",,"$469,000 "
+Vincent,Reames,10448 Ne 28th Pl,Bellevue,WA,98004,,,Former Customer,,"$0,000",,"$469,000 "
+Jennifer,Tada,10564 Ne 25th St,Bellevue,WA,98004,4258226368,,Former Customer,5/16/1992,"$153,000 ",DNC,"$469,000 "
+Samuel,Kim,10523 Ne 26th St,Bellevue,WA,98004,,,Former Customer,7/24/2002,"$385,000 ",,"$469,000 "
+Sean,Naughton,10612 Ne 18th St,Bellevue,WA,98004,,,Former Customer,3/22/2004,"$385,000 ",,"$469,000 "
+Doug,Landreth,10820 Se 21st St,Bellevue,WA,98004,4254539734,,Former Customer,7/16/1982,"$93,000 ",DNC,"$470,000 "
+Cui,Liao,1936  109th Ave Se,Bellevue,WA,98004,4253787627,,Former Customer,10/21/2003,"$349,000 ",DNC,"$471,000 "
+Julia,Flexer,10633 Ne 18th St,Bellevue,WA,98004,4256880324,,Former Customer,10/16/1993,"$179,000 ",OK,"$469,000 "
+Jong,Lee,10505 Ne 25th St,Bellevue,WA,98004,4254675992,,Former Customer,2/15/2002,"$405,000 ",DNC,"$469,000 "
+Jack,Austin,2123  102nd Ave Ne,Bellevue,WA,98004,4254551012,,Former Customer,,"$0,000",DNC,"$469,000 "
+Randy,Lazenby,1820  98th Ave Ne,Bellevue,WA,98004,4254538827,,Former Customer,4/16/1983,"$84,000 ",DNC,"$467,000 "
+Mark,Sheckler,10722 Se 3rd St,Bellevue,WA,98004,4254555253,,Former Customer,,"$0,000",OK,"$465,000 "
+Shinji,Goto,1029  109th Ave Se,Bellevue,WA,98004,4254535564,,Former Customer,3/15/2002,"$429,000 ",DNC,"$464,000 "
+Scott,Easterbrook,232  110th Pl Se,Bellevue,WA,98004,4254545865,,Former Customer,,"$0,000",DNC,"$452,000 "
+Diane,Bogue,3435  103rd Pl Ne,Bellevue,WA,98004,4258273835,,Former Customer,,"$0,000",DNC,"$456,000 "
+Ronald,Connor,2304  100th Ave Ne,Bellevue,WA,98004,4254513653,,Former Customer,12/16/1986,"$111,000 ",DNC,"$456,000 "
+Duc,Tran,840  102nd Ave Se,Bellevue,WA,98004,,,Former Customer,8/27/2002,"$290,000 ",,"$461,000 "
+Norman,Lampe,212  109th Ave Se,Bellevue,WA,98004,,,Former Customer,12/27/2000,"$340,000 ",,"$450,000 "
+Kael,Hammond,128  109th Ave Se,Bellevue,WA,98004,4254542580,,Former Customer,3/16/1995,"$203,000 ",DNC,"$450,000 "
+Loren,Pace,1437  102nd Ave Ne,Bellevue,WA,98004,4255027467,,Former Customer,3/16/2013,"$485,000 ",OK,"$449,000 "
+Miles,Forgette,2643  106th Ave Ne,Bellevue,WA,98004,,,Former Customer,,"$0,000",,"$446,000 "
+Ajay,Dhankhar,10000  Main St  201,Bellevue,WA,98004,,,Former Customer,2/2/2012,"$520,000 ",,"$443,000 "
+Andrew,Barlow,10444 Se 24th Pl,Bellevue,WA,98004,,,Former Customer,3/16/2002,"$0,000",,"$440,000 "
+William,Cadwallader,3029  106th Ave Se,Bellevue,WA,98004,4255029958,,Former Customer,6/8/2010,"$512,000 ",DNC,"$435,000 "
+Jordan,Sharpe,10214 Ne 24th St,Bellevue,WA,98004,4254511257,,Former Customer,,"$0,000",DNC,"$438,000 "
+Ivan,Jimenez,240  111th Ave Se,Bellevue,WA,98004,4256350463,,Former Customer,10/23/2000,"$352,000 ",DNC,"$430,000 "
+Adrian,Hague,11035 Se 31st St,Bellevue,WA,98004,4254629243,,Former Customer,5/16/1987,"$102,000 ",DNC,"$427,000 "
+Vartanush,Guyumdzhyan,10259 Ne 30th Pl,Bellevue,WA,98004,4255224740,,Former Customer,7/27/2005,"$465,000 ",OK,"$430,000 "
+Condra,Smith,226  111th Ave Se,Bellevue,WA,98004,4254550454,,Former Customer,7/1/2006,"$0,000",DNC,"$412,000 "
+Vance,Noriega,11056 Ne 14th St,Bellevue,WA,98004,,,Former Customer,11/16/2000,"$0,000",,"$416,000 "
+Richard,Dowd,2310  100th Ave Ne,Bellevue,WA,98004,4254540078,,Former Customer,,"$0,000",DNC,"$418,000 "
+Michael,Smith,1205  108th Ave Se,Bellevue,WA,98004,,,Former Customer,10/16/2002,"$325,000 ",,"$413,000 "
+Keith,Zhang,442  110th Ave Se,Bellevue,WA,98004,,,Former Customer,5/15/2008,"$567,000 ",,"$406,000 "
+Mary,Thompson,233  111th Ave Se,Bellevue,WA,98004,4254541636,,Former Customer,7/1/2000,"$0,000",DNC,"$407,000 "
+Gabriel,Desantino,205  108th Ave Se,Bellevue,WA,98004,4256880016,,Former Customer,1/16/1992,"$160,000 ",OK,"$397,000 "
+Marsh,Lefler,371  100th Ave Ne Apt 201,Bellevue,WA,98004,,,Former Customer,11/16/2009,"$521,000 ",,"$391,000 "
+Vadim,Goncharenko,177  107th Ave Ne Apt 1202,Bellevue,WA,98004,4254547730,,Former Customer,1/6/2006,"$595,000 ",DNC,"$382,000 "
+David,Kim,650  Bellevue Way Ne  2805,Bellevue,WA,98004,,,Former Customer,5/16/2006,"$519,000 ",,"$386,000 "
+James,Hamilton,11102 Se 1st Pl,Bellevue,WA,98004,4255028878,,Former Customer,10/16/1999,"$0,000",DNC,"$387,000 "
+Beth,Leblanc,3270  106th Ave Se,Bellevue,WA,98004,4254549525,,Former Customer,6/16/1993,"$0,000",DNC,"$374,000 "
+Darren,Remer,1022  108th Ave Se,Bellevue,WA,98004,4256796932,,Former Customer,10/16/1999,"$0,000",DNC,"$380,000 "
+William,Linton,10828 Ne 18th St,Bellevue,WA,98004,4256350179,,Former Customer,6/16/2000,"$0,000",DNC,"$386,000 "
+Jerome,Bosley,125  110th Ave Se,Bellevue,WA,98004,4254545895,,Former Customer,,"$0,000",DNC,"$367,000 "
+Nick,Buchanan,10042  Main St Apt 309,Bellevue,WA,98004,4254530289,,Former Customer,10/23/1998,"$260,000 ",DNC,"$356,000 "
+Lester,Hurlbert,1404  108th Ave Se,Bellevue,WA,98004,4254559793,,Former Customer,1/16/2002,"$0,000",DNC,"$359,000 "
+Tommi,Robison,3131  112th Ave Se,Bellevue,WA,98004,4259451106,,Former Customer,,"$0,000",OK,"$344,000 "
+Gary,Slabaugh,10045 Ne 1st St Apt 327,Bellevue,WA,98004,,,Former Customer,,"$0,000",,"$331,000 "
+Ian,Hu,177  107th Ave Ne Apt 2201,Bellevue,WA,98004,,,Former Customer,10/3/2012,"$373,000 ",,"$326,000 "
+Kc,Feng,150  102nd Ave Se  205,Bellevue,WA,98004,,,Former Customer,12/15/2006,"$440,000 ",,"$333,000 "
+Pamela,Dekker,10398 Ne 17th St  304,Bellevue,WA,98004,4255027297,,Former Customer,3/28/2007,"$712,000 ",OK,"$309,000 "
+Ritaellen,Lehr,177  107th Ave Ne Apt 1208,Bellevue,WA,98004,4254542897,,Former Customer,4/23/2001,"$433,000 ",DNC,"$328,000 "
+Natalya,Radutskaya,177  107th Ave Ne Apt 1015,Bellevue,WA,98004,4254533218,,Former Customer,6/19/2006,"$522,000 ",DNC,"$306,000 "
+Jeanne,McCarty,9901 Ne 4th St Apt 2,Bellevue,WA,98004,4254518105,,Former Customer,10/16/1997,"$185,000 ",DNC,"$305,000 "
+Bradley,Lytle,401  100th Ave Ne Apt 210,Bellevue,WA,98004,,,Former Customer,12/29/2003,"$268,000 ",,"$291,000 "
+Dae,Park,10000  Main St  403,Bellevue,WA,98004,,,Former Customer,3/7/2011,"$409,000 ",,"$294,000 "
+Karen,Stevens,10000  Main St  304,Bellevue,WA,98004,,,Former Customer,7/28/2010,"$345,000 ",,"$281,000 "
+Evan,Padilla,115  100th Ave Ne Apt 303,Bellevue,WA,98004,4254535704,,Former Customer,11/16/1996,"$158,000 ",DNC,"$286,000 "
+Takashi,Mizuma,11004 Ne 11th St Apt 501,Bellevue,WA,98004,,,Former Customer,12/15/2004,"$309,000 ",,"$270,000 "
+Angela,Dunavant,9951  Lake Washington Blvd Ne Apt 11,Bellevue,WA,98004,4254540449,,Former Customer,6/21/2010,"$493,000 ",OK,"$262,000 "
+Joyce,Shaffer,401  100th Ave Ne Apt 316,Bellevue,WA,98004,,,Former Customer,2/16/1988,"$133,000 ",,"$263,000 "
+Christine,Compton,10101 Se 3rd St Apt 306,Bellevue,WA,98004,4256371877,,Former Customer,11/9/2000,"$219,000 ",DNC,"$252,000 "
+Anthony,Pak,423  99th Ave Ne Apt 2,Bellevue,WA,98004,,,Former Customer,1/28/2008,"$360,000 ",,"$251,000 "
+David,Baldwin,10237 Se 3rd St Apt 9,Bellevue,WA,98004,4254554981,,Former Customer,9/10/1998,"$184,000 ",DNC,"$228,000 "
+Patrick,Parker,10101 Se 3rd St Apt 205,Bellevue,WA,98004,4254511022,,Former Customer,1/14/2000,"$206,000 ",DNC,"$249,000 "
+Matthew,McKinnon,424  102nd Ave Se Apt 106,Bellevue,WA,98004,4254518080,,Former Customer,8/22/2001,"$184,000 ",DNC,"$226,000 "
+Doug,Stevenson,115  100th Ave Ne Apt 301,Bellevue,WA,98004,4254519417,,Former Customer,6/16/1985,"$70,000 ",DNC,"$234,000 "
+Monalisa,Karar,177  107th Ave Ne Apt 1006,Bellevue,WA,98004,,,Former Customer,12/9/2010,"$323,000 ",,"$207,000 "
+Olga,Alekseyeva,10113 Ne 12th St Apt 8,Bellevue,WA,98004,,,Former Customer,3/5/2001,"$150,000 ",,"$205,000 "
+Helen,Nishimura,11011 Ne 12th St  403,Bellevue,WA,98004,4254558378,,Former Customer,8/27/2002,"$185,000 ",DNC,"$203,000 "
+George,Zacharias,300  110th Ave Ne Apt 204,Bellevue,WA,98004,,,Former Customer,5/1/2007,"$358,000 ",,"$200,000 "
+Julia,Sondej,342  102nd Ave Se Apt 206,Bellevue,WA,98004,,,Former Customer,4/19/2002,"$160,000 ",,"$195,000 "
+Blake,Woolsey,10007 Ne 12th St Apt 109,Bellevue,WA,98004,,,Former Customer,3/16/1986,"$84,000 ",,"$200,000 "
+Luis,Torres,1339  Bellefield Park Ln,Bellevue,WA,98004,,,Former Customer,,"$0,000",,"$192,000 "
+Joanne,Alexander,10129  Main St Apt 305,Bellevue,WA,98004,,,Former Customer,9/16/1988,"$75,000 ",,"$184,000 "
+Shelley,Watson,3915  108th Ave Ne Apt B304,Bellevue,WA,98004,,,Former Customer,3/30/2001,"$171,000 ",,"$170,000 "
+Robynn,Clark,1266  Bellevue Way Ne Apt 7,Bellevue,WA,98004,4254552122,,Former Customer,3/16/2001,"$169,000 ",DNC,"$176,000 "
+Dave,Hasse,10032 Se 6th St Apt 103,Bellevue,WA,98004,,,Former Customer,2/16/2001,"$189,000 ",,"$171,000 "
+Audrey,Erickson,10210 Ne 16th Pl Apt T3,Bellevue,WA,98004,4254518187,,Former Customer,10/16/1989,"$85,000 ",DNC,"$167,000 "
+Amanda,Waltman,10507 Ne 32nd Pl Apt H303,Bellevue,WA,98004,,,Former Customer,9/19/2005,"$177,000 ",,"$149,000 "
+Masako,Kanazawa,343  112th Ave Se,Bellevue,WA,98004,,,Former Customer,,"$0,000",,"$154,000 "
+Ellyn,Mangialardi,860  100th Ave Ne Apt 35,Bellevue,WA,98004,4254537791,,Former Customer,10/16/1999,"$150,000 ",DNC,"$164,000 "
+Charles,Ward,315  112th Ave Se,Bellevue,WA,98004,4256888159,,Former Customer,11/16/1980,"$72,000 ",DNC,"$154,000 "
+Lisa,Muth,3573  109th Pl Ne Apt 3,Bellevue,WA,98004,,,Former Customer,3/16/1992,"$89,000 ",,"$134,000 "
+Donna,Schwartz,1276  Bellevue Way Ne Apt 5,Bellevue,WA,98004,,,Former Customer,3/16/1995,"$103,000 ",,"$140,000 "
+Robert,Long,2005  102nd Ave Se,Bellevue,WA,98004,,,Former Customer,9/23/2003,"$612,000 ",,"$78,000 "
+Daniel,Solomonson,10101 Se 3rd St Apt 24,Bellevue,WA,98004,,,Former Customer,,"$0,000",,"$10,000 "
+David,Ballash,101  101st Ave Se Apt 201A,Bellevue,WA,98004,4254628274,,Former Customer,6/16/1993,"$349,000 ",DNC,"$5,000 "
+Eun,Chung,11052 Ne 33rd Pl Apt A6,Bellevue,WA,98004,4252420581,,Former Customer,12/14/2006,"$354,000 ",DNC,"$0,000"
+Sook,Pak,10430 Ne 32nd Pl Apt C201,Bellevue,WA,98004,,,Former Customer,,"$0,000",,"$0,000"
+David,Bocek,8429  Hunts Point Ln,Bellevue,WA,98004,4254540943,,Former Customer,9/16/1995,"$351,000 ",DNC,"$0,000"
+Karen,Geary,10323 Ne 19th Pl,Bellevue,WA,98004,4254541237,,Former Customer,,"$0,000",DNC,"$0,000"
+Richard,Gilroy,1714  Bellevue Way Ne,Bellevue,WA,98004,,,Former Customer,,"$0,000",,"$0,000"
+Edward,Urquhart,1632  92nd Ave Ne,Bellevue,WA,98004,4254525675,,Former Customer,5/16/1999,"$1,900,000 ",DNC,"$0,000"
+Betty,Kusler,1625  94th Ave Ne,Bellevue,WA,98004,,,Former Customer,,"$0,000",,"$0,000"
+Judye,Allman,1300  Bellevue Way Ne Apt 7,Bellevue,WA,98004,,,Former Customer,6/22/2003,"$197,000 ",,"$0,000"
+M,Heuple,1392  Bellevue Way Ne Apt 7,Bellevue,WA,98004,4256353540,,Former Customer,,"$0,000",DNC,"$0,000"
+Susanne,Paur,10305 Ne 16th St Apt I2,Bellevue,WA,98004,,,Former Customer,,"$0,000",,"$0,000"
+Nasser,Kamali,1741  100th Ave Ne,Bellevue,WA,98004,4254537258,,Former Customer,7/6/2005,"$840,000 ",DNC,"$0,000"
+Don,Gammell,933  111th Ave Ne Apt 224,Bellevue,WA,98004,,,Former Customer,,"$0,000",,"$0,000"
+Yohanes,Darmawan,1100  106th Ave Ne Apt 704,Bellevue,WA,98004,,,Former Customer,7/22/2005,"$275,000 ",,"$0,000"
+Brent,Nelson,10900 Ne 8th St Apt 9O0,Bellevue,WA,98004,,,Former Customer,,"$0,000",,"$0,000"
+George,Armendariz,10700 Ne 4th St  3812,Bellevue,WA,98004,4254012939,,Former Customer,,"$0,000",DNC,"$0,000"
+Dmitri,Bouianov,118  107th Ave Ne  B304,Bellevue,WA,98004,,,Former Customer,4/25/2011,"$167,000 ",,"$0,000"
+Lisa,Fang,118  107th Ave Ne  B405,Bellevue,WA,98004,,,Former Customer,5/7/2007,"$317,000 ",,"$0,000"
+Mokadan,Im,118  107th Ave Ne  B404,Bellevue,WA,98004,,,Former Customer,8/17/2007,"$340,000 ",,"$0,000"
+Kevin,Roberts,3933  108th Ave Ne Apt A103,Bellevue,WA,98004,,,Former Customer,10/16/1995,"$112,000 ",,"$0,000"
+Clayton,Compton,10925 Ne 37th Pl Apt 1,Bellevue,WA,98004,4258898019,,Former Customer,,"$0,000",DNC,"$0,000"
+Maxine,Hearing,2425  Killarney Way,Bellevue,WA,98004,4254542310,,Former Customer,,"$0,000",DNC,"$0,000"
+Evan,George,933  111th Ave Ne Apt 417,Bellevue,WA,98004,4254547574,,Former Customer,1/8/2007,"$2,100,000 ",DNC,"$0,000"
+Brenda,Link,3518  109th Pl Ne Apt 105,Bellevue,WA,98004,4258222912,,Former Customer,7/9/2004,"$149,000 ",DNC,"$0,000"
+Louis,Ramsay,500  106th Ave Ne  3711,Bellevue,WA,98004,4256499706,,Former Customer,5/25/2013,"$995,000 ",DNC,"$0,000"
+Michael,Perry,4466  140th Ave Ne,Bellevue,WA,98005,4258852295,,OK to Mail,Do Not Call,Former Customer,,
+Keith,Riffle,3400  134th Ave Ne,Bellevue,WA,98005,4258855986,,OK to Mail,Do Not Call,Former Customer,,
+Timothy,Shih,13659 Ne 32nd Pl,Bellevue,WA,98005,4258813065,,OK to Mail,Do Not Call,Former Customer,,
+John,Iwanski,13220 Ne 24th St,Bellevue,WA,98005,4258616456,,OK to Mail,Do Not Call,Former Customer,,
+Bjorn,Bayley,13436 Ne 36th St,Bellevue,WA,98005,4258698144,,OK to Mail,Do Not Call,Former Customer,,
+James,Rooney,12102 Ne 33rd St,Bellevue,WA,98005,4255587710,,Do Not Mail,Do Not Call,Former Customer,,
+John,Kugler,13424 Ne 51st Pl,Bellevue,WA,98005,4258827927,,OK to Mail,Do Not Call,Former Customer,,
+Rodney,Zonnefeld,13411 Ne 36th St,Bellevue,WA,98005,4258823666,,OK to Mail,Do Not Call,Former Customer,,
+But,Chui,3480  126th Ave Ne,Bellevue,WA,98005,4258679761,,OK to Mail,Do Not Call,Former Customer,,
+Walter,Feurer,13531 Ne 50th St,Bellevue,WA,98005,4258820561,,OK to Mail,Do Not Call,Former Customer,,
+Frederic,Templeton,1024  134th Ave Ne,Bellevue,WA,98005,4256431132,,OK to Mail,Do Not Call,Former Customer,,
+Aaron,Hammons,13771 Ne 2nd Pl,Bellevue,WA,98005,4256796920,,OK to Mail,Do Not Call,Former Customer,,
+Yoshio,Suzuki,3211  134th Ave Ne,Bellevue,WA,98005,4258831928,,OK to Mail,Do Not Call,Former Customer,,
+Heather,Sullivan,1802  122nd Ave Se,Bellevue,WA,98005,4259579553,,OK to Mail,Do Not Call,Former Customer,,
+Mark,Croft,3048  137th Ave Ne,Bellevue,WA,98005,4253762750,,OK to Mail,Do Not Call,Former Customer,,
+Michael,Oleary,3449  134th Ave Ne,Bellevue,WA,98005,4258839190,,OK to Mail,Do Not Call,Former Customer,,
+Charles,Petty,3036  135th Ave Ne,Bellevue,WA,98005,4258854349,,Do Not Mail,Do Not Call,Former Customer,,
+Robert,Shepherd,12416 Ne 37th St,Bellevue,WA,98005,4258832155,,OK to Mail,Do Not Call,Former Customer,,
+Robert,Jacobs,12203 Ne 37th St,Bellevue,WA,98005,4258836406,,OK to Mail,Do Not Call,Former Customer,,
+Anna,Schultz,13637 Ne 37th Pl,Bellevue,WA,98005,4258852040,,OK to Mail,Do Not Call,Former Customer,,
+Ron,Mondri,3610  130th Ave Ne,Bellevue,WA,98005,4258856556,,OK to Mail,Do Not Call,Former Customer,,
+Joe,Sturgeon,12708 Ne 36th St,Bellevue,WA,98005,4258695272,,OK to Mail,Do Not Call,Former Customer,,
+Paul,Burckhard,13252 Ne 47th St,Bellevue,WA,98005,4253382444,,OK to Mail,Do Not Call,Former Customer,,
+Alvin,Umphenour,11632 Ne 30th Pl,Bellevue,WA,98005,4258227133,,OK to Mail,Do Not Call,Former Customer,,
+Freely,Schwam,12530 Se 14th St,Bellevue,WA,98005,4254544639,,OK to Mail,Do Not Call,Former Customer,,
+Eugene,Robinson,901  129th Pl Ne,Bellevue,WA,98005,4254548669,,OK to Mail,Do Not Call,Former Customer,,
+Robert,Holzgraf,226  130th Pl Ne,Bellevue,WA,98005,4256981698,,OK to Mail,Do Not Call,Former Customer,,
+Julie,Warwick,11820 Ne 30th Pl,Bellevue,WA,98005,4258891460,,Do Not Mail,Do Not Call,Former Customer,,
+Charles,Pardee,1919  140th Ave Se,Bellevue,WA,98005,4257460849,,OK to Mail,Do Not Call,Former Customer,,
+Cathi,Fahey,2119  130th Pl Se,Bellevue,WA,98005,4256411184,,OK to Mail,Do Not Call,Former Customer,,
+Mildred,English,13236 Ne 40th St,Bellevue,WA,98005,4258852018,,OK to Mail,Do Not Call,Former Customer,,
+George,Dart,12603 Se 29th St,Bellevue,WA,98005,4257478511,,Do Not Mail,Do Not Call,Former Customer,,
+James,Mullen,2012  129th Ave Se,Bellevue,WA,98005,4256416166,,OK to Mail,Do Not Call,Former Customer,,
+Eric,Blohm,237  140th Ave Ne,Bellevue,WA,98005,4257460782,,OK to Mail,Do Not Call,Former Customer,,
+Cheryl,Hunt,12819 Ne 34th Pl,Bellevue,WA,98005,4258836815,,OK to Mail,Do Not Call,Former Customer,,
+Dwight,Carver,2616  131st Pl Ne,Bellevue,WA,98005,4258851243,,OK to Mail,Do Not Call,Former Customer,,
+Charles,Landau,3003  130th Pl Ne,Bellevue,WA,98005,4258810541,,Do Not Mail,Do Not Call,Former Customer,,
+Gagan,Arora,13008 Se 21st Pl,Bellevue,WA,98005,4254536680,,OK to Mail,Do Not Call,Former Customer,,
+Robert,Rudd,1606  123rd Ave Se,Bellevue,WA,98005,4255629360,,Do Not Mail,Do Not Call,Former Customer,,
+Doug,Simmons,2011  129th Ave Se,Bellevue,WA,98005,4257477322,,OK to Mail,Do Not Call,Former Customer,,
+William,Matson,13658 Se 7th St,Bellevue,WA,98005,4256411764,,OK to Mail,Do Not Call,Former Customer,,
+Natalie,Mall,12143 Se 15th St,Bellevue,WA,98005,4256532427,,OK to Mail,Do Not Call,Former Customer,,
+Jon,Oakdale,2551  123rd Ave Se,Bellevue,WA,98005,4256414138,,Do Not Mail,Do Not Call,Former Customer,,
+Michael,Cafferty,12201 Ne 3rd Pl,Bellevue,WA,98005,4256888115,,OK to Mail,Do Not Call,Former Customer,,
+Bruce,Lieberman,2408  131st Pl Ne,Bellevue,WA,98005,4258823371,,OK to Mail,Do Not Call,Former Customer,,
+Atul,Tandon,3226  129th Ave Ne,Bellevue,WA,98005,4258859169,,Do Not Mail,Do Not Call,Former Customer,,
+Gregory,Vanhinkle,2109  129th Ave Se,Bellevue,WA,98005,4255628818,,OK to Mail,Do Not Call,Former Customer,,
+Mary,Dispenza,12159 Se 14th St,Bellevue,WA,98005,4256442468,,OK to Mail,Do Not Call,Former Customer,,
+Edwin,Matheson,13920 Se 7th St,Bellevue,WA,98005,4257478506,,OK to Mail,Do Not Call,Former Customer,,
+Robert,Rose,2400  130th Pl Ne,Bellevue,WA,98005,4258816231,,OK to Mail,Do Not Call,Former Customer,,
+Patricia,Lemay,12910 Ne 28th St,Bellevue,WA,98005,4258859619,,OK to Mail,Do Not Call,Former Customer,,
+Daniel,Graney,13924 Se 22nd St,Bellevue,WA,98005,4257467402,,OK to Mail,Do Not Call,Former Customer,,
+Jule,Brown,1709  134th Ave Se Apt 10,Bellevue,WA,98005,4257473832,,OK to Mail,Do Not Call,Former Customer,,
+Tomoko,Tamura,1709  134th Ave Se Apt 22,Bellevue,WA,98005,4257463253,,OK to Mail,Do Not Call,Former Customer,,
+Clifford,Olin,12201 Se 18th Pl,Bellevue,WA,98005,4257462489,,Do Not Mail,Do Not Call,Former Customer,,
+Susane,Rough,1841  123rd Ave Se,Bellevue,WA,98005,4257460852,,Do Not Mail,Do Not Call,Former Customer,,
+David,Salzberg,1622  125th Ave Se,Bellevue,WA,98005,4254547889,,OK to Mail,Do Not Call,Former Customer,,
+Delores,Simkin,12830 Se 3rd St,Bellevue,WA,98005,4254543050,,OK to Mail,Do Not Call,Former Customer,,
+Hanka,Kafka,12517 Se 16th St,Bellevue,WA,98005,4257479103,,Do Not Mail,Do Not Call,Former Customer,,
+Gerald,Franklin,13630 Se 1st St,Bellevue,WA,98005,4257476157,,OK to Mail,Do Not Call,Former Customer,,
+Ching,Lin,12311 Ne 3rd Pl,Bellevue,WA,98005,4254537690,,OK to Mail,Do Not Call,Former Customer,,
+Richard,Young,2054  127th Ave Se,Bellevue,WA,98005,4255620660,,Do Not Mail,Do Not Call,Former Customer,,
+Peter,Proehl,12808 Ne 28th St,Bellevue,WA,98005,4258822057,,OK to Mail,Do Not Call,Former Customer,,
+Lois,Geren,12616 Ne 5th St,Bellevue,WA,98005,4254539955,,OK to Mail,Do Not Call,Former Customer,,
+Donald,Williams,257  140th Ave Ne,Bellevue,WA,98005,4257472939,,OK to Mail,Do Not Call,Former Customer,,
+Christopher,Loeken,1815  121st Ave Se,Bellevue,WA,98005,4257466585,,OK to Mail,Do Not Call,Former Customer,,
+Don,Lionetti,2008  123rd Ave Se,Bellevue,WA,98005,4253783823,,OK to Mail,Do Not Call,Former Customer,,
+Chester,Stencil,1702  126th Ave Se,Bellevue,WA,98005,4257478495,,OK to Mail,Do Not Call,Former Customer,,
+William,Wright,12120 Se 16th Pl,Bellevue,WA,98005,4257472033,,OK to Mail,Do Not Call,Former Customer,,
+Walter,Hockenbery,1622  121st Ave Se,Bellevue,WA,98005,4257479262,,OK to Mail,Do Not Call,Former Customer,,
+Gary,Kline,2205  135th Pl Se,Bellevue,WA,98005,4256416195,,OK to Mail,Do Not Call,Former Customer,,
+Chris,MacDonald,12904 Ne 28th St,Bellevue,WA,98005,4254971504,,OK to Mail,Do Not Call,Former Customer,,
+Bernard,Thompson,536  129th Ave Se,Bellevue,WA,98005,4254552278,,Do Not Mail,Do Not Call,Former Customer,,
+Sheldon,Lee,12128 Se 13th St,Bellevue,WA,98005,4257464794,,OK to Mail,Do Not Call,Former Customer,,
+King,Tan,12815 Se 25th Pl,Bellevue,WA,98005,4256413828,,OK to Mail,Do Not Call,Former Customer,,
+Mark,Gray,417  140th Ave Ne,Bellevue,WA,98005,4257461432,,OK to Mail,Do Not Call,Former Customer,,
+Travis,Fullerton,413  130th Pl Se,Bellevue,WA,98005,4256359432,,OK to Mail,Do Not Call,Former Customer,,
+Richard,Parkin,12725 Se 25th St,Bellevue,WA,98005,4257470090,,Do Not Mail,Do Not Call,Former Customer,,
+Donald,Waters,12049 Se 20th St,Bellevue,WA,98005,4256413454,,OK to Mail,Do Not Call,Former Customer,,
+Todd,Lien,12903 Se 19th Pl,Bellevue,WA,98005,4257478543,,OK to Mail,Do Not Call,Former Customer,,
+Chiu,Liao,2425  132nd Ave Se,Bellevue,WA,98005,4254016344,,OK to Mail,Do Not Call,Former Customer,,
+Arlene,Oki,2414  130th Ave Ne,Bellevue,WA,98005,4255569110,,OK to Mail,Do Not Call,Former Customer,,
+Jeanne,Wissler,443  140th Ave Ne,Bellevue,WA,98005,4257463520,,OK to Mail,Do Not Call,Former Customer,,
+James,Forbes,13614 Se 18th St,Bellevue,WA,98005,4256436961,,OK to Mail,Do Not Call,Former Customer,,
+Chris,Edwards,12737 Ne 30th St,Bellevue,WA,98005,4258857931,,OK to Mail,Do Not Call,Former Customer,,
+Wayne,Reimer,3251  140th Ave Ne,Bellevue,WA,98005,4258851728,,OK to Mail,Do Not Call,Former Customer,,
+Patricia,Janes,12424 Ne 28th St,Bellevue,WA,98005,4258852955,,Do Not Mail,Do Not Call,Former Customer,,
+Lance,Akutsu,1824  127th Ave Se,Bellevue,WA,98005,4256039598,,OK to Mail,Do Not Call,Former Customer,,
+W,Myer,12920 Se 5th St,Bellevue,WA,98005,4254544855,,Do Not Mail,Do Not Call,Former Customer,,
+Steven,Moe,12832 Se 2nd St,Bellevue,WA,98005,4254622007,,Do Not Mail,Do Not Call,Former Customer,,
+Michael,Holly,13929 Se 23rd St,Bellevue,WA,98005,4257475180,,OK to Mail,Do Not Call,Former Customer,,
+Dan,Albu,2403  131st Pl Ne,Bellevue,WA,98005,4257028019,,OK to Mail,Do Not Call,Former Customer,,
+Laura,Balent,12650 Ne 7th St,Bellevue,WA,98005,4254555146,,OK to Mail,Do Not Call,Former Customer,,
+William,Sauerbrey,1527  121st Ave Se,Bellevue,WA,98005,4257470324,,OK to Mail,Do Not Call,Former Customer,,
+Anne,Newman,13932 Se 23rd St,Bellevue,WA,98005,4257469484,,OK to Mail,Do Not Call,Former Customer,,
+Craig,Hislop,437  129th Ave Se,Bellevue,WA,98005,4254552633,,OK to Mail,Do Not Call,Former Customer,,
+Jeffrey,Robison,2317  129th Ave Se,Bellevue,WA,98005,4257476501,,OK to Mail,Do Not Call,Former Customer,,
+Brian,Miller,12716 Ne 32nd St,Bellevue,WA,98005,4252421993,,OK to Mail,Do Not Call,Former Customer,,
+Jr,Parker,12408 Ne 3rd Pl,Bellevue,WA,98005,4254554185,,OK to Mail,Do Not Call,Former Customer,,
+Keiko,Knode,1019  121st Ave Se,Bellevue,WA,98005,4256490751,,Do Not Mail,Do Not Call,Former Customer,,
+Matthew,Robkin,120  128th Ave Ne,Bellevue,WA,98005,4254539401,,OK to Mail,Do Not Call,Former Customer,,
+Elizabeth,Love,1422  127th Ave Se,Bellevue,WA,98005,4256436799,,OK to Mail,Do Not Call,Former Customer,,
+Kenneth,Rasp,12  128th Ave Se,Bellevue,WA,98005,4254553793,,Do Not Mail,Do Not Call,Former Customer,,
+Austin,Farrell,12621 Ne 7th St,Bellevue,WA,98005,4254521307,,OK to Mail,Do Not Call,Former Customer,,
+Greg,Allen,240  129th Ave Ne,Bellevue,WA,98005,4254518282,,Do Not Mail,Do Not Call,Former Customer,,
+Dan,Nicut,12645 Ne 6th St,Bellevue,WA,98005,4254676386,,OK to Mail,Do Not Call,Former Customer,,
+Daniel,Wong,2614  128th Ave Se,Bellevue,WA,98005,4256446022,,OK to Mail,Do Not Call,Former Customer,,
+Richard,Kalk,515  130th Ave Ne,Bellevue,WA,98005,4254553644,,OK to Mail,Do Not Call,Former Customer,,
+Guner,Firuz,12404 Se 4th Pl,Bellevue,WA,98005,4254549127,,OK to Mail,Do Not Call,Former Customer,,
+Timothy,Myers,3109  128th Ave Ne,Bellevue,WA,98005,4258856320,,OK to Mail,Do Not Call,Former Customer,,
+David,Loukusa,12422 Se 25th St,Bellevue,WA,98005,4256031862,,OK to Mail,Do Not Call,Former Customer,,
+Jay,Marsh,12709 Se 25th Pl,Bellevue,WA,98005,4256448604,,OK to Mail,Do Not Call,Former Customer,,
+Donald,Schronen,12832 Ne 32nd St,Bellevue,WA,98005,4258857040,,OK to Mail,Do Not Call,Former Customer,,
+Robert,Goldberg,12615 Ne 6th St,Bellevue,WA,98005,4254547304,,OK to Mail,Do Not Call,Former Customer,,
+Robert,Nelson,12641 Se 7th Pl,Bellevue,WA,98005,4254552704,,OK to Mail,Do Not Call,Former Customer,,
+Walter,Lorentson,2423  139th Ave Se,Bellevue,WA,98005,4257465272,,OK to Mail,Do Not Call,Former Customer,,
+William,Cruikshank,12437 Se 25th Pl,Bellevue,WA,98005,4256441491,,OK to Mail,Do Not Call,Former Customer,,
+Sylvia,Meehan,12646 Se 7th Pl,Bellevue,WA,98005,4254553406,,OK to Mail,Do Not Call,Former Customer,,
+Paul,Vlasuk,525  124th Ave Ne,Bellevue,WA,98005,4254546659,,OK to Mail,Do Not Call,Former Customer,,
+Mary,Reed,12922 Se 7th Pl,Bellevue,WA,98005,4254530494,,OK to Mail,Do Not Call,Former Customer,,
+Rajiv,Bhandari,321  124th Pl Ne,Bellevue,WA,98005,4254532408,,OK to Mail,Do Not Call,Former Customer,,
+Jane,Stevenson,12825 Ne 32nd St,Bellevue,WA,98005,4258856206,,OK to Mail,Do Not Call,Former Customer,,
+Guenter,Brune,552  128th Ave Se,Bellevue,WA,98005,4254552274,,OK to Mail,Do Not Call,Former Customer,,
+Hiroshi,Egashira,2306  129th Ave Se,Bellevue,WA,98005,4256441025,,OK to Mail,Do Not Call,Former Customer,,
+David,Janssen,2840  139th Ave Se Apt 21,Bellevue,WA,98005,4256447712,,OK to Mail,Do Not Call,Former Customer,,
+Vernie,Davidson,700  128th Ave Se,Bellevue,WA,98005,4254543011,,OK to Mail,Do Not Call,Former Customer,,
+Andrew,Corpman,1709  134th Ave Se Apt 12,Bellevue,WA,98005,4252235530,,OK to Mail,Do Not Call,Former Customer,,
+Dharam,Sikka,235  140th Ave Ne,Bellevue,WA,98005,4253739712,,OK to Mail,Do Not Call,Former Customer,,
+Robin,Contratto,4  128th Ave Se,Bellevue,WA,98005,4256350373,,OK to Mail,Do Not Call,Former Customer,,
+Garth,Vance,13610 Se 10th St,Bellevue,WA,98005,4256533124,,OK to Mail,Do Not Call,Former Customer,,
+Marc,Reissig,639  130th Ave Ne,Bellevue,WA,98005,4254558086,,OK to Mail,Do Not Call,Former Customer,,
+Ralph,Young,2435  137th Ave Se,Bellevue,WA,98005,4256436422,,OK to Mail,Do Not Call,Former Customer,,
+Mel,Weiner,1709  134th Ave Se Apt 2,Bellevue,WA,98005,4257471231,,OK to Mail,Do Not Call,Former Customer,,
+Duane,Anderson,2443  137th Ave Se,Bellevue,WA,98005,4256436204,,Do Not Mail,Do Not Call,Former Customer,,
+Donald,Good,1805  134th Ave Se Apt 6,Bellevue,WA,98005,4257470109,,OK to Mail,Do Not Call,Former Customer,,
+Karen,Martin,12915 Se 26th Pl Apt A2,Bellevue,WA,98005,4256415250,,OK to Mail,Do Not Call,Former Customer,,
+Aleksandr,Germanguz,620  122nd Ave Ne,Bellevue,WA,98005,4254531511,,OK to Mail,Do Not Call,Former Customer,,
+Diane,Cross,2440  140th Ave Ne Apt 57,Bellevue,WA,98005,4258829973,,OK to Mail,Do Not Call,Former Customer,,
+Richard,Rongve,2440  140th Ave Ne Apt 31,Bellevue,WA,98005,4258855326,,OK to Mail,Do Not Call,Former Customer,,
+Al,Fischer,12947 Se 26th Pl Apt E3,Bellevue,WA,98005,4256413044,,OK to Mail,Do Not Call,Former Customer,,
+John,Fonseca,2680  139th Ave Se Apt 54,Bellevue,WA,98005,4257460937,,OK to Mail,Do Not Call,Former Customer,,
+Michael,Link,6  Lake Bellevue Dr Apt 105,Bellevue,WA,98005,4257092855,,OK to Mail,Do Not Call,Former Customer,,
+Xiaolan,Feng,13609 Ne 8th St Apt 204,Bellevue,WA,98005,4257462374,,OK to Mail,Do Not Call,Former Customer,,
+Jue,Zhang,2610  118th Ave Se Apt 302,Bellevue,WA,98005,4253782601,,OK to Mail,Do Not Call,Former Customer,,
+Wai,Law,3020  125th Ave Se  5,Bellevue,WA,98005,4255029015,,OK to Mail,Do Not Call,Former Customer,,
+John,Hamlin,12208 Ne 24th St Apt 210,Bellevue,WA,98005,4258951628,,Do Not Mail,Do Not Call,Former Customer,,
+Greg,Laycock,12140 Ne 24th St Apt 101,Bellevue,WA,98005,4258822684,,OK to Mail,Do Not Call,Former Customer,,
+William,Bundren,13425 Ne 27th St,Bellevue,WA,98005,4258852571,,Do Not Mail,Do Not Call,Former Customer,,
+Jeffrey,Kyger,782  122nd Ave Ne,Bellevue,WA,98005,4254019999,,OK to Mail,Do Not Call,Former Customer,,
+Shayla,Lester,2050  132nd Ave Se Apt 512,Bellevue,WA,98005,4254542522,,OK to Mail,Do Not Call,Former Customer,,
+Eugene,Gordon,12305 Se 10th St,Bellevue,WA,98005,4257479775,,Do Not Mail,Do Not Call,Former Customer,,
+Art,Hidalgo,2803  122nd Pl Ne,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Abhinav,Jain,13647 Ne 32nd Pl,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Sanjay,Kumar,13557 Ne 54th Pl,Bellevue,WA,98005,,,Do Not Mail,NO PHONE,Former Customer,,
+Brett,Fidler,3417  122nd Pl Ne,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Gavin,Carrol,3239  134th Ave Ne,Bellevue,WA,98005,,,Do Not Mail,NO PHONE,Former Customer,,
+Darius,Emadi,12675 Ne 35th Pl,Bellevue,WA,98005,,,Do Not Mail,NO PHONE,Former Customer,,
+Clay,Sundermeyer,13723 Ne 28th St,Bellevue,WA,98005,,,Do Not Mail,NO PHONE,Former Customer,,
+Louis,Gray,13204 Ne 45th St,Bellevue,WA,98005,,,Do Not Mail,NO PHONE,Former Customer,,
+Jeffrey,Bissell,3308  122nd Pl Ne,Bellevue,WA,98005,,,Do Not Mail,NO PHONE,Former Customer,,
+Steven,Kim,13431 Ne 47th St,Bellevue,WA,98005,,,Do Not Mail,NO PHONE,Former Customer,,
+George,Humphrey,2421  134th Ave Ne,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Ahmad,Khodamoradi,12800 Se 22nd Pl,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Ying,Lu,2403  134th Ave Se,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Jason,Peacock,12656 Ne 4th St,Bellevue,WA,98005,,,Do Not Mail,NO PHONE,Former Customer,,
+Miguel,Quintana,13019 Se 21st Pl,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Donald,Dill,12926 Ne 25th Pl,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Arthi,Seshadri,12206 Se 12th St,Bellevue,WA,98005,,,Do Not Mail,NO PHONE,Former Customer,,
+Kory,Hansen,304  128th Ave Se,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Alejandro,Cox,12625 Ne 30th St,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Christopher,Mooney,210  131st Ave Ne,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+William,Andress,160  129th Ave Ne,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Victor,Armada,233  140th Ave Ne,Bellevue,WA,98005,,,Do Not Mail,NO PHONE,Former Customer,,
+Timothy,Powell,12949 Se 23rd St,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Kiuk,Yu,2477  132nd Ave Se,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Mark,Barber,1810  129th Pl Se,Bellevue,WA,98005,,,Do Not Mail,NO PHONE,Former Customer,,
+Patrick,Wong,2422  127th Ave Ne,Bellevue,WA,98005,,,Do Not Mail,NO PHONE,Former Customer,,
+Christopher,Colby,2555  130th Ave Se,Bellevue,WA,98005,,,Do Not Mail,NO PHONE,Former Customer,,
+Chuanqing,Rui,12840 Se 2nd St,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Clinton,Fink,2314  137th Pl Se,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Zaldy,Mercado,2336  128th Ave Se,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Nancy,Fernandes,3114  128th Ave Ne,Bellevue,WA,98005,,,Do Not Mail,NO PHONE,Former Customer,,
+Hasan,Abdi,12517 Se 4th Pl,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Andrew,Peabody,1206  123rd Ave Se,Bellevue,WA,98005,,,Do Not Mail,NO PHONE,Former Customer,,
+Thao,Nguyen,12506 Se 4th Pl,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Seung,Oh,12624 Se 30th St,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Lance,Harris,12404 Ne 6th Pl,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Cristinel,Barsete,2408  137th Ave Se,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Yuan,Wang,12423 Ne 7th Pl,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Gary,Wendleken,2220  132nd Ave Se Apt A306,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Lilly,Lee,736  122nd Ave Ne,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Hiroko,Komiya,2680  139th Ave Se Apt 101,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Dariusz,Grzyb,2628  139th Ave Se Apt 11,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Peter,Park,12406 Se 31st St Apt 202,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Pauline,Chu,12935 Se 26th Pl Apt D4,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Sarah,Kauppila,1688  118th Ave Se Apt B304,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Juanita,Cope,7  Lake Bellevue Dr Apt 110,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Alla,Avanesova,703  136th Pl Ne Apt A4,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Carol,Shaffer,12720 Ne 10th Pl Apt D301,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Christopher,Hebert,12680 Ne 10th Pl Apt 203,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Richard,Maki,3037  127th Pl Se Apt H21,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Timothy,Gray,12109  Bel Red Rd Apt C203,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Thomas,Andersen,4448  140th Ave Ne,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Dale,Tilman,811  126th Pl Ne Apt A203,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Dan,Crawford,12543 Ne 23rd Pl Apt D6,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Jason,Baker,12560 Ne 23rd Pl,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Janelle,Bublitz,12119  Bel Red Rd Apt B303,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Valentina,Lugacheva,12111  Bel Red Rd Apt C106,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Aryana,Grantham,847  132nd Ave Ne,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Dl,Jenkins,13600 Ne 9th Pl Apt C1-101,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Henry,Amaya,706  136th Pl Ne Apt C3,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Lynne,Devraun,2660  118th Ave Se Apt 8-302,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Kelly,Fennelly,2520  118th Ave Se Apt 15-10,Bellevue,WA,98005,,,OK to Mail,NO PHONE,Former Customer,,
+Sean,Mitchell,13715 Ne 36th Pl,Bellevue,WA,98005,4258694494,,OK to Mail,OK to Call,Former Customer,,
+Joshua,Luttman,11610 Ne 39th St,Bellevue,WA,98005,4259685556,,OK to Mail,OK to Call,Former Customer,,
+Guoqing,Li,13855 Ne 34th Pl,Bellevue,WA,98005,4258690395,,OK to Mail,OK to Call,Former Customer,,
+Larue,Wangerin,4250  137th Ave Ne,Bellevue,WA,98005,4258853519,,OK to Mail,OK to Call,Former Customer,,
+Otto,Windsor,841  136th Ave Ne,Bellevue,WA,98005,4256439027,,OK to Mail,OK to Call,Former Customer,,
+Gregory,Lyons,2641  120th Ave Ne,Bellevue,WA,98005,4254979595,,OK to Mail,OK to Call,Former Customer,,
+Thomas,McCarthy,12828 Ne 34th Pl,Bellevue,WA,98005,4258859279,,OK to Mail,OK to Call,Former Customer,,
+Vladimir,Khazak,12138 Se 10th St,Bellevue,WA,98005,4252235261,,OK to Mail,OK to Call,Former Customer,,
+Dean,Nguyen,12399 Ne 3rd Pl,Bellevue,WA,98005,4256378146,,OK to Mail,OK to Call,Former Customer,,
+Dennis,Knippel,2405  132nd Ave Se,Bellevue,WA,98005,4257473356,,OK to Mail,OK to Call,Former Customer,,
+Mark,Bjerke,13166 Se 26th St,Bellevue,WA,98005,4256981782,,OK to Mail,OK to Call,Former Customer,,
+Zachary,Pierce,624  129th Pl Ne,Bellevue,WA,98005,4255027310,,OK to Mail,OK to Call,Former Customer,,
+Cindy,Turbow,318  124th Pl Ne,Bellevue,WA,98005,4254546399,,OK to Mail,OK to Call,Former Customer,,
+Ladonna,Dolan,12404 Se 25th Pl,Bellevue,WA,98005,4257469216,,OK to Mail,OK to Call,Former Customer,,
+Patrice,Marcheck-Eguchi,1805  134th Ave Se Apt 5,Bellevue,WA,98005,4256412557,,OK to Mail,OK to Call,Former Customer,,
+Yoko,Garner,31223  20th Ave S Apt A302,Federal Way,WA,98003,2539412106,,OK to Mail,OK to Call,Former Customer,,
+Yam,Sieng,27735  25th Dr S,Federal Way,WA,98003,2064292577,,OK to Mail,OK to Call,Former Customer,,
+William,Pierce,30321  9th Ave S,Federal Way,WA,98003,2065922595,,OK to Mail,OK to Call,Former Customer,,
+William,Hammon,28839  18th Ave S,Federal Way,WA,98003,2538392764,,OK to Mail,OK to Call,Former Customer,,
+William,Rutledge,412 S 321st Pl Apt A1,Federal Way,WA,98003,2539525607,,OK to Mail,OK to Call,Former Customer,,
+Vitaliy,Filovets,2714 S 366th Pl,Federal Way,WA,98003,2538746076,,OK to Mail,OK to Call,Former Customer,,
+Victoria,Santana,29650  18th Ave S,Federal Way,WA,98003,2539416530,,OK to Mail,OK to Call,Former Customer,,
+Vasiliy,Marchuk,35224  27th Ct S,Federal Way,WA,98003,2538357385,,OK to Mail,OK to Call,Former Customer,,
+Thomas,Toth,27923  21st Ave S,Federal Way,WA,98003,2538393105,,OK to Mail,OK to Call,Former Customer,,
+Thomas,Hendricksen,28224  Military Rd S,Federal Way,WA,98003,2538391577,,OK to Mail,OK to Call,Former Customer,,
+Thomas,Bunn,28451  15th Pl S,Federal Way,WA,98003,2539460456,,Do Not Mail,OK to Call,Former Customer,,
+Suresh,Kumar,32330  4th Pl S Apt P5,Federal Way,WA,98003,2539441338,,OK to Mail,OK to Call,Former Customer,,
+Rodgie,Woods,32303  4th Pl S Apt M3,Federal Way,WA,98003,2533441104,,OK to Mail,OK to Call,Former Customer,,
+Robert,Darrigan,104 S 325th Pl,Federal Way,WA,98003,2538744282,,OK to Mail,OK to Call,Former Customer,,
+Resham,Lal,29428  19th Ave S,Federal Way,WA,98003,2539414580,,OK to Mail,OK to Call,Former Customer,,
+Raymond,Stowe,29401  Military Rd S  55,Federal Way,WA,98003,2064292633,,Do Not Mail,OK to Call,Former Customer,,
+Nita,Cutright,1635 S 359th St,Federal Way,WA,98003,2539441967,,OK to Mail,OK to Call,Former Customer,,
+Niran,Yodthong,31368  13th Ave S,Federal Way,WA,98003,2535297256,,OK to Mail,OK to Call,Former Customer,,
+Nelia,Galiant,1825 S 330th St Apt D1,Federal Way,WA,98003,2538740199,,OK to Mail,OK to Call,Former Customer,,
+Minh,Van,2548 S 364th Pl,Federal Way,WA,98003,2538351801,,Do Not Mail,OK to Call,Former Customer,,
+Lee,Vilaysane,32304  4th Pl S Apt R2,Federal Way,WA,98003,2533441216,,OK to Mail,OK to Call,Former Customer,,
+Jung,Kim,30328  13th Pl S Apt B,Federal Way,WA,98003,2539460801,,OK to Mail,OK to Call,Former Customer,,
+Js,Lee,32625  4th Pl S,Federal Way,WA,98003,2536615785,,OK to Mail,OK to Call,Former Customer,,
+Jonathan,Bueno,2949 S 296th Pl,Federal Way,WA,98003,2538399201,,OK to Mail,OK to Call,Former Customer,,
+John,Wasson,2619 S 302nd St,Federal Way,WA,98003,2535293079,,OK to Mail,OK to Call,Former Customer,,
+John,Poland,2100 S 336th St  E1,Federal Way,WA,98003,2535175293,,OK to Mail,OK to Call,Former Customer,,
+Jesus,Parada,30834  20th Ave S,Federal Way,WA,98003,2535299143,,OK to Mail,OK to Call,Former Customer,,
+Jeff,Stokes,2006 S 308th St,Federal Way,WA,98003,2538397484,,OK to Mail,OK to Call,Former Customer,,
+James,Sidlo,223 S 329th Ln,Federal Way,WA,98003,2538359251,,OK to Mail,OK to Call,Former Customer,,
+Ildefonso,Merced,607 S 331st Pl,Federal Way,WA,98003,2533441894,,OK to Mail,OK to Call,Former Customer,,
+Gregory,Bland,2416 S 354th St,Federal Way,WA,98003,2537198830,,OK to Mail,OK to Call,Former Customer,,
+Georgiy,Russu,30821  22nd Ave S,Federal Way,WA,98003,2535290221,,OK to Mail,OK to Call,Former Customer,,
+Gene,Copenspire,34723  4th Pl S,Federal Way,WA,98003,2535177407,,OK to Mail,OK to Call,Former Customer,,
+Gary,Lathrop,28418  16th Ave S Apt 301,Federal Way,WA,98003,2066537801,,OK to Mail,OK to Call,Former Customer,,
+Eunah,Kingori,2212 S 336th St Apt 204,Federal Way,WA,98003,2538151222,,OK to Mail,OK to Call,Former Customer,,
+Esther,Woodward,127 S 340th St Apt B,Federal Way,WA,98003,2539523505,,OK to Mail,OK to Call,Former Customer,,
+Eduard,Amromin,2322 S 284th Ct,Federal Way,WA,98003,2539414976,,OK to Mail,OK to Call,Former Customer,,
+David,Gantt,36928  Pacific Hwy S,Federal Way,WA,98003,2535179167,,OK to Mail,OK to Call,Former Customer,,
+Daniel,Miller,30725  5th Pl S,Federal Way,WA,98003,2539415206,,OK to Mail,OK to Call,Former Customer,,
+Andrey,Havlytyuk,2117 S 373rd Ct,Federal Way,WA,98003,2538382571,,OK to Mail,OK to Call,Former Customer,,
+Anatoly,Pilat,38009  24th Ct S,Federal Way,WA,98003,2533441116,,OK to Mail,OK to Call,Former Customer,,
+Albert,Scott,1438 S 308th Ln,Federal Way,WA,98003,2066537798,,OK to Mail,OK to Call,Former Customer,,
+Zaisong,Jin,32110  10th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Yvan,Tran,31003  14th Ave S Apt 5,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Yuk,Lee,509 S 323rd Pl Apt 15C,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Young,Heo,116 S 300th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Xiaoye,He,31003  14th Ave S Apt E21,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Willie,Hardy,32820  20th Ave S  1,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+William,Lester,29208  7th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+William,Bailey,2010 S 287th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+William,Polus,30229  1st Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Vladimir,Bunyatov,1040 S 320th St Apt 12,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Victoria,Garcia,334 S 327th Ln,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Veronica,Kong,451 S 328th St Apt 12,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Vern,Patterson,30433  1st Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Van,Tilka,729 S 313th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Troy,Maier,2619 S 304th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Travis,Pettit,1843 S 286th Ln Apt T204,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Tok,In,28805  14th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Tina,Finley,32820  4th Ln S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Tina,Krol,2502 S 317th St Apt 201,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Tim,Simon,33111  24th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Tim,Elling,1225 S 313th St,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Thu,Le,31221  8th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Thomas,Nipert,2116 S 371st St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Thomas,Thompson,2534 S 317th St Apt 304,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Theodore,Buhrman,2214 S 283rd St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Thelma,Fair,32516  3rd Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Terome,Fulmore,2622 S 301st St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Tammy,Lindsley,2218 S 336th St Apt 604,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Sung,Chae,29050  Redondo Way S,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Steven,Campbell,318 S 356th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Steven,Hurst,35430  25th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Steven,Hammond,2207 S 284th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Steve,Abeglen,31351  12th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Stanley,Porterfield,29351  18th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Soon,Cha,29206  Military Rd S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Sheryl,Fleming,30410  8th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Shelby,Evans,29932  3rd Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Sharron,Scholzen,2710 S 371st St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Shanelle,Williams,111 S 340th St Apt H,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+See,Goo,2237 S 287th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Scott,Garner,31735  7th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Sara,Florian,28532  20th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Sang,Ahn,33101  15th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Sandy,Jackson,30611  8th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Saekyun,Lee,32830  19th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Ryan,Hendrickson,35813  23rd Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Ryan,Pozzuto,1950 S 368th Pl,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Russell,Smith,30215  23rd Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Rosendo,Villamil,2640 S 309th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Ronald,Angelot,35703  25th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Ronald,Kittelberger,35723  23rd Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Ron,Michaels,31705  7th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Robert,Blackmon,29306  11th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Robert,Austin,37840  21st Ct S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Robert,Halliday,28945  12th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Robert,South,233 S 373rd St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Robert,Simmons,1315 S 289th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Robert,Baker,2026 S 280th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Robert,Holmes,2124 S 286th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Robert,Ihrig,29818  24th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Rita,Larsen,1816 S 330th St Apt A,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Richard,Kakuk,3023 S 365th Ct,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Richard,Clements,2052 S 333rd St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Richard,Cain,521 S 323rd Pl Apt 17C,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Raymond,Price,103 S 317th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Ravi,Bansal,35742  30th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Randy,Clark,2114 S 279th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Ralph,Sweem,1061 S 317th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Rafael,Lopez,28210  15th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Rafael,Orosco,31014  28th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Quoc,Nguyen,36210  22nd Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Quoc,Nguyen,2661 S 304th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Phyllis,McCarty,2611 S 287th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Pavel,Usach,28157  24th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Paul,Haley,30463  4th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Patsy,Combs,32820  20th Ave S  62,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Patrick,Kelly,32829  22nd Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Patricia,Bowman,28819  21st Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Opal,Brown,818 S 318th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Olga,Pavlova,30422  3rd Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Norman,Rickard,2025 S 280th Pl,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Njeri,Lissade,1927 S 369th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Nhi,Nguyen,29840  30th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Natalya,McKinley,31013  24th Ct S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Nadia,Storozhev,2352 S 292nd St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Moeao,Fotualii,32663  9th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Michael,Burton,28808  13th Ave S,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Michael,Noe,2564 S 365th Pl,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Michael,Merwin,29643  22nd Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Michael,Morganthaler,36443  25th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Mayra,Lemus,29653  20th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Max,Staub,1842 S 285th Pl Apt A,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Matthew,Groesse,814 S 308th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Mary,Justmann,2100 S 336th St Apt A4,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Marvin,Zabel,35429  26th Pl S,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Mark,Villegas,2731 S 366th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Marjorie,Lafrance,28844  22nd Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Marilyn,Boxly,415 S 329th Ln,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Marco,Nunez,30436  3rd Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Manjula,Banerjee,707 S 295th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Mahmoud,Danyaro,2621 S 353rd St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Lynda,Olson,305 S 314th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Luis,Ramirez,2701 S 355th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Louis,Galsim,2129 S 286th St,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Loretta,Hodo,2100 S 336th St Apt L4,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Lisa,Lavington,2120 S 279th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Linda,Marciniak,2403 S 298th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Linda,Muir,29801  Military Rd S,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Leo,Kelly,30202  23rd Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Larry,Francis,32856  20th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Lanh,Thai,32008  8th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Kyle,Shanafelt,704 S 325th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Kristina,Heintzelman,2312 S 357th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Kimberly,Gray,2530 S 317th St Apt 102,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Kim,Pham,27760  23rd Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Kevin,Morris,29843  24th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Kerry,Wilcher,29720  25th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Kelly,McGinnis,1024 S 286th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Keith,Johnson,31241  4th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Kay,Heng,36244  22nd Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Katrina,Panlasigui,27830  25th Dr S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Kathleen,Omero,28437  20th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Justin,Hartinger,31407  3rd Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Julius,Gibson,213 S 316th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Juan,Juarez,31222  8th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Joyce,Strain,2504 S 317th St Apt 302,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Josue,Bardales,804 S 318th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Jose,Marquez,28427  Old Military Rd S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Jose,Guerrero,2243 S 284th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Jolene,McKee,123 S 324th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+John,Packard,30020  2nd Ct S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+John,Skinner,29317  19th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+John,Bentley,35428  28th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+John,Evans,1700 S 374th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+John,Krogman,1113 S 299th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+John,Bubb,28029  22nd Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+John,Maus,533 S 323rd Pl Apt 9H,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Joginder,Kaur,2007 S 298th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Jin,Choe,29901  1st Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Jimmy,Alcantara,30304  29th Ct S,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Jill,Sparre,29636  9th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Jennifer,Anderson,31332  13th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Jeffrey,Miller,2477 S 283rd Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Jeffrey,Van-Fredenberg,27808  20th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Jeffrey,Kendig,32304  4th Pl S Apt R10,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Jeff,Markwith,2623 S 379th Pl,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+James,Domingo,2629 S 304th St,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+James,Gildon,402 S 331st Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+James,Freeman,2400 S 359th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+James,Pete,29817  20th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Jackie,Jones,2500 S 370th St  219,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Ivan,Kondratyev,2202 S 333rd St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Ignacio,Esparza,2604 S 284th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Hwi,Kim,37334  18th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Horacio,Leyva,32517  7th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Hector,Orozco,30052  Military Rd S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Harold,Anderson,35765  27th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Gwen,Gostisha,2321 S 302nd St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Gurinder,Bains,27744  25th Dr S,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Gregory,Reinking,420 S 321st Pl Apt H4,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Gina,Graziano,36011  24th Ct S,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Ghenadie,Tomescu,2221 S 284th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Gesagran,Kumar,603 S 310th Ct,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Gerald,Robinson,224 S 358th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Geoffery,McKenzie,1639 S 374th Ct,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Gary,Morgan,29024  23rd Ave S,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Fred,Kincaid,2329 S 376th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Fransisco,Dedios,2325 S 284th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Frank,Velasquez,36312  31st Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Francis,Cabilas,30803  20th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Fra,Dean,37029  8th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Folashade,Akinlosotu,31604  13th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Feifei,Lin,30900  2nd Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Everett,Lundy,29615  10th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Eui,Hwang,30233  3rd Ct S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Eric,Norris,37103  17th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Elaine,Lehman,29401  Military Rd S  27,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Edwin,Lewis,2820 S 284th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Edmund,Molina,27920  21st Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Duke,Minium,28411  15th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Duane,Stowers,31031  24th Ct S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Driss,Harakat,30243  2nd Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Douglas,Lee,30006  2nd Ct S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Dorman,Batson,35806  1st Ave S,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Dixon,Anderson,424 S 289th St,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Dianna,Driver,208 S 330th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Diane,Madsen,32849  22nd Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Derek,Spencer,516 S 331st Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Dennis,Cheramie,32504  7th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Dennis,Berger,316 S 327th Ln,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Denise,Salter,1971 S 368th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Denette,Edwards,2707 S 276th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Deborah,Bazara,1018 S 312th St Apt 513,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Dean,Fulcer,28701  15th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+David,McKechnie,1719 S 372nd Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+David,Goodwin,34623  4th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+David,Belica,35606  2nd Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Daphne,Lewis,2524 S 317th St Apt 201,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Danny,Allen,31435  10th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Danna,Johnson,2523 S 364th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Daniel,Wolfe,29627  18th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Dan,Kim,2336 S 380th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Cynthia,Vicars,31712  7th Ave S,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Craig,Pappas,1645 S 272nd St  29,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Corey,Waldrip,35307  25th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Corazon,Rafanan,511 S 325th St Apt 23B,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Colletta,Cartright,33025  18th Pl S Apt E101,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Claron,Anderson,31242  8th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Chun,Chi,30025  1st Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Christopher,Alger,30813  1st Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Christopher,Kelley,30824  20th Ave S,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Christopher,Franklin,419 S 325th Pl Apt T6,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Christine,Johnston,1416 S 282nd Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Christine,Harris,2223 S 298th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Chris,Peck,37320  17th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Chris,Smith,2620 S 355th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Chong,Lee,1927 S 375th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Chong,Park,37509  21st Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Chih,Wang,1847 S 286th Ln Apt U202,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Chet,Holden,2837 S 285th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Cheryl,Highberg,30803  13th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Cheng,Wang,30023  2nd Ct S,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Channarong,Kathasuwan,1131 S 312th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Chandra,Quinn,510 S 325th St Apt 19E,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Chad,Lettsome,30853  13th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Cesar,Torres,37522  21st Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Catherine,Wairimu,1825 S 330th St Apt E8,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Cat,Dao,547 S 330th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Carol,Montante,32836  3rd Pl S,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Carl,Ersfeld,2813 S 284th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Camelia,Stadulis,2420 S 299th St,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Brian,Moss,2400 S 283rd Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Brian,Hering,2720 S 357th Pl,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Bill,Classon,37931  19th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Bernard,Gavino,28851  23rd Ave S,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Benedicto,Fider,27617  25th Dr S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Ben,Urioste,33504  18th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Art,Owen,1826 S 285th Pl Apt G,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Aron,Cantrell,36704  28th Ave S,Federal Way,WA,98003,,,Do Not Mail,NO PHONE,Former Customer,,
+Arnold,Broussard,30112  27th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Armando,Montejano,28304  20th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Ariel,Nolasco,35903  23rd Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Ardath,Jackson,37731  27th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Archie,Klostreich,36316  25th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Antonio,Inocencio,35447  25th Pl S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Anthony,Fields,804 S 310th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Angel,Jones,2615 S 367th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Andrey,Chepel,37422  18th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Andrea,Jackson,141 S 330th St Apt 16-C,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Amanda,Viguerie,113 S 340th St Apt C,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Alma,Emert,520 S 323rd Pl Apt 12F,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Alex,Kostine,37212  20th Ave S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Albert,Suryan,29608  Military Rd S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Ahlberg,Auna,2506 S 355th Pl,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Adrienne,Ip,27724  25th Dr S,Federal Way,WA,98003,,,OK to Mail,NO PHONE,Former Customer,,
+Young,Lee,28805  8th Ave S,Federal Way,WA,98003,2539412662,,OK to Mail,Do Not Call,Former Customer,,
+Worko,Asmare,28911  20th Ave S,Federal Way,WA,98003,2538394472,,OK to Mail,Do Not Call,Former Customer,,
+Wilma,Kosanovic,29628  9th Pl S,Federal Way,WA,98003,2539460331,,OK to Mail,Do Not Call,Former Customer,,
+William,Linehan,2417 S 304th St,Federal Way,WA,98003,2539418005,,Do Not Mail,Do Not Call,Former Customer,,
+William,Cook,28538  20th Ave S,Federal Way,WA,98003,2538397059,,Do Not Mail,Do Not Call,Former Customer,,
+William,Wright,919 S 304th St,Federal Way,WA,98003,2539459266,,OK to Mail,Do Not Call,Former Customer,,
+Wesley,Sanford,2100 S 336th St Apt A1,Federal Way,WA,98003,2535179764,,OK to Mail,Do Not Call,Former Customer,,
+Warner,Lansciardi,30005  26th Pl S,Federal Way,WA,98003,2539411918,,OK to Mail,Do Not Call,Former Customer,,
+Vitaliy,Solomko,37423  19th Pl S,Federal Way,WA,98003,2538740358,,OK to Mail,Do Not Call,Former Customer,,
+Vicky,Elder,37936  19th Ave S,Federal Way,WA,98003,2538359653,,OK to Mail,Do Not Call,Former Customer,,
+Velma,Pappas,31251  4th Ave S,Federal Way,WA,98003,2538398129,,OK to Mail,Do Not Call,Former Customer,,
+Valentin,Grib,2213 S 362nd St,Federal Way,WA,98003,2539441844,,OK to Mail,Do Not Call,Former Customer,,
+Tyler,Sonnen,36715  28th Ave S,Federal Way,WA,98003,2538748622,,OK to Mail,Do Not Call,Former Customer,,
+Ty,Bardwell,29310  13th Ave S,Federal Way,WA,98003,2539461301,,OK to Mail,Do Not Call,Former Customer,,
+Tory,Foxall,2212 S 288th Pl,Federal Way,WA,98003,2065922112,,OK to Mail,Do Not Call,Former Customer,,
+Tony,Ono,35714  26th Ave S,Federal Way,WA,98003,2538745091,,OK to Mail,Do Not Call,Former Customer,,
+Timothy,Pflugh,3001 S 288th St  177,Federal Way,WA,98003,2538399042,,OK to Mail,Do Not Call,Former Customer,,
+Tim,Lee,914 S 291st St,Federal Way,WA,98003,2538396103,,Do Not Mail,Do Not Call,Former Customer,,
+Tim,Saunders,2019 S 292nd St,Federal Way,WA,98003,2064292717,,OK to Mail,Do Not Call,Former Customer,,
+Tien,Bui,29337  18th Ave S,Federal Way,WA,98003,2539450083,,OK to Mail,Do Not Call,Former Customer,,
+Thomas,Madden,37323  17th Ave S,Federal Way,WA,98003,2538746629,,OK to Mail,Do Not Call,Former Customer,,
+Thomas,Johnson,35212  26th Ct S,Federal Way,WA,98003,2538158517,,OK to Mail,Do Not Call,Former Customer,,
+Thomas,Decker,28833  21st Ave S,Federal Way,WA,98003,2536616379,,OK to Mail,Do Not Call,Former Customer,,
+Terry,Saiki,2208 S 380th St,Federal Way,WA,98003,2538749466,,Do Not Mail,Do Not Call,Former Customer,,
+Terry,King,2521 S 367th Pl,Federal Way,WA,98003,2538388672,,OK to Mail,Do Not Call,Former Customer,,
+Terry,Arnhold,2508 S 317th St Apt 307,Federal Way,WA,98003,2539460616,,Do Not Mail,Do Not Call,Former Customer,,
+Terry,French,31200  23rd Ave S Apt 242,Federal Way,WA,98003,2538394033,,OK to Mail,Do Not Call,Former Customer,,
+Sylvesta,Fornerette,630 S 331st Pl,Federal Way,WA,98003,2538151584,,OK to Mail,Do Not Call,Former Customer,,
+Suzanne,Dudziak,29805  8th Pl S,Federal Way,WA,98003,2539410654,,OK to Mail,Do Not Call,Former Customer,,
+Steven,Lind,33347  20th Ave S,Federal Way,WA,98003,2538742464,,OK to Mail,Do Not Call,Former Customer,,
+Steven,Pizana,1963 S 299th Pl,Federal Way,WA,98003,2539417406,,OK to Mail,Do Not Call,Former Customer,,
+Steve,Aita,27744  23rd Ave S,Federal Way,WA,98003,2539416794,,Do Not Mail,Do Not Call,Former Customer,,
+Stephen,Nguyen,2460 S 284th Pl,Federal Way,WA,98003,2539414136,,OK to Mail,Do Not Call,Former Customer,,
+Stephen,Zellerhoff,30659  3rd Pl S,Federal Way,WA,98003,2538393539,,Do Not Mail,Do Not Call,Former Customer,,
+Stephen,Long,2101 S 324th St  252,Federal Way,WA,98003,2536610402,,OK to Mail,Do Not Call,Former Customer,,
+Stanislaw,Maliszewski,559 S 330th Pl,Federal Way,WA,98003,2538743357,,OK to Mail,Do Not Call,Former Customer,,
+Stacy,Belz,28723  14th Ave S,Federal Way,WA,98003,2538394912,,OK to Mail,Do Not Call,Former Customer,,
+Shelby,Round,32125  9th Ave S,Federal Way,WA,98003,2539465567,,OK to Mail,Do Not Call,Former Customer,,
+Sergey,Polyakov,27928  21st Ave S,Federal Way,WA,98003,2538158751,,OK to Mail,Do Not Call,Former Customer,,
+Scott,Fuhrman,319 S 295th Pl,Federal Way,WA,98003,2539417692,,OK to Mail,Do Not Call,Former Customer,,
+Scott,Schlag,31306  11th Pl S,Federal Way,WA,98003,2539413002,,OK to Mail,Do Not Call,Former Customer,,
+Samuel,Altman,1303 S 302nd St,Federal Way,WA,98003,2538392543,,OK to Mail,Do Not Call,Former Customer,,
+Ronald,Roy,2433 S 283rd Pl,Federal Way,WA,98003,2538391776,,OK to Mail,Do Not Call,Former Customer,,
+Ronald,Edens,2633 S 296th Pl,Federal Way,WA,98003,2539413434,,OK to Mail,Do Not Call,Former Customer,,
+Robert,Orear,2238 S 308th St,Federal Way,WA,98003,2538390776,,OK to Mail,Do Not Call,Former Customer,,
+Robert,Leonard,32120  8th Ave S,Federal Way,WA,98003,2538398133,,OK to Mail,Do Not Call,Former Customer,,
+Robert,Olson,2638 S 377th St,Federal Way,WA,98003,2538386066,,OK to Mail,Do Not Call,Former Customer,,
+Robert,Troiani,28723  15th Ave S,Federal Way,WA,98003,2539461639,,OK to Mail,Do Not Call,Former Customer,,
+Rita,Chappelle,1825 S 330th St Apt A101,Federal Way,WA,98003,2535177029,,OK to Mail,Do Not Call,Former Customer,,
+Ricky,Bogan,28610  16th Ave S Apt 402,Federal Way,WA,98003,2539413087,,OK to Mail,Do Not Call,Former Customer,,
+Rick,Schneider,171 S 293rd St,Federal Way,WA,98003,2539464850,,OK to Mail,Do Not Call,Former Customer,,
+Richard,Tao,2449 S 284th Pl,Federal Way,WA,98003,2535295686,,Do Not Mail,Do Not Call,Former Customer,,
+Richard,Beard,1331 S 372nd St,Federal Way,WA,98003,2538749658,,OK to Mail,Do Not Call,Former Customer,,
+Richard,Ford,810 S 326th St,Federal Way,WA,98003,2538398583,,OK to Mail,Do Not Call,Former Customer,,
+Rich,Gibbons,3001 S 288th St  123,Federal Way,WA,98003,2535290626,,OK to Mail,Do Not Call,Former Customer,,
+Ray,Cramblit,417 S 309th St,Federal Way,WA,98003,2538393910,,Do Not Mail,Do Not Call,Former Customer,,
+Rashie,Mitchell,1025 S 316th St,Federal Way,WA,98003,2535298487,,OK to Mail,Do Not Call,Former Customer,,
+Randy,Lindsey,2309 S 278th Ct,Federal Way,WA,98003,2539416986,,OK to Mail,Do Not Call,Former Customer,,
+Randall,Stivers,30001  13th Ave S,Federal Way,WA,98003,2539461244,,OK to Mail,Do Not Call,Former Customer,,
+Ran,Park,2200 S 361st St,Federal Way,WA,98003,2538381770,,Do Not Mail,Do Not Call,Former Customer,,
+Rachel,Jernberg,2213 S 292nd St,Federal Way,WA,98003,2538397065,,OK to Mail,Do Not Call,Former Customer,,
+Point,La,951 S 327th St,Federal Way,WA,98003,2539410063,,OK to Mail,Do Not Call,Former Customer,,
+Phuc,Ly,2627 S 276th St,Federal Way,WA,98003,2539411351,,OK to Mail,Do Not Call,Former Customer,,
+Phillip,Dalrymple,148 S 361st Pl,Federal Way,WA,98003,2536619279,,Do Not Mail,Do Not Call,Former Customer,,
+Philip,Wong,37115  17th Ave S,Federal Way,WA,98003,2538351743,,Do Not Mail,Do Not Call,Former Customer,,
+Philip,Olsen,1910 S 379th St,Federal Way,WA,98003,2539441463,,Do Not Mail,Do Not Call,Former Customer,,
+Philip,Strange,2625 S 301st St,Federal Way,WA,98003,2539410821,,OK to Mail,Do Not Call,Former Customer,,
+Philip,Cruse,720 S 325th St,Federal Way,WA,98003,2538398485,,OK to Mail,Do Not Call,Former Customer,,
+Paul,Jensen,2225 S 287th St,Federal Way,WA,98003,2538391382,,OK to Mail,Do Not Call,Former Customer,,
+Patricia,Adkins,2623 S 302nd St,Federal Way,WA,98003,2535293412,,OK to Mail,Do Not Call,Former Customer,,
+Orlando,Robles,32507  10th Pl S,Federal Way,WA,98003,2538383587,,OK to Mail,Do Not Call,Former Customer,,
+Noel,Aquino,36244  23rd Pl S,Federal Way,WA,98003,2535179551,,OK to Mail,Do Not Call,Former Customer,,
+Nejib,Oueslati,37942  19th Ave S,Federal Way,WA,98003,2539441074,,OK to Mail,Do Not Call,Former Customer,,
+Nancy,Lewein,539 S 302nd St,Federal Way,WA,98003,2539466878,,OK to Mail,Do Not Call,Former Customer,,
+Nam,Kim,31044  20th Ave S,Federal Way,WA,98003,2535293266,,OK to Mail,Do Not Call,Former Customer,,
+Mustafa,Scott,32820  20th Ave S  73,Federal Way,WA,98003,2538350977,,OK to Mail,Do Not Call,Former Customer,,
+Morgan,Yao,1323 S 291st Pl,Federal Way,WA,98003,2538392772,,OK to Mail,Do Not Call,Former Customer,,
+Monte,Tung,37116  19th Way S,Federal Way,WA,98003,2538384146,,OK to Mail,Do Not Call,Former Customer,,
+Mon,Voege,925 S 310th Pl,Federal Way,WA,98003,2539456991,,Do Not Mail,Do Not Call,Former Customer,,
+Mohammad,Idris,1413 S 308th Ln,Federal Way,WA,98003,2539451126,,OK to Mail,Do Not Call,Former Customer,,
+Mohamed,Swelam,2520 S 317th St Apt 202,Federal Way,WA,98003,2536610067,,OK to Mail,Do Not Call,Former Customer,,
+Miguel,Manzueta,852 S 306th St,Federal Way,WA,98003,2539418579,,OK to Mail,Do Not Call,Former Customer,,
+Michael,Kelly,30005  8th Pl S,Federal Way,WA,98003,2539413771,,OK to Mail,Do Not Call,Former Customer,,
+Michael,Campbell,610 S 376th St,Federal Way,WA,98003,2539271754,,OK to Mail,Do Not Call,Former Customer,,
+Michael,Rappe,37972  23rd Pl S,Federal Way,WA,98003,2539259040,,OK to Mail,Do Not Call,Former Customer,,
+Michael,Vassallo,33110  21st Ave S,Federal Way,WA,98003,2535178296,,OK to Mail,Do Not Call,Former Customer,,
+Michael,Moore,32613  1st Pl S,Federal Way,WA,98003,2536610278,,OK to Mail,Do Not Call,Former Customer,,
+Michael,Fellows,30652  3rd Pl S,Federal Way,WA,98003,2062498082,,OK to Mail,Do Not Call,Former Customer,,
+Maximino,Acosta,2163 S 278th St,Federal Way,WA,98003,2066537226,,OK to Mail,Do Not Call,Former Customer,,
+Marlene,MacRae,836 S 310th Pl,Federal Way,WA,98003,2539462238,,OK to Mail,Do Not Call,Former Customer,,
+Mark,Reder,505 S 325th St Apt 22D,Federal Way,WA,98003,2539250481,,OK to Mail,Do Not Call,Former Customer,,
+Marian,Bernard,122 S 324th Pl,Federal Way,WA,98003,2533441965,,OK to Mail,Do Not Call,Former Customer,,
+Man,Do,37540  21st Ave S,Federal Way,WA,98003,2538353941,,OK to Mail,Do Not Call,Former Customer,,
+Lyle,Whipple,34608  4th Pl S,Federal Way,WA,98003,2539273056,,OK to Mail,Do Not Call,Former Customer,,
+Lucia,Grilley,35451  1st Ave S Apt F124,Federal Way,WA,98003,2538159050,,OK to Mail,Do Not Call,Former Customer,,
+Louis,Dorazio,710 S 291st St,Federal Way,WA,98003,2538392282,,OK to Mail,Do Not Call,Former Customer,,
+Louis,Pradel,35625  28th Ave S,Federal Way,WA,98003,2539279489,,OK to Mail,Do Not Call,Former Customer,,
+Louis,Bolar,36237  20th Pl S,Federal Way,WA,98003,2535179715,,OK to Mail,Do Not Call,Former Customer,,
+Loren,Neighbors,37321  17th Ave S,Federal Way,WA,98003,2532355427,,OK to Mail,Do Not Call,Former Customer,,
+Lois,Hanson,30420  10th Ave S,Federal Way,WA,98003,2538390354,,OK to Mail,Do Not Call,Former Customer,,
+Lloyd,Johnson,2030 S 291st St,Federal Way,WA,98003,2538390491,,OK to Mail,Do Not Call,Former Customer,,
+Lilian,Abadinas,30833  13th Pl S,Federal Way,WA,98003,2064293167,,Do Not Mail,Do Not Call,Former Customer,,
+Leslie,Anderson,817 S 318th St,Federal Way,WA,98003,2538397533,,OK to Mail,Do Not Call,Former Customer,,
+Leota,Box,2500 S 370th St  198,Federal Way,WA,98003,2538381883,,OK to Mail,Do Not Call,Former Customer,,
+Leonid,Prokhor,27636  21st Pl S,Federal Way,WA,98003,2538397215,,OK to Mail,Do Not Call,Former Customer,,
+Laurence,Eustice,31510  23rd Ave S Apt 317,Federal Way,WA,98003,2539462326,,OK to Mail,Do Not Call,Former Customer,,
+Laura,Chandler,2304 S 302nd St,Federal Way,WA,98003,2535295807,,OK to Mail,Do Not Call,Former Customer,,
+Larry,Gettle,29331  11th Pl S,Federal Way,WA,98003,2535290781,,OK to Mail,Do Not Call,Former Customer,,
+Larry,Purdy,226 S 316th Pl,Federal Way,WA,98003,2539460187,,OK to Mail,Do Not Call,Former Customer,,
+Kyle,Wimbish,2109 S 300th St,Federal Way,WA,98003,2535297241,,OK to Mail,Do Not Call,Former Customer,,
+Kristie,Mangialardi,2041 S 300th St,Federal Way,WA,98003,2539412756,,Do Not Mail,Do Not Call,Former Customer,,
+Kim,Berger,30714  8th Pl S,Federal Way,WA,98003,2538398320,,OK to Mail,Do Not Call,Former Customer,,
+Kim,Gray,2609 S 377th St,Federal Way,WA,98003,2532355311,,OK to Mail,Do Not Call,Former Customer,,
+Kevin,Squier,37318  22nd Ave S,Federal Way,WA,98003,2535177664,,OK to Mail,Do Not Call,Former Customer,,
+Kevin,Pook,37719  27th Pl S,Federal Way,WA,98003,2535175371,,OK to Mail,Do Not Call,Former Customer,,
+Kenneth,Newcombe,2214 S 291st St,Federal Way,WA,98003,2538391842,,OK to Mail,Do Not Call,Former Customer,,
+Kenneth,Blevens,30415  1st Pl S,Federal Way,WA,98003,2539466645,,Do Not Mail,Do Not Call,Former Customer,,
+Kenneth,Petersen,2205 S 298th St,Federal Way,WA,98003,2538393120,,OK to Mail,Do Not Call,Former Customer,,
+Kelly,Heathman,2923 S 285th St,Federal Way,WA,98003,2539460524,,Do Not Mail,Do Not Call,Former Customer,,
+Keith,Selthofer,326 S 314th Pl,Federal Way,WA,98003,2538392443,,OK to Mail,Do Not Call,Former Customer,,
+Kathleen,Kosmach,28437  20th Ave S,Federal Way,WA,98003,2538390127,,OK to Mail,Do Not Call,Former Customer,,
+Judy,Brown,28712  18th Ave S Apt X202,Federal Way,WA,98003,2539469102,,OK to Mail,Do Not Call,Former Customer,,
+Joseph,Fuller,30303  1st Ave S,Federal Way,WA,98003,2535291170,,Do Not Mail,Do Not Call,Former Customer,,
+Joseph,Wege,28720  26th Ave S,Federal Way,WA,98003,2539414059,,OK to Mail,Do Not Call,Former Customer,,
+Jose,Ortiz,2538 S 302nd Pl,Federal Way,WA,98003,2535291943,,OK to Mail,Do Not Call,Former Customer,,
+John,Siegfried,1030 S 286th Pl,Federal Way,WA,98003,2539462107,,OK to Mail,Do Not Call,Former Customer,,
+John,Carlile,1405 S 282nd Pl,Federal Way,WA,98003,2539464320,,OK to Mail,Do Not Call,Former Customer,,
+John,MacKenzie,34906  28th Ave S,Federal Way,WA,98003,2538380167,,OK to Mail,Do Not Call,Former Customer,,
+John,Hering,2707 S 357th Pl,Federal Way,WA,98003,2538387125,,OK to Mail,Do Not Call,Former Customer,,
+John,Rickert,2616 S 360th St,Federal Way,WA,98003,2539277127,,OK to Mail,Do Not Call,Former Customer,,
+John,Whisler,1003 S 316th St,Federal Way,WA,98003,2539461170,,OK to Mail,Do Not Call,Former Customer,,
+John,Allen,2210 S 284th Pl,Federal Way,WA,98003,2538392461,,Do Not Mail,Do Not Call,Former Customer,,
+John,Nichols,2033 S 300th St,Federal Way,WA,98003,2539465940,,OK to Mail,Do Not Call,Former Customer,,
+John,Smith,31233  8th Ave S,Federal Way,WA,98003,2539414945,,Do Not Mail,Do Not Call,Former Customer,,
+John,Ohalloran,824 S 309th Pl,Federal Way,WA,98003,2535292192,,Do Not Mail,Do Not Call,Former Customer,,
+Joel,Katterhagen,29005  15th Pl S,Federal Way,WA,98003,2539466791,,OK to Mail,Do Not Call,Former Customer,,
+Joan,Mordeaux,2628 S 300th St,Federal Way,WA,98003,2539416806,,Do Not Mail,Do Not Call,Former Customer,,
+Jim,Cox,2633 S 355th Pl,Federal Way,WA,98003,2539528339,,OK to Mail,Do Not Call,Former Customer,,
+Jim,Sabol,448 S 316th Pl,Federal Way,WA,98003,2539412560,,OK to Mail,Do Not Call,Former Customer,,
+Jerzy,Janczak,32632  4th Pl S,Federal Way,WA,98003,2538381799,,OK to Mail,Do Not Call,Former Customer,,
+Jeffrey,Hall,242 S 301st St,Federal Way,WA,98003,2064292838,,OK to Mail,Do Not Call,Former Customer,,
+Jeffrey,Nollan,419 S 325th Pl Apt T2,Federal Way,WA,98003,2535175469,,OK to Mail,Do Not Call,Former Customer,,
+Jeff,Dixon,2815 S 357th Ct,Federal Way,WA,98003,2538741189,,OK to Mail,Do Not Call,Former Customer,,
+Jared,Whaley,29824  8th Ave S,Federal Way,WA,98003,2538398079,,Do Not Mail,Do Not Call,Former Customer,,
+Jamie,Agulto,2162 S 278th St,Federal Way,WA,98003,2064292570,,OK to Mail,Do Not Call,Former Customer,,
+James,Santucci,28616  9th Ave S,Federal Way,WA,98003,2539410410,,OK to Mail,Do Not Call,Former Customer,,
+James,Warren,2212 S 284th St,Federal Way,WA,98003,2539415324,,OK to Mail,Do Not Call,Former Customer,,
+James,Gaines,31110  6th Ave S,Federal Way,WA,98003,2539461751,,OK to Mail,Do Not Call,Former Customer,,
+James,Pyle,32310  9th Ave S,Federal Way,WA,98003,2539461243,,OK to Mail,Do Not Call,Former Customer,,
+Ivan,Flores,2220 S 380th St,Federal Way,WA,98003,2535173320,,OK to Mail,Do Not Call,Former Customer,,
+Harrison,Ball,30121  27th Ave S,Federal Way,WA,98003,2538399679,,OK to Mail,Do Not Call,Former Customer,,
+Harald,Harestad,29960  4th Ave S,Federal Way,WA,98003,2538396140,,OK to Mail,Do Not Call,Former Customer,,
+Gretchen,Walker,1955 S 370th Ct,Federal Way,WA,98003,2538151391,,OK to Mail,Do Not Call,Former Customer,,
+Grant,Hulse,1206 S 293rd Pl,Federal Way,WA,98003,2539412570,,Do Not Mail,Do Not Call,Former Customer,,
+Gordon,King,32832  4th Ln S,Federal Way,WA,98003,2538388341,,Do Not Mail,Do Not Call,Former Customer,,
+Gordon,Carlson,2504 S 317th St Apt 301,Federal Way,WA,98003,2539465606,,OK to Mail,Do Not Call,Former Customer,,
+Gilbert,Peters,29636  8th Ave S,Federal Way,WA,98003,2535293433,,OK to Mail,Do Not Call,Former Customer,,
+Gerald,Wolf,605 S 304th St,Federal Way,WA,98003,2539463235,,OK to Mail,Do Not Call,Former Customer,,
+George,Paulose,311 S 295th Pl,Federal Way,WA,98003,2539410126,,OK to Mail,Do Not Call,Former Customer,,
+George,Ventura,1024 S 317th St,Federal Way,WA,98003,2535295924,,OK to Mail,Do Not Call,Former Customer,,
+George,Core,1900 S 368th Pl,Federal Way,WA,98003,2538743120,,OK to Mail,Do Not Call,Former Customer,,
+Gary,Rector,32334  9th Ave S,Federal Way,WA,98003,2539413918,,OK to Mail,Do Not Call,Former Customer,,
+Gary,Avery,2611 S 288th St  22,Federal Way,WA,98003,2539415566,,OK to Mail,Do Not Call,Former Customer,,
+Garry,Welch,716 S Marine Hills Way,Federal Way,WA,98003,2539410890,,OK to Mail,Do Not Call,Former Customer,,
+Fred,Austin,403 S 305th St,Federal Way,WA,98003,2535293000,,OK to Mail,Do Not Call,Former Customer,,
+Franklin,Coverson,521 S 317th St,Federal Way,WA,98003,2538390423,,OK to Mail,Do Not Call,Former Customer,,
+Francisco,Gaspay,36249  23rd Pl S,Federal Way,WA,98003,2538159217,,OK to Mail,Do Not Call,Former Customer,,
+Floyd,Bacon,2806 S 349th St,Federal Way,WA,98003,2538388847,,OK to Mail,Do Not Call,Former Customer,,
+Florencio,Leonor,2027 S 302nd Pl,Federal Way,WA,98003,2539411620,,OK to Mail,Do Not Call,Former Customer,,
+Ernest,Lewis,28220  28th Ave S,Federal Way,WA,98003,2538399121,,OK to Mail,Do Not Call,Former Customer,,
+Eric,Lund,1050 S 316th St,Federal Way,WA,98003,2539468834,,OK to Mail,Do Not Call,Former Customer,,
+Eldon,Mundy,29530  1st Ave S,Federal Way,WA,98003,2535299421,,Do Not Mail,Do Not Call,Former Customer,,
+Edward,Chappelle,2522 S 317th St Apt 207,Federal Way,WA,98003,2539415405,,OK to Mail,Do Not Call,Former Customer,,
+Eddie,Coleman,152 S 357th St,Federal Way,WA,98003,2535173031,,OK to Mail,Do Not Call,Former Customer,,
+Ed,Fijalka,35116  28th Ave S,Federal Way,WA,98003,2539275787,,OK to Mail,Do Not Call,Former Customer,,
+Douglas,Pef,2343 S 292nd St,Federal Way,WA,98003,2538394984,,OK to Mail,Do Not Call,Former Customer,,
+Doug,Bagnell,1420 S 289th Pl,Federal Way,WA,98003,2535294056,,OK to Mail,Do Not Call,Former Customer,,
+Doris,Pilemalm,28711  11th Ave S,Federal Way,WA,98003,2538396954,,OK to Mail,Do Not Call,Former Customer,,
+Donald,Hagen,29608  2nd Pl S,Federal Way,WA,98003,2538396221,,Do Not Mail,Do Not Call,Former Customer,,
+Donald,Cassell,30240  7th Ave S,Federal Way,WA,98003,2538392619,,OK to Mail,Do Not Call,Former Customer,,
+Dolores,McCanna,30717  8th Pl S,Federal Way,WA,98003,2539416064,,OK to Mail,Do Not Call,Former Customer,,
+Diann,McCready,2114 S 285th St,Federal Way,WA,98003,2539460898,,Do Not Mail,Do Not Call,Former Customer,,
+Diane,Feske,37923  20th Pl S,Federal Way,WA,98003,2538742779,,Do Not Mail,Do Not Call,Former Customer,,
+Diana,Pszanowski,2101 S 324th St  108,Federal Way,WA,98003,2538389861,,OK to Mail,Do Not Call,Former Customer,,
+Denver,Robison,116 S 309th St,Federal Way,WA,98003,2535291091,,OK to Mail,Do Not Call,Former Customer,,
+Dennis,Franz,37467  18th Ave S,Federal Way,WA,98003,2536617301,,OK to Mail,Do Not Call,Former Customer,,
+Dennesha,McCurry,2100 S 336th St Apt C3,Federal Way,WA,98003,2535686867,,OK to Mail,Do Not Call,Former Customer,,
+Debra,Oppie,28945  11th Pl S,Federal Way,WA,98003,2539411110,,OK to Mail,Do Not Call,Former Customer,,
+Davinder,Sahota,37510  21st Ave S,Federal Way,WA,98003,2539255229,,OK to Mail,Do Not Call,Former Customer,,
+Davidson,Berger,28615  9th Ave S,Federal Way,WA,98003,2539413064,,OK to Mail,Do Not Call,Former Customer,,
+David,Berger,917 S 294th Pl,Federal Way,WA,98003,2065922233,,OK to Mail,Do Not Call,Former Customer,,
+David,Hickel,1909 S 375th St,Federal Way,WA,98003,2538383371,,OK to Mail,Do Not Call,Former Customer,,
+David,Anderson,27808  25th Dr S,Federal Way,WA,98003,2539469558,,OK to Mail,Do Not Call,Former Customer,,
+David,Stephen,35921  23rd Pl S,Federal Way,WA,98003,2536616547,,OK to Mail,Do Not Call,Former Customer,,
+David,Dennis,30423  3rd Pl S,Federal Way,WA,98003,2538392626,,OK to Mail,Do Not Call,Former Customer,,
+David,Stanfield,411 S 304th St,Federal Way,WA,98003,2539414232,,OK to Mail,Do Not Call,Former Customer,,
+Daryl,Merrick,28611  16th Ave S,Federal Way,WA,98003,2538393261,,OK to Mail,Do Not Call,Former Customer,,
+Daniel,Bezus,2762 S 374th Pl,Federal Way,WA,98003,2538749602,,OK to Mail,Do Not Call,Former Customer,,
+Daniel,Reeb,2141 S 285th St,Federal Way,WA,98003,2539413535,,OK to Mail,Do Not Call,Former Customer,,
+Craig,Patrick,601 S 316th Pl,Federal Way,WA,98003,2539465065,,OK to Mail,Do Not Call,Former Customer,,
+Clara,McArthur,31026  20th Ave S,Federal Way,WA,98003,2538393139,,OK to Mail,Do Not Call,Former Customer,,
+Christopher,Willis,29314  13th Ave S,Federal Way,WA,98003,2535280870,,OK to Mail,Do Not Call,Former Customer,,
+Chris,Beaver,150 S 330th St Apt 8B,Federal Way,WA,98003,2538384687,,OK to Mail,Do Not Call,Former Customer,,
+Chongyup,Kymse,3010 S 367th Ct,Federal Way,WA,98003,2539275018,,OK to Mail,Do Not Call,Former Customer,,
+Charles,Dickinson,30248  2nd Ave S,Federal Way,WA,98003,2539461739,,OK to Mail,Do Not Call,Former Customer,,
+Cesar,Dizon,1339 S 290th Pl,Federal Way,WA,98003,2538393927,,OK to Mail,Do Not Call,Former Customer,,
+Catherine,Iwakiri,28240  27th Ave S,Federal Way,WA,98003,2539417925,,OK to Mail,Do Not Call,Former Customer,,
+Carol,Greco,31502  13th Ave S,Federal Way,WA,98003,2538397620,,Do Not Mail,Do Not Call,Former Customer,,
+C,Reed,29403  4th Ave S,Federal Way,WA,98003,2535297874,,OK to Mail,Do Not Call,Former Customer,,
+Bruce,Tougher,28443  20th Ave S,Federal Way,WA,98003,2539413172,,OK to Mail,Do Not Call,Former Customer,,
+Bruce,Bantz,30427  8th Pl S,Federal Way,WA,98003,2539460386,,Do Not Mail,Do Not Call,Former Customer,,
+Bruce,Hyde,31331  11th Pl S,Federal Way,WA,98003,2538393722,,OK to Mail,Do Not Call,Former Customer,,
+Brion,Abeles,2100 S 336th St Apt K2,Federal Way,WA,98003,2538382454,,OK to Mail,Do Not Call,Former Customer,,
+Bonnie,Bush,2712 S 282nd St,Federal Way,WA,98003,2539414444,,OK to Mail,Do Not Call,Former Customer,,
+Blair,Hironaga,36317  21st Ct S,Federal Way,WA,98003,2536610055,,OK to Mail,Do Not Call,Former Customer,,
+Beverly,Hein,1047 S 316th St,Federal Way,WA,98003,2538396376,,Do Not Mail,Do Not Call,Former Customer,,
+Bernie,Sanders,2122 S 371st St,Federal Way,WA,98003,2536611492,,Do Not Mail,Do Not Call,Former Customer,,
+Barry,Turnbull,33355  20th Ave S,Federal Way,WA,98003,2533441518,,OK to Mail,Do Not Call,Former Customer,,
+Barbara,Chasey,32518  7th Pl S,Federal Way,WA,98003,2538394393,,Do Not Mail,Do Not Call,Former Customer,,
+Austin,Wolff,30229  8th Ave S,Federal Way,WA,98003,2535298384,,Do Not Mail,Do Not Call,Former Customer,,
+Arthur,Hoffa,3001 S 288th St  186,Federal Way,WA,98003,2539463533,,OK to Mail,Do Not Call,Former Customer,,
+Arlene,Buck,32712  3rd Pl S,Federal Way,WA,98003,2538354156,,OK to Mail,Do Not Call,Former Customer,,
+Allan,Woida,30614  28th Ave S,Federal Way,WA,98003,2539419126,,OK to Mail,Do Not Call,Former Customer,,
+Allan,Noble,30448  11th Ave S,Federal Way,WA,98003,2539410875,,OK to Mail,Do Not Call,Former Customer,,
+Alan,Bolton,2738 S 374th Pl,Federal Way,WA,98003,2538740381,,OK to Mail,Do Not Call,Former Customer,,
+Alan,Mooney,29350  18th Ave S,Federal Way,WA,98003,2539411018,,OK to Mail,Do Not Call,Former Customer,,
+Alan,Loper,2613 S 311th St,Federal Way,WA,98003,2538392240,,OK to Mail,Do Not Call,Former Customer,,
+Adrian,Brennan,433 S 289th St,Federal Way,WA,98003,2539457906,,OK to Mail,Do Not Call,Former Customer,,
+Adrian,Mahar,135 S 308th St,Federal Way,WA,98003,2538390888,,OK to Mail,Do Not Call,Former Customer,,
+Adam,Vance,31003  22nd Ave S,Federal Way,WA,98003,2538392940,,OK to Mail,Do Not Call,Former Customer,,
+Lester,Olsen,204  37th St Se,Auburn,WA,98002,2538331208,,OK to Mail,Do Not Call,Former Customer,,
+Alan,Poe,410  Riverview Dr Ne,Auburn,WA,98002,2539392564,,OK to Mail,Do Not Call,Former Customer,,
+Jeffrey,Wilson,10  Riverview Dr Ne,Auburn,WA,98002,2538338384,,OK to Mail,Do Not Call,Former Customer,,
+Celeka,Mouton,1422  51st St Ne,Auburn,WA,98002,2538506892,,OK to Mail,Do Not Call,Former Customer,,
+Kim,Nguyen,1403  50th St Ne,Auburn,WA,98002,2538509093,,OK to Mail,Do Not Call,Former Customer,,
+Paul,Boulanger,524  17th Ct Se,Auburn,WA,98002,2539310285,,Do Not Mail,Do Not Call,Former Customer,,
+Jerome,Green,940  25th St Se,Auburn,WA,98002,2537356365,,OK to Mail,Do Not Call,Former Customer,,
+Daniel,Dumas,2640  Forest Ridge Dr Se,Auburn,WA,98002,2538337825,,Do Not Mail,Do Not Call,Former Customer,,
+John,Meteyer,2618  Alpine Pl Se,Auburn,WA,98002,2538338651,,Do Not Mail,Do Not Call,Former Customer,,
+George,Rottle,2500  Forest Ridge Dr Se,Auburn,WA,98002,2539393238,,OK to Mail,Do Not Call,Former Customer,,
+Kyle,Wiskirken,2822  U St Se,Auburn,WA,98002,2538337066,,OK to Mail,Do Not Call,Former Customer,,
+Dwight,Bishop,2306  Forest Ridge Dr Se,Auburn,WA,98002,2533330536,,OK to Mail,Do Not Call,Former Customer,,
+John,Sata,1606  Riverview Dr Ne,Auburn,WA,98002,2538049312,,OK to Mail,Do Not Call,Former Customer,,
+Agnes,Rischard,2102  Riverview Dr Ne,Auburn,WA,98002,2538338302,,Do Not Mail,Do Not Call,Former Customer,,
+Roman,Vinnikov,2017  H St Se,Auburn,WA,98002,2539392853,,OK to Mail,Do Not Call,Former Customer,,
+Lloyd,Case,2002  36th St Se,Auburn,WA,98002,2538331401,,Do Not Mail,Do Not Call,Former Customer,,
+John,Yorke,3419  Olympic St Se,Auburn,WA,98002,2538337462,,Do Not Mail,Do Not Call,Former Customer,,
+Diann,Winkcompleck,1010  21st St Se,Auburn,WA,98002,2538335934,,OK to Mail,Do Not Call,Former Customer,,
+Robert,Gerend,1524  Riverview Dr Ne,Auburn,WA,98002,2538330167,,OK to Mail,Do Not Call,Former Customer,,
+Mitchel,Fritschle,1102  Pike St Ne,Auburn,WA,98002,2538337086,,OK to Mail,Do Not Call,Former Customer,,
+Norman,Alexander,1929  1st St Ne,Auburn,WA,98002,2538333353,,OK to Mail,Do Not Call,Former Customer,,
+Donald,Hodson,31  Riverview Dr Ne,Auburn,WA,98002,2538332661,,OK to Mail,Do Not Call,Former Customer,,
+Alberto,Santome,1447  33rd St Se,Auburn,WA,98002,2538331025,,Do Not Mail,Do Not Call,Former Customer,,
+Jr,Redington,2742  Alpine Dr Se,Auburn,WA,98002,2539395036,,OK to Mail,Do Not Call,Former Customer,,
+Donald,Ballard,207  T St Ne,Auburn,WA,98002,2533331959,,OK to Mail,Do Not Call,Former Customer,,
+Pam,Dobbs,2730  Forest Ridge Dr Se,Auburn,WA,98002,2537350844,,Do Not Mail,Do Not Call,Former Customer,,
+Cindy,Cardenas,3502  Olympic St Se,Auburn,WA,98002,2538338295,,OK to Mail,Do Not Call,Former Customer,,
+Jame,Holt,2835  V Ct Se,Auburn,WA,98002,2537356672,,OK to Mail,Do Not Call,Former Customer,,
+William,Weiser,415  R St Ne,Auburn,WA,98002,2538331981,,Do Not Mail,Do Not Call,Former Customer,,
+Gerhard,Bartos,1505  F St Se,Auburn,WA,98002,2539399958,,OK to Mail,Do Not Call,Former Customer,,
+Mark,Henson,503  Riverview Dr Ne,Auburn,WA,98002,2538337119,,OK to Mail,Do Not Call,Former Customer,,
+David,Hawkins,2806  U St Se,Auburn,WA,98002,2539397800,,OK to Mail,Do Not Call,Former Customer,,
+Frances,Cooper,2520  Forest Ridge Dr Se,Auburn,WA,98002,2538331622,,OK to Mail,Do Not Call,Former Customer,,
+Larry,Strobel,1302  E St Se,Auburn,WA,98002,2533510971,,OK to Mail,Do Not Call,Former Customer,,
+Jose,Munoz,2621  17th St Se,Auburn,WA,98002,2533330709,,OK to Mail,Do Not Call,Former Customer,,
+Roy,Isaksen,2628  26th Pl Se,Auburn,WA,98002,2538337077,,OK to Mail,Do Not Call,Former Customer,,
+Steven,Blake,3315  Olympic St Se,Auburn,WA,98002,2539296209,,OK to Mail,Do Not Call,Former Customer,,
+Richard,Ode,1308  12th St Ne,Auburn,WA,98002,2538334524,,OK to Mail,Do Not Call,Former Customer,,
+Lael,Pyle,3445  Pike St Se,Auburn,WA,98002,2539391562,,OK to Mail,Do Not Call,Former Customer,,
+Russell,Holley,2201  O Pl Ne Apt A,Auburn,WA,98002,2539390656,,OK to Mail,Do Not Call,Former Customer,,
+Patricia,Kays,715  17th St Se,Auburn,WA,98002,2538334015,,OK to Mail,Do Not Call,Former Customer,,
+Charles,Lacoss,201  J St Ne,Auburn,WA,98002,2539391690,,OK to Mail,Do Not Call,Former Customer,,
+Kenneth,Thompson,1308  13th St Ne,Auburn,WA,98002,2538331806,,OK to Mail,Do Not Call,Former Customer,,
+Charles,Fisher,2024  3rd Ct Se,Auburn,WA,98002,2537350776,,OK to Mail,Do Not Call,Former Customer,,
+Michael,Seitz,2814  H St Se,Auburn,WA,98002,2538878613,,OK to Mail,Do Not Call,Former Customer,,
+Gary,Karr,1634  33rd Pl Se,Auburn,WA,98002,2539391025,,OK to Mail,Do Not Call,Former Customer,,
+Joseph,Allman,1506  H St Se,Auburn,WA,98002,2538333773,,OK to Mail,Do Not Call,Former Customer,,
+Brian,Hesse,332  Park Ave,Auburn,WA,98002,2539399448,,OK to Mail,Do Not Call,Former Customer,,
+Beau,Kentch,5  H St Se,Auburn,WA,98002,2537375200,,OK to Mail,Do Not Call,Former Customer,,
+Jerrene,Beach,1610  2nd St Ne,Auburn,WA,98002,2538333084,,OK to Mail,Do Not Call,Former Customer,,
+Thomas,Coppenbarger,3316  O St Se,Auburn,WA,98002,2537355299,,OK to Mail,Do Not Call,Former Customer,,
+Douglas,Crawford,2701  Skyway Ln,Auburn,WA,98002,2538337266,,OK to Mail,Do Not Call,Former Customer,,
+Homer,Yango,1501  6th St Ne,Auburn,WA,98002,2539397416,,OK to Mail,Do Not Call,Former Customer,,
+James,Landon,2301  Skyway Ln,Auburn,WA,98002,2538335264,,OK to Mail,Do Not Call,Former Customer,,
+Bruce,Rommel,214  N St Ne,Auburn,WA,98002,2539390571,,OK to Mail,Do Not Call,Former Customer,,
+Mark,Schmitke,2535  25th St Se,Auburn,WA,98002,2538332313,,OK to Mail,Do Not Call,Former Customer,,
+Jay,McQueen,320  O St Ne,Auburn,WA,98002,2539392265,,OK to Mail,Do Not Call,Former Customer,,
+Bruce,Meier,653  I Pl Ne,Auburn,WA,98002,2537350557,,OK to Mail,Do Not Call,Former Customer,,
+Donald,Dryden,1901  M St Ne Apt 11,Auburn,WA,98002,2539390303,,OK to Mail,Do Not Call,Former Customer,,
+Roland,Smith,2605  U St Se,Auburn,WA,98002,2539398277,,OK to Mail,Do Not Call,Former Customer,,
+Robert,Mayfield,1901  Pike St Ne,Auburn,WA,98002,2537358533,,Do Not Mail,Do Not Call,Former Customer,,
+Alice,Condrad,1105  28th St Se,Auburn,WA,98002,2538330864,,OK to Mail,Do Not Call,Former Customer,,
+Timothy,Scott,2416  17th St Se,Auburn,WA,98002,2539399850,,OK to Mail,Do Not Call,Former Customer,,
+Michael,Donat,1709  21st St Ne,Auburn,WA,98002,2537351433,,OK to Mail,Do Not Call,Former Customer,,
+Klathilde,Hume,3402  V St Se,Auburn,WA,98002,2538337329,,Do Not Mail,Do Not Call,Former Customer,,
+Richard,Vanwagoner,204  N St Se,Auburn,WA,98002,2538337302,,OK to Mail,Do Not Call,Former Customer,,
+Michael,Bucher,1922  Pike St Ne,Auburn,WA,98002,2538338082,,Do Not Mail,Do Not Call,Former Customer,,
+Scott,Fox,815  6th St Se,Auburn,WA,98002,2533974114,,OK to Mail,Do Not Call,Former Customer,,
+Karl,Kindsvater,1405  28th St Se,Auburn,WA,98002,2537356544,,OK to Mail,Do Not Call,Former Customer,,
+Walter,Taylor,1818  36th St Se,Auburn,WA,98002,2539390145,,OK to Mail,Do Not Call,Former Customer,,
+Matthew,McBride,303  Pike St Ne,Auburn,WA,98002,2539396124,,OK to Mail,Do Not Call,Former Customer,,
+Yakov,Chernyak,2425  17th St Se,Auburn,WA,98002,2533518978,,OK to Mail,Do Not Call,Former Customer,,
+Vladimir,Kholodnyak,1202  35th Ct Se,Auburn,WA,98002,2538871875,,Do Not Mail,Do Not Call,Former Customer,,
+Michael,Weekley,809  11th St Ne,Auburn,WA,98002,2538332278,,OK to Mail,Do Not Call,Former Customer,,
+Virginia,Haugen,2503  R St Se,Auburn,WA,98002,2538336205,,OK to Mail,Do Not Call,Former Customer,,
+David,Swenson,512  Pike St Ne,Auburn,WA,98002,2538330556,,OK to Mail,Do Not Call,Former Customer,,
+Robert,Sheets,1617  20th St Ne,Auburn,WA,98002,2539310279,,OK to Mail,Do Not Call,Former Customer,,
+Josephine,Flint,122  Pike St Ne,Auburn,WA,98002,2538332808,,OK to Mail,Do Not Call,Former Customer,,
+Gary,Pierson,126  I St Se,Auburn,WA,98002,2538044072,,Do Not Mail,Do Not Call,Former Customer,,
+Olga,Peterson,1012  19th St Se,Auburn,WA,98002,2538335882,,OK to Mail,Do Not Call,Former Customer,,
+Kenneth,Kludsikofsky,1018  9th St Ne,Auburn,WA,98002,2533339911,,OK to Mail,Do Not Call,Former Customer,,
+Brady,Dickman,126  L St Ne,Auburn,WA,98002,2533330614,,OK to Mail,Do Not Call,Former Customer,,
+Callum,Webster,250  13th St Se,Auburn,WA,98002,2538878331,,Do Not Mail,Do Not Call,Former Customer,,
+Dan,Klave,1305  23rd St Se,Auburn,WA,98002,2538339399,,OK to Mail,Do Not Call,Former Customer,,
+Floyd,Foster,2709  N St Se,Auburn,WA,98002,2538338291,,OK to Mail,Do Not Call,Former Customer,,
+Rodger,Birgen,510  M St Ne,Auburn,WA,98002,2539397225,,OK to Mail,Do Not Call,Former Customer,,
+Richard,Gimmi,1945  H St Se,Auburn,WA,98002,2538332609,,OK to Mail,Do Not Call,Former Customer,,
+Jeremy,Risley,325  L St Se,Auburn,WA,98002,2539392883,,OK to Mail,Do Not Call,Former Customer,,
+Marva,Young,520  N St Ne,Auburn,WA,98002,2539298390,,OK to Mail,Do Not Call,Former Customer,,
+Derryl,Miller,129  K St Se,Auburn,WA,98002,2539391860,,OK to Mail,Do Not Call,Former Customer,,
+David,Gordon,2610  17th St Se,Auburn,WA,98002,2533331566,,OK to Mail,Do Not Call,Former Customer,,
+David,Butts,602  25th St Se,Auburn,WA,98002,2539393244,,OK to Mail,Do Not Call,Former Customer,,
+Lynne,Skaalrud,201  7th St Se,Auburn,WA,98002,2538335585,,OK to Mail,Do Not Call,Former Customer,,
+Andrew,Cowen,1811  F St Se Apt 16,Auburn,WA,98002,2539392820,,OK to Mail,Do Not Call,Former Customer,,
+Sam,Carrieri,1811  F St Se Apt 9,Auburn,WA,98002,2538338765,,OK to Mail,Do Not Call,Former Customer,,
+Franklin,Bray,1025  9th St Ne,Auburn,WA,98002,2538337269,,OK to Mail,Do Not Call,Former Customer,,
+Mary,Rasmussen,1515  M St Ne,Auburn,WA,98002,2539398342,,OK to Mail,Do Not Call,Former Customer,,
+Daryl,McGlenn,1702  6th St Ne,Auburn,WA,98002,2538330707,,OK to Mail,Do Not Call,Former Customer,,
+Teri,Johnson,1205  H St Se,Auburn,WA,98002,2533519829,,OK to Mail,Do Not Call,Former Customer,,
+Ira,Frank,1602  28th St Se,Auburn,WA,98002,2539390255,,OK to Mail,Do Not Call,Former Customer,,
+Linda,Lucas,3019  M St Ne,Auburn,WA,98002,2539390903,,OK to Mail,Do Not Call,Former Customer,,
+Mark,Sonnenberg,1002  30th St Ne,Auburn,WA,98002,2539399725,,OK to Mail,Do Not Call,Former Customer,,
+Randall,Jorgensen,807  11th St Ne,Auburn,WA,98002,2538331546,,OK to Mail,Do Not Call,Former Customer,,
+Brent,Murray,602  Cedar Dr Se,Auburn,WA,98002,2538877759,,OK to Mail,Do Not Call,Former Customer,,
+Faye,Bailey,404  A St Ne,Auburn,WA,98002,2538334718,,OK to Mail,Do Not Call,Former Customer,,
+Dietrich,Hartmann,3621  Pike St Se,Auburn,WA,98002,2538332258,,Do Not Mail,Do Not Call,Former Customer,,
+Ron,Walker,206  L St Se,Auburn,WA,98002,2538330743,,OK to Mail,Do Not Call,Former Customer,,
+Curtis,Sluys,1432 E Main St,Auburn,WA,98002,2539391522,,OK to Mail,Do Not Call,Former Customer,,
+Helmer,Ariza,1111  6th St Se,Auburn,WA,98002,2539298218,,Do Not Mail,Do Not Call,Former Customer,,
+Sarah,Beachum,1843  F St Se,Auburn,WA,98002,2538333665,,OK to Mail,Do Not Call,Former Customer,,
+Frank,Griffin,1406  H St Se,Auburn,WA,98002,2539392073,,OK to Mail,Do Not Call,Former Customer,,
+Richard,Washington,404  7th St Se,Auburn,WA,98002,2538870436,,OK to Mail,Do Not Call,Former Customer,,
+Robert,Williams,507  4th St Ne,Auburn,WA,98002,2538331600,,OK to Mail,Do Not Call,Former Customer,,
+Natalie,Nuanez,1811  F St Se Apt 3,Auburn,WA,98002,2538339730,,Do Not Mail,Do Not Call,Former Customer,,
+Donaldo,Valdez,115  21st St Se Apt A,Auburn,WA,98002,2538333662,,OK to Mail,Do Not Call,Former Customer,,
+Larry,Hiller,1821  4th St Se,Auburn,WA,98002,2533518669,,OK to Mail,Do Not Call,Former Customer,,
+Daniel,Johnson,1822  4th Pl Se,Auburn,WA,98002,2532889787,,OK to Mail,Do Not Call,Former Customer,,
+Mary,Carey,1613  22nd St Ne,Auburn,WA,98002,2539397201,,OK to Mail,Do Not Call,Former Customer,,
+Kathleen,Fogarty,917  12th St Ne,Auburn,WA,98002,2538769095,,OK to Mail,Do Not Call,Former Customer,,
+Stacey,Biller,510  8th St Se,Auburn,WA,98002,2532889367,,OK to Mail,Do Not Call,Former Customer,,
+Duane,Jahraus,1402  22nd St Ne  528,Auburn,WA,98002,2539392913,,OK to Mail,Do Not Call,Former Customer,,
+Renae,Lohman,3312  I St Ne Apt C304,Auburn,WA,98002,2537374095,,OK to Mail,Do Not Call,Former Customer,,
+Jim,Hurlock,3611  I St Ne  128,Auburn,WA,98002,2539316648,,OK to Mail,Do Not Call,Former Customer,,
+Jodee,Pitzer,3611  I St Ne  199,Auburn,WA,98002,2537351423,,OK to Mail,Do Not Call,Former Customer,,
+Dolores,Pace,1402  22nd St Ne  259,Auburn,WA,98002,2533510250,,OK to Mail,Do Not Call,Former Customer,,
+Danny,Dodd,1402  Auburn Way N Apt 359,Auburn,WA,98002,2538769100,,OK to Mail,Do Not Call,Former Customer,,
+Sandra,Ream,2614  18th St Se,Auburn,WA,98002,2533516951,,Do Not Mail,Do Not Call,Former Customer,,
+Larry,Estey,2001  2nd St Se,Auburn,WA,98002,2537358194,,OK to Mail,Do Not Call,Former Customer,,
+Dennis,Dicken,2302  R St Se  39,Auburn,WA,98002,2539396027,,OK to Mail,Do Not Call,Former Customer,,
+Michael,Lawrence,1902  A St Se Apt D106,Auburn,WA,98002,2537350324,,OK to Mail,Do Not Call,Former Customer,,
+Phyllis,Koskovich,2302  R St Se  34,Auburn,WA,98002,2538330246,,OK to Mail,Do Not Call,Former Customer,,
+N,Pascoe,2302  R St Se  122,Auburn,WA,98002,2532887669,,OK to Mail,Do Not Call,Former Customer,,
+Zachary,Reifert,401  37th St Se  33,Auburn,WA,98002,2539392689,,OK to Mail,Do Not Call,Former Customer,,
+Diane,Costenbader,3417  M Pl Se Apt A,Auburn,WA,98002,2537375579,,OK to Mail,Do Not Call,Former Customer,,
+Walter,Jenne,4248  A St Se  205,Auburn,WA,98002,2532881131,,OK to Mail,Do Not Call,Former Customer,,
+Darla,Smith,4248  A St Se  332,Auburn,WA,98002,2532880809,,OK to Mail,Do Not Call,Former Customer,,
+Kevin,Bauer,1812  I St Ne Apt C,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Benjamin,Nelson,4920  Pike St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Eric,Mutschler,1428  32nd St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Tracey,Goncalves,1517  50th St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+John,Kireru,1326  32nd Pl Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Noukane,Souvannavanh,1439  49th St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Ikenna,Njoku,1141  32nd Pl Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Jason,Watts,1145  32nd Pl Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Kenneth,Johns,1208  32nd Pl Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Bernard,Bolisig,1210  32nd Pl Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+William,Dean,2536  I St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Keith,Peabody,2025  J St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Elisabeth,Tsai,1226  Pike St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Aurel,Pop,2041  2nd St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Kevin,Roberts,1016  21st St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Hung,Vo,1156  32nd Pl Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Sovathara,Sim,2215  Forest Ridge Dr Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Andrew,Magley,523  37th St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Khamkhoun,Luangrath,1410  J St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Troy,Ironmonger,1416  Riverview Dr Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Sean,Mabin,3820  I Pl Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+J,Kautzman,211  21st Pl Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Petr,Arkhipchuk,3844  I Pl Ne,Auburn,WA,98002,,,Do Not Mail,NO PHONE,Former Customer,,
+Pamela,Payne,2312  27th St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Miguel,Prado,215  Pike St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Vladimir,Sidorov,922  22nd St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Mary,Schmidt,103  I St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Patrick,Dicks,123  I St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Kelly,Haggett,929  23rd Pl Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Gregory,Rockafield,2714  Alpine Dr Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Jon,Holmes,1226  O St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Michael,Courneya,1110  Pike St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Surinder,Khangura,4036  I St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Mauro,Ramirez,2215  D St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Edward,Yadwinski,1410  25th St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Kok,Ngo,2602  17th St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Rick,Perkins,1021  22nd St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Valeriy,Gudunok,3601  Olympic St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Michael,Swinney,1307  G St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Barbara,Campbell,2620  Alpine St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Sandra,Hagen,1901  R St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Kristy,Towers,1924  3rd Ct Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Dan,Halpin,508  O St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Mister,Isbelle,2614  17th St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Steve,Snitily,109  T St Se,Auburn,WA,98002,,,Do Not Mail,NO PHONE,Former Customer,,
+Gilberto,Alonzo,1805  36th St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Gregg,Harmer,952 E Main St,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Michael,Lantz,2515  T St Se,Auburn,WA,98002,,,Do Not Mail,NO PHONE,Former Customer,,
+Gene,Combs,1713  20th St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Mark,Siegfried,657  I Pl Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+James,Smith,2702  17th St Se,Auburn,WA,98002,,,Do Not Mail,NO PHONE,Former Customer,,
+Fred,Elder,2510  Skyway Ln,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Federico,Masuccio,1718  G St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Norman,Gerber,1910  Pike St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Henry,Barrientos,1315  21st St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Kenneth,Huddleston,1716  M St Ne,Auburn,WA,98002,,,Do Not Mail,NO PHONE,Former Customer,,
+Cary,Davidson,1016  4th St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Patricia,Cripe,725  8th St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Priscilla,Hennemann,1814  27th St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Gregory,Veitch,130  H St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Garry,Rowe,412  R St Ne,Auburn,WA,98002,,,Do Not Mail,NO PHONE,Former Customer,,
+Inocencio,Rojero,1316  31st St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Cheryl,Creson,1420  21st St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Gary,Ho,1316  G St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Cheri,Boeger,1917  37th Way Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Jay,Pickett,1806  36th St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Elaine,Walsh,1826  35th St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Robert,Cartwright,1330  25th St Se,Auburn,WA,98002,,,Do Not Mail,NO PHONE,Former Customer,,
+Roxann,Ward,1313  6th Pl Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Rodney,Brown,312  Pike St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Rufino,Sun,1407  J St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Steve,Corsaletti,1702  5th St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Jacqueline,Debolt,2603  T St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Richard,Hughson,321  K St Se,Auburn,WA,98002,,,Do Not Mail,NO PHONE,Former Customer,,
+Colin,Smith,409  27th St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Sylvia,Lawrence,1709  4th St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+John,Cross,304  J St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+John,Prenner,1917  36th St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+David,Blood,1225  Harvey Rd,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Matthew,Nelson,304  G St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Brian,Verge,120  10th St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Ramon,Johnson,1807  35th St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Robert,Lockhart,1411  10th St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Mark,Bratsch,206  Pike St Se,Auburn,WA,98002,,,Do Not Mail,NO PHONE,Former Customer,,
+Kevin,Sheehan,323  O St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Desiree,Cole,607  29th St Se Apt B1,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Victoria,Powell,214  M St Ne,Auburn,WA,98002,,,Do Not Mail,NO PHONE,Former Customer,,
+Mark,Vanderit,129  15th St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Donald,Gorton,911  H St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Steven,Allen,3117  D St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Nancy,Winders,814  Pike St Ne Apt D5,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Sarah,Contreras,1805  L St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Jose,Valdez,1602  19th Dr Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Travis,Sutton,702  Cedar Dr Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Nicole,Ramos,610  27th St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Kenneth,Gordon,3512  O St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Amanda,Helmke,2911  D St Se,Auburn,WA,98002,,,Do Not Mail,NO PHONE,Former Customer,,
+Jeffrey,Long,228  J St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Walter,Hanson,301  H St Se,Auburn,WA,98002,,,Do Not Mail,NO PHONE,Former Customer,,
+James,Johansson,1116  30th St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Todd,McNett,3104  K St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Jay,Love,906  4th St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Brett,Smith,2612  O St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Gregory,Hoffmann,1435  22nd St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Calvin,Corbett,115  21st St Se Apt D,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Jeryl,Flood,920  D St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Dell,Trujillo,327  3rd St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Gary,Lofgren,813  8th St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Randy,Walschaert,822  4th St Se,Auburn,WA,98002,,,Do Not Mail,NO PHONE,Former Customer,,
+Crystal,Carrow,215  J St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Michael,Graf,418  17th St Se  11E,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Michael,Moody,3112  M Dr Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Darren,Walter,124  J St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Krystyna,Heston,1004  30th St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Donald,Ormsby,417  4th St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Tina,Bowen,424  6th St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Crystal,Curtis,3110  L St Ne,Auburn,WA,98002,,,Do Not Mail,NO PHONE,Former Customer,,
+Erin,Bender,318  O St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Henry,Daniels,1304  3rd St Se Apt 2,Auburn,WA,98002,,,Do Not Mail,NO PHONE,Former Customer,,
+Arnold,Benson,111  11th St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Jose,Gonzalez,812  29th St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Michael,Bigger,3004  C St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Brenda,Murdock,112  G St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Genevieve,Wallace,418  17th St Se  4C,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Dorothy,Roberson,133  10th St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Darrell,Stach,202  Pike St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Ryan,McCann,311  2nd St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Chelsi,Mateer,814  Pike St Ne Apt D4,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Oris,Slind,1819  M St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Chong,Choi,418  17th St Se  6D,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Steven,Paluzzi,113  8th St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Steve,Comstock,3402  I St Ne Apt H204,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Brent,Rash,1120  8th St Ne Apt 15,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Ethel,Kick,1402  22nd St Ne  226,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Don,Liu,2451  I St Ne Apt D,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Ogo,Osborne,810  Pike St Ne Apt E6,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Margaret,Mitchell,1903  M St Ne,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Brenda,Bernstein,7  Auburn Way S Apt 8,Auburn,WA,98002,,,Do Not Mail,NO PHONE,Former Customer,,
+Sue,Burch,2611  18th St Se  G26,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Jerry,Crites,2041  2nd St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Ronald,Howard,602  19th St Se Apt 135,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Roy,Heimes,900  29th St Se  A1,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Charles,Eagan,702  22nd St Se,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Carl,Jackson,707  37th St Se  59,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Cec,Thompson,607  37th St Se  108,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Leonard,Seivwright,607  37th St Se  113,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Marjorie,Bounpraseuth,725  37th St Se  13,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Samuel,Deleon,725  37th St Se  59,Auburn,WA,98002,,,OK to Mail,NO PHONE,Former Customer,,
+Cezary,Rabos,2610  V Ct Se,Auburn,WA,98002,2537358511,,OK to Mail,OK to Call,Former Customer,,
+Steve,Janssen,1619  4th St Ne,Auburn,WA,98002,2537374475,,OK to Mail,OK to Call,Former Customer,,
+Edgardo,Mesina,2607  V Ct Se,Auburn,WA,98002,2538870048,,OK to Mail,OK to Call,Former Customer,,
+Lawrence,Steckler,930  M St Se,Auburn,WA,98002,2537356001,,OK to Mail,OK to Call,Former Customer,,
+Nikolay,Kharik,935  23rd Pl Se,Auburn,WA,98002,2532888727,,OK to Mail,OK to Call,Former Customer,,
+Richard,Osborn,117  E St Se,Auburn,WA,98002,2537357378,,OK to Mail,OK to Call,Former Customer,,
+Kamal,Murad,1706  21st St Ne,Auburn,WA,98002,2538042748,,OK to Mail,OK to Call,Former Customer,,
+Lynne,Thurlow,1501  F St Se,Auburn,WA,98002,2538338726,,OK to Mail,OK to Call,Former Customer,,
+Brandon,McCann,833  23rd St Se,Auburn,WA,98002,2539298143,,OK to Mail,OK to Call,Former Customer,,
+Gerald,Hill,1226  35th Ct Se,Auburn,WA,98002,2533338164,,OK to Mail,OK to Call,Former Customer,,
+Timothy,Dailey,1220  23rd St Se,Auburn,WA,98002,2539394035,,OK to Mail,OK to Call,Former Customer,,
+Denise,Frank,1830  35th St Se,Auburn,WA,98002,2539399987,,OK to Mail,OK to Call,Former Customer,,
+Marilyn,Christensen,413  A St Ne,Auburn,WA,98002,2539392649,,OK to Mail,OK to Call,Former Customer,,
+Mike,Rogers,2708  Pike St Se,Auburn,WA,98002,2538336080,,OK to Mail,OK to Call,Former Customer,,
+James,West,1308  28th Pl Se,Auburn,WA,98002,2537354178,,OK to Mail,OK to Call,Former Customer,,
+Jesus,Rodriguez,711  8th St Se,Auburn,WA,98002,2539296385,,OK to Mail,OK to Call,Former Customer,,
+Christine,Jamison,403  D St Se,Auburn,WA,98002,2538871095,,OK to Mail,OK to Call,Former Customer,,
+Sharon,Shoe,406  2nd St Ne,Auburn,WA,98002,2538330975,,OK to Mail,OK to Call,Former Customer,,
+Michael,Brizitski,418  17th St Se  13B,Auburn,WA,98002,2533335013,,OK to Mail,OK to Call,Former Customer,,
+Trier,Trainer,5114  L Pl Ne,Auburn,WA,98002,2532364121,,OK to Mail,OK to Call,Former Customer,,
+Chris,McCrea,1120  8th St Ne Apt 6,Auburn,WA,98002,2537355415,,OK to Mail,OK to Call,Former Customer,,
+Mavis,King,2302  R St Se  113,Auburn,WA,98002,2537356134,,OK to Mail,OK to Call,Former Customer,,
+Johnna,Rogers,3710  A St Se  6,Auburn,WA,98002,2533974399,,OK to Mail,OK to Call,Former Customer,,

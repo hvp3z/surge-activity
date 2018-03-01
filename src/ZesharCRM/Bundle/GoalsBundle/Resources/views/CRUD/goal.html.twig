@@ -1,0 +1,74 @@
+{% extends 'ZesharCRMCoreBundle::sonata_layout.html.twig' %}
+
+{% block breadcrumb %}
+    <li><a href="{{ url('sonata_admin_dashboard') }}">{% trans %}Dashboard{% endtrans %}</a></li>
+    <li class="active">Goal Page</li>
+{% endblock %}
+
+{% block content %}
+    {{ include('ZesharCRMGoalsBundle:CRUD:goal_js.html.twig') }}
+
+    <label class="goal-product-title">{{ data.productTitle }}</label>
+
+    <div class="goal-assign-table-wrap table-wrap ui-sortable">
+        <div class="box box-primary">
+            <table class="report-table table-sonata-list table-striped table table-bordered" data-goal-id="{{ data.goalId }}">
+                <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Points</th>
+                    <th>Growth Desired</th>
+                    <th>Target Items</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% if data %}
+                    <input type="hidden" class="product-points" value="{{ data.productPoints }}" />
+                    <input type="hidden" class="global-percent" value="{{ data.globalPercent }}" />
+                    <input type="hidden" class="goal-estimated" value="{{ data.goalEstimated }}" />
+                    {% set globalPercent = 0 %}
+                    {% for key, item in data.users %}
+                        {% set globalPercent = globalPercent + item.percent %}
+                        <tr class="sonata-ba-view-container" {#data-product-id="{{ item.productId }}"#}>
+                            <td class="goal-user" data-user-id="{{ item.id }}">
+                                {{ key }}
+                            </td>
+                            <td class="goal-points goal-editable">
+                                <input type="number" class="goal-text-edit edit-field points" value="{{ item.point }}" />
+                            </td>
+                            <td class="goal-percent goal-editable goal-editable">
+                                <input type="number" class="goal-text-edit edit-field percent" value="{{ item.percent }}" />%
+                            </td>
+                            <td class="goal-items goal-editable">
+                                <input type="number" class="goal-text-edit edit-field items" value="{{ item.items }}" />
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    <tr class="total-amount last">
+                        <td class="td-title">Total targets:</td>
+                        <td>{{ data.globalPoints }}</td>
+                        <td class="total-percent">{{ globalPercent }}%</td>
+                        <td>{{ data.goalEstimated }}</td>
+                    </tr>
+                {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="goal-block-action">
+        <button class="goal-action-save btn-green btn">Save</button>
+    </div>
+
+{% endblock %}
+
+{#{% block javascripts %}#}
+    {#{{ parent() }}#}
+    {#<script src="{{ asset('bundles/zesharcrmgoals/js/goal_list.js') }}"></script>#}
+{#{% endblock %}#}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css"  href="{{ asset('bundles/zesharcrmgoals/css/style.css') }}"  />
+{% endblock %}

@@ -1,0 +1,44 @@
+{% set contactCard = (type == 'lead' ? subject.getContactCard() : subject.getContactCardOpportunity() )%}
+
+<table class="table editable-table form-column entity-details-table-form">
+    <input type="hidden" name="formType" value="{{ type }}">
+    <input type="hidden" name="leadId" value="{{ subject.id }}">
+    {% if contactCard %}
+        <input type="hidden" name="contactCardId" value="{{ contactCard.id }}">
+    {% endif %}
+    <tr class="form-group">
+        <td>First Name</td>
+        <td><input tabindex="1" class="form-control length-validate" name="firstName" type="text" value="{{ contactCard.firstName is defined ?  contactCard.firstName  : '' }}"/></td>
+        <td>Address</td>
+        <td class="address"><input tabindex="4" class="form-control length-validate" name="address" type="text"  value="{{ contactCard.streetAddress is defined ?  contactCard.streetAddress  : '' }}"/></td>
+    </tr>
+    <tr>
+        <td>Last Name</td>
+        <td><input tabindex="3" class="form-control length-validate" name="lastName" type="text" value="{{ contactCard.lastName is defined ?  contactCard.lastName  : '' }}"/></td>
+        <td>City</td>
+        <td><input id="city" tabindex="5" class="form-control" name="city" type="text" value="{{ contactCard.city is defined ?  contactCard.city  : '' }}"/> </td>
+    </tr>
+    <tr>
+        <td>Middle Name</td>
+        <td><input tabindex="2" class="form-control length-validate" name="middleName" type="text" value="{{ contactCard.middleInitial is defined ?  contactCard.middleInitial  : '' }}"/></td>
+        <td>State</td>
+        <td><input id="state" tabindex="6" class="form-control" name="state" type="text" value="{{ contactCard.state is defined ?  contactCard.state  : '' }}"/></td>
+    </tr>
+    <tr>
+        <td>Phone</td>
+        <td>
+            <input tabindex="8" class="form-control length-validate" name="phone" type="text" value="{{ contactCard.phone is defined ?  contactCard.phone  : '' }}"/>
+        </td>
+        <td>Zipcode</td>
+        <td><input tabindex="7" class="form-control" name="zipcode" type="text" value="{{ contactCard.zip is defined ?  contactCard.zip  : '' }}"/></td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>
+            <input tabindex="9" class="form-control length-validate" name="email" type="text" value="{{ contactCard.email is defined ?  contactCard.email  : '' }}"/>
+        </td>
+        <td>Other</td>
+        <td><input tabindex="10" class="form-control length-validate" name="other" type="text" value="{{ contactCard.other is defined ?  contactCard.other  : '' }}"/></td>
+    </tr>
+
+</table>

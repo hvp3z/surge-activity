@@ -1,0 +1,13 @@
+<td{% block sonata_list_field_attributes %} class="sonata-ba-list-field sonata-ba-list-field-{{ field_description.type }} sonata-list-field-{{ field_description.name }}" objectId="{{ admin.id(object) }}"{% endblock %}>
+    {% set billingInfo = false %}
+    {% set user = object.users|first %}
+    {% if user %}
+        {% set billingInfo = user.billingInfo|first %}
+    {% endif %}
+
+    {% if billingInfo %}
+        <a class="sonata-link-identifier" href="{{ path('admin_billing_info_show', {'id': billingInfo.id}) }}">{{ object.name }}</a>
+    {% else %}
+        <span class="sonata-link-identifier">{{ object.name }}</span>
+    {% endif %}
+</td>

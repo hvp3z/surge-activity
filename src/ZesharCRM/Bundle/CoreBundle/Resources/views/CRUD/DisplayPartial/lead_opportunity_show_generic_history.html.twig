@@ -1,0 +1,47 @@
+<div class="custom-block custom-block-history">
+    <div class="custom-head clearfix">
+        <h3>Lead History</h3>
+    </div>
+    <script type="text/javascript">
+        (function($) {
+            $(document).ready(function() {
+                $('#lead_assignee').on('block-ajax-return', function(e, serverResponse) {
+                    //console.log('ajax response', serverResponse);
+                    $(this).find('input').not('[type="hidden"]').val('').trigger('change');
+                    window.location.reload(); // todo - insert data without reload
+                });
+            });
+        })(jQuery);
+    </script>
+    <div class="form-column">
+        <div class="form-group">
+            <label for="createdate">Created At</label>
+            <input type="text" id="createdate" disabled class="form-control" name="pckr0" value="{{ object.createdAt|date('M d, Y') }}"/>
+        </div>
+        <div id="lead_assignee" class="form-group display-block-persistent" data-controller="leads_display" data-action="leadAssign">
+            {% if is_granted('ROLE_ADMIN') %}
+                {% set disabled = false %}
+            {% else %}
+                {% set disabled = true %}
+            {% endif %}
+            <label for="asign">Asignee</label>
+            {{  object.getAssignee() is not empty ? object.getAssignee().getId() : 'N/A' }}
+            {{ render(controller('ZesharCRMCoreBundle:FormItems:assigneeSelect', {
+                'activeId': object.getAssignee() is not empty ? object.getAssignee().getId() : null,
+                'disabled': disabled
+            })) }}
+            <input type="hidden" id="lead_id" name="lead_id" value="{{ object.getId() }}" />
+            {% if is_granted('ROLE_ADMIN') %}
+                {% include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_block_actions.html.twig') with {'show_cancel_link': false, 'save_button_title': 'Assign'} %}
+            {% endif %}
+        </div>
+        <div class="form-group">
+            <label for="source">Lead Source</label>
+            <input type="text" disabled="disabled" class="form-control" value="{{ object.getLeadSource() is not empty ? object.getLeadSource().getTitle() : '(none)'  }}"/>
+        </div>
+        <div class="form-group">
+            <label for="compaign">Activity</label>
+            <input type="text" disabled="disabled" class="form-control" value="{{ object.getLeadCampaign() is not empty ? object.getLeadCampaign().getTitle() : '(none)'  }}"/>
+        </div>
+    </div>
+</div>

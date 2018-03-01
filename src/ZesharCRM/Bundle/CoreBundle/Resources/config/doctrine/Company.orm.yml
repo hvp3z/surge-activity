@@ -1,0 +1,64 @@
+ZesharCRM\Bundle\CoreBundle\Entity\Company:
+    type: entity
+    table: company
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        firstAddress:
+            type: string
+            length: 255
+            column: first_address
+            nullable: true
+        secondAddress:
+            type: string
+            length: 255
+            column: second_address
+            nullable: true
+        country:
+            type: string
+            length: 255
+            nullable: true
+        city:
+            type: string
+            length: 255
+            nullable: true
+        state:
+            type: string
+            length: 255
+            nullable: true
+        postalCode:
+            type: string
+            length: 255
+            column: postal_code
+            nullable: true
+        phoneNumber:
+            type: string
+            length: 255
+            column: phone_number
+            nullable: true
+        phoneExt:
+            type: string
+            length: 255
+            column: phone_ext
+            nullable: true
+        industry:
+            type: integer
+            nullable: true
+
+    oneToMany:
+        users:
+            targetEntity: User
+            mappedBy: company
+            cascade: ["persist", "remove"]
+        scoringCriterias:
+            targetEntity: ZesharCRM\Bundle\LeadScoringBundle\Entity\ScoringCriteria
+            mappedBy: company
+            cascade: ["persist","remove"]
+    lifecycleCallbacks: {  }

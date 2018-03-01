@@ -1,0 +1,55 @@
+ZesharCRM\Bundle\CoreBundle\Entity\LeadAttachment:
+    table: lead_attachment
+    type: entity
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks:
+#        postPersist: [ addOpportunityAttachment ]
+#        postUpdate : [ updateOpportunityAttachment ]
+#        postRemove: [ removeOpportunityAttachment ]
+    manyToOne:
+        leadSubject:
+            targetEntity: LeadSubject
+            cascade: ["persist", "remove"]
+            mappedBy: null
+            inversedBy: attachments
+            joinColumns:
+                lead:
+                    nullable: false
+                    referencedColumnName: id
+            orphanRemoval: false
+        attachment:
+            targetEntity: Attachment
+            cascade: ["remove"]
+            mappedBy: null
+            inversedBy: leadAttachment
+            joinColumns:
+                attachment:
+                    nullable: false
+                    referencedColumnName: id
+            orphanRemoval: false
+#        opportunity:
+#            targetEntity: Opportunity
+#            cascade: ["persist"]
+#            mappedBy: null
+#            inversedBy: attachments
+#            joinColumns:
+#                opportunity:
+#                    nullable: false
+#                    referencedColumnName: id
+
+#    manyToOne:
+#        attachment:
+#            targetEntity: Attachment
+#            cascade: { }
+#            mappedBy: null
+#            inversedBy: leadAttachment
+#            joinColumns:
+#                attachment:
+#                    nullable: false
+#                    referencedColumnName: id
+#                    onDelete: CASCADE

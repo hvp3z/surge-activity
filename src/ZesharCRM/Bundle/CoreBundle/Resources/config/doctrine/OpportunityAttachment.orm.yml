@@ -1,0 +1,32 @@
+ZesharCRM\Bundle\CoreBundle\Entity\OpportunityAttachment:
+    table: opportunity_attachment
+    type: entity
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }
+    manyToOne:
+        opportunity:
+            targetEntity: Opportunity
+            cascade: ["persist"]
+            mappedBy: null
+            inversedBy: opportunities
+            joinColumns:
+                opportunity:
+                    nullable: false
+                    referencedColumnName: id
+            orphanRemoval: false
+    oneToOne:
+        attachment:
+            targetEntity: Attachment
+            cascade: { }
+            mappedBy: null
+            inversedBy: opportunityAttachment
+            joinColumns:
+                attachment:
+                    nullable: false
+                    referencedColumnName: id
+                    onDelete: CASCADE

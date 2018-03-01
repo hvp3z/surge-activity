@@ -1,0 +1,49 @@
+{#
+
+This file is part of the Sonata package.
+
+(c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+
+#}
+
+{% extends "ZesharCRMCoreBundle:CRUD:base_list_for_activity.html.twig" %}
+
+{% block custom_data %}
+{% set batchactions = admin.batchactions %}
+<div class="box box-primary">
+    <div class="box-body table-responsive no-padding">
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr class="sonata-ba-list-field-header">
+            {% for field_description in admin.list.elements %}
+                {% if admin.hasRoute('batch') and field_description.getOption('code') == '_batch' and batchactions|length > 0 %}
+                    <th class="sonata-ba-list-field-header sonata-ba-list-field-header-batch">
+                        <input type="checkbox" id="list_batch_checkbox">
+                    </th>
+                {% elseif field_description.getOption('code') == '_select' %}
+                    <th class="sonata-ba-list-field-header sonata-ba-list-field-header-select"></th>
+                {% else %}
+                    {% set sortable = false %}
+
+                        <th class="sonata-ba-list-field-header-{{ field_description.type}}">
+                            {{ admin.trans(field_description.label, {}, field_description.translationDomain) }}
+                        </th>
+
+                {% endif %}
+            {% endfor %}
+        </tr>
+        </thead>
+        <tbody>
+        {% for object in entities %}
+            <tr>
+                {% include admin.getTemplate('inner_list_row') %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+ZesharCRM\Bundle\CoreBundle\Entity\LeadSubjectEmail:
+    type: entity
+    table: lead_subject_email
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        theme:
+            type: string
+            length: 255
+        message:
+            type: text
+        createdAt:
+            type: datetime
+            column: created_at
+            nullable: false
+            gedmo:
+                timestampable:
+                    on: create
+    manyToOne:
+        lead:
+            targetEntity: LeadSubject
+            cascade: ["persist"]
+            mappedBy: null
+            inversedBy: leadSubjectEmail
+            joinColumns:
+                lead:
+                    nullable: true
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

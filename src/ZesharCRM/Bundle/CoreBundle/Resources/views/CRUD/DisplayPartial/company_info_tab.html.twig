@@ -1,0 +1,71 @@
+<div class="custom-block calendar-block">
+    <div class="custom-head clearfix">
+        <div class="custom-menu">
+            <button class="up-custom"></button>
+        </div>
+        <h3>Company Info</h3>
+    </div>
+    <div class="clearfix">
+        <div id="company-info-edit" class="display-block-persistent" data-controller="leads_display" data-action="leadEvent">
+            <div class="form-column">
+                <h4 class="company-id">Company ID : {{ object.creator.company.id }} </h4><br />
+
+                <div class="small-table">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th width="15%"></th>
+                            <th width="35%">Company Information</th>
+                            <th width="15%"></th>
+                            <th width="35%"></th>
+                        </tr>
+                        <tr>
+                            <td><b>Company Name</b></td>
+                            <td>
+                                <input class="form-control" type="text" value="{{ object.creator.company.name }}" {% if not is_granted('ROLE_ULTRA_ADMIN') %} disabled {% endif %} />
+                            </td>
+                            <td><b>Phone number</b></td>
+                            <td>
+                                <input class="form-control" type="text" value="{{ object.creator.company.phoneNumber }}" {% if not is_granted('ROLE_ULTRA_ADMIN') %} disabled {% endif %} />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Address Line 1</b></td>
+                            <td>
+                                <input id="companyFirstAddress" class="form-control" type="text" value="{{ object.creator.company.firstAddress }}" />
+                            </td>
+                            <td><b>Address Line 2</b></td>
+                            <td>
+                                <input id="companySecondAddress" class="form-control" type="text" value="{{ object.creator.company.secondAddress }}" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>City</b></td>
+                            <td>
+                                <input id="companyCity" class="form-control" type="text" value="{{ object.creator.company.city }}" />
+                            </td>
+                            <td><b>State</b></td>
+                            <td>
+                                <input id="companyState" class="form-control" type="text" value="{{ object.creator.company.state }}" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Postal Code</b></td>
+                            <td>
+                                <input id="companyPostalCode" class="form-control" type="text" value="{{ object.creator.company.postalCode }}" />
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br />
+            </div>
+
+            {% include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_block_actions.html.twig') with {'show_cancel_link': false, 'save_button_title': 'Save'} %}
+        </div>
+    </div>
+</div>
+
+

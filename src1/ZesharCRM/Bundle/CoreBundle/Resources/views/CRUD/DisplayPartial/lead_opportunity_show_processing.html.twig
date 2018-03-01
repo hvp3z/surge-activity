@@ -1,0 +1,137 @@
+<div class="custom-block">
+    <div class="custom-head clearfix">
+        <h3>Processing</h3>
+    </div>
+    <script type="text/javascript">
+        (function($) {
+            $(document).ready(function() {
+                $('#lead_event_create').on('block-data-validate', function(e, params) {
+                    var values = params.values;
+
+                    //var eventDate = new Date(eventDate);
+                    // @TODO check past date/time
+
+                });
+                $('#lead_processing_save').on('block-ajax-return', function(e, serverResponse) {
+//                    var serverResponseObject = JSON.parse(serverResponse);
+//                    var redirectUrl = serverResponseObject.redirectUrl;
+//                    var sold = serverResponseObject.sold;
+//                    $(this).find('input').not('[type="hidden"]').val('').trigger('change');
+//                    if (!sold) {
+//                        if (redirectUrl) {
+//                            window.location.replace(redirectUrl);
+//                        } else {
+//                            window.location.reload(); // todo - insert data without reload
+//                        }
+//                    }
+                    $(this).find('input').not('[type="hidden"]').val('').trigger('change');
+                    window.location.reload();
+
+                });
+
+//                $('button.btn-green-border').parents('form').on('submit', function(e){
+//                    e.preventDefault();
+//                    e.stopPropagation();
+//                    return false;
+//                })
+
+
+            });
+        })(jQuery);
+    </script>
+    <div id="lead_processing_save" class="form-column display-block-persistent" data-controller="leads_display" data-action="leadProcessing">
+        <form>
+            <div class="form-inline form-inline-processing">
+                <div class="form-group lead-processing-inline-select">
+                    <label for="source">Lead Source</label>
+                    {{ render(controller('ZesharCRMCoreBundle:FormItems:leadSourceSelect', {
+                    'activeId': object.getLeadSource() is not empty ? object.getLeadSource().getId() : null
+                    })) }}
+                </div>
+                <div class="form-group lead-processing-inline-select">
+                    {% if is_granted('ROLE_ADMIN') %}
+                        {% set disabled = false %}
+                    {% else %}
+                        {% set disabled = true %}
+                    {% endif %}
+                    <label for="asign">Asignee</label>
+                    {{ render(controller('ZesharCRMCoreBundle:FormItems:assigneeSelect', {
+                    'activeId': object.getAssignee() is not empty ? object.getAssignee().getId() : null,
+                    'disabled': disabled
+                    })) }}
+                    <input type="hidden" id="lead_id" name="lead_id" value="{{ object.getId() }}" />
+                </div>
+                <div class="form-group lead-processing-inline-select">
+                    <label for="compaign">Activity</label>
+                    {% set additionalParams = {'assignee': object.getAssignee() is not empty ? object.getAssignee().getId() : null} %}
+                    {{ render(controller('ZesharCRMCoreBundle:FormItems:leadCampaignSelect', {
+                        'activeId': object.getLeadCampaign() is not empty ? object.getLeadCampaign().getId() : null,
+                        'additionalParams': additionalParams
+                    })) }}
+                </div>
+            </div>
+            {% if admin.getLabel() == 'Lead' %}
+                <div class="form-group">
+                    <p class="label-type">Status</p>
+                    <div class="clearfix">
+                        {{ render(controller('ZesharCRMCoreBundle:FormItems:leadStatusSelect', {
+                        'activeValue': object.getType()
+                        })) }}
+                    </div>
+                </div>
+            {% endif %}
+            <div class="form-group">
+                <p class="label-type">Lead Type</p>
+                {% if app.request.attributes.get('_route') == 'admin_zesharcrm_core_lead_create' or object.getSystemTypeString() is empty %}
+                    <div class="clearfix">
+                        {{ render(controller('ZesharCRMCoreBundle:FormItems:leadTypeSelect', {
+                        'activeId': object.getLeadType() is not empty ? object.getLeadType().getId() : null
+                        })) }}
+                    </div>
+                {% else %}
+                    <span>{{ object.getSystemTypeString() }}</span>
+                {% endif %}
+            </div>
+
+           {# {% if object.getContactCard() is not empty %}
+                {% if object.getContactCard().getContacts() is not empty %}
+                    {% set callStatusString = object.getContactCard().getCallStatusString()%}
+                    {% if callStatusString == 'Yes' %}
+                        {% if callStatusString == 'No' %}
+                            {% set activeValue = 2 %}
+                        {% elseif callStatusString == 'Neglected' %}
+                            {% set activeValue = 3 %}
+                        {% endif %}
+                            <div class="form-group">
+                                <p class="label-type">Contact Attempted</p>
+                                <div class="clearfix">
+                                    {{ render(controller('ZesharCRMCoreBundle:FormItems:contactStatusSelect', {
+                                        'activeValue' : activeValue
+                                    })) }}
+                                </div>
+                            </div>
+                    {% endif %}
+
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <label for="type3">Contact Type</label>
+                            {{ render(controller('ZesharCRMCoreBundle:FormItems:contactTypeSelect', {
+                            'activeValue': object.getContactCard().getContacts()
+                            })) }}
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="type3">Contact Result</label>
+                            {{ render(controller('ZesharCRMCoreBundle:FormItems:contactResultSelect', {
+                            })) }}
+                        </div>
+                    </div>{#
+                {% endif %}
+            {% endif %}#}
+
+            <input type="hidden" id="lead_id" name="lead_id" value="{{ object.getId() }}" />
+            {{ include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_block_actions.html.twig') }}
+        </form>
+    </div>
+</div>
+{#{{ include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_popup_milestone_sold.html.twig') }}#}

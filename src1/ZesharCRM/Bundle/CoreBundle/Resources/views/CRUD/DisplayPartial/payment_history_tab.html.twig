@@ -1,0 +1,45 @@
+<div class="custom-block calendar-block">
+    <div class="custom-head clearfix">
+        <div class="custom-menu">
+            <button class="up-custom"></button>
+        </div>
+        <h3>Payment History</h3>
+    </div>
+    <div class="clearfix">
+        <div id="" class="display-block-persistent" data-controller="leads_display" data-action="leadEvent">
+            <div class="form-column">
+                <div class="small-table">
+                    <table>
+                        <tr>
+                            <th width="65%">Payment History</th>
+                            <th width="35%"></th>
+                        </tr>
+                    </table>
+                    <div>
+                        <table>
+                            <tr>
+                                <td width="20%"><b>Date</b></td>
+                                <td width="20%"><b>Actor</b></td>
+                                <td width="40%"><b>Description</b></td>
+                                <td width="20%"><b>Amount</b></td>
+                            </tr>
+                        </table>
+                        <div style="height: 500px; overflow: auto; width:97%;">
+                            <hr />
+                            <table class="payments">
+                                {% for payment in object.creator.payments %}
+                                    <tr>
+                                        <td>{{ payment.date|date('d/m/Y') }}</td>
+                                        <td>?</td>
+                                        <td>{{ payment.description }}</td>
+                                        <td>{{ payment.amount }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

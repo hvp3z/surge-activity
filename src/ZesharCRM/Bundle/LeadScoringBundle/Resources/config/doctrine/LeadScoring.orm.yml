@@ -1,0 +1,24 @@
+ZesharCRM\Bundle\LeadScoringBundle\Entity\LeadScoring:
+    type: entity
+    table: scoring
+    repositoryClass: ZesharCRM\Bundle\LeadScoringBundle\Repository\LeadScoringRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        scoring:
+            type: text
+        total:
+            type: integer
+    lifecycleCallbacks: {  }
+
+    oneToOne:
+        opportunity:
+            targetEntity: ZesharCRM\Bundle\CoreBundle\Entity\LeadSubject
+            mappedBy: null
+        lead:
+            targetEntity: ZesharCRM\Bundle\CoreBundle\Entity\Lead
+            mappedBy: null

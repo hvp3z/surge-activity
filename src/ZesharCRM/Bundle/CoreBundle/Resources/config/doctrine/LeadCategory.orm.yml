@@ -1,0 +1,62 @@
+ZesharCRM\Bundle\CoreBundle\Entity\LeadCategory:
+    type: entity
+    table: lead_category
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        effectiveDate:
+            type: integer
+            column: effective_date
+            nullable: false
+        review:
+            type: integer
+            column: review
+            nullable: true
+        points:
+            type: integer
+            nullable: false
+        value:
+            type: integer
+            nullable: false
+        lineCode:
+            type: string
+            length: 255
+            column: line_code
+            nullable: true
+        lspValue:
+            type: string
+            length: 255
+            column: lsp_value
+            nullable: true
+        average:
+            type: float
+            nullable: true
+    lifecycleCallbacks: {  }
+    oneToMany:
+
+        lead:
+            targetEntity: LeadSubject
+            cascade: ["persist", "remove"]
+            mappedBy: leadCategory
+#        opportunity:
+#            targetEntity: Opportunity
+#            cascade: ["persist"]
+#            mappedBy: opportunityCategory
+
+    manyToOne:
+        creator:
+            targetEntity: User
+            cascade: {  }
+            mappedBy: null
+            inversedBy: leadCategories
+            joinColumns:
+                creator:
+                    nullable: true
+                    referencedColumnName: id

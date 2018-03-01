@@ -1,0 +1,308 @@
+{#
+
+This file is part of the Sonata package.
+
+(c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+
+#}
+{% set _preview      = block('preview') %}
+{% set _form         = block('form') %}
+{% set _show         = block('show') %}
+{% set _list_table   = block('list_table') %}
+{% set _list_filters = block('list_filters') %}
+{% set _tab_menu     = block('tab_menu') %}
+{% set _content      = block('content') %}
+{% set _title        = block('title') %}
+{% set _breadcrumb   = block('breadcrumb') %}
+{% set _actions      = block('actions') %}
+{% set _navbar_title = block('navbar_title') %}
+{% set googleApiKey  = 'AIzaSyBYXDwzf_vXlHGkLj5vKQK7umVswZu7-t4' %}
+<!DOCTYPE html>
+<html {% block html_attributes %}class="no-js"{% endblock %}>
+    <head>
+        {% block meta_tags %}
+            <meta charset="UTF-8">
+            <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        {% endblock %}
+
+        {% block stylesheets %}
+
+            {% for stylesheet in admin_pool.getOption('stylesheets', []) %}
+                <link rel="stylesheet" type="text/css"  href="{{ asset(stylesheet) }}"  />
+            {% endfor %}
+            <link rel="stylesheet" type="text/css"  href="{{ asset('bundles/zesharcrmcore/css/sonata_fixes.css') }}"  />
+            <link rel="stylesheet" type="text/css"  href="{{ asset('bundles/zesharcrmcore/css/sonata_login_page_fixes.css') }}"  />
+            <meta name="description" content="" />
+            <meta name="keywords" content="" />
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+            <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+            <link rel="stylesheet" href="{{ asset('css/select2.css') }}">
+            <!--[if lt IE 9]><link rel="stylesheet" href="css/ie_style.css" type="text/css" ><![endif]-->
+
+            {% if app.user  %}
+                <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+            {% else %}
+                <link rel="stylesheet" href="{{ asset('css/style3.css') }}">
+            {% endif %}
+
+
+        {% endblock %}
+
+        {% block javascripts %}
+
+            {% if 0 %} {# do not output these scripts - they will be derived later from sonata #}
+                <script src="{{ asset('js/jquery-1.9.1.min.js') }}"></script>
+                <script src="{{ asset('js/jquery-ui-1.10.4.custom.min.js') }}"></script>
+                <script src="{{ asset('js/select2.min.js') }}"></script>
+            {% endif %}
+
+            <script>
+                window.SONATA_CONFIG = {
+                    CONFIRM_EXIT: {% if admin_pool is defined and admin_pool.getOption('confirm_exit') %}true{% else %}false{% endif %},
+                    USE_SELECT2: {% if admin_pool is defined and admin_pool.getOption('use_select2') %}true{% else %}false{% endif %}
+                };
+                window.SONATA_TRANSLATIONS = {
+                    CONFIRM_EXIT:  '{{ 'confirm_exit'|trans({}, 'SonataAdminBundle')|escape('js') }}'
+               };
+            </script>
+            {% for javascript in admin_pool.getOption('javascripts', []) %}
+                {% if not (javascript ends with 'select2.min.js') %}
+                    <script src="{{ asset(javascript) }}" type="text/javascript"></script>
+                {% endif %}
+            {% endfor %}
+
+            <script src="{{ asset('js/jquery.cookie.js') }}"></script>
+            <script src="{{ asset('js/jquery.timepicker.min.js') }}"></script>
+            <script src="{{ asset('js/select2.min.js') }}"></script>
+            <script src="{{ asset('js/actions.js') }}"></script>
+            <!--[if lt IE 9]><script src="{{ asset('js/html5shiv.js') }}"></script><![endif]-->
+
+            {% if enable_bundles.ZesharCRMCallsBundle is defined %}
+                <script type="text/javascript" src="//media.twiliocdn.com/sdk/js/client/v1.3/twilio.min.js"></script>
+                <script type="text/javascript" src="{{ asset('bundles/zesharcrmcore/js/twilio.js') }}"></script>
+            {% endif %}
+            {% if enable_bundles.ZesharCRMCoreBundle is defined %}
+            <script type="text/javascript" src="{{ asset('bundles/zesharcrmcore/js/cityStateAutoload.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/zesharcrmcore/js/timezones.full.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/zesharcrmcore/js/timezones.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('bundles/zesharcrmcore/js/validation.js') }}"></script>
+                <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key={{ googleApiKey }}&signed_in=true&libraries=places"></script>
+                <script type="text/javascript" src="{{ asset('bundles/zesharcrmcore/js/index.js') }}"></script>
+            {% endif %}
+
+            {% if (pageTitle is not defined) and (activityName is not defined) %}
+                <script>
+                    $(function() {
+                        document.title = document.title.replace('Admin', 'SurgeActivity');
+                    });
+                </script>
+            {% endif %}
+        {% endblock %}
+
+        <title>
+            {{ 'Admin'|trans({}, 'SonataAdminBundle') }}
+
+            {% if _title is not empty %}
+                {{ _title|raw }}
+            {% else %}
+                {% if action is defined %}
+                    -
+                    {% for menu in admin.breadcrumbs(action) %}
+                        {% if not loop.first %}
+                            {%  if loop.index != 2 %}
+                                &gt;
+                            {% endif %}
+
+                            {{ menu.label }}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endif%}
+        </title>
+    </head>
+    <body {% block body_attributes %}class="sonata-bc skin-black fixed"{% endblock %}>
+
+
+        <div class="wrapper" style="margin-top: 0;">
+
+            <header>
+                {% if app.user %}
+                    <div class="menu-wrap">
+                        {{ knp_menu_render('main', {'template': 'ZesharCRMCoreBundle::main_menu.html.twig'}) }}
+                    </div>
+                {% else %}
+                    <div class="menu-wrap">
+                        <ul class="menu">
+                             <li id="login-logo">
+                                <img src="{{ asset('images/logo2.png') }}" alt="" width="41px">
+                                <p class="title-logo">Surge<span>Activity</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                {% endif %}
+
+                {% if app.user %}
+                    <div class="title-wrap">
+                        {% if admin_pool is defined %}
+                            <nav class="navbar navbar-static-top" style="position:relative; z-index: auto;" role="navigation">
+                                <div class="navbar-left">
+                                    {% block sonata_breadcrumb %}
+
+                                        {% if not is_granted('ROLE_ULTRA_ADMIN') %}
+
+                                            {% if _breadcrumb is not empty or action is defined %}
+                                                <ol class="nav navbar-top-links breadcrumb">
+                                                    {% if _breadcrumb is empty %}
+                                                        {% if action is defined %}
+                                                            {% set adminBreadcrumbs = admin.breadcrumbs(action) %}
+                                                            {% set skip =  false %}
+                                                            {% for i,menu in adminBreadcrumbs %}
+                                                                {% if not (  (not is_granted('ROLE_SUPER_ADMIN')) and '/admin/dashboard' in menu.getUri()) %}
+                                                                    {% if (not loop.last) %}
+                                                                        <li>
+                                                                            {% if menu.uri is not empty %}
+                                                                                {% set skip =  false %}
+                                                                                    {% if not ('billing_info/list' in menu.getUri()) %}
+                                                                                        <a href="{{ menu.uri }}">{{ menu.label|raw }}</a>
+                                                                                    {% else %}
+                                                                                        <span style="color:#999;">Account Info</span>
+                                                                                        {% set skip =  true %}
+                                                                                    {% endif %}
+                                                                            {% else %}
+                                                                                {{ menu.label }}
+                                                                            {% endif %}
+                                                                        </li>
+                                                                    {% else %}
+                                                                        {% if not skip %}
+                                                                            <li class="active"><span>{{ menu.label }}</span></li>
+                                                                        {% endif %}
+                                                                    {% endif %}
+                                                                {% endif %}
+                                                            {% endfor %}
+                                                        {% endif %}
+                                                    {% else %}
+                                                        {{ _breadcrumb|raw }}
+                                                    {% endif %}
+                                                </ol>
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endblock sonata_breadcrumb %}
+                                </div>
+                                {%  if object is defined and lead_subject.checkType(object) == true %}
+                                    <div class="navbar-right">
+                                        <ol class="nav navbar-top-links">
+                                            {% if app.request.get('leadCampaign') is defined %}
+                                                {% set leadCampaign = app.request.get('leadCampaign') %}
+                                            {% else %}
+                                                {% set leadCampaign = '' %}
+                                            {% endif %}
+
+                                            {% set previousId = lead_subject.getPreviousId(object, leadCampaign) %}
+                                            {% if previousId is not empty %}
+                                                <li>
+                                                    <a href="{{ admin.generateUrl('show', {'id': previousId, 'leadCampaign': leadCampaign}) }}">&lt;&lt; Previous</a>
+                                                </li>
+                                            {% endif %}
+                                            <li>
+                                                <a href="{{ admin.generateUrl('list') }}">Back to list</a>
+                                            </li>
+                                            {% set nextId = lead_subject.getNextId(object, leadCampaign) %}
+
+                                            {% if nextId is not empty %}
+                                                <li class=""><a href="{{ admin.generateUrl('show', {'id': nextId, 'leadCampaign': leadCampaign}) }}">Next &gt;&gt;</a></li>
+                                            {% endif %}
+                                        </ol>
+                                    </div>
+                                {% endif %}
+
+                            </nav>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            </header>
+
+            {% block sonata_wrapper %}
+                <div class="{% block sonata_whole_content_wrapper_classes %}content clear-fix{% endblock %}">
+                    {% block sonata_page_content %}
+                        {% block sonata_page_content_header %}
+                            {% block sonata_page_content_nav %}
+                                {% if _tab_menu is not empty or _actions is not empty %}
+                                    <div class="filter-wrap clearfix">
+                                        <div class="right-column">
+                                            {{ block('sonata_admin_filter_right_column') }}
+                                        </div>
+                                        <div class="left-column">
+                                            {{ block('sonata_admin_filter_left_column') }}
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% if enable_bundles.ZesharCRMCallsBundle is defined %}
+                                    {{ render(controller('ZesharCRMCallsBundle:CallReporting:createCall')) }}
+                                {% endif %}
+                            {% endblock sonata_page_content_nav %}
+
+                        {% endblock sonata_page_content_header %}
+
+                        <div>
+                            {% block sonata_admin_content %}
+
+                                {% block notice %}
+                                    {% include 'SonataCoreBundle:FlashMessage:render.html.twig' %}
+                                {% endblock notice %}
+
+                                {{ block('sonata_admin_right_column') }}
+
+                                <div class="left-column">
+
+                                    {% if _preview is not empty %}
+                                        <div class="sonata-ba-preview">{{ _preview|raw }}</div>
+                                    {% endif %}
+
+                                    {% if _content is not empty %}
+                                        <div class="sonata-ba-content">{{ _content|raw }}</div>
+                                    {% endif %}
+
+                                    {% if _show is not empty %}
+                                        <div class="sonata-ba-show">{{ _show|raw }}</div>
+                                    {% endif %}
+
+                                    {% if _form is not empty %}
+                                        <div class="sonata-ba-form">{{ _form|raw }}</div>
+                                    {% endif %}
+
+                                    {% if _list_table is not empty or _list_filters is not empty %}
+                                        <div class="table-wrap">
+                                            <div class="table-block">
+                                                <div class="custom-content" style="padding-bottom: 35px;">
+                                                    <div>
+                                                        {{ _list_table|raw }}
+                                                    </div>
+
+                                                    {% if _list_filters|trim %}
+                                                        <div class="sonata-ba-filter col-md-2" style="display:none;">
+                                                            {{ _list_filters|raw }}
+                                                        </div>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            {% endblock sonata_admin_content %}
+                        </div>
+                    {% endblock sonata_page_content %}
+                </div>
+            {% endblock sonata_wrapper %}
+        </div>
+        <footer>
+            <p class="title-logo">Surge<span>Activity</span></p>
+            <p class="copy-left">&copy; {{ "now"|date("Y") }} Zeshar</p>
+            <p class="copy-right">Powered By Zesharcrm</p>
+        </footer>
+
+    </body>
+</html>

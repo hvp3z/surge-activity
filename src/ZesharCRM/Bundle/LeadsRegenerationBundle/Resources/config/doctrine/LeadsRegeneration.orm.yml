@@ -1,0 +1,18 @@
+ZesharCRM\Bundle\LeadsRegenerationBundle\Entity\LeadsRegeneration:
+    type: entity
+    table: leads_regeneration
+    repositoryClass: ZesharCRM\Bundle\LeadsRegenerationBundle\Repository\LeadsRegenerationRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        regenerationAt:
+            type: datetime
+    lifecycleCallbacks: {  }
+    oneToOne:
+        lead:
+            targetEntity: ZesharCRM\Bundle\CoreBundle\Entity\Lead
+            mappedBy: null

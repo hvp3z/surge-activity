@@ -1,0 +1,16 @@
+<td{% block sonata_list_field_attributes %} class="sonata-ba-list-field sonata-ba-list-field-{{ field_description.type }} sonata-list-field-{{ field_description.name }}" objectId="{{ admin.id(object) }}"{% endblock %}>
+    {% if object.getTypeString() is defined %}
+        {% set typeString = object.getTypeString() %}
+    {% else %}
+        {% set typeString = object.getLead().getTypeString() %}
+    {% endif %}
+    {% if typeString == 'Warm' %}
+        <span class="tile-type warm">Warm</span>
+    {% endif %}
+    {% if typeString == 'Cold' %}
+        <span class="tile-type cold">Cold</span>
+    {% endif %}
+    {% if typeString == 'Hot' %}
+        <span class="tile-type hot">Hot</span>
+    {% endif %}
+</td>

@@ -1,0 +1,70 @@
+<style>
+    .clock {
+        width:100%;
+        height: 100%;
+        margin:0px auto;
+        padding: 10px 0;
+        color:#fff;
+        background: #000000;
+    }
+
+    .Date {
+        font-family:'BebasNeueRegular', Arial, Helvetica, sans-serif;
+        font-size:14px;
+        text-align:center;
+        text-shadow:0 0 5px #00c6ff;
+    }
+
+    .clock ul {
+        width:100%;
+        margin:0 auto;
+        padding:0px;
+        list-style:none;
+        text-align:center;
+    }
+
+    .clock ul li {
+        display:inline;
+        font-size:14px;
+        text-align:center;
+        font-family:'BebasNeueRegular', Arial, Helvetica, sans-serif;
+        text-shadow:0 0 5px #00c6ff;
+    }
+
+    .point {
+        position:relative;
+        -moz-animation:mymove 1s ease infinite;
+        -webkit-animation:mymove 1s ease infinite;
+        padding-left:10px;
+        padding-right:10px;
+    }
+
+    @-webkit-keyframes mymove
+    {
+        0% {opacity:1.0; text-shadow:0 0 20px #00c6ff; }
+        50% {opacity:0;text-shadow:none;}
+        100% {opacity:1.0;text-shadow:0 0 20px #00c6ff;}
+    }
+
+    @-moz-keyframes mymove
+    {
+        0% { opacity:1.0; text-shadow:0 0 20px #00c6ff; }
+        50% { opacity:0;text-shadow:none;}
+        100% {  opacity:1.0;text-shadow:0 0 20px #00c6ff;}
+    }
+
+</style>
+{% block widget %}
+    <div class="clock">
+        <div class="Date">
+        </div>
+        <ul>
+            <li class="hours"> </li>
+            <li class="point">:</li>
+            <li class="min"> </li>
+            <li class="point">:</li>
+            <li class="sec"> </li>
+        </ul>
+    </div>
+
+{% endblock %}

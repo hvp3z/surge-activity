@@ -1,0 +1,49 @@
+{% block widget %}
+    <div class="custom-block table-block">
+        <div class="custom-head clear-fix">
+            <div class="custom-menu">
+                <button class="up-custom"></button>
+                <button class="settings-custom"></button>
+                <button class="close-custom"></button>
+            </div>
+            <div class="custom-menu-select">
+                {% if persons is not empty %}
+                    <select class="user_data">
+                        {% for person in persons %}
+                            <option {% if selectedUser == person.username %} selected {% endif %}>{{ person.username}}</option>
+                        {% endfor %}
+                    </select>
+                {% endif %}
+            </div>
+            <h3>Opportunities</h3>
+        </div>
+        <div class="custom-content">
+            <table class="custom-table">
+                <thead>
+                <tr>
+                    <th><span>Name</span><a class="filter-link" href="#"></a></th>
+                    <th><span>Status</span><a class="filter-link" href="#"></a></th>
+                    <th><span>Product</span><a class="filter-link" href="#"></a></th>
+                    <th><span>Account Name</span><a class="filter-link" href="#"></a></th>
+                    <th><span>Official Phone</span><a class="filter-link" href="#"></a></th>
+                    <th><span>Email</span><a class="filter-link" href="#"></a></th>
+                    <th><span>Opportunity Score</span><a class="filter-link" href="#"></a></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item in data %}
+                    <tr >
+                        <td><span>{{ item.name }}</span></td>
+                        <td><span>{{ opportunityStatus[item.status] }}</span></td>
+                        <td><span>{{ item.opportunityCategory }}</span></td>
+                        <td><span>{% if item.contactCard is not null %} {{ item.contactCard.firstName }} {{ item.contactCard.lastName }} {% endif %}</span></td>
+                        <td><span>{% if item.contactCard is not null %} {{ item.contactCard.phone }} {% endif %}</span></td>
+                        <td><span>{% if item.contactCard is not null %} {{ item.contactCard.email }} {% endif %}</span></td>
+                        <td><span>No data</span></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

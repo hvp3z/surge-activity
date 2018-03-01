@@ -1,0 +1,28 @@
+{% block widget %}
+    <div class="box" style="margin:10px auto">
+        <div class="box-body ">
+            {% if persons is not empty %}
+                <select class="user_data">
+                    {% for person in persons %}
+                        <option {% if selectedUser == person.username %} selected {% endif %}>{{ person.username}}</option>
+                    {% endfor %}
+                </select>
+            {% endif %}
+            <table class="table" style="border: solid 1px darkgrey;border-collapse: collapse; width: 96%;margin:3px">
+                 <thead>
+                   <tr>
+                       <th>Title</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                 {% for key, value in data %}
+                     <tr >
+                         <td style="border: 1px solid darkgrey;padding: 5px" >{{ key }}</td>
+                         <td style="border: 1px solid darkgrey;padding: 5px" >{{ value }}</td>
+                     </tr>
+                 {% endfor %}
+                 </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

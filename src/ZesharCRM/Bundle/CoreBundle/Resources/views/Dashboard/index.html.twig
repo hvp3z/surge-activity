@@ -1,0 +1,43 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Dashboard{% endblock %}
+{% block page_title %}Dashboard{% endblock %}
+
+{% block left_column %}
+    <div class="table-wrap" data-url="{{ app.request.getSchemeAndHttpHost()}}{{ app.request.getBaseURL() }}">
+        <div class="drop" default_user="{{ userName }}">
+        </div>
+    </div>
+    {% if persons is not empty %}
+        <select class="user_data" style="display: none">
+            <option></option>
+            {% for person in persons %}
+                <option>{{ person.username}}</option>
+            {% endfor %}
+        </select>
+    {% endif %}
+
+    <style>
+        .table-wrap .custom-block {
+            height: auto!important;
+        }
+    </style>
+{% endblock %}
+
+{% block widget_list %}
+    <select class="custom-select widget">
+        <option></option>
+        {% for widget in widgets %}
+        <option name="{{ widget.title }}" value="{{ widget.title }}" data_x="{{ widget.width }}" data_y="{{ widget.height }}" >{{ widget.title }}</option>
+        {% endfor %}
+    </select>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css"  href="{{ asset('bundles/zesharcrmcore/css/sonata_fixes.css') }}"  />
+{% endblock %}
+{% block javascripts %}
+    {#<script src="http://code.jquery.com/jquery-1.10.2.js"></script>#}
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="{{ asset('bundles/zesharcrmcore/js/dashboard.js') }}"></script>
+{% endblock %}

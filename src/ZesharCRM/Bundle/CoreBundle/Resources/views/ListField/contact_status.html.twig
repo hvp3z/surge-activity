@@ -1,0 +1,17 @@
+<td{% block sonata_list_field_attributes %} class="sonata-ba-list-field sonata-ba-list-field-{{ field_description.type }} sonata-list-field-{{ field_description.name }}" objectId="{{ admin.id(object) }}"{% endblock %}>
+    {% if object.getContactCard() is not empty %}
+        {% if object.getContactCard().getCallStatusString() is not empty %}
+            {% if object.getContactCard().getCallStatusString() == 'Yes' %}
+                <span class="contact-status yes">Yes</span>
+            {% endif %}
+            {% if object.getContactCard().getCallStatusString() == 'No' %}
+                <span class="contact-status no">No</span>
+            {% endif %}
+            {% if object.getContactCard().getCallStatusString() == 'Neglected' %}
+                <span class="contact-status neglect">Neglected</span>
+            {% endif %}
+        {% else %}
+            <span class="contact-status no">No</span>
+        {% endif %}
+    {% endif %}
+</td>

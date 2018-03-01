@@ -1,0 +1,33 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBYXDwzf_vXlHGkLj5vKQK7umVswZu7-t4&signed_in=true&libraries=places"></script>
+	<script type="text/javascript" src="{{ asset('bundles/zesharcrmcore/js/cityStateAutoload.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/zesharcrmcore/js/timezones.full.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/zesharcrmcore/js/timezones.js') }}"></script>
+
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css"  href="{{ asset('bundles/sonataadmin/vendor/bootstrap/dist/css/bootstrap.min.css') }}"  />
+	<link rel="stylesheet" type="text/css"  href="{{ asset('bundles/sonataadmin/vendor/AdminLTE/css/font-awesome.min.css') }}"  />
+	<link rel="stylesheet" type="text/css"  href="{{ asset('bundles/sonataadmin/vendor/AdminLTE/css/ionicons.min.css') }}"  />
+	<link rel="stylesheet" type="text/css"  href="{{ asset('bundles/sonataadmin/vendor/AdminLTE/css/AdminLTE.css') }}"  />
+	<link rel="stylesheet" type="text/css"  href="{{ asset('bundles/sonatacore/vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css') }}"  />
+	<link rel="stylesheet" type="text/css"  href="{{ asset('bundles/sonataadmin/vendor/jqueryui/themes/base/jquery-ui.css') }}"  />
+	<link rel="stylesheet" type="text/css"  href="{{ asset('bundles/zesharcrmcore/css/account-page-styles.css') }}"  />
+	<style>
+		footer {
+			margin-top: 0px;
+		}
+		.menu-wrap{
+			height: 49px!important;
+		}
+
+	</style>
+
+
+    {{ include('ZesharCRMCoreBundle:CRUD:DisplayPartial/account_show_block_actions_js.html.twig') }}
+
+    {{ include('ZesharCRMCoreBundle:CRUD:DisplayPartial/edit_account_tab.html.twig') }}
+
+{% endblock %}

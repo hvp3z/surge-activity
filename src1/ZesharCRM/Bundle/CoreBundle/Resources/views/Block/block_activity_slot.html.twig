@@ -1,0 +1,85 @@
+{% block activity_slot_fields %}
+    {% block javascripts %}
+        <script type="text/javascript" src="{{ asset('bundles/zesharcrmcore/js/activity_creation_block.js') }}"></script>
+        {% if url == 'edit' %}
+            <script>
+                $(function(){
+                    autocomplete();
+                });
+            </script>
+        {% endif %}
+        {% if url == 'create' %}
+            <script>
+                $(function(){
+                    showDate();
+                });
+            </script>
+        {% endif %}
+
+    {% endblock %}
+
+    {% set currentYear = "now"|date("Y") %}
+    {% set lastYear = currentYear + 10 %}
+
+    {% set ends = ['th','st','nd','rd','th','th','th','th','th','th'] %}
+    {% set days = {1: 'Monday', 2: 'Tuesday', 3: 'Wednesday', 4: 'Thursday', 5: 'Friday', 6: 'Saturday', 7: 'Sunday'} %}
+
+    <label class="control-label required">Slot</label>
+
+    <div class="sonata-ba-field sonata-ba-field-standard-natural  ">
+        <div id="custom_slot" class="form-control">
+            {#for daily frequency#}
+            <div style="display:block;" id="time" class="selected">
+                <select id="slot_time_hours">
+                    {% for k in 0..12 %}
+                        <option value="{{ k }}">{% if k<10 %}0{% endif %}{{ k }}</option>
+                    {% endfor %}
+                </select>:<select id="slot_time_minutes">
+                    {% for k in 0..59 %}
+                        <option value="{{ k }}">{% if k<10 %}0{% endif %}{{ k }}</option>
+                    {% endfor %}
+                </select>
+                <select id="slot_time_option">
+                    <option value="0">am</option>
+                    <option value="1">pm</option>
+                </select>
+            </div>
+
+            {#for weekly frequency#}
+            <div style="display:none;" id="day">
+                <select id="slot_day">
+                    {% for k in days %}
+                        <option value="{{ k }}">{{ k }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            {#for monthly frequency#}
+            <div style="display:none;" id="date">
+                <select id="slot_date">
+                    {% for k in 1..31 %}
+                        {% if (k%100) >= 11 and (k%100) <= 13 %}
+                            <option value="{{ k }}">{{ k }}th</option>
+                        {% else %}
+                            <option value="{{ k }}">{{ k }}{{ ends[k%10] }}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
+
+            {#for yearly frequency#}
+            <div style="display:none;" id="month_date">
+                <select id="slot_month">
+                    {% for j in 1..12 %}
+                        <option  value="{{ j }}">{{ j |date('2012-' ~ j ~ '-01') |date('M') }}</option>
+                    {% endfor %}
+                </select>
+                <select id="slot_month_date">
+                    {% for j in 1..31 %}
+                        <option  value="{{ j }}">{{ j }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+ZesharCRM\Bundle\GoalsBundle\Entity\LeadCategoryExtension:
+    type: entity
+    table: lead_category
+    inheritanceType: SINGLE_TABLE
+    discriminatorMap:
+        leadCategoryExtension: ZesharCRM\Bundle\GoalsBundle\Entity\LeadCategoryExtension
+    lifecycleCallbacks: {  }
+    oneToMany:
+        goal:
+            targetEntity: ZesharCRM\Bundle\GoalsBundle\Entity\Goal
+            cascade: ["persist"]
+            mappedBy: goalCategory

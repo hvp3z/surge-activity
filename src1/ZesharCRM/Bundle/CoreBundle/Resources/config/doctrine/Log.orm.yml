@@ -1,0 +1,34 @@
+ZesharCRM\Bundle\CoreBundle\Entity\Log:
+    type: entity
+    table: log
+    repositoryClass: ZesharCRM\Bundle\CoreBundle\Repository\LogRepository
+    id:
+        id:
+            type: integer
+            id: true
+            nullable: false
+            generator:
+                strategy: AUTO
+    fields:
+       performedAt:
+            type: datetime
+            column: performed_at
+            nullable: false
+            gedmo:
+                timestampable:
+                    on: create
+       operationType:
+            type: integer
+            column: operation_type
+    lifecycleCallbacks: {  }
+    manyToOne:
+        performer:
+            targetEntity: User
+            cascade: ["remove"]
+            mappedBy: null
+            inversedBy: performedActions
+            joinColumns:
+                performer:
+                    nullable: false
+                    referencedColumnName: id
+            orphanRemoval: false

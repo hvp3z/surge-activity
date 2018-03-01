@@ -1,0 +1,87 @@
+<script type=text/javascript>
+    $(document).ready(function() {
+        "use strict";
+
+        var goalReport = {
+
+            tableRowWrapper: $('.sonata-ba-view-container'),
+
+            commonReport: function(){
+
+//                goalReport.tableRowWrapper.on('click', 'a.report-username', function(){
+//
+//                    var allChildTables = $('.child-table');
+//                    allChildTables.hide();
+//
+//                    var childTable = $(this).parents('tr').next();
+//
+//                    if (childTable.hasClass('visible')) {
+//                        console.log(childTable);
+//                        childTable.hide();
+//                        childTable.removeClass('visible');
+//                    } else {
+//                        childTable.show();
+//                        allChildTables.removeClass('visible');
+//                        childTable.addClass('visible');
+//                    }
+//
+//                });
+
+                goalReport.tableRowWrapper.on('click', '.report-child', function(){
+
+
+                    var allChildTablesWrapper = $('.child-table');
+                    allChildTablesWrapper.hide();
+
+                    var childTableWrapper = $(this).parents('tr').next();
+
+                   // if (childTableWrapper.find())
+
+//                    if (childTableWrapper.hasClass('visible')) {
+//                        console.log(childTableWrapper);
+//                        childTableWrapper.hide();
+//                        childTableWrapper.removeClass('visible');
+//                    } else {
+//                        childTableWrapper.show();
+//                        allChildTables.removeClass('visible');
+//                        childTableWrapper.addClass('visible');
+//                    }
+
+                    var entityType = $(this).data('childType');
+
+                    var childTable = $('.child-goal-report-table');
+                    childTable.hide();
+                    var currentChildTable = $('.child-goal-report-table.'+entityType);
+
+                    if (childTableWrapper.hasClass('visible')) {
+                        if (currentChildTable.hasClass('visible')) {
+                            childTableWrapper.hide();
+                            childTableWrapper.removeClass('visible');
+                            currentChildTable.removeClass('visible');
+                        } else {
+                            childTableWrapper.show();
+                            allChildTablesWrapper.removeClass('visible');
+                            childTableWrapper.addClass('visible');
+                            childTable.removeClass('visible');
+                            currentChildTable.show().addClass('visible');
+                        }
+                    } else {
+                        childTableWrapper.show();
+                        allChildTablesWrapper.removeClass('visible');
+                        childTableWrapper.addClass('visible');
+                        currentChildTable.show().addClass('visible');
+                    }
+
+                    return false;
+            });
+
+            },
+
+            init: function(){
+                goalReport.commonReport();
+            }
+        };
+
+        goalReport.init();
+    });
+</script>

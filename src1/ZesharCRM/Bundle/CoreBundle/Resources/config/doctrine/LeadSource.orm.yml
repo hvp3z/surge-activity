@@ -1,0 +1,30 @@
+ZesharCRM\Bundle\CoreBundle\Entity\LeadSource:
+    type: entity
+    table: lead_source
+    repositoryClass: ZesharCRM\Bundle\CoreBundle\Repository\LeadSourceRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
+    oneToMany:
+        lead:
+            targetEntity: LeadSubject
+            cascade: ["persist"]
+            mappedBy: leadSource
+    manyToOne:
+        creator:
+            targetEntity: User
+            cascade: {  }
+            mappedBy: null
+            inversedBy: leadSources
+            joinColumns:
+                creator:
+                    nullable: true
+                    referencedColumnName: id

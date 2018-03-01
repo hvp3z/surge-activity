@@ -1,0 +1,59 @@
+ZesharCRM\Bundle\CallsBundle\Entity\CallReporting:
+    type: entity
+    table: call_reporting
+    repositoryClass: ZesharCRM\Bundle\CallsBundle\Repository\CallReportingRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        description:
+            type: text
+            nullable: false
+        startsAt:
+            type: datetime
+            nullable: false
+            column: starts_at
+        duration:
+            type: time
+            nullable: true
+        status:
+            type: integer
+            nullable: false
+        type:
+            type: integer
+            nullable: false
+        eventsType:
+            type: integer
+            column: events_type
+    lifecycleCallbacks: {  }
+    manyToOne:
+        contact:
+            targetEntity: ZesharCRM\Bundle\CoreBundle\Entity\Contact
+            cascade: ["persist"]
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                contact:
+                    nullable: false
+                    referencedColumnName: id
+        lead:
+            targetEntity: ZesharCRM\Bundle\CoreBundle\Entity\LeadSubject
+            cascade: ["persist"]
+            mappedBy: null
+            inversedBy: callReports
+            joinColumns:
+                lead:
+                    referencedColumnName: id
+            orphanRemoval: false
+        assignee:
+            targetEntity: ZesharCRM\Bundle\CoreBundle\Entity\User
+            cascade: ["persist"]
+            mappedBy: null
+            inversedBy: assignedCallReports
+            joinColumns:
+                assignee:
+                    referencedColumnName: id
+            orphanRemoval: false

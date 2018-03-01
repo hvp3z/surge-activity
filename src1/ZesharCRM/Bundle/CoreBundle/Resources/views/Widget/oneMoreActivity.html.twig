@@ -1,0 +1,42 @@
+{% block widget %}
+    <div class="custom-block">
+        <div class="custom-head clear-fix">
+            <div class="custom-menu">
+                <button class="up-custom"></button>
+                <button class="settings-custom"></button>
+            </div>
+            <h3>My Activities</h3>
+        </div>
+        <div class="custom-content">
+            <table class="table-widget">
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th>Contacted</th>
+                    <th>Quoted</th>
+                    <th>Sold</th>
+                </tr>
+                {% for item in activities %}
+                    <tr>
+                        <td>{{ item.title }}</td>
+                        {% if item.allContactedCount != 0 %}
+                            {% set percentage = '%.2f'|format(item.yesContactedCount*100/item.allContactedCount) %}
+                        {% else %}
+                            {% set percentage = '0.00' %}
+                        {% endif %}
+                        <td>
+                            <div class="column-line">
+                                <i data-percent-width="{{ percentage  }}%" class="icon-line icon-widget"></i>
+                            </div>
+                        </td>
+                        <td>
+                            {{ percentage }} %
+                        </td>
+                        <td>{{ item.quoteCount }}</td>
+                        <td style="color: #00a65a">{{ item.soldCount }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock %}

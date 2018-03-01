@@ -1,0 +1,107 @@
+{% extends 'ZesharCRMCoreBundle::sonata_layout.html.twig' %}
+
+{% block breadcrumb %}
+    <li><a href="{{ url('sonata_admin_dashboard') }}">{% trans %}Dashboard{% endtrans %}</a></li>
+    <li class="active">Goal Page</li>
+{% endblock %}
+
+{% block content %}
+    {{ include('ZesharCRMGoalsBundle:CRUD:goal_list_js.html.twig') }}
+    <div class="goal-table-wrap table-wrap ui-sortable">
+        <div class="box box-primary">
+            <table class="report-table table-sonata-list table-striped table table-bordered">
+                <thead>
+                <tr>
+                    <th colspan="4">
+                        Portfolio
+                    </th>
+                    <th colspan="4">
+                        New Targets
+                    </th>
+                </tr>
+                <tr>
+                    <th>Item</th>
+                    <th>Points</th>
+                    <th>Items in Force</th>
+                    <th>Total Points</th>
+                    <th>Growth Desired</th>
+                    <th>Target Items</th>
+                    <th>Total Points</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% if result %}
+                    {% set globalPoints = 0 %}
+                    {% set globalPrev = 0 %}
+                    {% set globalPrevTotal = 0 %}
+                    {% set globalPercent = 0 %}
+                    {% set globalEstimated = 0 %}
+                    {% set globalPostTotal = 0 %}
+                    {% for key, item in result %}
+                        {% set globalPoints = globalPoints + item.points %}
+                        {% set globalPrev = globalPrev + item.prev %}
+                        {% set globalPrevTotal = globalPrevTotal + item.prev*item.points %}
+                        {% set globalEstimated = globalEstimated + item.estimated %}
+                        {% set globalPostTotal = globalPostTotal + item.estimated*item.points %}
+
+                        <tr class="sonata-ba-view-container" data-product-id="{{ item.productId }}">
+                            <td>
+                                <a href="{{ path('zeshar_crm_goal_users', {'id': item.productId}) }}">{{ key }}</a>
+                            </td>
+                            <td class="goal-points">
+                                {{ item.points }}
+                            </td>
+                            <td class="goal-prev goal-editable editable-on-text" data-field-name='prev'>
+                                {{ item.prev }}
+                            </td>
+                            <td class="goal-prev-total">
+                                {{ item.prev*item.points}}
+                            </td>
+                            <td class="goal-percent goal-editable" data-field-name='percent' >
+                               <input type="number" class="goal-text-edit edit-field percent" value="{{ item.percent }}" /> %
+                            </td>
+                            <td class="goal-post">
+                                {{ item.estimated }}
+                            </td>
+                            <td class="goal-post-total">
+                                {{ item.estimated*item.points}}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    {% if globalPrev != 0 %}
+                        {% set globalPercent = (globalEstimated - globalPrev)/globalPrev * 100 %}
+                    {% else %}
+                        {% set globalPercent = 0 %}
+                    {% endif %}
+                    <tr class="total-amount last">
+                        <td class="td-title">Totals:</td>
+                        {#<td class="goal-global-points">{{ globalPoints }}</td>#}
+                        <td></td>
+                        <td class="goal-global-prev">{{ globalPrev }}</td>
+                        <td class="goal-global-prev-total">{{ globalPrevTotal }}</td>
+                        <td class="goal-global-percent">{{ globalPercent|number_format(2) }}%</td>
+                        <td class="goal-global-estimated">{{ globalEstimated }}</td>
+                        <td class="goal-global-post-total">{{ globalPostTotal }}</td>
+                    </tr>
+                {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="goal-block-action">
+        <button class="goal-action-save btn-green btn">Save</button>
+    </div>
+
+{% endblock %}
+
+{#{% block javascripts %}#}
+    {#{{ parent() }}#}
+    {#<script src="{{ asset('bundles/zesharcrmgoals/js/goal_list.js') }}"></script>#}
+{#{% endblock %}#}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css"  href="{{ asset('bundles/zesharcrmgoals/css/style.css') }}"  />
+{% endblock %}

@@ -1,0 +1,20 @@
+zeshar_crm_lead_scoring:
+    resource: "@ZesharCRMLeadScoringBundle/Resources/config/routing.yml"
+    prefix:   /
+
+zeshar_crm_calls:
+    resource: "@ZesharCRMCallsBundle/Resources/config/routing.yml"
+    prefix:   /
+
+zeshar_crm_goals:
+    resource: "@ZesharCRMGoalsBundle/Resources/config/routing.yml"
+    prefix:   /
+
+zeshar_crm_leads_regeneration:
+    resource: "@ZesharCRMLeadsRegenerationBundle/Resources/config/routing.yml"
+    prefix:   /
+
+zeshar_crm_core:
+    resource: "@ZesharCRMCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+

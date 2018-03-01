@@ -1,0 +1,3 @@
+{% if 2 != object.getType() and 1 == object.getStatus() %}
+    <a class="btn btn-sm btn-default" title="Switch a lead into Warm type" href="{{ admin.generateObjectUrl('warmup', object) }}">Warm Up</a>
+{% endif %}

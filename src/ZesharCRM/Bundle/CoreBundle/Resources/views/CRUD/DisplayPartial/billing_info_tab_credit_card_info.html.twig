@@ -1,0 +1,72 @@
+<div class="small-table left-couple">
+    <table>
+        <tbody>
+            <tr>
+                <th width="65%">Credit Card Info</th>
+                <th width="35%"></th>
+            </tr>
+            <tr>
+                <td>
+                    <select id="creditCard" {% if not is_granted('ROLE_ULTRA_ADMIN') %} disabled {% endif %}>
+                        {% for i,type in cards %}
+                            <option value="{{ i }}" {% if object.creator.creditCards[0].type == i %} selected {% endif %}>{{ type }}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+                <td>
+                    <b>Billing Address</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="red">*</span>
+                    <b>Name on card</b>
+                    <input id="creditCardName" class="form-control" type="text" value="{{ object.creator.creditCards[0].name }}" {% if not is_granted('ROLE_ULTRA_ADMIN') %} disabled {% endif %} />
+                </td>
+                <td>
+                    <span class="red">*</span>
+                    <b>Address</b>
+                    <input id="creditCardAddress" class="form-control" type="text" value="{{object.creator.creditCards[0].address }}"  />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="red">*</span>
+                    <b>Card number</b>
+                    <input id="creditCardNumber" class="form-control" type="text" value="{{object.creator.creditCards[0].number }}" {% if not is_granted('ROLE_ULTRA_ADMIN') %} disabled {% endif %}/>
+                </td>
+                <td>
+                    <span class="red">*</span>
+                    <b>City</b>
+                    <input id="creditCardCity" class="form-control" type="text" value="{{object.creator.creditCards[0].city }}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="red">*</span>
+                    <b>Expiration month</b>
+                    <br/>
+                    <input class="form-control" type="text" id="creditCardExpirationMonth" {% if not is_granted('ROLE_ULTRA_ADMIN') %} disabled {% endif %} value="{{ object.creator.creditCards[0].expirationDate|date('m') }}">
+                </td>
+                <td>
+                    <span class="red">*</span>
+                    <b>State</b>
+                    <input id="creditCardState" class="form-control" type="text" value="{{ object.creator.creditCards[0].state }}"  />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="red">*</span>
+                    <b>Expiration year</b>
+                    <br/>
+                    <input class="form-control" type="text" id="creditCardExpirationYear" {% if not is_granted('ROLE_ULTRA_ADMIN') %} disabled {% endif %} value="{{ object.creator.creditCards[0].expirationDate|date('Y') }}">
+                </td>
+                <td>
+                    <span class="red">*</span>
+                    <b>Zip code</b>
+                    <input id="creditCardZip" class="form-control" type="text" value="{{ object.creator.creditCards[0].zipCode }}" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

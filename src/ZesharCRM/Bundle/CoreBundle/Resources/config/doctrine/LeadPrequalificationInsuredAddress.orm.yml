@@ -1,0 +1,54 @@
+ZesharCRM\Bundle\CoreBundle\Entity\LeadPrequalificationInsuredAddress:
+    type: entity
+    table: lead_prequalification_insured_address
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        type:
+            type: smallint
+            nullable: true
+        address:
+            type: string
+            length: 255
+            nullable: true
+        state:
+            type: string
+            length: 255
+            nullable: true
+        zipCode:
+            type: string
+            length: 255
+            nullable: true
+        city:
+            type: string
+            length: 255
+            nullable: true
+        previousCarrierName:
+            type: string
+            length: 255
+            column: previous_carrier_name
+            nullable: true
+        previousCarrierPolice:
+            type: string
+            length: 255
+            column: previous_carrier_police
+            nullable: true
+        previousCarrierXDate:
+            type: datetime
+            column:  previous_carrier_x_date
+    manyToOne:
+        lead:
+            targetEntity: LeadSubject
+            cascade: {  }
+            mappedBy: null
+            inversedBy: prequalificationInsuredAddresses
+            joinColumns:
+                lead:
+                    nullable: false
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

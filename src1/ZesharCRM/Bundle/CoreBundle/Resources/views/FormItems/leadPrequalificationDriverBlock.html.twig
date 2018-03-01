@@ -1,0 +1,35 @@
+<div class="group-forms">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="driver_name[$$name$$]" class="form-control" value="{{ name is defined ?  name  : '' }}" />
+    </div>
+    <div class="form-group">
+        <label for="compaign">DOB</label>
+        <input type="text" id="dob" name="driver_dob[$$name$$]" value="{{ dob is defined ?  dob|date('M d, Y')  : '' }}" class="form-control datepicker-product"/>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-6">
+            <label for="compaign">License</label>
+            <input type="text" id="compaign" name="driver_license[$$name$$]" class="form-control" value="{{ license is defined ?  license  : '' }}" />
+        </div>
+        <div class="col-md-6">
+            <label for="compaign">Age Licensed</label>
+            <input type="number" id="compaign" name="driver_ageLicensed[$$name$$] " class="form-control" value="{{ ageLicensed is defined ?  ageLicensed  : '' }}" />
+        </div>
+    </div>
+    {% if tickets is not empty %}
+        {% for ticket in tickets %}
+            <div class="tickets-group" data-prototype-field="{{  render(controller('ZesharCRMCoreBundle:FormItems:leadPrequalificationTicketsSelect'))|e('js') }}">
+                {{ render(controller('ZesharCRMCoreBundle:FormItems:leadPrequalificationTicketsSelect', { 'first': loop.first ? true : false, 'activeValue': ticket } )) }}
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="tickets-group" data-prototype-field="{{ render(controller('ZesharCRMCoreBundle:FormItems:leadPrequalificationTicketsSelect', { 'activeValue': tickets is defined ?  tickets : '' } ))|e('js') }}">
+            {{ render(controller('ZesharCRMCoreBundle:FormItems:leadPrequalificationTicketsSelect', { 'first': true } )) }}
+        </div>
+    {% endif %}
+
+    <input type="hidden" class="driverId" name="driverId[$$name$$]" value="{{ driverId is defined ?  driverId  : '' }}" />
+    {% include('ZesharCRMCoreBundle:FormItems:prequalificationButtonGroup.html.twig') with {'empty': empty, 'singleEmpty': singleEmpty, 'last': last, 'save': false} %}
+
+</div>

@@ -1,0 +1,61 @@
+<div class="custom-block calendar-block">
+    <div class="custom-head clearfix">
+        <div class="custom-menu">
+            <button class="up-custom"></button>
+        </div>
+        <h3>Contact Info</h3>
+    </div>
+    <div class="clearfix">
+        <div id="contact-info-edit" class="display-block-persistent" data-controller="leads_display" data-action="leadEvent">
+            <div class="form-column">
+                <h4 class="company-id">Contact ID : {{ object.creator.id }} </h4><br />
+                <span class="error" style="display: none;"></span>
+                <div class="small-table">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th width="15%"></th>
+                            <th width="35%">Contact Information</th>
+                            <th width="15%"></th>
+                            <th width="35%"></th>
+                        </tr>
+                        <tr>
+                            <td><b>First Name</b></td>
+                            <td>
+                                <input id="contactFirstName" class="form-control" type="text" value="{{ object.creator.firstName }}"  />
+                            </td>
+                            <td><b>Last Name</b></td>
+                            <td>
+                                <input id="contactLastName" class="form-control" type="text" value="{{ object.creator.lastName }}"  />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Username</b></td>
+                            <td>
+                                <input id="contactUsername" class="form-control" type="text" value="{{ object.creator.username }}" />
+                            </td>
+                            <td><b>Email Address</b></td>
+                            <td>
+                                <input id="contactEmail" class="form-control" type="email" value="{{ object.creator.email }}" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Password</b></td>
+                            <td>
+                                <input id="contactPassword" class="form-control" type="password" value="" />
+                            </td>
+                            <td><span class="red">*</span><b>Confirm Password</b></td>
+                            <td>
+                                <input id="contactPasswordConfirmation" class="form-control" type="password" value="" />
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br />
+            </div>
+
+            {% include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_block_actions.html.twig') with {'show_cancel_link': false, 'save_button_title': 'Save'} %}
+        </div>
+    </div>
+</div>

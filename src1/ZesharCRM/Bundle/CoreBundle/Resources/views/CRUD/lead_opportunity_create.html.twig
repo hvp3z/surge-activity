@@ -1,0 +1,87 @@
+{% extends 'SonataAdminBundle:CRUD:show.html.twig' %}
+
+{% block actions %}
+    
+{% endblock %}
+
+{% block tab_menu %}{% endblock %}
+
+{% block sonata_whole_content_wrapper_classes %}content show-page clear-fix{% endblock %}
+
+{% block sonata_page_content_nav %}{% endblock %}
+
+{% block show %}
+    <button class="btn filter-widget hidden-widget">Hide widgets</button>
+    {{ include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_block_actions_js.html.twig') }}
+    <div class="row">
+        <div class="title-wrap-simple col-md-6">
+            <h2 class="pull-left">{{ admin.getLabel() }} #{{ object.getId() }}{% if object.getName() is not empty %} - {{ object.getName() }}{% endif %}</h2>
+            <button class="btn btn-success btn-all-save" style="
+                margin-left: 6px;
+            ">Save</button>
+            <div class="pull-right">
+                {#{{ include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_top_actions.html.twig') }}#}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div id="collapse-block"  class="right-column">
+            <div class="widget-wrap">
+                {{ render(controller('ZesharCRMCoreBundle:Dashboard:showBlockWidget')) }}
+            </div>
+        </div>
+        <div class="col-md-6" id = "for_choose_id">
+            <div class="entity-details-wrap">
+                {{ include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_entity_details.html.twig') }}
+            </div>
+            <div style="display: none">{{ form_widget(form.contactCard) }}</div>
+            <div class="row">
+                <div class="col-md-12">
+                    {{ include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_processing.html.twig') }}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 right_half lead-opp-edit-slides" style="width: 24%;">
+            {{ include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_calendar.html.twig') }}
+
+            {#{{ include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_generic_history.html.twig') }}#}
+
+            {{ include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_prequalification.html.twig') }}
+
+            {{ include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_show_notes.html.twig') }}
+        </div>
+    </div>
+    <div class="sonata-ba-view" style="display: none;">
+
+        {{ sonata_block_render_event('sonata.admin.show.top', { 'admin': admin, 'object': object }) }}
+
+        {% for name, view_group in admin.showgroups %}
+            <table class="table table-bordered">
+                {% if name %}
+                    <thead>
+                        <tr class="sonata-ba-view-title">
+                            <th colspan="2">
+                                {{ admin.trans(name) }}
+                            </th>
+                        </tr>
+                    </thead>
+                {% endif %}
+
+                <tbody>
+                    {% for field_name in view_group.fields %}
+                        <tr class="sonata-ba-view-container">
+                            {% if elements[field_name] is defined %}
+                                {{ elements[field_name]|render_view_element(object) }}
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endfor %}
+
+        {{ sonata_block_render_event('sonata.admin.show.bottom', { 'admin': admin, 'object': object }) }}
+        {% include('ZesharCRMCoreBundle:CRUD:DisplayPartial/lead_opportunity_popup_verification.html.twig') %}
+
+    </div>
+    <script src="{{ asset('bundles/zesharcrmcore/js/ajaxfileupload.js') }}"></script>
+{% endblock %}
